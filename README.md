@@ -27,7 +27,7 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 [View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/1_stat_superv_parametric.ipynb?create=1)  
 <br>
-[Download PDF](https://github.com/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/1_stat_superv_parametric.pdf?raw=true)
+[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/1_stat_superv_parametric.pdf)
 
 <hr>
 
@@ -50,7 +50,7 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 [View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/2_stat_superv_parametric.ipynb?create=1)  
 <br>
-[Download PDF](https://github.com/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/2_stat_superv_parametric.pdf?raw=true)
+[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/2_stat_superv_parametric.pdf)
 
 <hr>
 
@@ -73,6 +73,6 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 [View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/3_stat_superv_parametric.ipynb?create=1)  
 <br>
-[Download PDF](https://github.com/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/3_stat_superv_parametric.pdf?raw=true)
+[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/3_stat_superv_parametric.pdf)
 
 <hr>
