@@ -133,7 +133,7 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 <hr>
 
-<p><a name="univar"></a></p>
+<p><a name="multivar"></a></p>
 #### Multivariate Normal Density
 
 ## Example 1
