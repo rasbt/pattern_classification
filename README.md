@@ -6,6 +6,38 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 <br>
 <br>
 
+# Sections
+&#8226; <a href="#stat_pat_rec">Statistical Pattern Recognition</a><br>
+&nbsp;&nbsp;&nbsp;&#8226; <a href="#supervised">Supervised Learning</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#param">Parametric Techniques</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#univar">Univariate Normal Density</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Multivariate Normal Density<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Non-Parametric Techniques<br>
+&nbsp;&nbsp;&nbsp;&#8226; Unupervised Learning
+<hr>
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+<p><a name="stat_pat_rec"></a></p>
+# Statistical Pattern Recognition
+
+<p><a name="supervised"></a></p>
+## Supervised Learning
+
+<p><a name="param"></a></p>
+### Parametric Approach
+
+<p><a name="univar"></a></p>
+#### Univariate Normal Density
+
 
 <hr>
 ## Example 1
