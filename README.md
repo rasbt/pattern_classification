@@ -11,7 +11,7 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 &nbsp;&nbsp;&nbsp;&#8226; <a href="#supervised">Supervised Learning</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#param">Parametric Techniques</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#univar">Univariate Normal Density</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Multivariate Normal Density<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#multivar">Multivariate Normal Density</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#seq_feat_sel_algos">Sequential Feature Selection Algorithms</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Non-Parametric Techniques<br>
 &nbsp;&nbsp;&nbsp;&#8226; Unsupervised Learning
@@ -132,6 +132,36 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 [Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/4_stat_superv_parametric.pdf)
 
 <hr>
+
+<p><a name="univar"></a></p>
+#### Multivariate Normal Density
+
+## Example 1
+
+##### Problem Category:
+- Statistical Pattern Recognition   
+- Supervised Learning  
+- Parametric Learning  
+- Bayes Decision Theory  
+- Multivariate data (2-dimensional)
+- 2-class problem
+- different variances
+- equal prior probabilities
+- Gaussian model (2 parameters)
+- with conditional Risk (1-0 loss functions)
+
+![](./Images/5_stat_superv_parametric.png)
+
+
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/5_stat_superv_parametric.ipynb?create=1)  
+<br>
+[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/5_stat_superv_parametric.pdf)
+
+<hr>
+
+
+
+
 
 <p><a name="seq_feat_sel_algos"></a></p>
 #### Sequential Feature Selection Algorithms
