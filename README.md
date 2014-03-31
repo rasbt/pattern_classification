@@ -12,8 +12,9 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#param">Parametric Techniques</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#univar">Univariate Normal Density</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Multivariate Normal Density<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#seq_feat_sel_algos">Sequential Feature Selection Algorithms</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Non-Parametric Techniques<br>
-&nbsp;&nbsp;&nbsp;&#8226; Unupervised Learning
+&nbsp;&nbsp;&nbsp;&#8226; Unsupervised Learning
 <hr>
 
 
@@ -129,5 +130,14 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 [View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/4_stat_superv_parametric.ipynb?create=1)  
 <br>
 [Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/4_stat_superv_parametric.pdf)
+
+<hr>
+
+<p><a name="seq_feat_sel_algos"></a></p>
+#### Sequential Feature Selection Algorithms
+
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/algorithms_in_ipython_notebooks/blob/master/ipython_nbs/sequential_selection_algorithms.ipynb?create=1)  
+<br>
+[Download PDF](https://github.com/rasbt/algorithms_in_ipython_notebooks/raw/master/pdfs/sequential_selection_algorithms.pdf)
 
 <hr>
