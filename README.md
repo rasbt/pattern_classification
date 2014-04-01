@@ -189,6 +189,7 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 <p><a name="seq_feat_sel_algos"></a></p>
 #### Sequential Feature Selection Algorithms
+![](./Images/feat_sele_alg.png)
 
 [View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/algorithms_in_ipython_notebooks/blob/master/ipython_nbs/sequential_selection_algorithms.ipynb?create=1)  
 <br>
