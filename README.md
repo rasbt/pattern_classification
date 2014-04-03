@@ -184,7 +184,30 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 <hr>
 
 
+## Example 2
 
+##### Problem Category:
+
+- Statistical Pattern Recognition   
+- Supervised Learning  
+- Parametric Learning  
+- Bayes Decision Theory  
+- Multivariate data (2-dimensional)
+- 2-class problem
+- equal variances
+- equal prior probabilities
+- Gaussian model (2 parameters)
+- no conditional Risk (1-0 loss functions)
+
+
+![](./Images/7_stat_superv_parametric.png)
+
+
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/7_stat_superv_parametric.ipynb?create=1)  
+<br>
+[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/7_stat_superv_parametric.pdf)
+
+<hr>
 
 
 <p><a name="seq_feat_sel_algos"></a></p>
