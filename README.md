@@ -12,9 +12,13 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#param">Parametric Techniques</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#univar">Univariate Normal Density</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#multivar">Multivariate Normal Density</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#seq_feat_sel_algos">Sequential Feature Selection Algorithms</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Non-Parametric Techniques<br>
-&nbsp;&nbsp;&nbsp;&#8226; Unsupervised Learning
+<br>
+&nbsp;&nbsp;&nbsp;&#8226; Unsupervised Learning<br>
+<br>
+&nbsp;&#8226; <a href="#dim_red">Techniques for Dimensionality Reduction</a><br>
+&nbsp;&nbsp;&nbsp;&#8226; <a href="#seq_feat_sel_algos">Sequential Feature Selection Algorithms</a><br>
+
 <hr>
 
 
@@ -186,8 +190,12 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 
 
+<p><a name="dim_red"></a></p>
+
+#Techniques for Dimensionality Reductu=ion
 
 <p><a name="seq_feat_sel_algos"></a></p>
+
 #### Sequential Feature Selection Algorithms
 ![](./Images/feat_sele_alg.png)
 
