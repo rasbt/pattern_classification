@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -54,8 +53,6 @@ coverage.xml
 docs/_build/
 
 =======
-*.txt
-*.sqlite
 gmon.out
 __pycache__
 *.pyc
@@ -75,4 +72,3 @@ doc/_build
 *ENV
 .DS_store
 .idea
->>>>>>> bfababa9807a3eb3004beffc0402241184f7c824
