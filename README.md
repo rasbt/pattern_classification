@@ -31,21 +31,6 @@ ab<span style="width: 2222px;">sdfdsf</span>
 
 
 
-
-<p><a name="linear_transf"></a></p>
-
-### Linear Transformation
-
-<p><a name="pca"></a></p>
-
-#### Principal Component Analyses (PCA)
-
-<p><a name="mda"></a></p>
-
-#### Multiple Discriminant Analysis (MDA)
-
-
-
 <br>
 <br>
 
