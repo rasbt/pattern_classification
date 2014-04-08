@@ -5,9 +5,11 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 <br>
 <br>
+sdfdsf  
 
+ab<span style="width: 2222px;">sdfdsf</span>
 # Sections
-&#8226; <a href="#stat_pat_rec">Statistical Pattern Recognition</a><br>
+&#8226; <a href="#stat_pat_rec"><strong>Statistical Pattern Recognition</strong></a><br>
 &nbsp;&nbsp;&nbsp;&#8226; <a href="#supervised">Supervised Learning</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#param">Parametric Techniques</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#univar">Univariate Normal Density</a><br>
@@ -16,13 +18,15 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 <br>
 &nbsp;&nbsp;&nbsp;&#8226; Unsupervised Learning<br>
 <br>
-&nbsp;&#8226; <a href="#dim_red">Techniques for Dimensionality Reduction</a><br>
-&nbsp;&nbsp;&nbsp;&#8226; <a href="#seq_feat_sel_algos">Sequential Feature Selection Algorithms</a><br>
-
+&nbsp;&#8226; <a href="#dim_red"><strong>Techniques for Dimensionality Reduction</strong></a><br>
+&nbsp;&nbsp;&nbsp;&#8226; <a href="#feat_sel">Feature Selection</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#seq_feat_sel_algos">Sequential Feature Selection Algorithms</a><br>
+&nbsp;&nbsp;&nbsp;&#8226; <a href="#projection">Projection</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#comp_analysis">Component Analyses</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#linear_transf">Linear Transformation</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#pca">Principal Component Analysis (PCA)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mda">Multiple Discriminant Analysis (MDA)</a><br>
 <hr>
-
-
-
 
 
 
@@ -194,6 +198,10 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 #Techniques for Dimensionality Reduction
 
+<p><a name="feat_sel"></a></p>
+
+## Feature Selection
+
 <p><a name="seq_feat_sel_algos"></a></p>
 
 #### Sequential Feature Selection Algorithms
@@ -204,3 +212,23 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 [Download PDF](https://github.com/rasbt/pattern_classification/tree/master/dimensionality_reduction/feature_selection/sequential_selection_algorithms.pdf)
 
 <hr>
+
+<p><a name="projection"></a></p>
+
+## Projection
+
+<p><a name="comp_analyses"></a></p>
+
+### Component Analyses
+
+<p><a name="linear_transf"></a></p>
+
+### Linear Transformation
+
+<p><a name="pca"></a></p>
+
+#### Principal Component Analyses (PCA)
+
+<p><a name="mda"></a></p>
+
+#### Multiple Discriminant Analysis (MDA)
