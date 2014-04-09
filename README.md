@@ -5,9 +5,6 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 <br>
 <br>
-sdfdsf  
-
-ab<span style="width: 2222px;">sdfdsf</span>
 # Sections
 &#8226; <a href="#stat_pat_rec"><strong>Statistical Pattern Recognition</strong></a><br>
 &nbsp;&nbsp;&nbsp;&#8226; <a href="#supervised">Supervised Learning</a><br>
