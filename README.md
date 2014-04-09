@@ -225,10 +225,20 @@ ab<span style="width: 2222px;">sdfdsf</span>
 
 ### Linear Transformation
 
+<br>
+<br>
+
+
 <p><a name="pca"></a></p>
 
 #### Principal Component Analyses (PCA)
+<br><br>
+![./Images/principal_component_analysis.png](./Images/principal_component_analysis.png)
+<br><br>
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/principal_component_analysis.ipynb?create=1)  
 
 <p><a name="mda"></a></p>
+<br>
+<br>
 
 #### Multiple Discriminant Analysis (MDA)
