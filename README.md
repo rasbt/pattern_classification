@@ -12,7 +12,7 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#univar">Univariate Normal Density</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#multivar">Multivariate Normal Density</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#nonparam"> Non-Parametric Techniques</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="mle">Maximum Likelihood Estimate (MLE)</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mle">Maximum Likelihood Estimate (MLE)</a>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Parzen-window technique
 <br>
@@ -193,11 +193,16 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 <p><a name="nonparam"></a></p>
 ## Non-Parametric Techniques
-
+<br>
+<br>
+<br>
 <p><a name="mle"></a></p>
 ### Maximum Likelihood Estimate (MLE)
 <br>
-<br><br>
+![](./Images/mle.png)
+
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/parameter_estimation/maximum_likelihood_estimate.ipynb?create=1)  
+
 <br>
 <br>
 <br>
