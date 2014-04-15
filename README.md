@@ -11,7 +11,10 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#param">Parametric Techniques</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#univar">Univariate Normal Density</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#multivar">Multivariate Normal Density</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Non-Parametric Techniques<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#nonparam"> Non-Parametric Techniques</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="mle">Maximum Likelihood Estimate (MLE)</a>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Parzen-window technique
 <br>
 &nbsp;&nbsp;&nbsp;&#8226; Unsupervised Learning<br>
 <br>
@@ -39,7 +42,7 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 ## Supervised Learning
 
 <p><a name="param"></a></p>
-### Parametric Approach
+### Parametric Techniques
 
 <p><a name="univar"></a></p>
 #### Univariate Normal Density
@@ -188,9 +191,18 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 <hr>
 
+<p><a name="nonparam"></a></p>
+## Non-Parametric Techniques
 
-
-
+<p><a name="mle"></a></p>
+### Maximum Likelihood Estimate (MLE)
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<hr>
 <p><a name="dim_red"></a></p>
 
 #Techniques for Dimensionality Reduction
