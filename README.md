@@ -280,7 +280,7 @@ Reduction</strong></a><br>
 <br>
 ![](./Images/mle.png)
 
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/parameter_estimation/maximum_likelihood_estimate.ipynb?create=1)
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/maximum_likelihood_estimate.ipynb?create=1)
 
 
 <p><a name="est_nonparam"></a></p>
