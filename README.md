@@ -294,7 +294,7 @@ Reduction</strong></a><br>
 <br>
 ![](./Images/bivariate_gaussian.png)
 
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/non_parametric/parzen_window_technique.ipynb?create=1)  
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/parzen_window_technique.ipynb?create=1)  
 
 <br>
 <br>
