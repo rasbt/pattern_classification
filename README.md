@@ -6,26 +6,37 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 <br>
 <br>
 # Sections
-&#8226; <a href="#stat_pat_rec"><strong>Statistical Pattern Recognition</strong></a><br>
+&#8226; <a href="#stat_pat_rec"><strong>Statistical Pattern Recognition Examples</strong></a><br>
+
 &nbsp;&nbsp;&nbsp;&#8226; <a href="#supervised">Supervised Learning</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#param">Parametric Techniques</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#univar">Univariate Normal Density</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#multivar">Multivariate Normal Density</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#nonparam"> Non-Parametric Techniques</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mle">Maximum Likelihood Estimate (MLE)</a>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Parzen-window technique
-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Non-Parametric Techniques<br>
+
+
 &nbsp;&nbsp;&nbsp;&#8226; Unsupervised Learning<br>
 <br>
-&nbsp;&#8226; <a href="#dim_red"><strong>Techniques for Dimensionality Reduction</strong></a><br>
+&nbsp;&#8226; <a href="#dim_red"><strong>Techniques for Dimensionality 
+Reduction</strong></a><br>
+
 &nbsp;&nbsp;&nbsp;&#8226; <a href="#feat_sel">Feature Selection</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#seq_feat_sel_algos">Sequential Feature Selection Algorithms</a><br>
+
 &nbsp;&nbsp;&nbsp;&#8226; <a href="#projection">Projection</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#comp_analysis">Component Analyses</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#linear_transf">Linear Transformation</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#pca">Principal Component Analysis (PCA)</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mda">Multiple Discriminant Analysis (MDA)</a><br>
+
+&nbsp;&#8226; <a href="#est_param_tech"><strong>Techniques for Parameter Estimation</strong></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#est_param">Parametric Techniques</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mle">Maximum Likelihood Estimate (MLE)</a>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#est_nonparam"> Non-Parametric Techniques</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#parzen">Parzen-window technique</a>
+<br>
+
 <hr>
 
 
@@ -191,20 +202,11 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 <hr>
 
-<p><a name="nonparam"></a></p>
-## Non-Parametric Techniques
-<br>
-<br>
-<br>
-<p><a name="mle"></a></p>
-### Maximum Likelihood Estimate (MLE)
-<br>
-![](./Images/mle.png)
 
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/parameter_estimation/maximum_likelihood_estimate.ipynb?create=1)  
+ 
 
-<br>
-<br>
+
+
 <br>
 <br>
 <hr>
@@ -256,3 +258,44 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 <br>
 
 #### Multiple Discriminant Analysis (MDA)
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p><a name="est_param_tech"></a></p>
+## Techniques for Parameter Estimation
+<br>
+<br>
+<p><a name="est_param"></a></p>
+### Parametric Techniques
+
+<p><a name="mle"></a></p>
+### Maximum Likelihood Estimate (MLE)
+<br>
+![](./Images/mle.png)
+
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/parameter_estimation/maximum_likelihood_estimate.ipynb?create=1)
+
+
+<p><a name="est_nonparam"></a></p>
+### Non-Parametric Techniques
+
+
+<br>
+<br>
+<p><a name="parzen"></a></p>
+### Parzen-window technique
+<br>
+![](./Images/bivariate_gaussian.png)
+
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/non_parametric/parzen_window_technique.ipynb?create=1)  
+
+<br>
+<br>
+ 
