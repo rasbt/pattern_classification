@@ -6,6 +6,29 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 <br>
 <br>
 # Sections
+<br>
+&nbsp;&#8226; <a href="#dim_red"><strong>Techniques for Dimensionality 
+Reduction</strong></a><br>
+
+
+
+&nbsp;&nbsp;&nbsp;&#8226; <a href="#projection">Projection</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#comp_analysis">Component Analyses</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#linear_transf">Linear Transformation</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#pca">Principal Component Analysis (PCA)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Multiple Discriminant Analysis (MDA)<br>
+
+&nbsp;&nbsp;&nbsp;&#8226; <a href="#feat_sel"><strong>Feature Selection</a></strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#seq_feat_sel_algos">Sequential Feature Selection Algorithms</a><br>
+
+&nbsp;&#8226; <a href="#est_param_tech"><strong>Techniques for Parameter Estimation</strong></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#est_param">Parametric Techniques</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mle">Maximum Likelihood Estimate (MLE)</a>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#est_nonparam"> Non-Parametric Techniques</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#parzen">Kernel density estimation via the Parzen-window technique</a>
+<br>
+<br>
 &#8226; <a href="#stat_pat_rec"><strong>Statistical Pattern Recognition Examples</strong></a><br>
 
 &nbsp;&nbsp;&nbsp;&#8226; <a href="#supervised">Supervised Learning</a><br>
@@ -16,26 +39,6 @@ Examples for solving pattern classification problems in Python (IPython Notebook
 
 
 &nbsp;&nbsp;&nbsp;&#8226; Unsupervised Learning<br>
-<br>
-&nbsp;&#8226; <a href="#dim_red"><strong>Techniques for Dimensionality 
-Reduction</strong></a><br>
-
-&nbsp;&nbsp;&nbsp;&#8226; <a href="#feat_sel">Feature Selection</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#seq_feat_sel_algos">Sequential Feature Selection Algorithms</a><br>
-
-&nbsp;&nbsp;&nbsp;&#8226; <a href="#projection">Projection</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#comp_analysis">Component Analyses</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#linear_transf">Linear Transformation</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#pca">Principal Component Analysis (PCA)</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mda">Multiple Discriminant Analysis (MDA)</a><br>
-
-&nbsp;&#8226; <a href="#est_param_tech"><strong>Techniques for Parameter Estimation</strong></a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#est_param">Parametric Techniques</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mle">Maximum Likelihood Estimate (MLE)</a>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#est_nonparam"> Non-Parametric Techniques</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#parzen">Parzen-window technique</a>
-<br>
 
 <hr>
 
@@ -46,7 +49,103 @@ Reduction</strong></a><br>
 <br>
 
 
-<p><a name="stat_pat_rec"></a></p>
+<br>
+<br>
+<hr>
+<p><a name="dim_red"></a></p>
+
+#Techniques for Dimensionality Reduction
+
+
+
+<hr>
+
+<p><a name="projection"></a></p>
+
+## Projection
+
+<p><a name="comp_analyses"></a></p>
+
+### Component Analyses
+
+<p><a name="linear_transf"></a></p>
+
+### Linear Transformation
+
+<br>
+<br>
+
+
+<p><a name="pca"></a></p>
+
+#### Principal Component Analyses (PCA)
+<br><br>
+![./Images/principal_component_analysis.png](./Images/principal_component_analysis.png)
+<br><br>
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/principal_component_analysis.ipynb?create=1)  
+
+<p><a name="mda"></a></p>
+<br>
+<br>
+
+#### Multiple Discriminant Analysis (MDA)
+
+
+<br>
+<br>
+<br>
+<br>
+<p><a name="feat_sel"></a></p>
+
+## Feature Selection
+
+<p><a name="seq_feat_sel_algos"></a></p>
+
+#### Sequential Feature Selection Algorithms
+![](./Images/feat_sele_alg.png)
+
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/feature_selection/sequential_selection_algorithms.ipynb?create=1)  
+<br>
+[Download PDF](https://github.com/rasbt/pattern_classification/tree/master/dimensionality_reduction/feature_selection/sequential_selection_algorithms.pdf)
+<br>
+<br>
+<br>
+<br>
+<p><a name="est_param_tech"></a></p>
+## Techniques for Parameter Estimation
+<br>
+<br>
+<p><a name="est_param"></a></p>
+### Parametric Techniques
+
+<p><a name="mle"></a></p>
+### Maximum Likelihood Estimate (MLE)
+<br>
+![](./Images/mle.png)
+
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/maximum_likelihood_estimate.ipynb?create=1)
+
+
+<p><a name="est_nonparam"></a></p>
+### Non-Parametric Techniques
+
+
+<br>
+<br>
+<p><a name="parzen"></a></p>
+### Kernel density estimation via the Parzen-window technique
+<br>
+![](./Images/bivariate_gaussian.png)
+
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/parzen_window_technique.ipynb?create=1)  
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ <p><a name="stat_pat_rec"></a></p>
 # Statistical Pattern Recognition
 
 <p><a name="supervised"></a></p>
@@ -207,95 +306,3 @@ Reduction</strong></a><br>
 
 
 
-<br>
-<br>
-<hr>
-<p><a name="dim_red"></a></p>
-
-#Techniques for Dimensionality Reduction
-
-<p><a name="feat_sel"></a></p>
-
-## Feature Selection
-
-<p><a name="seq_feat_sel_algos"></a></p>
-
-#### Sequential Feature Selection Algorithms
-![](./Images/feat_sele_alg.png)
-
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/feature_selection/sequential_selection_algorithms.ipynb?create=1)  
-<br>
-[Download PDF](https://github.com/rasbt/pattern_classification/tree/master/dimensionality_reduction/feature_selection/sequential_selection_algorithms.pdf)
-
-<hr>
-
-<p><a name="projection"></a></p>
-
-## Projection
-
-<p><a name="comp_analyses"></a></p>
-
-### Component Analyses
-
-<p><a name="linear_transf"></a></p>
-
-### Linear Transformation
-
-<br>
-<br>
-
-
-<p><a name="pca"></a></p>
-
-#### Principal Component Analyses (PCA)
-<br><br>
-![./Images/principal_component_analysis.png](./Images/principal_component_analysis.png)
-<br><br>
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/principal_component_analysis.ipynb?create=1)  
-
-<p><a name="mda"></a></p>
-<br>
-<br>
-
-#### Multiple Discriminant Analysis (MDA)
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<p><a name="est_param_tech"></a></p>
-## Techniques for Parameter Estimation
-<br>
-<br>
-<p><a name="est_param"></a></p>
-### Parametric Techniques
-
-<p><a name="mle"></a></p>
-### Maximum Likelihood Estimate (MLE)
-<br>
-![](./Images/mle.png)
-
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/maximum_likelihood_estimate.ipynb?create=1)
-
-
-<p><a name="est_nonparam"></a></p>
-### Non-Parametric Techniques
-
-
-<br>
-<br>
-<p><a name="parzen"></a></p>
-### Parzen-window technique
-<br>
-![](./Images/bivariate_gaussian.png)
-
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/parzen_window_technique.ipynb?create=1)  
-
-<br>
-<br>
- 
