@@ -1,7 +1,9 @@
 pattern_classification
 ======================
 
-Examples for solving pattern classification problems in Python (IPython Notebooks)
+<hr>
+**A collection of tutorials and examples for solving and understanding machine learning and pattern classification tasks.**
+<hr>
 
 <br>
 <br>
