@@ -3,7 +3,14 @@ pattern_classification
 
 <hr>
 **A collection of tutorials and examples for solving and understanding machine learning and pattern classification tasks.**
+<br>
+<br>
+
+<font size=5em>
+**Newest**: <a href="#parzen">Kernel density estimation via the Parzen-window technique</a></font>
+
 <hr>
+<br>
 
 <br>
 <br>
