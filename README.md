@@ -99,11 +99,16 @@ Reduction</strong></a><br>
 
 #### Multiple Discriminant Analysis (MDA)
 
+<br><br>
+![./Images/mda_overview2.png](./Images/mda_overvie2.png)
+<br><br>
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/multiple_discriminant_analysis.ipynb?create=1)  
+<br>
+<br>
+<br>
+<br>
 
-<br>
-<br>
-<br>
-<br>
+
 <p><a name="feat_sel"></a></p>
 
 ## Feature Selection
