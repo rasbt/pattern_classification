@@ -25,7 +25,7 @@ Reduction</strong></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#comp_analysis">Component Analyses</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#linear_transf">Linear Transformation</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#pca">Principal Component Analysis (PCA)</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Multiple Discriminant Analysis (MDA)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mda">Multiple Discriminant Analysis (MDA)</a><br>
 
 &nbsp;&nbsp;&nbsp;&#8226; <a href="#feat_sel"><strong>Feature Selection</a></strong><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#seq_feat_sel_algos">Sequential Feature Selection Algorithms</a><br>
@@ -100,7 +100,7 @@ Reduction</strong></a><br>
 #### Multiple Discriminant Analysis (MDA)
 
 <br><br>
-![./Images/mda_overview2.png](./Images/mda_overvie2.png)
+![./Images/mda_overview2.png](./Images/mda_overview2.png)
 <br><br>
 [View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/multiple_discriminant_analysis.ipynb?create=1)  
 <br>
