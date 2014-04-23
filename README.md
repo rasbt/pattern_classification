@@ -32,7 +32,8 @@ Reduction</strong></a><br>
 
 &nbsp;&#8226; <a href="#est_param_tech"><strong>Techniques for Parameter Estimation</strong></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#est_param">Parametric Techniques</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mle">Maximum Likelihood Estimate (MLE)</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mle">Introduction to the Maximum Likelihood Estimate (MLE)</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mle_dist">How to calculate Maximum Likelihood Estimates (MLE) for different distributions</a>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#est_nonparam"> Non-Parametric Techniques</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#parzen">Kernel density estimation via the Parzen-window technique</a>
@@ -133,12 +134,21 @@ Reduction</strong></a><br>
 ### Parametric Techniques
 
 <p><a name="mle"></a></p>
-### Maximum Likelihood Estimate (MLE)
+### Introduction to the Maximum Likelihood Estimate (MLE)
 <br>
 ![](./Images/mle.png)
 
 [View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/maximum_likelihood_estimate.ipynb?create=1)
+<br>
+<p><a name="mle_dist"></a></p>
+### Maximum Liklihood parameter Estimation (MLE) for different distributions
+<br>
+<br>
+![](./Images/ml3_3d_lot.ipynb)
 
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/maximum_likelihood_estimate.ipynb?create=1)
+<br><br>
+<br><br>
 
 <p><a name="est_nonparam"></a></p>
 ### Non-Parametric Techniques
