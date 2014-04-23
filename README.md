@@ -144,13 +144,14 @@ Reduction</strong></a><br>
 ### Maximum Liklihood parameter Estimation (MLE) for different distributions
 <br>
 <br>
-![](./Images/ml3_3d_lot.ipynb)
+![](./Images/pca_iris.png)
 
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/maximum_likelihood_estimate.ipynb?create=1)
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/max_likelihood_est_distributions.ipynb?create=1)
 <br><br>
 <br><br>
 
 <p><a name="est_nonparam"></a></p>
+![](./Images/ml3_3d_lot.ipynb)
 ### Non-Parametric Techniques
 
 
