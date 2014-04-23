@@ -11,7 +11,7 @@ pattern_classification
 
 <hr>
 <br>
-
+<a name="sections"></a>
 <br>
 <br>
 # Sections
@@ -36,7 +36,8 @@ Reduction</strong></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mle_dist">How to calculate Maximum Likelihood Estimates (MLE) for different distributions</a>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#est_nonparam"> Non-Parametric Techniques</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#parzen">Kernel density estimation via the Parzen-window technique</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#parzen">Kernel density estimation via the Parzen-window technique</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; The K-Nearest Neighbor (KNN) technique
 <br>
 <br>
 &#8226; <a href="#stat_pat_rec"><strong>Statistical Pattern Recognition Examples</strong></a><br>
@@ -65,7 +66,7 @@ Reduction</strong></a><br>
 <p><a name="dim_red"></a></p>
 
 #Techniques for Dimensionality Reduction
-
+[[back to top](#sections)]
 
 
 <hr>
@@ -73,15 +74,17 @@ Reduction</strong></a><br>
 <p><a name="projection"></a></p>
 
 ## Projection
+[[back to top](#sections)]
 
 <p><a name="comp_analyses"></a></p>
 
 ### Component Analyses
+[[back to top](#sections)]
 
 <p><a name="linear_transf"></a></p>
 
 ### Linear Transformation
-
+[[back to top](#sections)]
 <br>
 <br>
 
@@ -89,6 +92,7 @@ Reduction</strong></a><br>
 <p><a name="pca"></a></p>
 
 #### Principal Component Analyses (PCA)
+[[back to top](#sections)]
 <br><br>
 ![./Images/principal_component_analysis.png](./Images/principal_component_analysis.png)
 <br><br>
@@ -99,7 +103,7 @@ Reduction</strong></a><br>
 <br>
 
 #### Multiple Discriminant Analysis (MDA)
-
+[[back to top](#sections)]
 <br><br>
 ![./Images/mda_overview2.png](./Images/mda_overview2.png)
 <br><br>
@@ -113,10 +117,11 @@ Reduction</strong></a><br>
 <p><a name="feat_sel"></a></p>
 
 ## Feature Selection
-
+[[back to top](#sections)]
 <p><a name="seq_feat_sel_algos"></a></p>
 
 #### Sequential Feature Selection Algorithms
+[[back to top](#sections)]
 ![](./Images/feat_sele_alg.png)
 
 [View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/feature_selection/sequential_selection_algorithms.ipynb?create=1)  
@@ -128,13 +133,16 @@ Reduction</strong></a><br>
 <br>
 <p><a name="est_param_tech"></a></p>
 ## Techniques for Parameter Estimation
+[[back to top](#sections)]
 <br>
 <br>
 <p><a name="est_param"></a></p>
 ### Parametric Techniques
+[[back to top](#sections)]
 
 <p><a name="mle"></a></p>
 ### Introduction to the Maximum Likelihood Estimate (MLE)
+[[back to top](#sections)]
 <br>
 ![](./Images/mle.png)
 
@@ -142,23 +150,25 @@ Reduction</strong></a><br>
 <br>
 <p><a name="mle_dist"></a></p>
 ### Maximum Liklihood parameter Estimation (MLE) for different distributions
+[[back to top](#sections)]
 <br>
 <br>
-![](./Images/pca_iris.png)
+![](./Images/mle_distributions.png)
 
 [View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/max_likelihood_est_distributions.ipynb?create=1)
 <br><br>
 <br><br>
 
 <p><a name="est_nonparam"></a></p>
-![](./Images/ml3_3d_lot.ipynb)
-### Non-Parametric Techniques
 
+### Non-Parametric Techniques
+[[back to top](#sections)]
 
 <br>
 <br>
 <p><a name="parzen"></a></p>
 ### Kernel density estimation via the Parzen-window technique
+[[back to top](#sections)]
 <br>
 ![](./Images/bivariate_gaussian.png)
 
@@ -172,19 +182,23 @@ Reduction</strong></a><br>
 <br>
  <p><a name="stat_pat_rec"></a></p>
 # Statistical Pattern Recognition
+[[back to top](#sections)]
 
 <p><a name="supervised"></a></p>
 ## Supervised Learning
 
+[[back to top](#sections)]
 <p><a name="param"></a></p>
 ### Parametric Techniques
 
+[[back to top](#sections)]
 <p><a name="univar"></a></p>
 #### Univariate Normal Density
-
+[[back to top](#sections)]
 
 <hr>
 ## Example 1
+[[back to top](#sections)]
 
 ##### Problem Category:
 - Statistical Pattern Recognition   
@@ -208,6 +222,7 @@ Reduction</strong></a><br>
 <hr>
 
 ## Example 2
+[[back to top](#sections)]
 
 ##### Problem Category:
 - Statistical Pattern Recognition   
@@ -231,6 +246,7 @@ Reduction</strong></a><br>
 <hr>
 
 ## Example 3
+[[back to top](#sections)]
 
 ##### Problem Category:
 - Statistical Pattern Recognition   
@@ -254,6 +270,7 @@ Reduction</strong></a><br>
 <hr>
 
 ## Example 4
+[[back to top](#sections)]
 
 ##### Problem Category:
 - Statistical Pattern Recognition   
@@ -277,6 +294,7 @@ Reduction</strong></a><br>
 <hr>
 
 ## Example 5
+[[back to top](#sections)]
 
 ##### Problem Category:
 - Statistical Pattern Recognition   
@@ -304,6 +322,7 @@ Reduction</strong></a><br>
 #### Multivariate Normal Density
 
 ## Example 1
+[[back to top](#sections)]
 
 ##### Problem Category:
 - Statistical Pattern Recognition   
