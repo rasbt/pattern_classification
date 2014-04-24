@@ -98,6 +98,8 @@ Reduction</strong></a><br>
 <br><br>
 [View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/principal_component_analysis.ipynb?create=1)  
 
+[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/PDFs/principal_component_analysis_sebastian_raschka.pdf)
+
 <p><a name="mda"></a></p>
 <br>
 <br>
@@ -174,6 +176,7 @@ Reduction</strong></a><br>
 
 [View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/parzen_window_technique.ipynb?create=1)  
 
+[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/PDFs/parzen_window_sebastian_raschka.pdf)
 <br>
 <br>
 <br>
