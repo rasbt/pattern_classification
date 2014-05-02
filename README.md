@@ -172,7 +172,7 @@ Reduction</strong></a><br>
 ### Kernel density estimation via the Parzen-window technique
 [[back to top](#sections)]
 <br>
-![](./Images/bivariate_gaussian.png)
+![](./Images/parzen_window_effect.png)
 
 [View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/parzen_window_technique.ipynb?create=1)  
 
