@@ -40,8 +40,11 @@ Reduction</strong></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; The K-Nearest Neighbor (KNN) technique
 <br>
 <br>
-&#8226; <a href="#stat_pat_rec"><strong>Statistical Pattern Recognition Examples</strong></a><br>
+&#8226; <a href="#regr_analysis"><strong>Regression Analysis</strong></a><br>
+&nbsp;&nbsp;&nbsp;&#8226; <a href="#lin_regr">Linear Regression</a><br>
+&nbsp;&nbsp;&nbsp;&#8226; <a href="#nonlin_regr">Non-Linear Regression</a><br>
 
+&#8226; <a href="#stat_pat_rec"><strong>Statistical Pattern Recognition Examples</strong></a><br>
 &nbsp;&nbsp;&nbsp;&#8226; <a href="#supervised">Supervised Learning</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#param">Parametric Techniques</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#univar">Univariate Normal Density</a><br>
@@ -183,6 +186,42 @@ Reduction</strong></a><br>
 <br>
 <br>
 <br>
+
+<p><a name="regr_analysis"></a></p>  
+#Regression Analysis
+[[back to top](#sections)]
+
+
+
+<p><a name="lin_regr"></a></p>  
+##Linear Regression
+[[back to top](#sections)]
+
+
+#### Implementing the least squares fit method for linear regression and speeding it up via Cython
+
+![](./Images/lin_least_square_fit.png)  
+[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/benchmarks/cython_least_squares.ipynb?create=1) 
+
+
+<br>
+<br>
+<br>
+
+<p><a name="nonlin_regr"></a></p>  
+##Non-Linear Regression
+[[back to top](#sections)]
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
  <p><a name="stat_pat_rec"></a></p>
 # Statistical Pattern Recognition
 [[back to top](#sections)]
