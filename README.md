@@ -1,5 +1,6 @@
-pattern_classification
-======================
+
+
+![logo](./Images/logo.png)
 
 <hr>
 **A collection of tutorials and examples for solving and understanding machine learning and pattern classification tasks.**
