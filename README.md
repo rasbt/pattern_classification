@@ -7,14 +7,25 @@
 <br>
 <br>
 
-<font size=5em>
-**Newest**: <a href="#parzen">Kernel density estimation via the Parzen-window technique</a></font>
+
+
+
+
+### New Intro Tutorial
+
+[Entry Point: Data](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/python_data_entry_point.ipynb?create=1)
+- Using Python's sci-packages to prepare data for Machine Learning tasks and other data analyses
+<br>
+<br>
+<br>
 
 <hr>
 <br>
 <a name="sections"></a>
 <br>
 <br>
+
+
 # Sections
 <br>
 &nbsp;&#8226; <a href="#dim_red"><strong>Techniques for Dimensionality 
