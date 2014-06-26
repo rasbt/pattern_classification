@@ -26,6 +26,13 @@
 <br>
 
 
+## Machine-learning tutorials for Python's scikit-learn
+
+- [An Introduction to simple linear supervised classification using `scikit-learn`](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/scikit_linear_classification.ipynb)
+
+<br>
+<br>
+
 # Sections
 <br>
 &nbsp;&#8226; <a href="#dim_red"><strong>Techniques for Dimensionality 
