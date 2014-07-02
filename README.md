@@ -120,6 +120,9 @@
 - [google.com/publicdata](http://www.google.com/publicdata/directory) - public data maintained by Google
 
 - [Freebase](http://www.freebase.com) - A community-curated database of well-known people, places, and things
+
+- [mldata.org](http://mldata.org) - machine learning data set repository for uploading and finding data sets
+
 <br>
 <br>
 
