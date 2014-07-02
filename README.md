@@ -11,403 +11,145 @@
 
 
 
-### New Intro Tutorial
-
-[Entry Point: Data](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/python_data_entry_point.ipynb?create=1)
-- Using Python's sci-packages to prepare data for Machine Learning tasks and other data analyses
-<br>
 <br>
 <br>
 
-<hr>
-<br>
-<a name="sections"></a>
-<br>
-<br>
-
-
-## Machine-learning tutorials for Python's scikit-learn
-
-- [An Introduction to simple linear supervised classification using `scikit-learn`](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/scikit_linear_classification.ipynb)
+# Machine Learning and Pattern Classification
 
 <br>
-<br>
-
-# Sections
-<br>
-&nbsp;&#8226; <a href="#dim_red"><strong>Techniques for Dimensionality 
-Reduction</strong></a><br>
-
-
-
-&nbsp;&nbsp;&nbsp;&#8226; <a href="#projection">Projection</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#comp_analysis">Component Analyses</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#linear_transf">Linear Transformation</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#pca">Principal Component Analysis (PCA)</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mda">Multiple Discriminant Analysis (MDA)</a><br>
-
-&nbsp;&nbsp;&nbsp;&#8226; <a href="#feat_sel"><strong>Feature Selection</a></strong><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#seq_feat_sel_algos">Sequential Feature Selection Algorithms</a><br>
-
-&nbsp;&#8226; <a href="#est_param_tech"><strong>Techniques for Parameter Estimation</strong></a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#est_param">Parametric Techniques</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mle">Introduction to the Maximum Likelihood Estimate (MLE)</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#mle_dist">How to calculate Maximum Likelihood Estimates (MLE) for different distributions</a>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#est_nonparam"> Non-Parametric Techniques</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#parzen">Kernel density estimation via the Parzen-window technique</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; The K-Nearest Neighbor (KNN) technique
-<br>
-<br>
-&#8226; <a href="#regr_analysis"><strong>Regression Analysis</strong></a><br>
-&nbsp;&nbsp;&nbsp;&#8226; <a href="#lin_regr">Linear Regression</a><br>
-&nbsp;&nbsp;&nbsp;&#8226; <a href="#nonlin_regr">Non-Linear Regression</a><br>
-
-&#8226; <a href="#stat_pat_rec"><strong>Statistical Pattern Recognition Examples</strong></a><br>
-&nbsp;&nbsp;&nbsp;&#8226; <a href="#supervised">Supervised Learning</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#param">Parametric Techniques</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#univar">Univariate Normal Density</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; <a href="#multivar">Multivariate Normal Density</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226; Non-Parametric Techniques<br>
-
-
-&nbsp;&nbsp;&nbsp;&#8226; Unsupervised Learning<br>
-
-<hr>
-
-
-
-
-<br>
-<br>
-
-
 <br>
 <br>
 <hr>
-<p><a name="dim_red"></a></p>
+<br>
 
-#Techniques for Dimensionality Reduction
-[[back to top](#sections)]
+### Machine learning and pattern classification with scikit-learn 
+
+- Entry Point: Data - Using Python's sci-packages to prepare data for Machine Learning tasks and other data analyses [[IPython nb](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/python_data_entry_point.ipynb)]
+
+
+- An Introduction to simple linear supervised classification using `scikit-learn` [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/scikit_linear_classification.ipynb)]
+
+
 
 
 <hr>
-
-<p><a name="projection"></a></p>
-
-## Projection
-[[back to top](#sections)]
-
-<p><a name="comp_analyses"></a></p>
-
-### Component Analyses
-[[back to top](#sections)]
-
-<p><a name="linear_transf"></a></p>
-
-### Linear Transformation
-[[back to top](#sections)]
-<br>
 <br>
 
+### Techniques for Dimensionality Reduction
 
-<p><a name="pca"></a></p>
-
-#### Principal Component Analyses (PCA)
-[[back to top](#sections)]
-<br><br>
-![./Images/principal_component_analysis.png](./Images/principal_component_analysis.png)
-<br><br>
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/principal_component_analysis.ipynb?create=1)  
-
-[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/PDFs/principal_component_analysis_sebastian_raschka.pdf)
-
-<p><a name="mda"></a></p>
-<br>
-<br>
-
-#### Multiple Discriminant Analysis (MDA)
-[[back to top](#sections)]
-<br><br>
-![./Images/mda_overview2.png](./Images/mda_overview2.png)
-<br><br>
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/multiple_discriminant_analysis.ipynb?create=1)  
-<br>
-<br>
-<br>
-<br>
-
-
-<p><a name="feat_sel"></a></p>
-
-## Feature Selection
-[[back to top](#sections)]
-<p><a name="seq_feat_sel_algos"></a></p>
-
-#### Sequential Feature Selection Algorithms
-[[back to top](#sections)]
-![](./Images/feat_sele_alg.png)
-
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/feature_selection/sequential_selection_algorithms.ipynb?create=1)  
-<br>
-[Download PDF](https://github.com/rasbt/pattern_classification/tree/master/dimensionality_reduction/feature_selection/sequential_selection_algorithms.pdf)
-<br>
-<br>
-<br>
-<br>
-<p><a name="est_param_tech"></a></p>
-## Techniques for Parameter Estimation
-[[back to top](#sections)]
-<br>
-<br>
-<p><a name="est_param"></a></p>
-### Parametric Techniques
-[[back to top](#sections)]
-
-<p><a name="mle"></a></p>
-### Introduction to the Maximum Likelihood Estimate (MLE)
-[[back to top](#sections)]
-<br>
-![](./Images/mle.png)
-
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/maximum_likelihood_estimate.ipynb?create=1)
-<br>
-<p><a name="mle_dist"></a></p>
-### Maximum Liklihood parameter Estimation (MLE) for different distributions
-[[back to top](#sections)]
-<br>
-<br>
-![](./Images/mle_distributions.png)
-
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/max_likelihood_est_distributions.ipynb?create=1)
-<br><br>
-<br><br>
-
-<p><a name="est_nonparam"></a></p>
-
-### Non-Parametric Techniques
-[[back to top](#sections)]
-
-<br>
-<br>
-<p><a name="parzen"></a></p>
-### Kernel density estimation via the Parzen-window technique
-[[back to top](#sections)]
-<br>
-![](./Images/parzen_window_effect.png)
-
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/parzen_window_technique.ipynb?create=1)  
-
-[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/PDFs/parzen_window_sebastian_raschka.pdf)
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<p><a name="regr_analysis"></a></p>  
-#Regression Analysis
-[[back to top](#sections)]
+- **Projection**
+	- Component Analyses
+		- Linear Transformation
+			- Principal Component Analysis (PCA) [[IPython nb]](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/principal_component_analysis.ipynb)
+			- Linear Discriminant Analysis (LDA) [[IPython nb]](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/multiple_discriminant_analysis.ipynb)
 
 
 
-<p><a name="lin_regr"></a></p>  
-##Linear Regression
-[[back to top](#sections)]
-
-
-#### Implementing the least squares fit method for linear regression and speeding it up via Cython
-
-![](./Images/lin_least_square_fit.png)  
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/benchmarks/cython_least_squares.ipynb?create=1) 
+- **Feature Selection**
+	- Sequential Feature Selection Algorithms [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/feature_selection/sequential_selection_algorithms.ipynb)]
 
 
 <br>
-<br>
-<br>
-
-<p><a name="nonlin_regr"></a></p>  
-##Non-Linear Regression
-[[back to top](#sections)]
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
- <p><a name="stat_pat_rec"></a></p>
-# Statistical Pattern Recognition
-[[back to top](#sections)]
-
-<p><a name="supervised"></a></p>
-## Supervised Learning
-
-[[back to top](#sections)]
-<p><a name="param"></a></p>
-### Parametric Techniques
-
-[[back to top](#sections)]
-<p><a name="univar"></a></p>
-#### Univariate Normal Density
-[[back to top](#sections)]
-
 <hr>
-## Example 1
-[[back to top](#sections)]
-
-##### Problem Category:
-- Statistical Pattern Recognition   
-- Supervised Learning  
-- Parametric Learning  
-- Bayes Decision Theory  
-- Univariate data  
-- 2-class problem
-- equal variances
-- equal priors
-- Gaussian model (2 parameters)
-- No Risk function
-
-![](./Images/1_stat_superv_parametric.png)
-
-
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/1_stat_superv_parametric.ipynb?create=1)  
 <br>
-[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/1_stat_superv_parametric.pdf)
 
-<hr>
-
-## Example 2
-[[back to top](#sections)]
-
-##### Problem Category:
-- Statistical Pattern Recognition   
-- Supervised Learning  
-- Parametric Learning  
-- Bayes Decision Theory  
-- Univariate data  
-- 2-class problem
-- different variances
-- equal priors
-- Gaussian model (2 parameters)
-- No Risk function
-
-![](./Images/2_stat_superv_parametric.png)
+### Techniques for Parameter Estimation
 
 
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/2_stat_superv_parametric.ipynb?create=1)  
+- **Parametric Techniques**
+    - Introduction to the Maximum Likelihood Estimate (MLE) [[IPython nb]](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/maximum_likelihood_estimate.ipynb)
+    - How to calculate Maximum Likelihood Estimates (MLE) for different distributions [[IPython nb]](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/max_likelihood_est_distributions.ipynb)
+	
+- **Non-Parametric Techniques**
+	- Kernel density estimation via the Parzen-window technique [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/parzen_window_technique.ipynb)]
+	- The K-Nearest Neighbor (KNN) technique 
+
+
+- **Regression Analysis**
+	- Linear Regression
+		- Least-Squares fit [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_fitting/regression/linregr_least_squares_fit.ipynb)]
+   
+   - Non-Linear Regression
+
+
 <br>
-[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/2_stat_superv_parametric.pdf)
-
 <hr>
-
-## Example 3
-[[back to top](#sections)]
-
-##### Problem Category:
-- Statistical Pattern Recognition   
-- Supervised Learning  
-- Parametric Learning  
-- Bayes Decision Theory  
-- Univariate data  
-- 2-class problem
-- equal variances
-- different priors
-- Gaussian model (2 parameters)
-- No Risk function
-
-![](./Images/3_stat_superv_parametric.png)
-
-
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/3_stat_superv_parametric.ipynb?create=1)  
 <br>
-[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/3_stat_superv_parametric.pdf)
-
-<hr>
-
-## Example 4
-[[back to top](#sections)]
-
-##### Problem Category:
-- Statistical Pattern Recognition   
-- Supervised Learning  
-- Parametric Learning  
-- Bayes Decision Theory  
-- Univariate data  
-- 2-class problem
-- different variances
-- different priors
-- Gaussian model (2 parameters)
-- With conditional Risk (loss functions)
-
-![](./Images/4_stat_superv_parametric.png)
 
 
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/4_stat_superv_parametric.ipynb?create=1)  
+### Statistical Pattern Recognition Examples
+
+- **Supervised Learning**
+    	
+    - Parametric Techniques
+    	- Univariate Normal Density 
+    		- Ex1: 2-classes, equal variances, equal priors [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/1_stat_superv_parametric.ipynb)]
+			- Ex2: 2-classes, different variances, equal priors [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/2_stat_superv_parametric.ipynb)]
+			- Ex3: 2-classes, equal variances, different priors [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/3_stat_superv_parametric.ipynb)]
+			- Ex4: 2-classes, different variances, different priors, loss function [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/4_stat_superv_parametric.ipynb)]
+			- Ex5: 2-classes, different variances, equal priors, loss function, cauchy distr. [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/4_stat_superv_parametric.ipynb)]			
+			
+			
+			
+    	- Multivariate Normal Density
+			- Ex5: 2-classes, different variances, equal priors, loss function [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/6_stat_superv_parametric.ipynb)]    			- Ex7: 2-classes, equal variances, equal priors [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/6_stat_superv_parametric.ipynb)]  		
+    		
+    - Non-Parametric Techniques
+
+- **Unsupervised Learning**
+
+
 <br>
-[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/4_stat_superv_parametric.pdf)
-
 <hr>
-
-## Example 5
-[[back to top](#sections)]
-
-##### Problem Category:
-- Statistical Pattern Recognition   
-- Supervised Learning  
-- Parametric Learning  
-- Bayes Decision Theory  
-- Univariate data  
-- 2-class problem
-- different variances
-- equal priors
-- **Cauchy model** (2 parameters)
-- With conditional Risk (1-0 loss functions)
-
-![](./Images/6_stat_superv_parametric.png)
-
-
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/6_stat_superv_parametric.ipynb?create=1)  
 <br>
-[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/6_stat_superv_parametric.pdf)
 
-<hr>
+## Links to useful resources
 
-
-<p><a name="multivar"></a></p>
-#### Multivariate Normal Density
-
-## Example 1
-[[back to top](#sections)]
-
-##### Problem Category:
-- Statistical Pattern Recognition   
-- Supervised Learning  
-- Parametric Learning  
-- Bayes Decision Theory  
-- Multivariate data (2-dimensional)
-- 2-class problem
-- different variances
-- equal prior probabilities
-- Gaussian model (2 parameters)
-- with conditional Risk (1-0 loss functions)
-
-![](./Images/5_stat_superv_parametric.png)
-
-
-[View IPython Notebook](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/stat_pattern_class/supervised/parametric/5_stat_superv_parametric.ipynb?create=1)  
 <br>
-[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/stat_pattern_class/supervised/parametric/5_stat_superv_parametric.pdf)
+<br>
 
-<hr>
+<a id='datasets'></a>
 
+#### Dataset Collections
 
- 
+- [Kaggle](https://www.kaggle.com/competitions) - Kaggle, the leading platform for predictive modeling competitions. 
 
+- [UCI MLR](http://archive.ics.uci.edu/ml/) - UC Irvine Machine Learning Repository
 
+- [google.com/publicdata](http://www.google.com/publicdata/directory) - public data maintained by Google
 
+- [Freebase](http://www.freebase.com) - A community-curated database of well-known people, places, and things
+<br>
+<br>
+
+#### Specialized Datasets
+
+- [SMS Spam Collection](http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/) - A collection of 425 SMS spam messages was manually extracted from the Grumbletext Web site
+
+- [SNAP](http://snap.stanford.edu/data/index.html) - Stanford Large Network Dataset Collection
+
+- [Amazon Google Books Ngrams](http://aws.amazon.com/datasets/8172056142375670) - A data set containing Google Books n-gram corpuses
+
+- [The Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/) - Audio features and metadata for a million contemporary popular music tracks.
+
+- [Modeling Online Auctions](http://www.modelingonlineauctions.com/datasets) - Datasets of bidding for different ebay auctions
+
+- [CAT Dataset](http://137.189.35.203/WebUI/CatDatabase/catData.html) - A dataset of 10,000 cat images
+
+- [Click Dataset](http://cnets.indiana.edu/groups/nan/webtraffic/click-dataset/) - A large dataset of about 53.5 billion HTTP requests made by users at Indiana University
+
+- [Meteorites](http://www.analyticbridge.com/profiles/blogs/registered-meteorites-that-has-impacted-on-earth-visualized) - Registered meteorites that have impacted on Earth
+
+- [Common Crawl 2012 web corpus](http://www.bigdatanews.com/profiles/blogs/big-data-set-3-5-billion-web-pages-made-available-for-all-of-us) - A hyperlink graph of 3.5 billion web pages and 128 billion hyperlinks between these pages
+
+- [PyPi/Maven Dependency Data](http://ogirardot.wordpress.com/2013/01/31/sharing-pypimaven-dependency-data/) - State of the Maven/Java dependency graph and state of the PyPi/Python dependency graph.
+
+- [NYPD Crash Data Band-Aid](http://nypd.openscrape.com/#/) - NYPD traffic crash data as a geocoded CSV
+
+- [Pass rates, race & gender](http://home.cc.gatech.edu/ice-gt/556) - Detailed data on pass rates, race, and gender for 2013
+
+- [Nominate/vote data](http://voteview.com/dwnl.htm) - Datasets including all the D-NOMINATE and W-NOMINATE scores
+
+- [aiHit Datasets](http://endb-consolidated.aihit.com/datasets.htm) - Information on random 10,000 UK companies sampled from aiHit DB
+
+- [Amsterdam Library of Object Images (ALOI)](http://aloi.science.uva.nl) - A color image collection of one-thousand small objects, recorded for scientific purposes
