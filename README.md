@@ -123,6 +123,9 @@
 
 - [mldata.org](http://mldata.org) - machine learning data set repository for uploading and finding data sets
 
+- [Infochimps](http://www.infochimps.com/datasets) - a huge collection of large-sized data sets
+
+
 <br>
 <br>
 
