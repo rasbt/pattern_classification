@@ -1,5 +1,8 @@
 
 
+
+
+
 ![logo](./Images/logo.png)
 
 <hr>
@@ -18,11 +21,26 @@
 
 <br>
 <br>
+
+- [Machine learning and pattern classification with scikit-learn](#machine-learning-and-pattern-classification-with-scikit-learn)
+- [Techniques for Dimensionality Reduction](#techniques-for-dimensionality-reduction)
+- [Techniques for Parameter Estimation](#techniques-for-parameter-estimation)
+- [Statistical Pattern Recognition Examples](#statistical-pattern-recognition-examples)
+- [Links to useful resources](#links-to-useful-resources)
+
+
+
+
+
+
+<br>
+<br>
 <br>
 <hr>
 <br>
 
 ### Machine learning and pattern classification with scikit-learn 
+[[back to top](#machine-learning-and-pattern-classification)]
 
 - Entry Point: Data - Using Python's sci-packages to prepare data for Machine Learning tasks and other data analyses [[IPython nb](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/python_data_entry_point.ipynb)]
 
@@ -36,6 +54,7 @@
 <br>
 
 ### Techniques for Dimensionality Reduction
+[[back to top](#machine-learning-and-pattern-classification)]
 
 - **Projection**
 	- Component Analyses
@@ -54,6 +73,7 @@
 <br>
 
 ### Techniques for Parameter Estimation
+[[back to top](#machine-learning-and-pattern-classification)]
 
 
 - **Parametric Techniques**
@@ -78,6 +98,7 @@
 
 
 ### Statistical Pattern Recognition Examples
+[[back to top](#machine-learning-and-pattern-classification)]
 
 - **Supervised Learning**
     	
@@ -105,13 +126,14 @@
 <br>
 
 ## Links to useful resources
+[[back to top](#machine-learning-and-pattern-classification)]
 
 <br>
 <br>
 
-<a id='datasets'></a>
 
 #### Dataset Collections
+[[back to top](#machine-learning-and-pattern-classification)]
 
 - [Kaggle](https://www.kaggle.com/competitions) - Kaggle, the leading platform for predictive modeling competitions. 
 
@@ -130,6 +152,7 @@
 <br>
 
 #### Specialized Datasets
+[[back to top](#machine-learning-and-pattern-classification)]
 
 - [Titanic Survivors](http://lib.stat.cmu.edu/S/Harrell/data/descriptions/titanic.html) - dataset with 1313 samples and 10 features about Titanic survivors
 
