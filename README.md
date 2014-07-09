@@ -131,6 +131,8 @@
 
 #### Specialized Datasets
 
+- [Titanic Survivors](http://lib.stat.cmu.edu/S/Harrell/data/descriptions/titanic.html) - dataset with 1313 samples and 10 features about Titanic survivors
+
 - [SMS Spam Collection](http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/) - A collection of 425 SMS spam messages was manually extracted from the Grumbletext Web site
 
 - [SNAP](http://snap.stanford.edu/data/index.html) - Stanford Large Network Dataset Collection
