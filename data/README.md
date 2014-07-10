@@ -1,7 +1,10 @@
 #Table of Contents
-- [titanic.csv](#titanic-csv)
-- [wine.csv](#wine-csv)
-- [iris.csv](#iris-csv)
+
+- [titanic.csv](#titaniccsv)
+- [wine.csv](#winecsv)
+- [iris.csv](#iriscsv)
+
+
 
 
 <br>
@@ -126,4 +129,5 @@ Bache, K. & Lichman, M. (2013). UCI Machine Learning Repository. Irvine, CA: Uni
 
 
 Creator: R.A. Fisher (1936)
+
 
