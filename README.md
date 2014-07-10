@@ -23,6 +23,7 @@
 <br>
 
 - [Machine learning and pattern classification with scikit-learn](#machine-learning-and-pattern-classification-with-scikit-learn)
+- [Pre-Processing](#pre-processing)
 - [Techniques for Dimensionality Reduction](#techniques-for-dimensionality-reduction)
 - [Techniques for Parameter Estimation](#techniques-for-parameter-estimation)
 - [Statistical Pattern Recognition Examples](#statistical-pattern-recognition-examples)
@@ -47,8 +48,25 @@
 
 - An Introduction to simple linear supervised classification using `scikit-learn` [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/scikit_linear_classification.ipynb)]
 
+<br>
+<br>
+<br>
+<hr>
+<br>
+
+### Pre-processing
+
+[[back to top](#machine-learning-and-pattern-classification)]
+
+- About Feature Scaling: Standardization and Min-Max-Scaling (Normalization) [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/preprocessing/about_standardization_normalization.ipynb)]
 
 
+
+<br>
+<br>
+<br>
+<hr>
+<br>
 
 <hr>
 <br>
