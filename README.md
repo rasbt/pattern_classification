@@ -27,7 +27,8 @@
 - [Techniques for Dimensionality Reduction](#techniques-for-dimensionality-reduction)
 - [Techniques for Parameter Estimation](#techniques-for-parameter-estimation)
 - [Statistical Pattern Recognition Examples](#statistical-pattern-recognition-examples)
-- [Links to useful resources](#links-to-useful-resources)
+- [Other Resources](#other-resources)
+- [Dataset Collections](#links-to-useful-resources)
 
 
 
@@ -138,6 +139,17 @@
 
 - **Unsupervised Learning**
 
+<br>
+<hr>
+<br>
+
+## Other resources
+[[back to top](#machine-learning-and-pattern-classification)]
+
+- A collection of copy-and-paste ready LaTex equations [[Markdown](./resources/latex_equations.md)]
+
+<br>
+<br>
 
 <br>
 <hr>
