@@ -64,7 +64,7 @@ or prepend `/begin{equation}` and append `/end{equation}`
 		
 	![](../Images/latex_equations/bayes_theorem_words.gif)	
 		
-		\Rightarrow posterior \; probability = \frac{\; likelihood \; \cdot \; prior \; probability}{evidence}
+		\Rightarrow \text{posterior probability} = \frac{ \text{likelihood}  \cdot \text{prior probability}}{\text{evidence}}
  
  
 	- decision rule:
@@ -73,7 +73,7 @@ or prepend `/begin{equation}` and append `/end{equation}`
 
 	![](../Images/latex_equations/bayes_decision_rule_2.gif)
     
-        Decide \;  \omega_1 $ if  P(\omega_1|x) > P(\omega_2|x) \; else \; decide \; \omega_2 .
+        \text{Decide } \omega_1  \text{ if }  P(\omega_1|x) > P(\omega_2|x)  \text{ else decide } \omega_2 .
 		
 		\frac{p(x|\omega_1) \cdot P(\omega_1)}{p(x)} > \frac{p(x|\omega_2) \cdot P(\omega_2)}{p(x)}
 
@@ -128,11 +128,11 @@ example covariance matrix:
 
     \pmb A\pmb{v} =  \lambda\pmb{v}\\\\
 
-    where \\\\
+    \text{where} \\\\
 
     \pmb A = S_{W}^{-1}S_B\\
-    \pmb{v} = \; Eigenvector\\
-    \lambda = \; Eigenvalue
+    \pmb{v} = \text{Eigenvector}\\
+    \lambda = \text{Eigenvalue}
     
    
 
@@ -164,8 +164,8 @@ where
 
 ![](../Images/latex_equations/least_squares_variance_covariance.gif)
 
-	S_{xy} = \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})\quad (covariance) \\
-	\sigma{_x}^{2} = \sum_{i=1}^{n} (x_i - \bar{x})^2\quad (variance)	
+	S_{xy} = \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})\quad \text{(covariance)} \\
+	\sigma{_x}^{2} = \sum_{i=1}^{n} (x_i - \bar{x})^2\quad \text{(variance)}	
 	
 <br>
 <br>	
@@ -213,14 +213,16 @@ where
 
     S_W = \sum\limits_{i=1}^{c} S_i \\\\
 
-    where  \\\\
+    \text{where}  \\\\
 
     S_i = \sum\limits_{\pmb x \in D_i}^n (\pmb x - \pmb m_i)\;(\pmb x - \pmb m_i)^T
-    (scatter \; matrix \; for \; every \; class) \\\\
+     \text{  (scatter matrix for every class)} \\\\
 
-    and \\\\
+    \text{and} \\\\
       
-    \pmb m_i = \frac{1}{n_i} \sum\limits_{\pmb x \in D_i}^n \; \pmb x_k \;(mean \; vector)m	\limits_{\pmb x \in D_i}^n \; \pmb x_k \;(mean \; vector)
+    \pmb m_i = \frac{1}{n_i} \sum\limits_{\pmb x \in D_i}^n \; \pmb x_k   \text{ (mean vector)}
+
+
 
 <br>
 <br>
@@ -353,7 +355,7 @@ and p(D | **&theta;**) is also called the likelihood of **&theta;**.
 ![](../Images/latex_equations/parzen_window_function_hypercube_1.gif)
 
 	\phi(\pmb u) = \Bigg[ \begin{array}{ll} 1 & \quad |u_j| \leq 1/2 \; ;\quad \quad j = 1, ..., d \\
-	0 & \quad otherwise \end{array} 
+	0 & \quad \text{otherwise} \end{array} 
 
 for a hypercube of unit length 1 centered at the coordinate system's origin. What this function basically does is assigning a value 1 to a sample point if it lies within 1/2 of the edges of the hypercube, and 0 if lies outside (note that the evaluation is done for all dimensions of the sample point).
 
@@ -363,7 +365,9 @@ If we extend on this concept, we can define a more general equation that applies
 
 	k_n = \sum\limits_{i=1}^{n} \phi \bigg( \frac{\pmb x - \pmb x_i}{h_n} \bigg)\\\\
 
-	where \; \pmb u = \bigg( \frac{\pmb x - \pmb x_i}{h_n} \bigg)
+	\text{where}\\\\
+
+	\pmb u = \bigg( \frac{\pmb x - \pmb x_i}{h_n} \bigg)
 
 - probability density estimation with hypercube kernel
 
@@ -373,8 +377,8 @@ If we extend on this concept, we can define a more general equation that applies
 
 ![](../Images/latex_equations/parzen_estimation_hypercube_2.gif)
 
-	where\\\\   
-	h^d = V_n\quad   and    \quad\phi \bigg[ \frac{\pmb x - \pmb x_i}{h_n} \bigg] = k
+	\text{where}\\\\   
+	h^d = V_n\quad   \text{and}    \quad\phi \bigg[ \frac{\pmb x - \pmb x_i}{h_n} \bigg] = k
 
 - probability density estimation with Gaussian kernel
 
@@ -435,7 +439,7 @@ where
 
 ![](../Images/latex_equations/pca_mean_vector.gif)
 
-	\pmb m = \frac{1}{n} \sum\limits_{k=1}^n \; \pmb x_k \; (mean \; vector)
+	\pmb m = \frac{1}{n} \sum\limits_{k=1}^n \; \pmb x_k \text{   (mean vector)}
 
 <br>
 <br>
@@ -449,7 +453,7 @@ where
 
     p(x|\theta) =  \Bigg\{ \begin{array}{c}
       2\theta xe^{- \theta x^2},\quad \quad x \geq0, \\
-      0,\quad otherwise. \\
+      0,\quad \text{otherwise.} \\
       \end{array}
 
 <br>
