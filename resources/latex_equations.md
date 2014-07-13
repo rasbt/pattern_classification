@@ -98,7 +98,7 @@ or prepend `/begin{equation}` and append `/end{equation}`
 
 ![](../Images/latex_equations/binomial_distribution.gif)
 
-	p_k = \bigg[ \begin{array}{c} n \\ k \end{array}\bigg] \cdot p^k \cdot (1-p)^{n-k}
+	p_k = {n \choose x} \cdot p^k \cdot (1-p)^{n-k}
 
 
 <br>
