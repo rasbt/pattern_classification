@@ -109,14 +109,17 @@ or prepend `/begin{equation}` and append `/end{equation}`
 
 ![](../Images/latex_equations/covariance.gif)
 
-	S_{xy} = \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})\quad
+	S_{xy} = \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})
 
 example covariance matrix:
 
 ![](../Images/latex_equations/covariance_matrix.gif)
 
-	\quad\pmb{\Sigma_1} = 
-	\begin{bmatrix}1\quad 0\quad 0\\0\quad 1\quad0\\0\quad0\quad1\end{bmatrix}\quad
+	\pmb{\Sigma_1} = 
+	\begin{bmatrix}1 & 0 & 0 \\
+	0 & 1\ &0\\
+	0 & 0 & 1
+	\end{bmatrix}
 
 <br>
 <br>
