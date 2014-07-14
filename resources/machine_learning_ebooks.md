@@ -12,9 +12,9 @@ Last updated: 07/14/2014
 
 [http://www1.maths.leeds.ac.uk/~charles/statlog/](http://www1.maths.leeds.ac.uk/~charles/statlog/)
 
-Authors: D. Michie, D.J. Spiegelhalter, C.C. Taylor (eds)  
-Year: 1994  
-Pages: 290 pages
+- Authors: D. Michie, D.J. Spiegelhalter, C.C. Taylor (eds)  
+- Year: 1994  
+- Pages: 290 pages  
 
 From the Back Cover:
 
@@ -27,9 +27,9 @@ This book is based on the EC (ESPRIT) project StatLog which compare and evaluate
 
 [http://www-ai.ijs.si/SasoDzeroski/ILPBook/](http://www-ai.ijs.si/SasoDzeroski/ILPBook//)
 
-Authors: Nada Lavrac and Saso Dzeroski  
-Year: 1994  
-Pages: 400 pages
+- Authors: Nada Lavrac and Saso Dzeroski  
+- Year: 1994   
+- Pages: 400 pages  
 
 From the Back Cover:
 
@@ -43,9 +43,9 @@ The book provides the reader with an in-depth understanding of empirical ILP tec
 
 [http://markwatson.com/opencontent_data/JavaAI3rd.pdf](http://markwatson.com/opencontent_data/JavaAI3rd.pdf)
 
-Author: Mark Watson  
-Year: 2008  
-Pages: 210 pages
+- Author: Mark Watson  
+- Year: 2008  
+- Pages: 210 pages
 
 Author Preface:
 I wrote this book for both professional programmers and home hobbyists who al- ready know how to program in Java and who want to learn practical Artificial In- telligence (AI) programming and information processing techniques. I have tried to make this an enjoyable book to work through. In the style of a “cook book,” the chapters can be studied in any order. Each chapter follows the same pattern: a mo- tivation for learning a technique, some theory for the technique, and a Java example program that you can experiment with.
@@ -56,9 +56,9 @@ Author Preface:
 
 [http://www.inference.phy.cam.ac.uk/itila/book.html](http://www.inference.phy.cam.ac.uk/itila/book.html)
 
-Author: David J.C. MacKay  
-Year: 2003  
-Pages: 628 pages
+- Author: David J.C. MacKay  
+- Year: 2003  
+- Pages: 628 pages
 
 Author Preface:
 This book is aimed at senior undergraduates and graduate students in Engi- neering, Science, Mathematics, and Computing. It expects familiarity with calculus, probability theory, and linear algebra as taught in a first- or second- year undergraduate course on mathematics for scientists and engineers.Conventional courses on information theory cover not only the beauti- ful theoretical ideas of Shannon, but also practical solutions to communica- tion problems. This book goes further, bringing in Bayesian data modelling, Monte Carlo methods, variational methods, clustering algorithms, and neural networks.Why unify information theory and machine learning? Because they are two sides of the same coin. In the 1960s, a single field, cybernetics, was populated by information theorists, computer scientists, and neuroscientists, all studying common problems. Information theory and machine learning still belong together. Brains are the ultimate compression and communication systems. And the state-of-the-art algorithms for both data compression and error-correcting codes use the same tools as machine learning.
@@ -69,9 +69,9 @@ Author Preface:
 
 [http://ciml.info](http://ciml.info)
 
-Author: Hal Daumé III
-Year: 2012  
-Pages: 189 pages
+- Author: Hal Daumé III
+- Year: 2012  
+- Pages: 189 pages
 
 Book Description:
 Machine learning is a broad and fascinating field. It has been called one of the sexiest fields to work in1. It has applications in an incredibly wide variety of application areas, from medicine to advertising, from military to pedestrian. Its importance is likely to grow, as more and more areas turn to it as a way of dealing with the massive amounts of data available.
@@ -83,9 +83,9 @@ Book Description:
 
 [http://www.cs.ucl.ac.uk/staff/d.barber/brml/](http://www.cs.ucl.ac.uk/staff/d.barber/brml/)
 
-Author: David Barber
-Year: 2014  
-Pages: 648 pages
+- Author: David Barber
+- Year: 2014  
+- Pages: 648 pages
 
 Book Description:
 
@@ -97,9 +97,9 @@ The book begins with the basic concepts of graphical models and inference. For t
 
 [http://arxiv.org/pdf/0904.3664.pdf](http://arxiv.org/pdf/0904.3664.pdf)
 
-Author: Amnon Shashua
-Year: 2008  
-Pages: 105 pages
+- Author: Amnon Shashua
+- Year: 2008  
+- Pages: 105 pages
 
 Book Description:
 
@@ -113,9 +113,9 @@ Bayesian Decision Theory, Maximum Likelihood/ Maximum Entropy Duality, EM Algori
 
 [http://statweb.stanford.edu/~tibs/ElemStatLearn/](http://statweb.stanford.edu/~tibs/ElemStatLearn/)
 
-Authors: ￼Trevor Hastie, Robert Tibshirani, Jerome Fried
-Year: 2009 
-Pages: 763 pages
+- Authors: ￼Trevor Hastie, Robert Tibshirani, Jerome Fried
+- Year: 2009 
+- Pages: 763 pages
 
 Book Description:
 
@@ -132,9 +132,9 @@ Trevor Hastie, Robert Tibshirani, and Jerome Friedman are professors of statisti
 
 [http://www.gaussianprocess.org/gpml/chapters/](http://www.gaussianprocess.org/gpml/chapters/)
 
-Authors: Carl Edward Rasmussen and Christopher K. I. Williams
-Year: 2006
-Pages: 266 pages
+- Authors: Carl Edward Rasmussen and Christopher K. I. Williams
+- Year: 2006
+- Pages: 266 pages
 
 Book Description:
 
@@ -147,9 +147,9 @@ Gaussian processes (GPs) provide a principled, practical, probabilistic approach
 
 [http://www.cse.wustl.edu/~kilian/introductions/reinforcement_learning.pdf](http://www.cse.wustl.edu/~kilian/introductions/reinforcement_learning.pdf)
 
-Authors: Richard S. Sutton and Andrew G. Barto
-Year: 1998
-Pages: 322 pages
+- Authors: Richard S. Sutton and Andrew G. Barto
+- Year: 1998
+- Pages: 322 pages
 
 Book Description:
 
@@ -163,9 +163,9 @@ The book is divided into three parts. Part I defines the reinforcement learning 
 
 [http://www.intechopen.com/books/machine_learning](http://www.intechopen.com/books/machine_learning)
 
-Authors: Abdelhamid Mellouk and Abdennacer Chebira
-Year: 2009
-Pages: 450 pages
+- Authors: Abdelhamid Mellouk and Abdennacer Chebira
+- Year: 2009
+- Pages: 450 pages
 
 Book Description:
 
@@ -180,9 +180,9 @@ Machine Learning can be defined in various ways related to a scientific domain c
 
 [http://www.intechopen.com/books/reinforcement_learning](http://www.intechopen.com/books/machine_learning)
 
-Authors: Cornelius Weber, Mark Elshaw and Norbert Michael Mayer
-Year: 2008
-Pages: 434 pages
+- Authors: Cornelius Weber, Mark Elshaw and Norbert Michael Mayer
+- Year: 2008
+- Pages: 434 pages
 
 Book Description:
 
