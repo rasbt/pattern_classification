@@ -158,66 +158,13 @@
 ## Links to useful resources
 [[back to top](#machine-learning-and-pattern-classification)]
 
-<br>
-<br>
-
-
-#### Dataset Collections
-[[back to top](#machine-learning-and-pattern-classification)]
-
-- [Kaggle](https://www.kaggle.com/competitions) - Kaggle, the leading platform for predictive modeling competitions. 
-
-- [UCI MLR](http://archive.ics.uci.edu/ml/) - UC Irvine Machine Learning Repository
-
-- [google.com/publicdata](http://www.google.com/publicdata/directory) - public data maintained by Google
-
-- [Freebase](http://www.freebase.com) - A community-curated database of well-known people, places, and things
-
-- [mldata.org](http://mldata.org) - machine learning data set repository for uploading and finding data sets
-
-- [Infochimps](http://www.infochimps.com/datasets) - a huge collection of large-sized data sets
-
+#### [Dataset Collections](./resources/dataset_collections.md)
 
 <br>
 <br>
 
-#### Specialized Datasets
-[[back to top](#machine-learning-and-pattern-classification)]
 
-- [Titanic Survivors](http://lib.stat.cmu.edu/S/Harrell/data/descriptions/titanic.html) - dataset with 1313 samples and 10 features about Titanic survivors
 
-- [SMS Spam Collection](http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/) - A collection of 425 SMS spam messages was manually extracted from the Grumbletext Web site
-
-- [SNAP](http://snap.stanford.edu/data/index.html) - Stanford Large Network Dataset Collection
-
-- [Amazon Google Books Ngrams](http://aws.amazon.com/datasets/8172056142375670) - A data set containing Google Books n-gram corpuses
-
-- [The Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/) - Audio features and metadata for a million contemporary popular music tracks.
-
-- [Modeling Online Auctions](http://www.modelingonlineauctions.com/datasets) - Datasets of bidding for different ebay auctions
-
-- [CAT Dataset](http://137.189.35.203/WebUI/CatDatabase/catData.html) - A dataset of 10,000 cat images
-
-- [Click Dataset](http://cnets.indiana.edu/groups/nan/webtraffic/click-dataset/) - A large dataset of about 53.5 billion HTTP requests made by users at Indiana University
-
-- [Meteorites](http://www.analyticbridge.com/profiles/blogs/registered-meteorites-that-has-impacted-on-earth-visualized) - Registered meteorites that have impacted on Earth
-
-- [Common Crawl 2012 web corpus](http://www.bigdatanews.com/profiles/blogs/big-data-set-3-5-billion-web-pages-made-available-for-all-of-us) - A hyperlink graph of 3.5 billion web pages and 128 billion hyperlinks between these pages
-
-- [PyPi/Maven Dependency Data](http://ogirardot.wordpress.com/2013/01/31/sharing-pypimaven-dependency-data/) - State of the Maven/Java dependency graph and state of the PyPi/Python dependency graph.
-
-- [NYPD Crash Data Band-Aid](http://nypd.openscrape.com/#/) - NYPD traffic crash data as a geocoded CSV
-
-- [Pass rates, race & gender](http://home.cc.gatech.edu/ice-gt/556) - Detailed data on pass rates, race, and gender for 2013
-
-- [Nominate/vote data](http://voteview.com/dwnl.htm) - Datasets including all the D-NOMINATE and W-NOMINATE scores
-
-- [aiHit Datasets](http://endb-consolidated.aihit.com/datasets.htm) - Information on random 10,000 UK companies sampled from aiHit DB
-
-- [Amsterdam Library of Object Images (ALOI)](http://aloi.science.uva.nl) - A color image collection of one-thousand small objects, recorded for scientific purposes
-
-<br>
-<br>
 
 ## Free learning material
 
