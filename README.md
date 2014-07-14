@@ -29,7 +29,7 @@
 - [Statistical Pattern Recognition Examples](#statistical-pattern-recognition-examples)
 - [Other Resources](#other-resources)
 - [Dataset Collections](#links-to-useful-resources)
-
+- [Free learning material](#Free-learning-material)
 
 
 
@@ -215,3 +215,15 @@
 - [aiHit Datasets](http://endb-consolidated.aihit.com/datasets.htm) - Information on random 10,000 UK companies sampled from aiHit DB
 
 - [Amsterdam Library of Object Images (ALOI)](http://aloi.science.uva.nl) - A color image collection of one-thousand small objects, recorded for scientific purposes
+
+<br>
+<br>
+
+## Free learning material
+
+[[back to top](#machine-learning-and-pattern-classification)]
+
+#### [Free Machine Learning eBooks](./resources/machine_learning_ebooks.md)
+
+
+
