@@ -188,6 +188,20 @@ Book Description:
 
 Brains rule the world, and brain-like computation is increasingly used in computers and electronic devices. Brain-like computation is about processing and interpreting data or directly putting forward and performing actions. Learning is a very important aspect. This book is on reinforcement learning which involves performing actions to achieve a goal. The first 11 chapters of this book describe and extend the scope of reinforcement learning. The remaining 11 chapters show that there is already wide usage in numerous fields. Reinforcement learning can tackle control tasks that are too complex for traditional, hand-designed, non-learning controllers. As learning computers can deal with technical complexities, the tasks of human operators remain to specify goals on increasingly higher levels. This book shows that reinforcement learning is a very dynamic area in terms of theory and applications and it shall stimulate and encourage new research in this field.
 
+<hr>
+
+**An Introduction to Statistical Learning with Applications in R**
+
+[http://www-bcf.usc.edu/%7Egareth/ISL/](http://www-bcf.usc.edu/%7Egareth/ISL/)
+
+- Authors: Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani
+- Year: 2013
+- Pages: 426 pages
+
+Book Description:
+
+This book provides an introduction to statistical learning methods. It is aimed for upper level undergraduate students, masters students and Ph.D. students in the non-mathematical sciences. The book also contains a number of R labs with detailed explanations on how to implement the various methods in real life settings, and should be a valuable resource for a practicing data scientist.
+
 
 
 <hr>
