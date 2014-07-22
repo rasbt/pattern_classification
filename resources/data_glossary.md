@@ -15,7 +15,7 @@ Please feel free to drop me a note via
 - [Curse of dimensionality](#curse-of-dimensionality)
 - [Data mining](#data-mining)
 - [Decision rule](#decision-rule)
-- [Feature Selection](#feature-selection)
+- [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
 - [Machine learning](#machine-learning)
@@ -68,11 +68,11 @@ A function in pattern classification tasks for making an "action", e.g., assigni
 <br>
 <br>
 
-<a class="mk-toclify" id="feature-selection"></a>
-#### Feature Selection 
+<a class="mk-toclify" id="feature-selection-algorithms"></a>
+#### Feature Selection Algorithms
 [[back to top](#table-of-contents)]
 
-An alternative algorithmic approach to projection-based techniques like Principal Component and Linear Discriminant Analysis for dimensionality reduction of a dataset in order to select a "sufficiently reduced" feature subset with minimal decline of the recognition rate of a classifier.
+Algorithmic approaches as alternative to projection-based techniques like Principal Component and Linear Discriminant Analysis for dimensionality reduction of a dataset via the selection a "sufficiently reduced" feature subsets with minimal decline of the recognition rate of a classifier.
 
 <br>
 <br>
@@ -166,4 +166,4 @@ A linear transformation technique that is commonly used to project a given datas
 #### Support Vector Machines (SVM)
 [[back to top](#table-of-contents)]
 
-An algorithm that is used for supervised pattern classification tasks and regression analyses. The method is based on the creation of hyperplanes that are separating different classes in a dataset. 
+A classifier in supervised pattern classification tasks and regression analyses with an algorithm that is based on the creation of hyperplanes (as decision boundaries) that maximize the margin between different classes and penalize misclassifications.
