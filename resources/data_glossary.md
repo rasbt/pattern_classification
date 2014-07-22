@@ -172,6 +172,7 @@ A linear transformation technique that is commonly used to project a given datas
 
 <a class="mk-toclify" id="k-means-clustering"></a>
 #### K-Means Clustering
+[[back to top](#table-of-contents)]
 
 A method of partitioning a dataset into `k` clusters by picking `k` random initial points, assigning clusters, averaging, reassigning, and repeating until stability is achieved. The number `k` must be chosen beforehand.
 
@@ -180,5 +181,6 @@ A method of partitioning a dataset into `k` clusters by picking `k` random initi
 
 <a class="mc-toclify" id="k-means-pp-clustering"></a>
 #### K-Means++ Clustering
+[[back to top](#table-of-contents)]
 
 A variant of [k-means](#k-means-clustering) where instead of choosing all initial centers randomly, the first is chosen randomly, the second chosen with probability proportional to the squared distance from the first, the third chosen with probability proportional to the square distance from the first two, etc.
