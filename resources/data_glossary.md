@@ -18,7 +18,7 @@ Please feel free to drop me a note via
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [K-Means Clustering](#k-means-clustering)
-- [K-Means++ Clustering](#k-means-pp-clustering)
+- [K-Means++ Clustering](#k-means-clustering-1)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
 - [Machine learning](#machine-learning)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
@@ -85,7 +85,7 @@ Non-parametric techniques to estimate probability densities from the available d
 <br>
 <br>
 
-<a class="mk-toclify" id="k-means-clustering"></a>
+<a class="mk-toclify" id="k-means-clustering-1"></a>
 #### K-Means Clustering
 [[back to top](#table-of-contents)]
 
