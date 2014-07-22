@@ -47,7 +47,7 @@ For a fixed number of training samples, the curse of dimensionality describes th
 #### Data mining
 [[back to top](#table-of-contents)]
 
-A field that is closely related to machine learning and pattern classification that is focussed on the collection of data and combines different techniques the data in order to extract meaningful information.
+A field that is closely related to machine learning and pattern classification. The focus of data mining is often on the collection of data and combines different techniques the data in order to extract meaningful information out of data.
 
 <br>
 <br>
