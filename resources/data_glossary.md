@@ -26,7 +26,8 @@ Please feel free to drop me a note via
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
-
+- [K-Means Clustering](#k-means-clustering)
+- [K-Means++ Clustering](#k-means-pp-clustering)
 
 
 
@@ -164,6 +165,22 @@ The usage of patterns in datasets to discriminate between classes, i.e., to assi
 #### Principal Component Analysis (PCA)
 [[back to top](#table-of-contents)]
 
+<br>
+<br>
+
 A linear transformation technique that is commonly used to project a given dataset onto a new feature space  or feature subspace (for dimensionality reduction) where the new component axes are the directions that maximize the variance/spread of the data.
 
+<a class="mk-toclify" id="k-means-clustering"></a>
+#### K-Means Clustering
+[[back to top](#table-of-contents)]
 
+A method of partitioning a dataset into `k` clusters by picking `k` random initial points, assigning clusters, averaging, reassigning, and repeating until stability is achieved. The number `k` must be chosen beforehand.
+
+<br>
+<br>
+
+<a class="mc-toclify" id="k-means-pp-clustering"></a>
+#### K-Means++ Clustering
+[[back to top](#table-of-contents)]
+
+A variant of [k-means](#k-means-clustering) where instead of choosing all initial centers randomly, the first is chosen randomly, the second chosen with probability proportional to the squared distance from the first, the third chosen with probability proportional to the square distance from the first two, etc. See [this paper](http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf).
