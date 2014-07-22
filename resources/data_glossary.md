@@ -1,4 +1,4 @@
-Sebastian Raschka
+Sebastian Raschka  
 last updated: 07/21/2014
 
 # Data Science definitions in less than 50 words
