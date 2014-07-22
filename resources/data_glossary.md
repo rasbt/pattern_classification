@@ -57,7 +57,7 @@ A field that is closely related to machine learning and pattern classification. 
 #### Decision rule
 [[back to top](#table-of-contents)]
 
-A function in pattern classification tasks for making an "action", e.g., assigning a certain class label to an observation or pattern.
+A function in pattern classification tasks of making an "action", e.g., assigning a certain class label to an observation or pattern.
 
 <br>
 <br>
