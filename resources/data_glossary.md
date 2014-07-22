@@ -19,7 +19,7 @@ Please feel free to drop me a note via
 - [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
 - [Overfitting](#overfitting)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
-- [Principal Component Analysis (PCA):](#principal-component-analysis-pca)
+- [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Support Vector Machines (SVM)](#support-vector-machines-svm)
 
 
@@ -101,7 +101,7 @@ A non-parametric kernel density estimation technique for probability densities o
 <br>
 
 <a class="mk-toclify" id="principal-component-analysis-pca"></a>
-#### Principal Component Analysis (PCA):
+#### Principal Component Analysis (PCA)
 [[back to top](#table-of-contents)]
 
 A linear transformation technique that is commonly used to project a given dataset onto a new feature space  or feature subspace (for dimensionality reduction) where the new component axes are the directions that maximize the variance/spread of the data.
