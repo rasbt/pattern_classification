@@ -27,9 +27,8 @@
 - [Techniques for Dimensionality Reduction](#techniques-for-dimensionality-reduction)
 - [Techniques for Parameter Estimation](#techniques-for-parameter-estimation)
 - [Statistical Pattern Recognition Examples](#statistical-pattern-recognition-examples)
-- [Other Resources](#other-resources)
-- [Dataset Collections](#links-to-useful-resources)
-- [Free learning material](#Free-learning-material)
+- [Resources](#resources)
+
 
 
 
@@ -143,34 +142,19 @@
 <hr>
 <br>
 
-## Other resources
+## Resources
 [[back to top](#machine-learning-and-pattern-classification)]
 
-- A collection of copy-and-paste ready LaTex equations [[Markdown](./resources/latex_equations.md)]
+- Copy-and-paste ready LaTex equations [[Markdown](./resources/latex_equations.md)]
 
-<br>
-<br>
+- Open-source datasets [[Markdown](./resources/dataset_collections.md)]
 
-<br>
-<hr>
-<br>
+- Free Machine Learning eBooks [[Markdown]](./resources/machine_learning_ebooks.md)]
 
-## Links to useful resources
-[[back to top](#machine-learning-and-pattern-classification)]
-
-#### [Dataset Collections](./resources/dataset_collections.md)
-
-<br>
-<br>
+- Data Science definitions in less than 50 words [[Markdown](./resources/data_glossary.md)]
 
 
 
-
-## Free learning material
-
-[[back to top](#machine-learning-and-pattern-classification)]
-
-#### [Free Machine Learning eBooks](./resources/machine_learning_ebooks.md)
 
 
 
