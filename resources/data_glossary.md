@@ -3,7 +3,7 @@ last updated: 07/21/2014
 
 # Data Science definitions in less than 50 words
 
-I be happy about contributions or to hear your comments and suggestions. 
+I'd be happy about contributions or to hear your comments and suggestions. 
 Please feel free to drop me a note via
 [twitter](https://twitter.com/rasbt), [email](mailto:bluewoodtree@gmail.com), or [google+](https://plus.google.com/+SebastianRaschka).
 
