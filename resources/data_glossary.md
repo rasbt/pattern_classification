@@ -3,11 +3,9 @@ last updated: 07/21/2014
 
 # Data Science definitions in less than 50 words
 
-<hr>
-I would be happy to hear your comments and suggestions. 
+I be happy about contributions or to hear your comments and suggestions. 
 Please feel free to drop me a note via
 [twitter](https://twitter.com/rasbt), [email](mailto:bluewoodtree@gmail.com), or [google+](https://plus.google.com/+SebastianRaschka).
-<hr>
 
 
 <a class="mk-toclify" id="table-of-contents"></a>
@@ -24,8 +22,6 @@ Please feel free to drop me a note via
 - [Principal Component Analysis (PCA):](#principal-component-analysis-pca)
 - [Support Vector Machines (SVM)](#support-vector-machines-svm)
 
-
-# Data Science definitions in less than 50 words
 
 <br>
 <br>
