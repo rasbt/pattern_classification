@@ -19,6 +19,8 @@ Please feel free to drop me a note via
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
 - [Machine learning](#machine-learning)
+- [Supervised learning](#supervised-learning)
+- [Unsupervised learning](#unsupervised-learning)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
 - [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
 - [Objective function](#objective-function)
@@ -109,7 +111,7 @@ The problem of inferring a mapping between the input space X and a target variab
 <br>
 
 
-<a class="mk-toclify" id="supervised-learning"></a>
+<a class="mk-toclify" id="unsupervised-learning"></a>
 #### Unsupervised Learning
 
 [[back to top](#table-of-contents)]
