@@ -147,16 +147,6 @@ A classifier based on a statistical model (i.e., Bayes theorem: calculating post
 <br>
 <br>
 
-<a class="mk-toclify" id="naive-bayes-classifier"></a>
-#### Naive Bayes Classifier
-[[back to top](#table-of-contents)]
-
-A classifier based on a statistical model (i.e., Bayes theorem: calculating posterior probabilities based on the prior probability and the so-called likelihood) in the field of pattern classification. It is based on the assumption that all features are i.i.d. (independent and identically distributed). 
-
-<br>
-<br>
-
-
 <a class="mk-toclify" id="objective-function"></a>
 #### Objective function
 [[back to top](#table-of-contents)]
