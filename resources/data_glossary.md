@@ -148,6 +148,8 @@ A non-parametric kernel density estimation technique for probability densities o
 
 #### Pattern classification
 
+[[back to top](#table-of-contents)]
+
 The usage of patterns in datasets to discriminate between classes, i.e., to assign a class label to a new observation based on inference.
 
 <br>
