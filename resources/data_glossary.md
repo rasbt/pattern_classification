@@ -219,6 +219,7 @@ A linear transformation technique that is commonly used to project a given datas
 #### Supervised Learning
 
 [[back to top](#table-of-contents)]
+
 The problem of inferring a mapping between the input space X and a target variable y when given labelled training data (i.e. (X,y) pairs). Encompasses the problems of classification (categorical y) and regression (continuous y).  
 (submitted by [Alex Yakubovich](https://github.com/ayakubovich))
 
@@ -231,6 +232,7 @@ The problem of inferring a mapping between the input space X and a target variab
 #### Unsupervised Learning
 
 [[back to top](#table-of-contents)]
+
 The problem of inferring latent structure in data when not given any training cases. Encompasses the problems of clustering, dimensionality reduction and density estimation.   
 (submitted by [Alex Yakubovich](https://github.com/ayakubovich))
 
