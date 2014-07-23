@@ -1,11 +1,20 @@
 Sebastian Raschka  
 last updated: 07/23/2014
 
-# Data Science definitions in less than 50 words
+# Terms in data science defined in less than 50 words
+
+
+Although, I am not a big fan of the term "data science" itself  - since it is a umbrella term that basically includes everything but means nothing in particular.  
+Here, I probably finally found a context where it is useful: I think it makes this collection eligible to include anything from machine learning and pattern classification, data mining, computer science, engineering, mathematics, and statistics. I basically picture "data science" as the name of the Venn diagram of all those different fields (with extensive overlap!).
+
+<hr>
+
 
 I'd be happy about contributions or to hear your comments and suggestions. 
 Please feel free to drop me a note via
 [twitter](https://twitter.com/rasbt), [email](mailto:bluewoodtree@gmail.com), or [google+](https://plus.google.com/+SebastianRaschka).
+
+
 
 
 <a class="mk-toclify" id="table-of-contents"></a>
