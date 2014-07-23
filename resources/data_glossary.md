@@ -19,6 +19,8 @@ Please feel free to drop me a note via
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
+- [Least Squares fit](#least-squares-fit)
+- [Least Squares fit - linear](#least-squares-fit-linear)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
 - [Machine learning](#machine-learning)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
@@ -102,9 +104,28 @@ A method of partitioning a dataset into *k* clusters by picking *k* random initi
 A variant of [k-means](#k-means-clustering) where instead of choosing all initial centers randomly, the first is chosen randomly, the second chosen with probability proportional to the squared distance from the first, the third chosen with probability proportional to the square distance from the first two, etc. See [this paper](http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf).   
 (submitted by [Jack Maney](https://github.com/jackmaney))
 
+<br>
+<br>
+
+<a class="mc-toclify" id="least-squares-fit"></a>
+#### Least Squares fit
+[[back to top](#table-of-contents)]
+
+A regression technique to fit a linear or nonlinear model to a dataset to identify relationships between variables by minimizing the norm of residuals squared. 
 
 <br>
 <br>
+
+<a class="mc-toclify" id="least-squares-fit-linear"></a>
+#### Least Squares fit - linear
+[[back to top](#table-of-contents)]
+
+
+A linear regression technique that fits a straight line to a data set (or overdetermined system) by minimizing the sum of the squared residuals, which can be the minimized vertical or perpendicular offsets from the fitted line.
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="linear-discriminant-analysis-lda"></a>
 #### Linear Discriminant Analysis (LDA)
@@ -200,7 +221,7 @@ The usage of patterns in datasets to discriminate between classes, i.e., to assi
 [[back to top](#table-of-contents)]
 
 
-A linear transformation technique that is commonly used to project a given dataset onto a new feature space  or feature subspace (for dimensionality reduction) where the new component axes are the directions that maximize the variance/spread of the data.
+A linear transformation technique that is commonly used to project a dataset (without utilizing class labels) onto a new feature space or feature subspace (for dimensionality reduction) where the new component axes are the directions that maximize the variance/spread of the data. 
 
 <br>
 <br>
