@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 07/22/2014
+last updated: 07/23/2014
 
 # Data Science definitions in less than 50 words
 
@@ -15,6 +15,7 @@ Please feel free to drop me a note via
 - [Curse of dimensionality](#curse-of-dimensionality)
 - [Data mining](#data-mining)
 - [Decision rule](#decision-rule)
+- [Density-based clustering](#density-based-clustering)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [K-Means Clustering](#k-means-clustering)
@@ -60,6 +61,17 @@ A field that is closely related to machine learning and pattern classification. 
 <br>
 
 
+
+<a class="mk-toclify" id="dbscan"></a>
+#### DBSCAN
+[[back to top](#table-of-contents)]
+
+DBSCAN is a variant of a density-based clustering algorithm that identifies core points as regions of high-densities based on their number of neighbors (> *MinPts*) in a specified radius (&epsilon;). Points that are below *MinPts* but within &epsilon; are specified as border points; the remaining points are classified as noise points.   
+([Vahid Mirjalili](https://github.com/mirjalil) and [Sebastian Raschka](https://github.com/rasbt))
+
+<br>
+<br>
+
 <a class="mk-toclify" id="decision-rule"></a>
 #### Decision rule
 [[back to top](#table-of-contents)]
@@ -68,6 +80,20 @@ A function in pattern classification tasks of making an "action", e.g., assignin
 
 <br>
 <br>
+
+
+
+<a class="mc-toclify" id="density-dased-clustering"></a>
+#### Density-based clustering
+[[back to top](#table-of-contents)]
+
+In density-based clustering, regions of high density in n-dimensional space are identified as clusters. The best advantage of this class of clustering algorithms is that they do not require apriori knowledge of number of clusters (as opposed to kmeans algorithm).   
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="feature-selection-algorithms"></a>
 #### Feature Selection Algorithms
