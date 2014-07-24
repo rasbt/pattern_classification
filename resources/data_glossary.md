@@ -21,12 +21,14 @@ Please feel free to drop me a note via
 
 #Table of Contents
 
+- [Cross-validation](#cross-validation)
 - [Curse of dimensionality](#curse-of-dimensionality)
 - [Data mining](#data-mining)
 - [Decision rule](#decision-rule)
 - [Density-based clustering](#density-based-clustering)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Kernel Density Estimation](#kernel-density-estimation)
+- [K-fold cross-validation](#k-fold-cross-validation)
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
 - [Least Squares fit](#least-squares-fit)
@@ -39,8 +41,6 @@ Please feel free to drop me a note via
 - [Normalization - Standard Scores](#normalization-standard-scores)
 - [Objective function](#objective-function)
 - [Overfitting](#overfitting)
-- [Cross-validation](#cross-validation)
-- [K-fold Cross-validation](#kfold-cross-validation)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
@@ -49,6 +49,16 @@ Please feel free to drop me a note via
 
 
 
+
+<br>
+<br>
+
+<a class="mk-toclify" id="cross-validation"></a>
+#### Cross-validation
+[[back to top](#table-of-contents)]
+
+Cross-validation is a statistical technique to estimate the prediction error rate by splitting the data into training, cross-validation, and test sets. A prediction model is obtained using the training set, and model parameters are optimized by the cross-validation set, while the test set is held primarily for empirical error estimation.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
@@ -120,6 +130,19 @@ Algorithmic approaches as alternative to projection-based techniques like Princi
 [[back to top](#table-of-contents)]
 
 Non-parametric techniques to estimate probability densities from the available data without requiring prior knowledge of the underlying model of the probability distribution.
+
+<br>
+<br>
+
+
+
+
+<a class="mk-toclify" id="k-fold-cross-validation"></a>
+#### k-fold Cross-validation
+[[back to top](#table-of-contents)]
+
+In k-fold cross-validation the data is split into *k* subsets, then a prediction/classification model is trained *k* times, each time holding one subset as test set, training the model parameters using the remaining *k*-1. Finally, cross-validation error is evaluated as the average error out of all *k* training models.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
@@ -215,26 +238,6 @@ A function that is to be optimized (minimizing or maximizing a numerical value d
 <br>
 
 
-<a class="mk-toclify" id="cross-validation"></a>
-#### Cross-validation
-[[back to top](#table-of-contents)]
-
-Cross-validation is a statistical technique to estimate the prediction error rate by splitting the data into training, cross-validation and test sets. In best practices, a prediction model is obtained using trainig set, model parameters are optimized by cross-validation set, while test set is held primarily for empirical error estimation.
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
-
-<br>
-<br>
-
-
-<a class="mk-toclify" id="kfold-cross-validation"></a>
-#### Cross-validation
-[[back to top](#table-of-contents)]
-
-K-fold cross-validation splits the data into K subsets, then train a prediction/classification model K times, each time holding one subset as test set, and train the model paramaters using the remaining K-1. Finally, cross-validation error is evaluated as the average error out of all K training models.
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
-
-<br>
-<br>
 
 
 <a class="mk-toclify" id="normalization-min-max-scaling"></a>
