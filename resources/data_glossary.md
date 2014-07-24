@@ -39,6 +39,8 @@ Please feel free to drop me a note via
 - [Normalization - Standard Scores](#normalization-standard-scores)
 - [Objective function](#objective-function)
 - [Overfitting](#overfitting)
+- [Cross-validation](#cross-validation)
+- [K-fold Cross-validation](#kfold-cross-validation)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
@@ -211,6 +213,29 @@ A function that is to be optimized (minimizing or maximizing a numerical value d
 
 <br>
 <br>
+
+
+<a class="mk-toclify" id="cross-validation"></a>
+#### Cross-validation
+[[back to top](#table-of-contents)]
+
+Cross-validation is a statistical technique to estimate the prediction error rate by splitting the data into training, cross-validation and test sets. In best practices, a prediction model is obtained using trainig set, model parameters are optimized by cross-validation set, while test set is held primarily for empirical error estimation.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+
+<a class="mk-toclify" id="kfold-cross-validation"></a>
+#### Cross-validation
+[[back to top](#table-of-contents)]
+
+K-fold cross-validation splits the data into K subsets, then train a prediction/classification model K times, each time holding one subset as test set, and train the model paramaters using the remaining K-1. Finally, cross-validation error is evaluated as the average error out of all K training models.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="normalization-min-max-scaling"></a>
 #### Normalization - Min-Max scaling
