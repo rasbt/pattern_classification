@@ -99,7 +99,7 @@ A field that is closely related to machine learning and pattern classification. 
 [[back to top](#table-of-contents)]
 
 DBSCAN is a variant of a density-based clustering algorithm that identifies core points as regions of high-densities based on their number of neighbors (> *MinPts*) in a specified radius (&epsilon;). Points that are below *MinPts* but within &epsilon; are specified as border points; the remaining points are classified as noise points.   
-([Vahid Mirjalili](https://github.com/mirjalil) and [Sebastian Raschka](https://github.com/rasbt))
+([Vahid Mirjalili](https://github.com/mirjalil); edited)
 
 <br>
 <br>
@@ -120,7 +120,7 @@ A function in pattern classification tasks of making an "action", e.g., assignin
 [[back to top](#table-of-contents)]
 
 In density-based clustering, regions of high density in n-dimensional space are identified as clusters. The best advantage of this class of clustering algorithms is that they do not require apriori knowledge of number of clusters (as opposed to kmeans algorithm).   
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
 
 <br>
@@ -130,8 +130,8 @@ In density-based clustering, regions of high density in n-dimensional space are 
 #### Distance Metric Learning
 [[back to top](#table-of-contents)]
 
-Distance metrics are the most fundamental part of every machine learning algorithm. Distance metric learning instead of learning a model, obtains a distance metric which can potentially separates classes/clusters most optimally. Relevance of features for classification is estimated and incorporated in distance calculations to yield larger distances for objects from different classes, while smaller distances for objects of the same class.
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+Distance metrics are fundamental for many machine learning algorithms. Distance metric learning - instead of learning a model - incorporates estimated relevances of features to obtain a distance metric for potentially optimal separation of classes and clusters: Large distances for objects from different classes, and small distances for objects of the same class, respectively.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
 
 <br>
