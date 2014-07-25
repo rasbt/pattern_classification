@@ -44,6 +44,7 @@ Please feel free to drop me a note via
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
+- [Purity Measure](#purity-measure)
 - [Supervised learning](#supervised-learning)
 - [Unsupervised learning](#unsupervised-learning)
 
@@ -288,6 +289,19 @@ A linear transformation technique that is commonly used to project a dataset (wi
 
 <br>
 <br>
+
+
+<a class="mk-toclify" id="purity-measure"></a>
+#### Purity Measure
+
+[[back to top](#table-of-contents)]
+
+In cluster analysis, provided that we have ground truth cluster memberships (or classes), we can use purity to assess the effectiveness of clustering. Purity is measured by assigning each cluster to the class that is maximally represented, and computing the weigthed average of maximum number of samples from the same class in each cluster.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="supervised-learning"></a>
 #### Supervised Learning
