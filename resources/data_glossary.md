@@ -296,7 +296,7 @@ A linear transformation technique that is commonly used to project a dataset (wi
 
 [[back to top](#table-of-contents)]
 
-In cluster analysis, provided that we have ground truth cluster memberships (or classes), we can use purity to assess the effectiveness of clustering. Purity is measured by assigning each cluster to the class that is maximally represented, and computing the weigthed average of maximum number of samples from the same class in each cluster.
+In a cluster analysis with given truth cluster memberships (or classes), "purity" is used to assess the effectiveness of clustering. Purity is measured by assigning each cluster to the class that is maximally represented and computed via the weighted average of maximum number of samples from the same class in each cluster.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
