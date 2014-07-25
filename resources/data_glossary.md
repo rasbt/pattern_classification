@@ -57,7 +57,7 @@ Please feel free to drop me a note via
 #### Cosine Similarity
 [[back to top](#table-of-contents)]
 
-In vector space, cosine similarity measures the orientation of two sample n-dimensional vectors with respect to each other, irrespective of their magnitude. It is calculated by the dot product of two numeric vectors, normalized by vector lengths. Output values close to 1 means two samples are highly similar. This similarity measure is also used in document clustering, which needs constructing numeric term vectors.
+Cosine similarity measures the orientation of two *n*-dimensional sample vectors irrespective to their magnitude. It is calculated by the dot product of two numeric vectors, and it is normalized by the vector lengths, so that output values close to 1 indicate high similarity.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
