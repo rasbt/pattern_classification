@@ -151,7 +151,7 @@
 
 - Free Machine Learning eBooks [[Markdown](./resources/machine_learning_ebooks.md)]
 
-- Data Science definitions in less than 50 words [[Markdown](./resources/data_glossary.md)]
+- Terms in data science defined in less than 50 words [[Markdown](./resources/data_glossary.md)]
 
 
 

@@ -1,23 +1,34 @@
 Sebastian Raschka  
-last updated: 07/23/2014
+last updated: 07/24/2014
 
-# Data Science definitions in less than 50 words
+# Terms in data science defined in less than 50 words
+
+
+Although, I am not a big fan of the term "data science" itself  - since it is a umbrella term that basically includes everything but means nothing in particular.  
+Here, I probably finally found a context where it is useful: I think it makes this collection eligible to include anything from machine learning and pattern classification, data mining, computer science, engineering, mathematics, and statistics. I basically picture "data science" as the name of the Venn diagram of all those different fields (with extensive overlap!).
+
+<hr>
+
 
 I'd be happy about contributions or to hear your comments and suggestions. 
 Please feel free to drop me a note via
 [twitter](https://twitter.com/rasbt), [email](mailto:bluewoodtree@gmail.com), or [google+](https://plus.google.com/+SebastianRaschka).
 
 
+
+
 <a class="mk-toclify" id="table-of-contents"></a>
 
 #Table of Contents
 
+- [Cross-validation](#cross-validation)
 - [Curse of dimensionality](#curse-of-dimensionality)
 - [Data mining](#data-mining)
 - [Decision rule](#decision-rule)
 - [Density-based clustering](#density-based-clustering)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Kernel Density Estimation](#kernel-density-estimation)
+- [K-fold cross-validation](#k-fold-cross-validation)
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
 - [Least Squares fit](#least-squares-fit)
@@ -38,6 +49,16 @@ Please feel free to drop me a note via
 
 
 
+
+<br>
+<br>
+
+<a class="mk-toclify" id="cross-validation"></a>
+#### Cross-validation
+[[back to top](#table-of-contents)]
+
+Cross-validation is a statistical technique to estimate the prediction error rate by splitting the data into training, cross-validation, and test sets. A prediction model is obtained using the training set, and model parameters are optimized by the cross-validation set, while the test set is held primarily for empirical error estimation.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
@@ -109,6 +130,19 @@ Algorithmic approaches as alternative to projection-based techniques like Princi
 [[back to top](#table-of-contents)]
 
 Non-parametric techniques to estimate probability densities from the available data without requiring prior knowledge of the underlying model of the probability distribution.
+
+<br>
+<br>
+
+
+
+
+<a class="mk-toclify" id="k-fold-cross-validation"></a>
+#### k-fold Cross-validation
+[[back to top](#table-of-contents)]
+
+In k-fold cross-validation the data is split into *k* subsets, then a prediction/classification model is trained *k* times, each time holding one subset as test set, training the model parameters using the remaining *k*-1. Finally, cross-validation error is evaluated as the average error out of all *k* training models.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
@@ -202,6 +236,9 @@ A function that is to be optimized (minimizing or maximizing a numerical value d
 
 <br>
 <br>
+
+
+
 
 <a class="mk-toclify" id="normalization-min-max-scaling"></a>
 #### Normalization - Min-Max scaling
