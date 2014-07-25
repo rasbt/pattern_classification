@@ -21,6 +21,7 @@ Please feel free to drop me a note via
 
 #Table of Contents
 
+- [Cosine Similarity](#cosine-similarity)
 - [Cross-validation](#cross-validation)
 - [Curse of dimensionality](#curse-of-dimensionality)
 - [Data mining](#data-mining)
@@ -49,7 +50,15 @@ Please feel free to drop me a note via
 - [Unsupervised learning](#unsupervised-learning)
 
 
+<br>
+<br>
 
+<a class="mk-toclify" id="cosine-similarity"></a>
+#### Cosine Similarity
+[[back to top](#table-of-contents)]
+
+In vector space, cosine similarity measures the orientation of two sample n-dimensional vectors with respect to each other, irrespective of their magnitude. It is calculated by the dot product of two numeric vectors, normalized by vector lengths. Output values close to 1 means two samples are highly similar. This similarity measure is also used in document clustering, which needs constructing numeric term vectors.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
