@@ -27,6 +27,7 @@ Please feel free to drop me a note via
 - [Data mining](#data-mining)
 - [Decision rule](#decision-rule)
 - [Density-based clustering](#density-based-clustering)
+- [Distance Metric Learning](#distance-metric-learning)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [K-fold cross-validation](#k-fold-cross-validation)
@@ -119,6 +120,17 @@ A function in pattern classification tasks of making an "action", e.g., assignin
 [[back to top](#table-of-contents)]
 
 In density-based clustering, regions of high density in n-dimensional space are identified as clusters. The best advantage of this class of clustering algorithms is that they do not require apriori knowledge of number of clusters (as opposed to kmeans algorithm).   
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+
+<br>
+<br>
+
+<a class="mc-toclify" id="distance-metric-learning"></a>
+#### Distance Metric Learning
+[[back to top](#table-of-contents)]
+
+Distance metrics are the most fundamental part of every machine learning algorithm. Distance metric learning instead of learning a model, obtains a distance metric which can potentially separates classes/clusters most optimally. Relevance of features for classification is estimated and incorporated in distance calculations to yield larger distances for objects from different classes, while smaller distances for objects of the same class.
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 
