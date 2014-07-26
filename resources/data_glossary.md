@@ -48,6 +48,7 @@ Please feel free to drop me a note via
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Purity Measure](#purity-measure)
 - [Supervised learning](#supervised-learning)
+- [Support Vector Machine (SVM)](#support-vector-machine)
 - [Unsupervised learning](#unsupervised-learning)
 
 
@@ -336,6 +337,16 @@ The problem of inferring a mapping between the input space X and a target variab
 <br>
 
 
+<a class="mk-toclify" id="support-vector-machine"></a>
+#### Support Vector Machine
+
+[[back to top](#table-of-contents)]
+
+SMV is a classification  method, that tries to find the hyperplane that separates classes with highest margin, where margin is defined as the minimum distance from sample points to the hyperplane. The sample point(s) that form margin are called support vectors, and they suffice for creating the SVM model.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
 
 <a class="mk-toclify" id="unsupervised-learning"></a>
 #### Unsupervised Learning
