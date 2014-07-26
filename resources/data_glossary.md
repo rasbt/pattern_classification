@@ -342,8 +342,8 @@ The problem of inferring a mapping between the input space X and a target variab
 
 [[back to top](#table-of-contents)]
 
-SMV is a classification  method, that tries to find the hyperplane that separates classes with highest margin, where margin is defined as the minimum distance from sample points to the hyperplane. The sample point(s) that form margin are called support vectors, and they suffice for creating the SVM model.
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+SMV is a classification  method that tries to find the hyperplane which separates classes with highest margin. The margin is defined as the minimum distance from sample points to the hyperplane. The sample point(s) that form margin are called support vectors and eventually establish the SVM model.   
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
 <br>
 <br>
