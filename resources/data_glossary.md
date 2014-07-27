@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 07/25/2014
+last updated: 07/27/2014
 
 # Terms in data science defined in less than 50 words
 
