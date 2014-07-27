@@ -21,6 +21,7 @@ Please feel free to drop me a note via
 
 #Table of Contents
 
+- [Confusion Matrix](#confusion-matrix)
 - [Cosine Similarity](#cosine-similarity)
 - [Cross-validation](#cross-validation)
 - [Curse of dimensionality](#curse-of-dimensionality)
@@ -28,7 +29,9 @@ Please feel free to drop me a note via
 - [Decision rule](#decision-rule)
 - [Density-based clustering](#density-based-clustering)
 - [Distance Metric Learning](#distance-metric-learning)
+- [Eigenvectors and Eigenvalues](#eigenvectors-and-eigenvalues)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
+- [Feature Space](#feature-space)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [K-fold cross-validation](#k-fold-cross-validation)
 - [K-Means Clustering](#k-means-clustering)
@@ -37,6 +40,7 @@ Please feel free to drop me a note via
 - [Least Squares fit - linear](#least-squares-fit-linear)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
 - [Machine learning](#machine-learning)
+- [Mahalanobis distance](#mahalanobis-distance)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
 - [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
 - [Normalization - Min-Max Scaling](#normalization-min-max-scaling)
@@ -53,8 +57,21 @@ Please feel free to drop me a note via
 - [Unsupervised learning](#unsupervised-learning)
 
 
+
 <br>
 <br>
+
+
+<a class="mk-toclify" id="confusion-matrix"></a>
+#### Confusion Matrix
+[[back to top](#table-of-contents)]
+
+The confusion matrix is used as a way to represent the performance of a classifier and is sometimes also called "error matrix". This square matrix consists of columns and rows that list the number of instances as absolute or relative "actual class" vs. "predicted class" ratios.
+
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="cosine-similarity"></a>
 #### Cosine Similarity
@@ -139,6 +156,16 @@ Distance metrics are fundamental for many machine learning algorithms. Distance 
 <br>
 <br>
 
+<a class="mc-toclify" id="eigenvectors-and-eigenvalues"></a>
+#### Eigenvectors and Eigenvalues
+[[back to top](#table-of-contents)]
+
+Both eigenvectors and eigenvalues fundamental in many applications involve linear systems and are related via *A&middot;v = &lambda;&middot;v* (where *A* is a square matrix, *v* the eigenvector, and &lambda; the eigenvalue). Eigenvectors are describing the direction of the axes of a linear transformation, whereas eigenvalues are describing the scale or magnitude.
+
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="feature-selection-algorithms"></a>
 #### Feature Selection Algorithms
@@ -148,6 +175,16 @@ Algorithmic approaches as alternative to projection-based techniques like Princi
 
 <br>
 <br>
+
+<a class="mk-toclify" id="feature-space"></a>
+#### Feature Space
+[[back to top](#table-of-contents)]
+
+A feature space describes the descriptive variables  that are available for samples in a dataset as a *d*-dimensional Euclidean space. E.g., sepal length and width, and petal length and width for each flower sample in the popular Iris dataset.
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="kernel-density-estimation"></a>
 #### Kernel Density Estimation
@@ -226,6 +263,16 @@ A linear transformation technique (related to Principal Component Analysis) that
 [[back to top](#table-of-contents)]
 
 A set of algorithmic instructions for discovering and learning patterns from data e.g., to train a classifier for a pattern classification task.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="mahalanobis-distance"></a>
+#### Mahalanobis distance
+
+[[back to top](#table-of-contents)]
+
+The Mahalanobis distance measure accounts for the covariance among variables by calculating the distance between a sample *x* and the sample mean &mu; in units of the standard deviation.  The Mahalanobis distance becomes equal to the Euclidean distance for uncorrelated with same variances.
 
 
 <br>
@@ -318,8 +365,9 @@ A linear transformation technique that is commonly used to project a dataset (wi
 #### Precision and Recall
 [[back to top](#table-of-contents)]
 
-Precision and recall are two measures to assess performance of a classifier. When  class label distributoins are skewed, performance assessment via classification accuracy might not be suitable, instead precision and recall might be better. Precision is defined as the ratio of number of relevant items out of total retrieved items, whereas recall is the fraction of relevant items which are retrieved.
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+Precision and recall are two measures to assess performance of a classifier if class label distributions are skewed.
+Precision is defined as the ratio of number of relevant items out of total retrieved items, whereas recall is the fraction of relevant items which are retrieved.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
 <br>
 <br>
