@@ -45,6 +45,7 @@ Please feel free to drop me a note via
 - [Overfitting](#overfitting)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
+- [Precision and Recall](#precision-recall)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Purity Measure](#purity-measure)
 - [Supervised learning](#supervised-learning)
@@ -312,6 +313,16 @@ A linear transformation technique that is commonly used to project a dataset (wi
 <br>
 <br>
 
+
+<a class="mk-toclify" id="precision-recall"></a>
+#### Precision and Recall
+[[back to top](#table-of-contents)]
+
+Precision and recall are two measures to assess the performance of a classifier. When the class label distributoins are skewed, performance assessment via classification accuracy might not be suitable,, instead Precision and Recall might be better. Precision is defined as the ratio of number of relevant items by number of retrieved items, whereas recall is the fraction of relevant items which are retrieved.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
 
 <a class="mk-toclify" id="purity-measure"></a>
 #### Purity Measure
