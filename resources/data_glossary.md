@@ -318,7 +318,7 @@ A linear transformation technique that is commonly used to project a dataset (wi
 #### Precision and Recall
 [[back to top](#table-of-contents)]
 
-Precision and recall are two measures to assess the performance of a classifier. When the class label distributoins are skewed, performance assessment via classification accuracy might not be suitable,, instead Precision and Recall might be better. Precision is defined as the ratio of number of relevant items by number of retrieved items, whereas recall is the fraction of relevant items which are retrieved.
+Precision and recall are two measures to assess performance of a classifier. When  class label distributoins are skewed, performance assessment via classification accuracy might not be suitable, instead precision and recall might be better. Precision is defined as the ratio of number of relevant items out of total retrieved items, whereas recall is the fraction of relevant items which are retrieved.
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
