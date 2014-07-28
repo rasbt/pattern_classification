@@ -33,6 +33,7 @@ Please feel free to drop me a note via
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Feature Space](#feature-space)
 - [Kernel Density Estimation](#kernel-density-estimation)
+- [Kernel Methods](#kernel-methods)
 - [K-fold cross-validation](#k-fold-cross-validation)
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
@@ -195,6 +196,19 @@ Non-parametric techniques to estimate probability densities from the available d
 <br>
 <br>
 
+
+
+<a class="mk-toclify" id="kernel-methods"></a>
+#### Kernel Methods
+[[back to top](#table-of-contents)]
+
+Kernel methods are algorithms that map the sample vectors of a dataset onto a (typically) higher-dimensional feature space via a so-called kernel function. The goal is to identify  and simplify general relationships between data, which is especially useful for linearly non-separable datasets.  
+
+<br>
+<br>
+
+
+Kernel methods are algorithms that map the sample vectors of a dataset onto a (typically) higher-dimensional feature space via a so-called Kernel function. The goal is to identify  and simplify general relationships between data, which is especially useful for linearly non-separable datasets.  
 
 
 
