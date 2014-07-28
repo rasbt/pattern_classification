@@ -163,8 +163,9 @@ Non-parametric techniques to estimate probability densities from the available d
 #### Kernel Trick
 [[back to top](#table-of-contents)]
 
-Any linear model can be converted to a non-linear form by transfering the feature space to a higher dimension (even infinite dimension) using Kernel method. An example algorithm is Kernel-SVM. The term kernel trick means for final learning model, you do not need to compute the features in infinite dimensional space, rather the actual distances are required which can be computed by inner product of sample points.
+Any linear model can be converted to a non-linear form by transfering the feature space to a higher dimension (even infinite dimensions) using Kernel method. The term kernel trick means for final learning model, you do not need to compute the features in infinite dimensional space, rather the actual distances are required which can be computed by inner product of sample points.
 
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 <br>
 <br>
 
