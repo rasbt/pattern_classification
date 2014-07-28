@@ -383,7 +383,7 @@ The problem of inferring latent structure in data when not given any training ca
 
 [[back to top](#table-of-contents)]
 
-   
+The equclidean distance between two points after performing whitening transformation, is equivalent to Mahalanobis distance of those two points before whitening transformation.
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
