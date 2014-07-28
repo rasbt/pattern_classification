@@ -6,21 +6,18 @@
 ![logo](./Images/logo.png)
 
 <hr>
-**A collection of tutorials and examples for solving and understanding machine learning and pattern classification tasks.**
+**Tutorials, examples, collections, and everything else that falls into the categories: pattern classification, machine learning, and data mining.**
 <br>
 <br>
 
 
 
-
-
 <br>
 <br>
 
-# Machine Learning and Pattern Classification
+# Sections
 
-<br>
-<br>
+
 
 - [Machine learning and pattern classification with scikit-learn](#machine-learning-and-pattern-classification-with-scikit-learn)
 - [Pre-Processing](#pre-processing)
