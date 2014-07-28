@@ -30,6 +30,7 @@ Please feel free to drop me a note via
 - [Density-based clustering](#density-based-clustering)
 - [Distance Metric Learning](#distance-metric-learning)
 - [Eigenvectors and Eigenvalues](#eigenvectors-and-eigenvalues)
+- [Ensemble methods](#ensemble-methods)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Feature Space](#feature-space)
 - [Kernel Density Estimation](#kernel-density-estimation)
@@ -167,6 +168,17 @@ Both eigenvectors and eigenvalues fundamental in many applications involve linea
 <br>
 <br>
 
+<a class="mc-toclify" id="ensemble-methods"></a>
+#### Ensemble methods
+[[back to top](#table-of-contents)]
+
+Ensemble methods combine multiple classifiers which may differ in algorithms, input features, or input samples. Statistical analyses showed that ensemble methods yield better classification performances and are also less prone to overfitting. Different methods, e.g., bagging or boosting, are used to construct the final classification decision based on weighted votes.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="feature-selection-algorithms"></a>
 #### Feature Selection Algorithms
@@ -208,7 +220,6 @@ Kernel methods are algorithms that map the sample vectors of a dataset onto a (t
 <br>
 
 
-Kernel methods are algorithms that map the sample vectors of a dataset onto a (typically) higher-dimensional feature space via a so-called Kernel function. The goal is to identify  and simplify general relationships between data, which is especially useful for linearly non-separable datasets.  
 
 
 
