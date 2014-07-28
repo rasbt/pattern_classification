@@ -33,6 +33,7 @@ Please feel free to drop me a note via
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Feature Space](#feature-space)
 - [Kernel Density Estimation](#kernel-density-estimation)
+- [Kernel Trick](#kernel-trick)
 - [K-fold cross-validation](#k-fold-cross-validation)
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
@@ -195,7 +196,15 @@ Non-parametric techniques to estimate probability densities from the available d
 <br>
 <br>
 
+<a class="mk-toclify" id="kernel-trick"></a>
+#### Kernel Trick
+[[back to top](#table-of-contents)]
 
+Any linear model can be converted to a non-linear form by transfering the feature space to a higher dimension (even infinite dimensions) using Kernel method. The term kernel trick means for final learning model, you do not need to compute the features in infinite dimensional space, rather the actual distances are required which can be computed by inner product of sample points.
+
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+<br>
+<br>
 
 
 <a class="mk-toclify" id="k-fold-cross-validation"></a>
