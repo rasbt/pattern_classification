@@ -29,7 +29,7 @@ Please feel free to drop me a note via
 - [Decision Tree Classifier](#decision-tree-classifier)
 - [Density-based clustering](#density-based-clustering)
 - [Distance Metric Learning](#distance-metric-learning)
-- [Ensemble Methods for Classification](#ensemble)
+- [Ensemble Methods for Classification](#ensemble-methods)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Trick](#kernel-trick)
@@ -142,6 +142,16 @@ Distance metrics are fundamental for many machine learning algorithms. Distance 
 <br>
 <br>
 
+<a class="mc-toclify" id="ensemble-methods"></a>
+#### Ensemble Methods for Classification
+[[back to top](#table-of-contents)]
+
+Ensemble methods combine the classification results of multiple classifiers which may differ in algorithms, input features or input samples. The final classification can be obtained by maximum vote. It is statistically proved that ensemble methods yield better classification performance.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+
+<br>
+<br>
 
 <a class="mk-toclify" id="feature-selection-algorithms"></a>
 #### Feature Selection Algorithms
