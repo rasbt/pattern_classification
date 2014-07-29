@@ -26,8 +26,10 @@ Please feel free to drop me a note via
 - [Curse of dimensionality](#curse-of-dimensionality)
 - [Data mining](#data-mining)
 - [Decision rule](#decision-rule)
+- [Decision Tree Classifier](#decision-tree-classifier)
 - [Density-based clustering](#density-based-clustering)
 - [Distance Metric Learning](#distance-metric-learning)
+- [Ensemble Methods for Classification](#ensemble-methods)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Trick](#kernel-trick)
@@ -141,6 +143,16 @@ Distance metrics are fundamental for many machine learning algorithms. Distance 
 <br>
 <br>
 
+<a class="mc-toclify" id="ensemble-methods"></a>
+#### Ensemble Methods for Classification
+[[back to top](#table-of-contents)]
+
+Ensemble methods combine the classification results of multiple classifiers which may differ in algorithms, input features or input samples. It is statistically proved that ensemble methods yield better classification performance. Ensemble methods are also less prone to over-fitting issues. Constructing the final classification decision based on weighted votes results in different methods such as bagging, boosting, etc. 
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+
+<br>
+<br>
 
 <a class="mk-toclify" id="feature-selection-algorithms"></a>
 #### Feature Selection Algorithms
@@ -157,16 +169,6 @@ Algorithmic approaches as alternative to projection-based techniques like Princi
 
 Non-parametric techniques to estimate probability densities from the available data without requiring prior knowledge of the underlying model of the probability distribution.
 
-<br>
-<br>
-
-<a class="mk-toclify" id="kernel-trick"></a>
-#### Kernel Trick
-[[back to top](#table-of-contents)]
-
-Any linear model can be converted to a non-linear form by transfering the feature space to a higher dimension (even infinite dimensions) using Kernel method. The term kernel trick means for final learning model, you do not need to compute the features in infinite dimensional space, rather the actual distances are required which can be computed by inner product of sample points.
-
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 <br>
 <br>
 
