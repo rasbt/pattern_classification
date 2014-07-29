@@ -27,7 +27,6 @@ Please feel free to drop me a note via
 - [Curse of dimensionality](#curse-of-dimensionality)
 - [Data mining](#data-mining)
 - [Decision rule](#decision-rule)
-- [Decision Tree Classifier](#decision-tree-classifier)
 - [Density-based clustering](#density-based-clustering)
 - [Distance Metric Learning](#distance-metric-learning)
 - [Ensemble Methods for Classification](#ensemble-methods)
@@ -55,7 +54,7 @@ Please feel free to drop me a note via
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
 - [Unsupervised learning](#unsupervised-learning)
-- [Whitening Transformation](#whitening-transformation)
+
 
 
 <br>
