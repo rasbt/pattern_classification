@@ -62,7 +62,7 @@ Please feel free to drop me a note via
 <br>
 
 <a class="mk-toclify" id="bagging"></a>
-#### Cosine Similarity
+#### Bagging
 [[back to top](#table-of-contents)]
 
 Bagging is an ensmble method for classification (or regression analysis), in which individual models are trained by random sample of data, and the final decision is made by voting among individual models with equal weights (or averaging for regression analysis).
