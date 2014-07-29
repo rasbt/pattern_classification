@@ -29,7 +29,7 @@ Please feel free to drop me a note via
 - [Decision rule](#decision-rule)
 - [Density-based clustering](#density-based-clustering)
 - [Distance Metric Learning](#distance-metric-learning)
-- [Ensemble Methods for Classification](#ensemble-methods)
+- [Ensemble Methods](#ensemble-methods)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Trick](#kernel-trick)
@@ -154,12 +154,11 @@ Distance metrics are fundamental for many machine learning algorithms. Distance 
 <br>
 
 <a class="mc-toclify" id="ensemble-methods"></a>
-#### Ensemble Methods for Classification
+#### Ensemble Methods
 [[back to top](#table-of-contents)]
 
-Ensemble methods combine the classification results of multiple classifiers which may differ in algorithms, input features or input samples. It is statistically proved that ensemble methods yield better classification performance. Ensemble methods are also less prone to over-fitting issues. Constructing the final classification decision based on weighted votes results in different methods such as bagging, boosting, etc. 
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
-
+Ensemble methods combine multiple classifiers which may differ in algorithms, input features, or input samples. Statistical analyses showed that ensemble methods yield better classification performances and are also less prone to overfitting. Different methods, e.g., bagging or boosting, are used to construct the final classification decision based on weighted votes.
+(submitted by Vahid Mirjalili; edited)
 
 <br>
 <br>
@@ -389,14 +388,6 @@ SMV is a classification  method that tries to find the hyperplane which separate
 The problem of inferring latent structure in data when not given any training cases. Encompasses the problems of clustering, dimensionality reduction and density estimation.   
 (submitted by [Alex Yakubovich](https://github.com/ayakubovich))
 
-
-<a class="mk-toclify" id="whitening-transformation"></a>
-#### Whitening Transformation
-
-[[back to top](#table-of-contents)]
-
-The equclidean distance between two points after performing whitening transformation, is equivalent to Mahalanobis distance of those two points before whitening transformation.
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
