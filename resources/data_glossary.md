@@ -57,6 +57,7 @@ Please feel free to drop me a note via
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
 - [Unsupervised learning](#unsupervised-learning)
+- [Whitening transformation](#whitening-transformation)
 
 
 
@@ -440,4 +441,13 @@ SMV is a classification  method that tries to find the hyperplane which separate
 The problem of inferring latent structure in data when not given any training cases. Encompasses the problems of clustering, dimensionality reduction and density estimation.   
 (submitted by [Alex Yakubovich](https://github.com/ayakubovich))
 
+<br>
+<br>
+
+<a class="mk-toclify" id="whitening-transformation"></a>
+#### Whitening transformation
+
+[[back to top](#table-of-contents)]
+
+Whitening transformation is a normalization procedure to de-correlate samples in a dataset if the covariance matrix is not a diagonal matrix. Features are uncorrelated after "whitening" and their variances are equal unity, thus the covariance matrix becomes an identity matrix.
 
