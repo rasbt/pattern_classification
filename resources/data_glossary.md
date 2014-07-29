@@ -1,26 +1,28 @@
 Sebastian Raschka  
-last updated: 07/27/2014
+last updated: 07/29/2014
 
 # Terms in data science defined in less than 50 words
 
+<br>
 
 Although, I am not a big fan of the term "data science" itself  - since it is a umbrella term that basically includes everything but means nothing in particular.  
 Here, I probably finally found a context where it is useful: I think it makes this collection eligible to include anything from machine learning and pattern classification, data mining, computer science, engineering, mathematics, and statistics. I basically picture "data science" as the name of the Venn diagram of all those different fields (with extensive overlap!).
 
 <hr>
 
-
 I'd be happy about contributions or to hear your comments and suggestions. 
 Please feel free to drop me a note via
 [twitter](https://twitter.com/rasbt), [email](mailto:bluewoodtree@gmail.com), or [google+](https://plus.google.com/+SebastianRaschka).
 
+<hr>
 
-
+<br>
 
 <a class="mk-toclify" id="table-of-contents"></a>
 
 #Table of Contents
 
+- [Bagging](#bagging)
 - [Confusion Matrix](#confusion-matrix)
 - [Cosine Similarity](#cosine-similarity)
 - [Cross-validation](#cross-validation)
@@ -63,6 +65,15 @@ Please feel free to drop me a note via
 <br>
 <br>
 
+<a class="mk-toclify" id="bagging"></a>
+#### Bagging
+[[back to top](#table-of-contents)]
+
+Bagging is an ensemble method for classification (or regression analysis) in which individual models are trained by random sampling of data, and the final decision is made by voting among individual models with equal weights (or averaging for regression analysis).   
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
 
 <a class="mk-toclify" id="confusion-matrix"></a>
 #### Confusion Matrix
@@ -70,10 +81,8 @@ Please feel free to drop me a note via
 
 The confusion matrix is used as a way to represent the performance of a classifier and is sometimes also called "error matrix". This square matrix consists of columns and rows that list the number of instances as absolute or relative "actual class" vs. "predicted class" ratios.
 
-
 <br>
 <br>
-
 
 <a class="mk-toclify" id="cosine-similarity"></a>
 #### Cosine Similarity
@@ -113,8 +122,6 @@ A field that is closely related to machine learning and pattern classification. 
 <br>
 <br>
 
-
-
 <a class="mk-toclify" id="dbscan"></a>
 #### DBSCAN
 [[back to top](#table-of-contents)]
@@ -134,15 +141,12 @@ A function in pattern classification tasks of making an "action", e.g., assignin
 <br>
 <br>
 
-
-
 <a class="mc-toclify" id="density-dased-clustering"></a>
 #### Density-based clustering
 [[back to top](#table-of-contents)]
 
 In density-based clustering, regions of high density in n-dimensional space are identified as clusters. The best advantage of this class of clustering algorithms is that they do not require apriori knowledge of number of clusters (as opposed to kmeans algorithm).   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
-
 
 <br>
 <br>
@@ -154,7 +158,6 @@ In density-based clustering, regions of high density in n-dimensional space are 
 Distance metrics are fundamental for many machine learning algorithms. Distance metric learning - instead of learning a model - incorporates estimated relevances of features to obtain a distance metric for potentially optimal separation of classes and clusters: Large distances for objects from different classes, and small distances for objects of the same class, respectively.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
-
 <br>
 <br>
 
@@ -163,7 +166,6 @@ Distance metrics are fundamental for many machine learning algorithms. Distance 
 [[back to top](#table-of-contents)]
 
 Both eigenvectors and eigenvalues fundamental in many applications involve linear systems and are related via *A&middot;v = &lambda;&middot;v* (where *A* is a square matrix, *v* the eigenvector, and &lambda; the eigenvalue). Eigenvectors are describing the direction of the axes of a linear transformation, whereas eigenvalues are describing the scale or magnitude.
-
 
 <br>
 <br>
@@ -175,10 +177,8 @@ Both eigenvectors and eigenvalues fundamental in many applications involve linea
 Ensemble methods combine multiple classifiers which may differ in algorithms, input features, or input samples. Statistical analyses showed that ensemble methods yield better classification performances and are also less prone to overfitting. Different methods, e.g., bagging or boosting, are used to construct the final classification decision based on weighted votes.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
-
 <br>
 <br>
-
 
 <a class="mk-toclify" id="feature-selection-algorithms"></a>
 #### Feature Selection Algorithms
@@ -198,7 +198,6 @@ A feature space describes the descriptive variables  that are available for samp
 <br>
 <br>
 
-
 <a class="mk-toclify" id="kernel-density-estimation"></a>
 #### Kernel Density Estimation
 [[back to top](#table-of-contents)]
@@ -208,8 +207,6 @@ Non-parametric techniques to estimate probability densities from the available d
 <br>
 <br>
 
-
-
 <a class="mk-toclify" id="kernel-methods"></a>
 #### Kernel Methods
 [[back to top](#table-of-contents)]
@@ -218,10 +215,6 @@ Kernel methods are algorithms that map the sample vectors of a dataset onto a (t
 
 <br>
 <br>
-
-
-
-
 
 <a class="mk-toclify" id="k-fold-cross-validation"></a>
 #### k-fold Cross-validation
@@ -266,12 +259,10 @@ A regression technique to fit a linear or nonlinear model to a dataset to identi
 #### Least Squares fit - linear
 [[back to top](#table-of-contents)]
 
-
 A linear regression technique that fits a straight line to a data set (or overdetermined system) by minimizing the sum of the squared residuals, which can be the minimized vertical or perpendicular offsets from the fitted line.
 
 <br>
 <br>
-
 
 <a class="mk-toclify" id="linear-discriminant-analysis-lda"></a>
 #### Linear Discriminant Analysis (LDA)
@@ -299,7 +290,6 @@ A set of algorithmic instructions for discovering and learning patterns from dat
 
 The Mahalanobis distance measure accounts for the covariance among variables by calculating the distance between a sample *x* and the sample mean &mu; in units of the standard deviation.  The Mahalanobis distance becomes equal to the Euclidean distance for uncorrelated with same variances.
 
-
 <br>
 <br>
 
@@ -312,8 +302,6 @@ A technique to estimate the parameters that have been fit to a model by maximizi
 
 <br>
 <br>
-
-
 
 <a class="mk-toclify" id="naive-bayes-classifier"></a>
 #### Naive Bayes Classifier
@@ -333,9 +321,6 @@ A function that is to be optimized (minimizing or maximizing a numerical value d
 <br>
 <br>
 
-
-
-
 <a class="mk-toclify" id="normalization-min-max-scaling"></a>
 #### Normalization - Min-Max scaling
 [[back to top](#table-of-contents)]
@@ -344,7 +329,6 @@ A data pre-processing step (also often referred to as "Feature Scaling") for fit
 
 <br>
 <br>
-
 
 <a class="mk-toclify" id="normalization-standard-scores"></a>
 #### Normalization - Standard Scores
@@ -379,12 +363,10 @@ The usage of patterns in datasets to discriminate between classes, i.e., to assi
 #### Principal Component Analysis (PCA)
 [[back to top](#table-of-contents)]
 
-
 A linear transformation technique that is commonly used to project a dataset (without utilizing class labels) onto a new feature space or feature subspace (for dimensionality reduction) where the new component axes are the directions that maximize the variance/spread of the data. 
 
 <br>
 <br>
-
 
 <a class="mk-toclify" id="precision-recall"></a>
 #### Precision and Recall
@@ -408,7 +390,6 @@ In a cluster analysis with given truth cluster memberships (or classes), "purity
 <br>
 <br>
 
-
 <a class="mk-toclify" id="supervised-learning"></a>
 #### Supervised Learning
 
@@ -419,7 +400,6 @@ The problem of inferring a mapping between the input space X and a target variab
 
 <br>
 <br>
-
 
 <a class="mk-toclify" id="support-vector-machine"></a>
 #### Support Vector Machine
