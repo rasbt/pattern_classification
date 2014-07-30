@@ -45,6 +45,7 @@ Please feel free to drop me a note via
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
 - [Machine learning](#machine-learning)
 - [Mahalanobis distance](#mahalanobis-distance)
+- [Markov chains](#markov-chains)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
 - [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
 - [Normalization - Min-Max Scaling](#normalization-min-max-scaling)
@@ -290,6 +291,18 @@ A set of algorithmic instructions for discovering and learning patterns from dat
 [[back to top](#table-of-contents)]
 
 The Mahalanobis distance measure accounts for the covariance among variables by calculating the distance between a sample *x* and the sample mean &mu; in units of the standard deviation.  The Mahalanobis distance becomes equal to the Euclidean distance for uncorrelated with same variances.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="markov-chains"></a>
+#### Markov chains
+
+[[back to top](#table-of-contents)]
+
+Markov chains (names after Andrey Markov) are mathematical systems that describe the transitioning between different states in a model. The transitioning from one state to the other (or back to itself) is a stochastic process.
+
+
 
 <br>
 <br>
