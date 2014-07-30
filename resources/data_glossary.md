@@ -46,6 +46,7 @@ Please feel free to drop me a note via
 - [Machine learning](#machine-learning)
 - [Mahalanobis distance](#mahalanobis-distance)
 - [Markov chains](#markov-chains)
+- [Monte Carlo simulation](#monte-carlo-simulation)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
 - [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
 - [Normalization - Min-Max Scaling](#normalization-min-max-scaling)
@@ -302,6 +303,15 @@ The Mahalanobis distance measure accounts for the covariance among variables by 
 
 Markov chains (names after Andrey Markov) are mathematical systems that describe the transitioning between different states in a model. The transitioning from one state to the other (or back to itself) is a stochastic process.
 
+<br>
+<br>
+
+<a class="mk-toclify" id="monte-carlo-simulation"></a>
+#### Monte Carlo simulation
+
+[[back to top](#table-of-contents)]
+
+A Monte Carlo simulation is an iterative sampling method for solving deterministic models. Random numbers or variables from a particular probability distribution are used as input variables for uncertain parameters to compute the response variables. 
 
 
 <br>
