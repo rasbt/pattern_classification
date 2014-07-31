@@ -31,6 +31,7 @@ Please feel free to drop me a note via
 - [Curse of dimensionality](#curse-of-dimensionality)
 - [Data mining](#data-mining)
 - [Decision rule](#decision-rule)
+- [Decision Tree](#decision-tree)
 - [Density-based clustering](#density-based-clustering)
 - [Distance Metric Learning](#distance-metric-learning)
 <<<<<<< HEAD
@@ -159,6 +160,16 @@ A function in pattern classification tasks of making an "action", e.g., assignin
 <br>
 <br>
 
+<a class="mc-toclify" id="decision-tree"></a>
+#### Decision Tree
+[[back to top](#table-of-contents)]
+
+Decision tree in classification is a tree like graph, with nodes testing some condition os feature, and branches split the decision towards the leaf nodes were the class label will be determined. The optimal tree is learned by evaluating the Gini impurity, or information gain. 
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+
+<br>
+<br>
 
 
 <a class="mc-toclify" id="density-dased-clustering"></a>
