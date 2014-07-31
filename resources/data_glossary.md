@@ -29,6 +29,7 @@ Please feel free to drop me a note via
 - [Curse of dimensionality](#curse-of-dimensionality)
 - [Data mining](#data-mining)
 - [Decision rule](#decision-rule)
+- [Decision Tree Classifier](#decision-tree)
 - [Density-based clustering](#density-based-clustering)
 - [Distance Metric Learning](#distance-metric-learning)
 - [Eigenvectors and Eigenvalues](#eigenvectors-and-eigenvalues)
@@ -143,6 +144,18 @@ A function in pattern classification tasks of making an "action", e.g., assignin
 
 <br>
 <br>
+
+<a class="mc-toclify" id="decision-tree"></a>
+#### Decision Tree
+[[back to top](#table-of-contents)]
+
+Decision tree classifier is a tree like graph, where nodes in the graph test some conditions on some of the features, and branches split the decision towards the leaf nodes. The leaves are at the lowest level and determine the class labels. The optimal tree is learned by minimizing Gini impurity, or maximizing information gain.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+
+<br>
+<br>
+
 
 <a class="mc-toclify" id="density-dased-clustering"></a>
 #### Density-based clustering
