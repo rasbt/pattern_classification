@@ -59,6 +59,7 @@ Please feel free to drop me a note via
 - [Precision and Recall](#precision-recall)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Purity Measure](#purity-measure)
+- [Random forest](#random-forest)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
 - [Unsupervised learning](#unsupervised-learning)
@@ -422,6 +423,17 @@ Precision is defined as the ratio of number of relevant items out of total retri
 [[back to top](#table-of-contents)]
 
 In a cluster analysis with given truth cluster memberships (or classes), "purity" is used to assess the effectiveness of clustering. Purity is measured by assigning each cluster to the class that is maximally represented and computed via the weighted average of maximum number of samples from the same class in each cluster.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="random-forest"></a>
+#### Random forest
+
+[[back to top](#table-of-contents)]
+
+Random forest is an ensemble classifier where multiple [decision tree classifiers](#decision-tree-classifier) are learned and combined together with [baggin](#bagging) technique. Unseen/test objects are then classified by taking the majority of votes from individual decision trees.
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
