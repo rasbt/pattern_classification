@@ -59,6 +59,7 @@ Please feel free to drop me a note via
 - [Precision and Recall](#precision-recall)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Purity Measure](#purity-measure)
+- [Random forest](#random-forest)
 - [Regularization](#regularization)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
@@ -428,12 +429,26 @@ In a cluster analysis with given truth cluster memberships (or classes), "purity
 <br>
 <br>
 
+
+<a class="mk-toclify" id="random-forest"></a>
+#### Random forest
+
+[[back to top](#table-of-contents)]
+
+Random forest is an ensemble classifier where multiple [decision tree classifiers](#decision-tree-classifier) are learned and combined via the [bagging](#bagging) technique. Unseen/test objects are then classified by taking the majority of votes from individual decision trees.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+
+
 <a class="mk-toclify" id="regularization"></a>
 #### Regularization
 
 [[back to top](#table-of-contents)]
 
-Regularization is a technique to overcome overfitting, which introduces a penalty term for model complexity. Usually, the penalty term is the sum squared of model parameters, thereby promoting less complex models during training. Regularization may increase the training error, but potentially it can reduce the test error.
+Regularization is a technique to overcome overfitting by introducing a penalty term for model complexity. Usually, the penalty term is the squared sum of the model parameters, thereby promoting less complex models during training. Regularization may increase the training error but can potentially reduce the classification error on the test dataset.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
