@@ -61,7 +61,7 @@ Please feel free to drop me a note via
 - [Purity Measure](#purity-measure)
 - [Random forest](#random-forest)
 - [Regularization](#regularization)
-- [Ridge Regression](#risge-regression)
+- [Ridge Regression](#ridge-regression)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
 - [Unsupervised learning](#unsupervised-learning)
@@ -457,12 +457,11 @@ Regularization is a technique to overcome overfitting by introducing a penalty t
 
 
 <a class="mk-toclify" id="ridge-regression"></a>
-#### Regularization
+#### Ridge Regression
 
 [[back to top](#table-of-contents)]
 
-Ridge regression is a regularized regression technique, in which sum of squared model coefficients is used to penalize model complexity. 
-
+Ridge regression is a regularized regression technique in which the squared sum of the model coefficients is used to penalize model complexity.   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
