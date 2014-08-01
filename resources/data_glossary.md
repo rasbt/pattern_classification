@@ -5,7 +5,7 @@ last updated: 07/29/2014
 
 <br>
 
-Although, I am not a big fan of the term "data science" itself  - since it is a umbrella term that basically includes everything but means nothing in particular.  
+Although, I am not a big fan of the term "data science" itself  - since it is an umbrella term that basically includes everything but means nothing in particular.  
 Here, I probably finally found a context where it is useful: I think it makes this collection eligible to include anything from machine learning and pattern classification, data mining, computer science, engineering, mathematics, and statistics. I basically picture "data science" as the name of the Venn diagram of all those different fields (with extensive overlap!).
 
 <hr>
@@ -61,6 +61,7 @@ Please feel free to drop me a note via
 - [Purity Measure](#purity-measure)
 - [Random forest](#random-forest)
 - [Regularization](#regularization)
+- [Ridge Regression](#risge-regression)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
 - [Unsupervised learning](#unsupervised-learning)
@@ -453,6 +454,20 @@ Regularization is a technique to overcome overfitting by introducing a penalty t
 
 <br>
 <br>
+
+
+<a class="mk-toclify" id="ridge-regression"></a>
+#### Regularization
+
+[[back to top](#table-of-contents)]
+
+Ridge regression is a regularized regression technique, in which sum of squared model coefficients is used to penalize model complexity. 
+
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="supervised-learning"></a>
 #### Supervised Learning
