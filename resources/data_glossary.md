@@ -44,6 +44,7 @@ Please feel free to drop me a note via
 - [Least Squares fit](#least-squares-fit)
 - [Least Squares fit - linear](#least-squares-fit-linear)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
+- [Logistic Regression](#logistic-regression)
 - [Machine learning](#machine-learning)
 - [Mahalanobis distance](#mahalanobis-distance)
 - [Markov chains](#markov-chains)
@@ -288,6 +289,17 @@ A linear regression technique that fits a straight line to a data set (or overde
 [[back to top](#table-of-contents)]
 
 A linear transformation technique (related to Principal Component Analysis) that is commonly used to project a dataset onto a new feature space or feature subspace, where the new component axes maximize the spread between multiple classes, or for classification of data.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="logistic-regression"></a>
+#### Logistic Regression
+[[back to top](#table-of-contents)]
+
+Logistic regression is a statistical model used for binary classification (binomial logistic regression) where class labels are mapped to "0" or "1" outputs. Logistic regression uses the logistic function (a general form of sigmoid function), where its output ranges from (0-1).
+
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
