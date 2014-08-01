@@ -1,33 +1,43 @@
 Sebastian Raschka  
-last updated: 07/24/2014
+last updated: 07/29/2014
 
 # Terms in data science defined in less than 50 words
 
+<br>
 
-Although, I am not a big fan of the term "data science" itself  - since it is a umbrella term that basically includes everything but means nothing in particular.  
+Although, I am not a big fan of the term "data science" itself  - since it is an umbrella term that basically includes everything but means nothing in particular.  
 Here, I probably finally found a context where it is useful: I think it makes this collection eligible to include anything from machine learning and pattern classification, data mining, computer science, engineering, mathematics, and statistics. I basically picture "data science" as the name of the Venn diagram of all those different fields (with extensive overlap!).
 
 <hr>
-
 
 I'd be happy about contributions or to hear your comments and suggestions. 
 Please feel free to drop me a note via
 [twitter](https://twitter.com/rasbt), [email](mailto:bluewoodtree@gmail.com), or [google+](https://plus.google.com/+SebastianRaschka).
 
+<hr>
 
-
+<br>
 
 <a class="mk-toclify" id="table-of-contents"></a>
 
 #Table of Contents
 
+- [Bagging](#bagging)
+- [Confusion Matrix](#confusion-matrix)
+- [Cosine Similarity](#cosine-similarity)
 - [Cross-validation](#cross-validation)
 - [Curse of dimensionality](#curse-of-dimensionality)
 - [Data mining](#data-mining)
 - [Decision rule](#decision-rule)
+- [Decision tree classifier](#decision-tree-classifier)
 - [Density-based clustering](#density-based-clustering)
+- [Distance Metric Learning](#distance-metric-learning)
+- [Eigenvectors and Eigenvalues](#eigenvectors-and-eigenvalues)
+- [Ensemble methods](#ensemble-methods)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
+- [Feature Space](#feature-space)
 - [Kernel Density Estimation](#kernel-density-estimation)
+- [Kernel Methods](#kernel-methods)
 - [K-fold cross-validation](#k-fold-cross-validation)
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
@@ -35,6 +45,9 @@ Please feel free to drop me a note via
 - [Least Squares fit - linear](#least-squares-fit-linear)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
 - [Machine learning](#machine-learning)
+- [Mahalanobis distance](#mahalanobis-distance)
+- [Markov chains](#markov-chains)
+- [Monte Carlo simulation](#monte-carlo-simulation)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
 - [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
 - [Normalization - Min-Max Scaling](#normalization-min-max-scaling)
@@ -43,12 +56,47 @@ Please feel free to drop me a note via
 - [Overfitting](#overfitting)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
+- [Precision and Recall](#precision-recall)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
+- [Purity Measure](#purity-measure)
+- [Random forest](#random-forest)
+- [Regularization](#regularization)
+- [Ridge Regression](#risge-regression)
 - [Supervised learning](#supervised-learning)
+- [Support Vector Machine (SVM)](#support-vector-machine)
 - [Unsupervised learning](#unsupervised-learning)
+- [Whitening transformation](#whitening-transformation)
 
 
 
+<br>
+<br>
+
+<a class="mk-toclify" id="bagging"></a>
+#### Bagging
+[[back to top](#table-of-contents)]
+
+Bagging is an ensemble method for classification (or regression analysis) in which individual models are trained by random sampling of data, and the final decision is made by voting among individual models with equal weights (or averaging for regression analysis).   
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="confusion-matrix"></a>
+#### Confusion Matrix
+[[back to top](#table-of-contents)]
+
+The confusion matrix is used as a way to represent the performance of a classifier and is sometimes also called "error matrix". This square matrix consists of columns and rows that list the number of instances as absolute or relative "actual class" vs. "predicted class" ratios.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="cosine-similarity"></a>
+#### Cosine Similarity
+[[back to top](#table-of-contents)]
+
+Cosine similarity measures the orientation of two *n*-dimensional sample vectors irrespective to their magnitude. It is calculated by the dot product of two numeric vectors, and it is normalized by the vector lengths, so that output values close to 1 indicate high similarity.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
@@ -81,14 +129,12 @@ A field that is closely related to machine learning and pattern classification. 
 <br>
 <br>
 
-
-
 <a class="mk-toclify" id="dbscan"></a>
 #### DBSCAN
 [[back to top](#table-of-contents)]
 
 DBSCAN is a variant of a density-based clustering algorithm that identifies core points as regions of high-densities based on their number of neighbors (> *MinPts*) in a specified radius (&epsilon;). Points that are below *MinPts* but within &epsilon; are specified as border points; the remaining points are classified as noise points.   
-([Vahid Mirjalili](https://github.com/mirjalil) and [Sebastian Raschka](https://github.com/rasbt))
+([Vahid Mirjalili](https://github.com/mirjalil); edited)
 
 <br>
 <br>
@@ -102,6 +148,16 @@ A function in pattern classification tasks of making an "action", e.g., assignin
 <br>
 <br>
 
+<a class="mc-toclify" id="decision-tree"></a>
+#### Decision tree classifier
+[[back to top](#table-of-contents)]
+
+Decision tree classifiers are tree like graphs, where nodes in the graph test certain conditions on a particular set of features, and branches split the decision towards the leaf nodes. Leaves represent lowest level in the graph and determine the class labels. Optimal tree are trained by minimizing Gini impurity, or maximizing information gain.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+
+<br>
+<br>
 
 
 <a class="mc-toclify" id="density-dased-clustering"></a>
@@ -109,18 +165,54 @@ A function in pattern classification tasks of making an "action", e.g., assignin
 [[back to top](#table-of-contents)]
 
 In density-based clustering, regions of high density in n-dimensional space are identified as clusters. The best advantage of this class of clustering algorithms is that they do not require apriori knowledge of number of clusters (as opposed to kmeans algorithm).   
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
-
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
 <br>
 <br>
 
+<a class="mc-toclify" id="distance-metric-learning"></a>
+#### Distance Metric Learning
+[[back to top](#table-of-contents)]
+
+Distance metrics are fundamental for many machine learning algorithms. Distance metric learning - instead of learning a model - incorporates estimated relevances of features to obtain a distance metric for potentially optimal separation of classes and clusters: Large distances for objects from different classes, and small distances for objects of the same class, respectively.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
+
+<a class="mc-toclify" id="eigenvectors-and-eigenvalues"></a>
+#### Eigenvectors and Eigenvalues
+[[back to top](#table-of-contents)]
+
+Both eigenvectors and eigenvalues fundamental in many applications involve linear systems and are related via *A&middot;v = &lambda;&middot;v* (where *A* is a square matrix, *v* the eigenvector, and &lambda; the eigenvalue). Eigenvectors are describing the direction of the axes of a linear transformation, whereas eigenvalues are describing the scale or magnitude.
+
+<br>
+<br>
+
+<a class="mc-toclify" id="ensemble-methods"></a>
+#### Ensemble methods
+[[back to top](#table-of-contents)]
+
+Ensemble methods combine multiple classifiers which may differ in algorithms, input features, or input samples. Statistical analyses showed that ensemble methods yield better classification performances and are also less prone to overfitting. Different methods, e.g., bagging or boosting, are used to construct the final classification decision based on weighted votes.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
 
 <a class="mk-toclify" id="feature-selection-algorithms"></a>
 #### Feature Selection Algorithms
 [[back to top](#table-of-contents)]
 
 Algorithmic approaches as alternative to projection-based techniques like Principal Component and Linear Discriminant Analysis for dimensionality reduction of a dataset via the selection a "sufficiently reduced" feature subsets with minimal decline of the recognition rate of a classifier.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="feature-space"></a>
+#### Feature Space
+[[back to top](#table-of-contents)]
+
+A feature space describes the descriptive variables  that are available for samples in a dataset as a *d*-dimensional Euclidean space. E.g., sepal length and width, and petal length and width for each flower sample in the popular Iris dataset.
 
 <br>
 <br>
@@ -134,8 +226,14 @@ Non-parametric techniques to estimate probability densities from the available d
 <br>
 <br>
 
+<a class="mk-toclify" id="kernel-methods"></a>
+#### Kernel Methods
+[[back to top](#table-of-contents)]
 
+Kernel methods are algorithms that map the sample vectors of a dataset onto a (typically) higher-dimensional feature space via a so-called kernel function. The goal is to identify  and simplify general relationships between data, which is especially useful for linearly non-separable datasets.  
 
+<br>
+<br>
 
 <a class="mk-toclify" id="k-fold-cross-validation"></a>
 #### k-fold Cross-validation
@@ -180,12 +278,10 @@ A regression technique to fit a linear or nonlinear model to a dataset to identi
 #### Least Squares fit - linear
 [[back to top](#table-of-contents)]
 
-
 A linear regression technique that fits a straight line to a data set (or overdetermined system) by minimizing the sum of the squared residuals, which can be the minimized vertical or perpendicular offsets from the fitted line.
 
 <br>
 <br>
-
 
 <a class="mk-toclify" id="linear-discriminant-analysis-lda"></a>
 #### Linear Discriminant Analysis (LDA)
@@ -203,6 +299,36 @@ A linear transformation technique (related to Principal Component Analysis) that
 
 A set of algorithmic instructions for discovering and learning patterns from data e.g., to train a classifier for a pattern classification task.
 
+<br>
+<br>
+
+<a class="mk-toclify" id="mahalanobis-distance"></a>
+#### Mahalanobis distance
+
+[[back to top](#table-of-contents)]
+
+The Mahalanobis distance measure accounts for the covariance among variables by calculating the distance between a sample *x* and the sample mean &mu; in units of the standard deviation.  The Mahalanobis distance becomes equal to the Euclidean distance for uncorrelated with same variances.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="markov-chains"></a>
+#### Markov chains
+
+[[back to top](#table-of-contents)]
+
+Markov chains (names after Andrey Markov) are mathematical systems that describe the transitioning between different states in a model. The transitioning from one state to the other (or back to itself) is a stochastic process.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="monte-carlo-simulation"></a>
+#### Monte Carlo simulation
+
+[[back to top](#table-of-contents)]
+
+A Monte Carlo simulation is an iterative sampling method for solving deterministic models. Random numbers or variables from a particular probability distribution are used as input variables for uncertain parameters to compute the response variables. 
+
 
 <br>
 <br>
@@ -216,8 +342,6 @@ A technique to estimate the parameters that have been fit to a model by maximizi
 
 <br>
 <br>
-
-
 
 <a class="mk-toclify" id="naive-bayes-classifier"></a>
 #### Naive Bayes Classifier
@@ -237,9 +361,6 @@ A function that is to be optimized (minimizing or maximizing a numerical value d
 <br>
 <br>
 
-
-
-
 <a class="mk-toclify" id="normalization-min-max-scaling"></a>
 #### Normalization - Min-Max scaling
 [[back to top](#table-of-contents)]
@@ -248,7 +369,6 @@ A data pre-processing step (also often referred to as "Feature Scaling") for fit
 
 <br>
 <br>
-
 
 <a class="mk-toclify" id="normalization-standard-scores"></a>
 #### Normalization - Standard Scores
@@ -283,11 +403,71 @@ The usage of patterns in datasets to discriminate between classes, i.e., to assi
 #### Principal Component Analysis (PCA)
 [[back to top](#table-of-contents)]
 
-
 A linear transformation technique that is commonly used to project a dataset (without utilizing class labels) onto a new feature space or feature subspace (for dimensionality reduction) where the new component axes are the directions that maximize the variance/spread of the data. 
 
 <br>
 <br>
+
+<a class="mk-toclify" id="precision-recall"></a>
+#### Precision and Recall
+[[back to top](#table-of-contents)]
+
+Precision and recall are two measures to assess performance of a classifier if class label distributions are skewed.
+Precision is defined as the ratio of number of relevant items out of total retrieved items, whereas recall is the fraction of relevant items which are retrieved.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
+
+<a class="mk-toclify" id="purity-measure"></a>
+#### Purity Measure
+
+[[back to top](#table-of-contents)]
+
+In a cluster analysis with given truth cluster memberships (or classes), "purity" is used to assess the effectiveness of clustering. Purity is measured by assigning each cluster to the class that is maximally represented and computed via the weighted average of maximum number of samples from the same class in each cluster.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+
+<a class="mk-toclify" id="random-forest"></a>
+#### Random forest
+
+[[back to top](#table-of-contents)]
+
+Random forest is an ensemble classifier where multiple [decision tree classifiers](#decision-tree-classifier) are learned and combined via the [bagging](#bagging) technique. Unseen/test objects are then classified by taking the majority of votes from individual decision trees.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+
+
+<a class="mk-toclify" id="regularization"></a>
+#### Regularization
+
+[[back to top](#table-of-contents)]
+
+Regularization is a technique to overcome overfitting by introducing a penalty term for model complexity. Usually, the penalty term is the squared sum of the model parameters, thereby promoting less complex models during training. Regularization may increase the training error but can potentially reduce the classification error on the test dataset.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+
+<a class="mk-toclify" id="ridge-regression"></a>
+#### Regularization
+
+[[back to top](#table-of-contents)]
+
+Ridge regression is a regularized regression technique, in which sum of squared model coefficients is used to penalize model complexity. 
+
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="supervised-learning"></a>
 #### Supervised Learning
@@ -300,7 +480,16 @@ The problem of inferring a mapping between the input space X and a target variab
 <br>
 <br>
 
+<a class="mk-toclify" id="support-vector-machine"></a>
+#### Support Vector Machine
 
+[[back to top](#table-of-contents)]
+
+SMV is a classification  method that tries to find the hyperplane which separates classes with highest margin. The margin is defined as the minimum distance from sample points to the hyperplane. The sample point(s) that form margin are called support vectors and eventually establish the SVM model.   
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
 
 <a class="mk-toclify" id="unsupervised-learning"></a>
 #### Unsupervised Learning
@@ -310,4 +499,13 @@ The problem of inferring a mapping between the input space X and a target variab
 The problem of inferring latent structure in data when not given any training cases. Encompasses the problems of clustering, dimensionality reduction and density estimation.   
 (submitted by [Alex Yakubovich](https://github.com/ayakubovich))
 
+<br>
+<br>
+
+<a class="mk-toclify" id="whitening-transformation"></a>
+#### Whitening transformation
+
+[[back to top](#table-of-contents)]
+
+Whitening transformation is a normalization procedure to de-correlate samples in a dataset if the covariance matrix is not a diagonal matrix. Features are uncorrelated after "whitening" and their variances are equal unity, thus the covariance matrix becomes an identity matrix.
 
