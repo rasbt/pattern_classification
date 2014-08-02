@@ -150,6 +150,9 @@
 
 - Terms in data science defined in less than 50 words [[Markdown](./resources/data_glossary.md)]
 
+- Useful libraries for data science in Python [[Markdown](./resources/python_data_libraries.md)]
+
+
 
 
 
