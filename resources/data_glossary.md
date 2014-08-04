@@ -41,6 +41,7 @@ Please feel free to drop me a note via
 - [K-fold cross-validation](#k-fold-cross-validation)
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
+- [LASSO Regression](#lasso-regression)
 - [Least Squares fit](#least-squares-fit)
 - [Least Squares fit - linear](#least-squares-fit-linear)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
@@ -262,6 +263,16 @@ A method of partitioning a dataset into *k* clusters by picking *k* random initi
 
 A variant of [k-means](#k-means-clustering) where instead of choosing all initial centers randomly, the first is chosen randomly, the second chosen with probability proportional to the squared distance from the first, the third chosen with probability proportional to the square distance from the first two, etc. See [this paper](http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf).   
 (submitted by [Jack Maney](https://github.com/jackmaney))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="lasso-regression"></a>
+#### LASSO Regression
+[[back to top](#table-of-contents)]
+
+LASSO (Least Absolute Shrinkage and Selection Operator) is a regression model that uses the L1-norm (sum of absolute values) of model coefficients to penalize the model complexity. LASSO has the advantage that some coefficients can become zero, as opposed to [ridge regression](#ridge-regression) that uses the sum squared of model coeeficients.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
