@@ -2,7 +2,7 @@
 
 
 Sebastian Raschka  
-last updated: 09/02/2014
+last updated: 09/04/2014 
 
 # Useful libraries for data science in Python
 
@@ -42,7 +42,10 @@ Please feel free to drop me a note via
     - [plotly](#plotly)
     - [prettyplotlib](#prettyplotlib)
     - [seaborn](#seaborn)
-
+- [Data formatting and storage](#data-formatting-and-storage)
+	- [csvkit](#csvkit)
+	- [PyTables](#pytables)
+	- [sqlite3](#sqlite3) 
 
 <br>
 <br>
@@ -245,4 +248,36 @@ Website: [http://web.stanford.edu/~mwaskom/software/seaborn/](http://web.stanfor
 
 Seaborn is based on matplotlib's core functionality and adds additional features (e.g., violin plots) and visual enhancements to create even more beautiful plots.
 
+<br>
+<br>
 
+<a class="mk-toclify" id="data-formatting-and-management"></a>
+## Data formatting and management
+[back to top](#table-of-contents)
+
+<br>
+
+<a class="mk-toclify" id="csvkit"></a>
+#### csvkit
+
+Website: [https://csvkit.readthedocs.org](https://csvkit.readthedocs.org)
+
+csvkit is also known as the "Swiss Army knife for comma-delimited data files" that offers additional functionality and features over Python's in-built [`csv`](https://docs.python.org/3.4/library/csv.html) module. It comes with several shell command-line tools, e.g., csvgrep, csvsort, etc., but of course it can also be imported as library in Python.
+
+<br>
+
+<a class="mk-toclify" id="pytables"></a>
+#### PyTables
+
+Website: [http://www.pytables.org](http://www.pytables.org)
+
+PyTables is a library that combines HDF5 and NumPy for working with very large datasets efficiently. PyTables also makes use of C-extensions (via Cython) for fast data access and pulling data into NumPy or pandas arrays.
+
+<br>
+
+<a class="mk-toclify" id="sqlite3"></a>
+#### sqlite3
+
+Website: [https://docs.python.org/3.4/library/sqlite3.html](https://docs.python.org/3.4/library/sqlite3.html)
+
+Although, the `sqlite3` is part of Python's Standard Library, it is still worth mentioning this classic that provides a Python interface to SQLite databases. SQLitean open-source SQL database engine that is ideal for smaller workgroups, because it is a single locally stored database file (up to 140 Tb in size) that does not require -- in contrast to SQL -- any server infrastructure.
