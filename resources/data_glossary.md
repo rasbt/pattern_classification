@@ -93,6 +93,33 @@ The confusion matrix is used as a way to represent the performance of a classifi
 <br>
 <br>
 
+<a class="mk-toclify" id="correlation"></a>
+#### Correlation analysis
+[[back to top](#table-of-contents)]
+
+Correlation analysis describes and quantifies the relationship between two independent variables. Typically, in case of a positive correlation both variables have a tendency to increase, and in the case of negative correlation, one variable increases while the other variable increases. It is important to mention the famous quotation "correlation does not imply causation".
+
+<br>
+<br>
+
+<a class="mk-toclify" id="correlation-analysis-pearson"></a>
+#### Correlation analysis - Pearson
+[[back to top](#table-of-contents)]
+
+The Pearson correlation coefficientis probably the most widely used measure for a linear relationship between two normal distributed variables and thus often just called "correlation coefficient". Usually, the Pearson coefficient is obtained via a [Least-Squares fit](#least-squares-fit) and a value of 1 represents a perfect positive relation-ship, -1 a perfect negative relationship, and 0 indicates the absence of a relationship between variables.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="correlation"></a>
+#### Correlation analysis - Spearman
+[[back to top](#table-of-contents)]
+
+The Spearman correlation coefficient is a rank-based version of [Pearson's correlation coefficient](correlation-analysis-pearson), which can be used for variables that are not normal-distributed and have a non-linear relationship.
+
+<br>
+<br>
+
 <a class="mk-toclify" id="cosine-similarity"></a>
 #### Cosine Similarity
 [[back to top](#table-of-contents)]
