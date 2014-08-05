@@ -24,6 +24,9 @@ Please feel free to drop me a note via
 
 - [Bagging](#bagging)
 - [Confusion Matrix](#confusion-matrix)
+- [Correlation analysis](#correlation-analysis)
+- [Correlation analysis - Pearson](#correlation-analysis-pearson)
+- [Correlation analysis - Spearman](#correlation-analysis-spearman)
 - [Cosine Similarity](#cosine-similarity)
 - [Cross-validation](#cross-validation)
 - [Curse of dimensionality](#curse-of-dimensionality)
