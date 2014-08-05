@@ -164,7 +164,7 @@ PyBrain (Python-Based Reinforcement Learning, Artificial Intelligence and Neural
 
 Website: [http://deeplearning.net/software/pylearn2/](http://deeplearning.net/software/pylearn2/)
 
-PyLearn2 is a machine learning **research** library - a library to study machine learning - focussed on convolutional neural networks.
+PyLearn2 is a machine learning **research** library - a library to study machine learning - focussed on deep and convolutional neural networks, restricted Boltzman machines, and auto-encoders.
 
 <br>
 
