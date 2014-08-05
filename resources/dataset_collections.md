@@ -87,3 +87,11 @@ by governments, companies and organizations.
 
 <br>
 <br>
+
+
+# General Data Sites
+
+- [United Nations](#http://data.un.org/) Data about health, environment, energy.. for different nations
+- [United Stated](#http://www.data.gov/) 
+- [Open Government Data](#http://www.data.gov/open-gov/) List of cities/counties in the U.S. with open data, plus other countries involved in open-data project
+- [Survey Data from U.S.](#http://www.asdfree.com/)
