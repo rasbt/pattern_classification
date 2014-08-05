@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 07/29/2014
+last updated: 09/04/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -271,7 +271,7 @@ A variant of [k-means](#k-means-clustering) where instead of choosing all initia
 #### LASSO Regression
 [[back to top](#table-of-contents)]
 
-LASSO (Least Absolute Shrinkage and Selection Operator) is a regression model that uses the L1-norm (sum of absolute values) of model coefficients to penalize the model complexity. LASSO has the advantage that some coefficients can become zero, as opposed to [ridge regression](#ridge-regression) that uses the sum squared of model coeeficients.
+LASSO (Least Absolute Shrinkage and Selection Operator) is a regression model that uses the L1-norm (sum of absolute values) of model coefficients to penalize the model complexity. LASSO has the advantage that some coefficients can become zero, as opposed to [ridge regression](#ridge-regression) that uses the squared sum of model coefficients.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
