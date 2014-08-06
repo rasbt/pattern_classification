@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/04/2014
+last updated: 09/06/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -44,9 +44,9 @@ Please feel free to drop me a note via
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Methods](#kernel-methods)
 - [K-fold cross-validation](#k-fold-cross-validation)
-- [K-Medoids Clustering](#k-medoids-clustering)
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
+- [K-Medoids Clustering](#k-medoids-clustering)
 - [LASSO Regression](#lasso-regression)
 - [Least Squares fit](#least-squares-fit)
 - [Least Squares fit - linear](#least-squares-fit-linear)
@@ -200,7 +200,7 @@ Decision tree classifiers are tree like graphs, where nodes in the graph test ce
 #### Density-based clustering
 [[back to top](#table-of-contents)]
 
-In density-based clustering, regions of high density in n-dimensional space are identified as clusters. The best advantage of this class of clustering algorithms is that they do not require apriori knowledge of number of clusters (as opposed to kmeans algorithm).   
+In density-based clustering, regions of high density in n-dimensional space are identified as clusters. The best advantage of this class of clustering algorithms is that they do not require apriori knowledge of number of clusters (as opposed to [k-means](#k-means-clustering) algorithm).   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
 <br>
@@ -257,7 +257,7 @@ A feature space describes the descriptive variables  that are available for samp
 #### Fuzzy C-Means Clustering
 [[back to top](#table-of-contents)]
 
-Fuzzy C-Means is a soft clustering algorithm in which each sample point has a membership degree to each cluster, whereas in hard (crisp) clustering, membership of each point to each cluster is either 0 or 1. Fuzzy C-Means considers a weight matrix for cluster membrerships, and minimizes sum squared error (SSE) of weithed distance of sample points to the cluster centroids.
+Fuzzy C-Means is a soft clustering algorithm in which each sample point has a membership degree to each cluster; in hard (crisp) clustering, membership of each point to each cluster is either 0 or 1. Fuzzy C-Means considers a weight matrix for cluster memberships, and minimizes sum squared error (SSE) of weighted distances of sample points to the cluster centroids.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
@@ -301,7 +301,7 @@ In k-fold cross-validation the data is split into *k* subsets, then a prediction
 <br>
 <br>
 
-<a class="mk-toclify" id="k-means-clustering-1"></a>
+<a class="mk-toclify" id="k-means-clustering"></a>
 #### K-Means Clustering
 [[back to top](#table-of-contents)]
 
@@ -311,7 +311,7 @@ A method of partitioning a dataset into *k* clusters by picking *k* random initi
 <br>
 <br>
 
-<a class="mc-toclify" id="k-means-pp-clustering"></a>
+<a class="mc-toclify" id="k-means-clustering-1"></a>
 #### K-Means++ Clustering
 [[back to top](#table-of-contents)]
 
@@ -321,11 +321,11 @@ A variant of [k-means](#k-means-clustering) where instead of choosing all initia
 <br>
 <br>
 
-<a class="mk-toclify" id="k-medeoids-clustering"></a>
+<a class="mk-toclify" id="k-medoids-clustering"></a>
 #### K-Medoids Clustering
 [[back to top](#table-of-contents)]
 
-K-Medoids clustering is a variant of [K-Means] algorithm in which cluster centroids are picked among the sample points, rather than the mean point of each cluster. K-Medoids can overcome some of the limitations of [K-Means] algorithm, avoiding empty clusters, more robust to outliers, and easily applicable to non-numeric data types.
+K-Medoids clustering is a variant of [k-means](#k-means-clustering) algorithm in which cluster centroids are picked among the sample points rather than the mean point of each cluster. K-Medoids can overcome some of the limitations of [k-means](#k-means-clustering) algorithm by avoiding empty clusters, being more robust to outliers, and being more easily applicable to non-numeric data types.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
