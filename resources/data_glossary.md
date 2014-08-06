@@ -43,6 +43,7 @@ Please feel free to drop me a note via
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Methods](#kernel-methods)
 - [K-fold cross-validation](#k-fold-cross-validation)
+- [K-Medoids Clustering](#k-medoids-clustering)
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
 - [LASSO Regression](#lasso-regression)
@@ -305,6 +306,16 @@ A method of partitioning a dataset into *k* clusters by picking *k* random initi
 
 A variant of [k-means](#k-means-clustering) where instead of choosing all initial centers randomly, the first is chosen randomly, the second chosen with probability proportional to the squared distance from the first, the third chosen with probability proportional to the square distance from the first two, etc. See [this paper](http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf).   
 (submitted by [Jack Maney](https://github.com/jackmaney))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="k-medeoids-clustering"></a>
+#### K-Medoids Clustering
+[[back to top](#table-of-contents)]
+
+K-Medoids clustering is a variant of [K-Means] algorithm in which cluster centroids are picked among the sample points, rather than the mean point of each cluster. K-Medoids can overcome some of the limitations of [K-Means] algorithm, avoiding empty clusters, more robust to outliers, and easily applicable to non-numeric data types.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
