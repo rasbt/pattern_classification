@@ -39,6 +39,7 @@ Please feel free to drop me a note via
 - [Ensemble methods](#ensemble-methods)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Feature Space](#feature-space)
+- [Fuzzy C-Means Clustering](#fuzzy-cmeans-clustering)
 - [Independent Component Analysis](#independent-component-analysis)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Methods](#kernel-methods)
@@ -247,6 +248,16 @@ Algorithmic approaches as alternative to projection-based techniques like Princi
 [[back to top](#table-of-contents)]
 
 A feature space describes the descriptive variables  that are available for samples in a dataset as a *d*-dimensional Euclidean space. E.g., sepal length and width, and petal length and width for each flower sample in the popular Iris dataset.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="fuzzy-cmeans-clustering"></a>
+#### Fuzzy C-Means Clustering
+[[back to top](#table-of-contents)]
+
+Fuzzy C-Means is a soft clustering algorithm in which each sample point has a membership degree to each cluster, whereas in hard (crisp) clustering, membership of each point to each cluster is either 0 or 1. Fuzzy C-Means considers a weight matrix for cluster membrerships, and minimizes sum squared error (SSE) of weithed distance of sample points to the cluster centroids.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
