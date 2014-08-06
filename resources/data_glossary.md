@@ -66,6 +66,7 @@ Please feel free to drop me a note via
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Purity Measure](#purity-measure)
 - [Random forest](#random-forest)
+- [Reinforcement learning]	(#reinforcement-learning)
 - [Regularization](#regularization)
 - [Ridge Regression](#ridge-regression)
 - [Supervised learning](#supervised-learning)
@@ -518,6 +519,18 @@ Regularization is a technique to overcome overfitting by introducing a penalty t
 
 <br>
 <br>
+
+
+<a class="mk-toclify" id="reinforcement-learning"></a>
+#### Reinforcement learning
+
+[[back to top](#table-of-contents)]
+
+Reinforcement learning is a machine learning algorithm that learns from a series of actions by maximizing a "reward function". The reward function can either be maximized by penalizing "bad actions" and/or rewarding "good actions".
+
+<br>
+<br>
+
 
 
 <a class="mk-toclify" id="ridge-regression"></a>
