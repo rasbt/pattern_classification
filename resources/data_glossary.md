@@ -39,6 +39,7 @@ Please feel free to drop me a note via
 - [Ensemble methods](#ensemble-methods)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Feature Space](#feature-space)
+- [Independent Component Analysis](#independent-component-analysis)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Methods](#kernel-methods)
 - [K-fold cross-validation](#k-fold-cross-validation)
@@ -245,6 +246,16 @@ Algorithmic approaches as alternative to projection-based techniques like Princi
 [[back to top](#table-of-contents)]
 
 A feature space describes the descriptive variables  that are available for samples in a dataset as a *d*-dimensional Euclidean space. E.g., sepal length and width, and petal length and width for each flower sample in the popular Iris dataset.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="independent-component-analysis"></a>
+#### Independent Component Analysis
+[[back to top](#table-of-contents)]
+
+Independent Component Analysis (ICA) is a statistical signal-processing technique that decomposes a multivariate dataset of mixed, non-gaussian distributed source signals into  independent components 
+A popular example is the separation of overlapping voice samples -- the so-called "cocktail party problem".
 
 <br>
 <br>
