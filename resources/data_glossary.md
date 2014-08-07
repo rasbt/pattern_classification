@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/06/2014
+last updated: 09/07/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -40,6 +40,7 @@ Please feel free to drop me a note via
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Feature Space](#feature-space)
 - [Fuzzy C-Means Clustering](#fuzzy-cmeans-clustering)
+- [Generalization error](#generalization-error) 
 - [Independent Component Analysis](#independent-component-analysis)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Methods](#kernel-methods)
@@ -68,14 +69,17 @@ Please feel free to drop me a note via
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Purity Measure](#purity-measure)
 - [Random forest](#random-forest)
-- [Reinforcement learning]	(#reinforcement-learning)
+- [Reinforcement learning](#reinforcement-learning)
 - [Regularization](#regularization)
+- [Resubstitution error](#resubstitution-error)
 - [Ridge Regression](#ridge-regression)
-- [Singular Value Decomposition](#singular-value-decomposition)
+- [Singular Value Decomposition (SVD)](#singular-value-decomposition-svd)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
 - [Unsupervised learning](#unsupervised-learning)
+- [White noise](#white-noise)
 - [Whitening transformation](#whitening-transformation)
+
 
 
 
@@ -260,6 +264,22 @@ A feature space describes the descriptive variables  that are available for samp
 
 Fuzzy C-Means is a soft clustering algorithm in which each sample point has a membership degree to each cluster; in hard (crisp) clustering, membership of each point to each cluster is either 0 or 1. Fuzzy C-Means considers a weight matrix for cluster memberships, and minimizes sum squared error (SSE) of weighted distances of sample points to the cluster centroids.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="generalization-error"></a>
+
+#### Generalization error
+[[back to top](#table-of-contents)]
+
+The generalization error describes how well new data can be classified and is a useful metric to assess the performance of a classifier. Typically, the generalization error is computed via [cross-validation](cross-validation) or simply the absolute difference between the error rate on the training and test dataset.
+
+
+<br>
+<br>
+
+
 
 <br>
 <br>
@@ -554,6 +574,16 @@ Reinforcement learning is a machine learning algorithm that learns from a series
 <br>
 <br>
 
+<a class="mk-toclify" id="resubstitution-error"></a>
+
+#### Resubstitution error
+[[back to top](#table-of-contents)]
+
+The resubstitution error represents the classification error rate on the training dataset (the dataset that was used to train the classifier). The performance of a classifier cannot be directly deduced from resubstitution error alone, but it becomes a useful measure for calculating the [generalization error](#generalization-error).
+
+<br>
+<br>
+
 
 
 <a class="mk-toclify" id="ridge-regression"></a>
@@ -568,14 +598,18 @@ Ridge regression is a regularized regression technique in which the squared sum 
 <br>
 
 
-<a class="mk-toclify" id="singular-value-decomposition"></a>
-#### Singular Value Decomposition
+<a class="mk-toclify" id="singular-value-decomposition-svd"></a>
+#### Singular Value Decomposition (SVD)
 
 [[back to top](#table-of-contents)]
 
-Singular value decomposition (SVD) is linear algebra technique that decomposes matrix X into   
-***U D V<sup>T<sup>*** where ***U*** (left-singular vectors) and ***V*** (right-singular vector) are both column-orthogonal, and ***D*** is a diagonal matrix that contains singular values. [PCA](#principal-component-analysis) is closely related to the right-singular vectors of SVD.  
+Singular value decomposition (SVD) is linear algebra technique that decomposes matrix ***X*** into  
+***U D V<sup>T</sup>*** where ***U*** (left-singular vectors) and ***V*** (right-singular vector) are both column-orthogonal, and D is a diagonal matrix that contains singular values. [PCA](#principal-component-analysis) is closely related to the right0singular vectors of SVD.  
  (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="supervised-learning"></a>
 #### Supervised Learning
@@ -610,10 +644,23 @@ The problem of inferring latent structure in data when not given any training ca
 <br>
 <br>
 
+
+<a class="mk-toclify" id="white-noise"></a>
+#### White noise
+[[back to top](#table-of-contents)]
+
+White noise is a source that produces random, statistically independent variables following a particular distribution. In the field of sound processing, white noise is also often referred to as a mixture of tones or sounds of different frequencies.
+
+<br>
+<br>
+
+
 <a class="mk-toclify" id="whitening-transformation"></a>
 #### Whitening transformation
 
 [[back to top](#table-of-contents)]
 
 Whitening transformation is a normalization procedure to de-correlate samples in a dataset if the covariance matrix is not a diagonal matrix. Features are uncorrelated after "whitening" and their variances are equal unity, thus the covariance matrix becomes an identity matrix.
+
+
 
