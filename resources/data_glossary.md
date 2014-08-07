@@ -76,7 +76,9 @@ Please feel free to drop me a note via
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
 - [Unsupervised learning](#unsupervised-learning)
+- [White noise](#white-noise)
 - [Whitening transformation](#whitening-transformation)
+
 
 
 
@@ -628,10 +630,23 @@ The problem of inferring latent structure in data when not given any training ca
 <br>
 <br>
 
+
+<a class="mk-toclify" id="white-noise"></a>
+#### White noise
+[[back to top](#table-of-contents)]
+
+White noise is a source that produces random, statistically independent variables following a particular distribution. In the field of sound processing, white noise is also often referred to as a mixture of tones or sounds of different frequencies.
+
+<br>
+<br>
+
+
 <a class="mk-toclify" id="whitening-transformation"></a>
 #### Whitening transformation
 
 [[back to top](#table-of-contents)]
 
 Whitening transformation is a normalization procedure to de-correlate samples in a dataset if the covariance matrix is not a diagonal matrix. Features are uncorrelated after "whitening" and their variances are equal unity, thus the covariance matrix becomes an identity matrix.
+
+
 
