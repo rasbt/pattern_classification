@@ -71,6 +71,7 @@ Please feel free to drop me a note via
 - [Reinforcement learning]	(#reinforcement-learning)
 - [Regularization](#regularization)
 - [Ridge Regression](#ridge-regression)
+- [Singular Value Decomposition](#singular-value-decomposition)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
 - [Unsupervised learning](#unsupervised-learning)
@@ -566,6 +567,15 @@ Ridge regression is a regularized regression technique in which the squared sum 
 <br>
 <br>
 
+
+<a class="mk-toclify" id="singular-value-decomposition"></a>
+#### Singular Value Decomposition
+
+[[back to top](#table-of-contents)]
+
+Singular value decomposition (SVD) is linear algebra technique that decomposes matrix X into   
+***U D V<sup>T<sup>*** where ***U*** (left-singular vectors) and ***V*** (right-singular vector) are both column-orthogonal, and ***D*** is a diagonal matrix that contains singular values. [PCA](#principal-component-analysis) is closely related to the right-singular vectors of SVD.  
+ (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <a class="mk-toclify" id="supervised-learning"></a>
 #### Supervised Learning
