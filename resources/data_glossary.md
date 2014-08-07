@@ -40,6 +40,7 @@ Please feel free to drop me a note via
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Feature Space](#feature-space)
 - [Fuzzy C-Means Clustering](#fuzzy-cmeans-clustering)
+- [Generalization error](#generalization-error) 
 - [Independent Component Analysis](#independent-component-analysis)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Methods](#kernel-methods)
@@ -68,8 +69,9 @@ Please feel free to drop me a note via
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Purity Measure](#purity-measure)
 - [Random forest](#random-forest)
-- [Reinforcement learning]	(#reinforcement-learning)
+- [Reinforcement learning](#reinforcement-learning)
 - [Regularization](#regularization)
+- [Resubstitution error](#resubstitution-error)
 - [Ridge Regression](#ridge-regression)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
@@ -259,6 +261,22 @@ A feature space describes the descriptive variables  that are available for samp
 
 Fuzzy C-Means is a soft clustering algorithm in which each sample point has a membership degree to each cluster; in hard (crisp) clustering, membership of each point to each cluster is either 0 or 1. Fuzzy C-Means considers a weight matrix for cluster memberships, and minimizes sum squared error (SSE) of weighted distances of sample points to the cluster centroids.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="generalization-error"></a>
+
+#### Generalization error
+[[back to top](#table-of-contents)]
+
+The generalization error describes how well new data can be classified and is a useful metric to assess the performance of a classifier. Typically, the generalization error is computed via [cross-validation](cross-validation) or simply the absolute difference between the error rate on the training and test dataset.
+
+
+<br>
+<br>
+
+
 
 <br>
 <br>
@@ -549,6 +567,16 @@ Regularization is a technique to overcome overfitting by introducing a penalty t
 [[back to top](#table-of-contents)]
 
 Reinforcement learning is a machine learning algorithm that learns from a series of actions by maximizing a "reward function". The reward function can either be maximized by penalizing "bad actions" and/or rewarding "good actions".
+
+<br>
+<br>
+
+<a class="mk-toclify" id="resubstitution-error"></a>
+
+#### Resubstitution error
+[[back to top](#table-of-contents)]
+
+The resubstitution error represents the classification error rate on the training dataset (the dataset that was used to train the classifier). The performance of a classifier cannot be directly deduced from resubstitution error alone, but it becomes a useful measure for calculating the [generalization error](#generalization-error).
 
 <br>
 <br>
