@@ -152,7 +152,7 @@
 
 - Useful libraries for data science in Python [[Markdown](./resources/python_data_libraries.md)]
 
-- General Tips and Advices [[Markdown](./general_tips_and_advices.md)]
+- General Tips and Advices [[Markdown](./resources/general_tips_and_advices.md)]
 
 
 
