@@ -46,6 +46,7 @@ Please feel free to drop me a note via
 - [Feature Space](#feature-space)
 - [Fuzzy C-Means Clustering](#fuzzy-cmeans-clustering)
 - [Generalization error](#generalization-error) 
+- [Imputation](#imputation)
 - [Independent Component Analysis](#independent-component-analysis)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Methods](#kernel-methods)
@@ -336,7 +337,12 @@ The generalization error describes how well new data can be classified and is a 
 <br>
 <br>
 
+<a class="mk-toclify" id="imputation"></a>
+#### Imputation
+[[back to top](#table-of-contents)]
 
+In dealing with missing data (NAs), rather than discarding them for analysis, imputation algorithms replace the missing data with some statistics. Different imputation methods include mean imputation (replacing missing data with mean of that attribute), kNN imputation, and regression imputation.
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
