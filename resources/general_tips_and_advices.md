@@ -45,6 +45,7 @@ Last updated 09/07/2014
 - Both the test and training datasets should be randomly sampled.
 - A test dataset should only be used **exactly once**, otherwise (if an algorithm is trained on the training dataset, and the test set is used to evaluate the predictor  multiple times) the test dataset "becomes" a training dataset and can cause "overfitting".
 - If a test dataset is to be used to evaluate the predictor multiple times, create a separate validation dataset beforehand (the validation dataset should also only be used once).
+- If the input dataset is split into three datasets, the typically suggested ratio is 60% training, 20% test, and 20% validation dataset.
 - It is generally recommended to use cross-validation: the training set is split into subsets of training and test datasets so that the original test dataset is kept to evaluate the predictor only once at the very end.
 - Choose a cross-validation method (random sampling, k-fold, or leave-one-out) appropriate to your data: continuous or categorical data, large or small sample sizes.
 
