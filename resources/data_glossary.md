@@ -341,8 +341,8 @@ The generalization error describes how well new data can be classified and is a 
 #### Imputation
 [[back to top](#table-of-contents)]
 
-In dealing with missing data (NAs), rather than discarding them for analysis, imputation algorithms replace the missing data with some statistics. Different imputation methods include mean imputation (replacing missing data with mean of that attribute), kNN imputation, and regression imputation.
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+Imputations algorithms are designed to replace the missing data (NAs) with certain statistics rather than discarding them for downstream analysis. Commonly used imputation methods include mean imputation (replacement by the sample mean of an attribute), kNN imputation, and regression imputation.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
 <br>
 <br>
