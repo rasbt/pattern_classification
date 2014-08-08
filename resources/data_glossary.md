@@ -30,6 +30,9 @@ Please feel free to drop me a note via
 - [Correlation analysis - Spearman](#correlation-analysis-spearman)
 - [Cosine Similarity](#cosine-similarity)
 - [Cross-validation](#cross-validation)
+- [Cross-validation, K-fold](#cross-validation-k-fold)
+- [Cross-validation, Leave-One-Out](#cross-validation-leave-one-out)
+- [Cross-validation, Random Sampling](#cross-validation-random-sampling)
 - [Curse of dimensionality](#curse-of-dimensionality)
 - [Data mining](#data-mining)
 - [Decision rule](#decision-rule)
@@ -110,6 +113,7 @@ Bagging is an ensemble method for classification (or regression analysis) in whi
 <br>
 <br>
 
+
 <a class="mk-toclify" id="confusion-matrix"></a>
 #### Confusion Matrix
 [[back to top](#table-of-contents)]
@@ -165,6 +169,36 @@ Cross-validation is a statistical technique to estimate the prediction error rat
 
 <br>
 <br>
+
+<a class="mk-toclify" id="cross-validation-k-fold"></a>
+#### Cross-validation, K-fold
+[[back to top](#table-of-contents)]
+
+K-fold cross-validation  is a variant of [cross validation](#cross-validation) where contiguous segments of samples are selected from the training dataset to build two new subsets for every iteration (without replacement): a new training and test dataset (while the original test dataset is retained for the final evaluation of the predictor). 
+
+<br>
+<br>
+
+<a class="mk-toclify" id="cross-validation-leave-one-out"></a>
+#### Cross-validation, Leave-One-Out
+[[back to top](#table-of-contents)]
+
+Leave-One-Out cross-validation a variant of [cross validation](#cross-validation) one sample is removed for every iteration (without replacement). The model is trained on the remaining N-1 samples and evaluated via the removed sample (while the original test dataset is retained for the final evaluation of the predictor). 
+
+<br>
+<br>
+
+<a class="mk-toclify" id="cross-validation-random-sampling"></a>
+#### Cross-validation, Random Sampling
+[[back to top](#table-of-contents)]
+
+Cross-validation via random sampling is a variant of [cross validation](#cross-validation) where random chunks of samples are extracted from the training dataset to build two new subsets for every iteration  (with or without replacement): a new training and test dataset for every iteration (while the original test dataset is retained for the final evaluation of the predictor). 
+
+
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="curse-of-dimensionality"></a>
 #### Curse of dimensionality
