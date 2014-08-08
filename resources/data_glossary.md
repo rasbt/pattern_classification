@@ -71,8 +71,9 @@ Please feel free to drop me a note via
 - [Proportion of Variance Explained (PVE)](#proportion-of-variance-explained-pve)
 - [Purity Measure](#purity-measure)
 - [Random forest](#random-forest)
-- [Reinforcement learning](#reinforcement-learning)
+- [Receiver Operating Characteristic (ROC)](#receiver-operating-characteristic-roc))
 - [Regularization](#regularization)
+- [Reinforcement learning](#reinforcement-learning)
 - [Resubstitution error](#resubstitution-error)
 - [Ridge Regression](#ridge-regression)
 - [Sensitivity](#sensitivity)
@@ -188,7 +189,7 @@ A field that is closely related to machine learning and pattern classification. 
 [[back to top](#table-of-contents)]
 
 DBSCAN is a variant of a density-based clustering algorithm that identifies core points as regions of high-densities based on their number of neighbors (> *MinPts*) in a specified radius (&epsilon;). Points that are below *MinPts* but within &epsilon; are specified as border points; the remaining points are classified as noise points.   
-([Vahid Mirjalili](https://github.com/mirjalil); edited)
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
 <br>
 <br>
@@ -406,8 +407,7 @@ A linear transformation technique (related to Principal Component Analysis) that
 #### Logistic Regression
 [[back to top](#table-of-contents)]
 
-Logistic regression is a statistical model used for binary classification (binomial logistic regression) where class labels are mapped to "0" or "1" outputs. Logistic regression uses the logistic function (a general form of sigmoid function), where its output ranges from (0-1).
-
+Logistic regression is a statistical model used for binary classification (binomial logistic regression) where class labels are mapped to "0" or "1" outputs. Logistic regression uses the logistic function (a general form of sigmoid function), where its output ranges from (0-1).  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
@@ -573,6 +573,16 @@ Random forest is an ensemble classifier where multiple [decision tree classifier
 <br>
 <br>
 
+<a class="mk-toclify" id="receiver-operating-characteristic-roc"></a>
+#### Receiver Operating Characteristic (ROC)
+
+[[back to top](#table-of-contents)]
+
+The Receiver Operating Characteristic (ROC, or ROC curve) is a quality measure for binary prediction algorithms by plotting the "False positive rate" vs. the "True positive rate" ([sensitivity](#sensitivity)).
+
+<br>
+<br>
+
 
 
 <a class="mk-toclify" id="regularization"></a>
@@ -585,6 +595,7 @@ Regularization is a technique to overcome overfitting by introducing a penalty t
 
 <br>
 <br>
+
 
 
 <a class="mk-toclify" id="reinforcement-learning"></a>
