@@ -67,6 +67,7 @@ Please feel free to drop me a note via
 - [Pattern classification](#pattern-classification)
 - [Precision and Recall](#precision-recall)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
+- [Proportion of Variance Explained (PVE)](#proportion-of-variance-explained)
 - [Purity Measure](#purity-measure)
 - [Random forest](#random-forest)
 - [Reinforcement learning](#reinforcement-learning)
@@ -523,6 +524,16 @@ A linear transformation technique that is commonly used to project a dataset (wi
 Precision and recall are two measures to assess performance of a classifier if class label distributions are skewed.
 Precision is defined as the ratio of number of relevant items out of total retrieved items, whereas recall is the fraction of relevant items which are retrieved.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
+
+<a class="mk-toclify" id="proportion-of-variance-explained"></a>
+#### Precision and Recall
+[[back to top](#table-of-contents)]
+
+In dimensionality reduction context, proportion of variance explained (PVE) represnts how much of the total variance is captured by the new selected axes (for example by principal components). It is computed by the sum of variance of new component axes devided by the total variance.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
