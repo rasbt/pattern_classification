@@ -75,6 +75,8 @@ Please feel free to drop me a note via
 - [Regularization](#regularization)
 - [Resubstitution error](#resubstitution-error)
 - [Ridge Regression](#ridge-regression)
+- [Sensitivity](#sensitivity)
+- [Specificity](#specificity)
 - [Singular Value Decomposition (SVD)](#singular-value-decomposition-svd)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
@@ -618,6 +620,25 @@ Ridge regression is a regularized regression technique in which the squared sum 
 <br>
 <br>
 
+<a class="mk-toclify" id="sensitivity"></a>
+#### Sensitivity
+
+[[back to top](#table-of-contents)]
+
+Sensitivity, which is related to [specificity](#specificity) -- in the context of error rate evaluation -- describes the "True Positive Rate" for a binary classification problem: The probability to make a correct prediction for a "positive/true" case (e.g., in an attempt to predict a disease, the disease is correctly predicted for a patient who truly has this disease).
+
+<br>
+<br>
+
+<a class="mk-toclify" id="specificity"></a>
+#### Specificity
+
+[[back to top](#table-of-contents)]
+
+Specificity, which is related to [sensitivity](#sensitivity) -- in the context of error rate evaluation -- describes the "True Negative Rate" for a binary classification problem: The probability to make a correct prediction for a "false/negative" case (e.g., in an attempt to predict a disease, no disease is predicted for a healthy patient).
+
+<br>
+<br>
 
 <a class="mk-toclify" id="singular-value-decomposition-svd"></a>
 #### Singular Value Decomposition (SVD)
