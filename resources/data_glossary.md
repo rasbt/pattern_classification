@@ -22,6 +22,7 @@ Please feel free to drop me a note via
 
 #Table of Contents
 
+- [Backtesting](#backtesting)
 - [Bagging](#bagging)
 - [Confusion Matrix](#confusion-matrix)
 - [Correlation analysis](#correlation-analysis)
@@ -87,6 +88,15 @@ Please feel free to drop me a note via
 <br>
 <br>
 
+<a class="mk-toclify" id="backtesting"></a>
+#### Backtesting
+[[back to top](#table-of-contents)]
+
+Backtesting is a specific case of [cross-validation](#cross-validation) in the context of finance and trading models where empirical data from previous time periods (data from the past) is used to evaluate a trading strategy.
+
+<br>
+<br>
+
 <a class="mk-toclify" id="bagging"></a>
 #### Bagging
 [[back to top](#table-of-contents)]
@@ -147,7 +157,7 @@ Cosine similarity measures the orientation of two *n*-dimensional sample vectors
 #### Cross-validation
 [[back to top](#table-of-contents)]
 
-Cross-validation is a statistical technique to estimate the prediction error rate by splitting the data into training, cross-validation, and test sets. A prediction model is obtained using the training set, and model parameters are optimized by the cross-validation set, while the test set is held primarily for empirical error estimation.  
+Cross-validation is a statistical technique to estimate the prediction error rate by splitting the data into training, cross-validation, and test datasets. A prediction model is obtained using the training set, and model parameters are optimized by the cross-validation set, while the test set is held primarily for empirical error estimation.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
