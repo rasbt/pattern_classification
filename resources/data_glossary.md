@@ -67,7 +67,7 @@ Please feel free to drop me a note via
 - [Pattern classification](#pattern-classification)
 - [Precision and Recall](#precision-recall)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
-- [Proportion of Variance Explained (PVE)](#proportion-of-variance-explained)
+- [Proportion of Variance Explained (PVE)](#proportion-of-variance-explained-pve)
 - [Purity Measure](#purity-measure)
 - [Random forest](#random-forest)
 - [Reinforcement learning](#reinforcement-learning)
@@ -528,11 +528,11 @@ Precision is defined as the ratio of number of relevant items out of total retri
 <br>
 <br>
 
-<a class="mk-toclify" id="proportion-of-variance-explained"></a>
-#### Precision and Recall
+<a class="mk-toclify" id="proportion-of-variance-explained-pve"></a>
+#### Proportion of Variance Explained
 [[back to top](#table-of-contents)]
 
-In dimensionality reduction context, proportion of variance explained (PVE) represnts how much of the total variance is captured by the new selected axes (for example by principal components). It is computed by the sum of variance of new component axes devided by the total variance.  
+In the context of dimensionality reduction, the proportion of variance explained (PVE) describes how much of the total variance is captured by the new selected axes, for example,  principal components or discriminant axes. It is computed by the sum of variance of new component axes divided by the total variance.   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
