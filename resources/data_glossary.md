@@ -24,6 +24,7 @@ Please feel free to drop me a note via
 
 - [Backtesting](#backtesting)
 - [Bagging](#bagging)
+- [Big Data](#big-data)
 - [Confusion Matrix](#confusion-matrix)
 - [Correlation analysis](#correlation-analysis)
 - [Correlation analysis - Pearson](#correlation-analysis-pearson)
@@ -113,6 +114,14 @@ Bagging is an ensemble method for classification (or regression analysis) in whi
 <br>
 <br>
 
+<a class="mk-toclify" id="big-data"></a>
+#### Big Data
+[[back to top](#table-of-contents)]
+
+There are many different, controversial interpretations and definitions for the term "Big Data". Typically, one refers to data as "Big Data" if its volume and complexity are of a magnitude that the data cannot be processed by "conventional" computing platforms anymore; storage space, processing power, and database structures are typically among the limiting factors.
+
+<br>
+<br>
 
 <a class="mk-toclify" id="confusion-matrix"></a>
 #### Confusion Matrix
