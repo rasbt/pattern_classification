@@ -25,6 +25,7 @@ Please feel free to drop me a note via
 - [Backtesting](#backtesting)
 - [Bagging](#bagging)
 - [Big Data](#big-data)
+- [Bootstrapping](#bootstrapping)
 - [Confusion Matrix](#confusion-matrix)
 - [Correlation analysis](#correlation-analysis)
 - [Correlation analysis - Pearson](#correlation-analysis-pearson)
@@ -123,6 +124,16 @@ There are many different, controversial interpretations and definitions for the 
 
 <br>
 <br>
+
+<a class="mk-toclify" id="bootstrapping"></a>
+#### Bootstrapping
+[[back to top](#table-of-contents)]
+
+A resampling technique to that is closely related to [cross-validation](#cross-validation) where a training dataset is divided into random subsets. Bootstrapping -- in contrast to cross-validation -- is a random sampling **with** replacement. A typicl application of bootstrapping is to estimate the generalization error of an predictor.
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="confusion-matrix"></a>
 #### Confusion Matrix
