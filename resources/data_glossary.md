@@ -86,6 +86,7 @@ Please feel free to drop me a note via
 - [Sensitivity](#sensitivity)
 - [Specificity](#specificity)
 - [Singular Value Decomposition (SVD)](#singular-value-decomposition-svd)
+- [Stochastic Gradient Descent (SGD)](#stochastic-gradient-descent-sgd)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
 - [Unsupervised learning](#unsupervised-learning)
@@ -734,6 +735,15 @@ Singular value decomposition (SVD) is linear algebra technique that decomposes m
 <br>
 <br>
 
+<a class="mk-toclify" id="stochastic-gradient-descent-sgd"></a>
+#### Stochastic Gradient Descent (SGD)
+
+[[back to top](#table-of-contents)]
+
+Stochastic Gradient Descent (SGD) is a machine learning algorithm that seeks to minimize an objective (or cost) function and can be grouped into the category of linear classifiers for supervised learning tasks. SGD is easy to implement and especially popular for its computational efficiency.
+
+<br>
+<br>
 
 <a class="mk-toclify" id="supervised-learning"></a>
 #### Supervised Learning
