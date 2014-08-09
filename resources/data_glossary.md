@@ -26,6 +26,7 @@ Please feel free to drop me a note via
 - [Bagging](#bagging)
 - [Big Data](#big-data)
 - [Bootstrapping](#bootstrapping)
+- [Central Limit Theorem](#central-limit-theorem)
 - [Confusion Matrix](#confusion-matrix)
 - [Correlation analysis](#correlation-analysis)
 - [Correlation analysis - Pearson](#correlation-analysis-pearson)
@@ -57,6 +58,7 @@ Please feel free to drop me a note via
 - [K-Means++ Clustering](#k-means-clustering-1)
 - [K-Medoids Clustering](#k-medoids-clustering)
 - [LASSO Regression](#lasso-regression)
+- [Law of Large Numbers](#law-of-large-numbers)
 - [Least Squares fit](#least-squares-fit)
 - [Least Squares fit - linear](#least-squares-fit-linear)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
@@ -136,6 +138,14 @@ A resampling technique to that is closely related to [cross-validation](#cross-v
 <br>
 <br>
 
+<a class="mk-toclify" id="central-limit-theorem"></a>
+#### Central Limit Theorem
+[[back to top](#table-of-contents)]
+
+The Central Limit Theorem is a theorem in the field of probability theory that expresses the idea
+that the distribution of sample means (from independent random variables) converges to a normal distribution when the sample size approaches infinity.
+<br>
+<br>
 
 <a class="mk-toclify" id="confusion-matrix"></a>
 #### Confusion Matrix
@@ -444,6 +454,15 @@ K-Medoids clustering is a variant of [k-means](#k-means-clustering) algorithm in
 
 LASSO (Least Absolute Shrinkage and Selection Operator) is a regression model that uses the L1-norm (sum of absolute values) of model coefficients to penalize the model complexity. LASSO has the advantage that some coefficients can become zero, as opposed to [ridge regression](#ridge-regression) that uses the squared sum of model coefficients.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="law-of-large-numbers"></a>
+#### Law of Large Numbers
+[[back to top](#table-of-contents)]
+
+The Law of Large Numbers is a theorem in the field of probability theory that expresses the idea that the actual value of a random sampling process approaches the expected value for growing sample sizes. A common example is that the observed ratio of "heads" in an unbiased coin-flip experiment will approach 0.5 for large sample sizes. 
 
 <br>
 <br>
