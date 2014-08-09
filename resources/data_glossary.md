@@ -373,7 +373,7 @@ A popular example is the separation of overlapping voice samples -- the so-calle
 #### Jackknifing
 [[back to top](#table-of-contents)]
 
-Jackknifing is a resampling technique that predates the related [cross-validation](#cross-validation) and [bootstrapping](#bootstrapping) techniques and mostly used bias and variance estimation. In jackknifing, a dataset is split into N subsets where exactly one sample is removed from every subset so that every subset is of size N-1.
+Jackknifing is a resampling technique that predates the related [cross-validation](#cross-validation) and [bootstrapping](#bootstrapping) techniques and is mostly used for bias and variance estimations. In jackknifing, a dataset is split into N subsets where exactly one sample is removed from every subset so that every subset is of size N-1.
 
 
 <br>
