@@ -1,5 +1,5 @@
 Sebastian Raschka  
-Last updated 09/07/2014
+Last updated 09/08/2014
 
 # General tips and advices
 
@@ -8,7 +8,7 @@ Last updated 09/07/2014
 ### Sections
 
 - [A typical pattern classification workflow](#a-typical-pattern-classification-workflow)
-- [Training and Test dataset](#training-and-test-dataset)
+- [Resampling of training and test datasets](#resampling-of-training-and-test-datasets)
 <br>
 <br>
 
@@ -37,7 +37,7 @@ Last updated 09/07/2014
 <br>
 <br>
 
-### Training and Test dataset
+### Resampling of training and test datasets
 
 [[back to top](#sections)]
 
@@ -49,7 +49,7 @@ Last updated 09/07/2014
 - The choice whether a separate validation dataset should be used depends on the size of the dataset: A validation dataset is typically only recommended for "reasonably" large datasets
 - It is generally recommended to use cross-validation: the training set is split into subsets of training and test datasets so that the original test dataset is kept to evaluate the predictor only once at the very end.
 - Choose a cross-validation method (random sampling, k-fold, or leave-one-out) appropriate to your data: continuous or categorical data, large or small sample sizes.
-
+- A typical size for **k** in k-fold cross-validation is 10 since a larger number of folds increases the variance of the error estimates and the computational time as well; very small numbers of folds can cause very biased error estimates on the other hand.
 <br>
 <br>
 
