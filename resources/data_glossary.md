@@ -49,6 +49,7 @@ Please feel free to drop me a note via
 - [Generalization error](#generalization-error) 
 - [Imputation](#imputation)
 - [Independent Component Analysis](#independent-component-analysis)
+- [Jackknifing](#jackknifing)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Methods](#kernel-methods)
 - [K-fold cross-validation](#k-fold-cross-validation)
@@ -129,7 +130,7 @@ There are many different, controversial interpretations and definitions for the 
 #### Bootstrapping
 [[back to top](#table-of-contents)]
 
-A resampling technique to that is closely related to [cross-validation](#cross-validation) where a training dataset is divided into random subsets. Bootstrapping -- in contrast to cross-validation -- is a random sampling **with** replacement. A typicl application of bootstrapping is to estimate the generalization error of an predictor.
+A resampling technique to that is closely related to [cross-validation](#cross-validation) where a training dataset is divided into random subsets. Bootstrapping -- in contrast to cross-validation -- is a random sampling **with** replacement. Bootstrapping is typically be used for statistical estimation of bias and standard error, and a common application in machine learning is to estimate the generalization error of an predictor.
 
 <br>
 <br>
@@ -364,6 +365,16 @@ Imputations algorithms are designed to replace the missing data (NAs) with certa
 
 Independent Component Analysis (ICA) is a statistical signal-processing technique that decomposes a multivariate dataset of mixed, non-gaussian distributed source signals into  independent components 
 A popular example is the separation of overlapping voice samples -- the so-called "cocktail party problem".
+
+<br>
+<br>
+
+<a class="mk-toclify" id="jackknifing"></a>
+#### Jackknifing
+[[back to top](#table-of-contents)]
+
+Jackknifing is a resampling technique that predates the related [cross-validation](#cross-validation) and [bootstrapping](#bootstrapping) techniques and mostly used bias and variance estimation. In jackknifing, a dataset is split into N subsets where exactly one sample is removed from every subset so that every subset is of size N-1.
+
 
 <br>
 <br>
