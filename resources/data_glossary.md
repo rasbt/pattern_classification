@@ -33,6 +33,7 @@ Please feel free to drop me a note via
 - [Correlation analysis - Pearson](#correlation-analysis-pearson)
 - [Correlation analysis - Spearman](#correlation-analysis-spearman)
 - [Cosine Similarity](#cosine-similarity)
+- [Covariate creation](#covariate-creation)
 - [Cross-validation](#cross-validation)
 - [Cross-validation, K-fold](#cross-validation-k-fold)
 - [Cross-validation, Leave-One-Out](#cross-validation-leave-one-out)
@@ -76,6 +77,7 @@ Please feel free to drop me a note via
 - [Overfitting](#overfitting)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
+- [Power transform](#power-transform)
 - [Precision and Recall](#precision-and-recall)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Proportion of Variance Explained (PVE)](#proportion-of-variance-explained-pve)
@@ -196,6 +198,15 @@ The Spearman correlation coefficient is a rank-based version of [Pearson's corre
 
 Cosine similarity measures the orientation of two *n*-dimensional sample vectors irrespective to their magnitude. It is calculated by the dot product of two numeric vectors, and it is normalized by the vector lengths, so that output values close to 1 indicate high similarity.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="covariate-creation"></a>
+#### Covariate creation
+[[back to top](#table-of-contents)]
+
+Covariate creation describes the general procedure of creating a set of features from raw data that are used for prediction or classification. The goal is to find a good balance between summarization/compression and information loss by creating and extracting features that represent the data well and contain the most information (variance).
 
 <br>
 <br>
@@ -615,6 +626,15 @@ A non-parametric kernel density estimation technique for probability densities o
 
 The usage of patterns in datasets to discriminate between classes, i.e., to assign a class label to a new observation based on inference.
 
+<br>
+<br>
+
+<a class="mk-toclify" id="power-transform"></a>
+#### Power transform
+
+[[back to top](#table-of-contents)]
+
+Power transforms form a category of statistical transformation techniques that are used to transform non-normal distributed data to normality.
 <br>
 <br>
 
