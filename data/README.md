@@ -130,4 +130,20 @@ Bache, K. & Lichman, M. (2013). UCI Machine Learning Repository. Irvine, CA: Uni
 
 Creator: R.A. Fisher (1936)
 
+#### iris_test40.csv and iris_train60.csv
 
+
+
+The datasets `iris_test40.csv` and `iris_train60.csv` are randomly sampled from the original `iris.csv` dataset where `iris_test40.csv` contains 40% of the original samples and the remaining 60% are contained in `iris_train60.csv`. The class labels in the 5th column where replaced by integers 1-4, where 
+
+- 1 = Iris-setosa
+- 2 = Iris-versicolor
+- 3 = Iris-virginica
+
+
+| class | # of samples in test set | # of samples in training set | total
+|-------|------|----------|
+| Iris-setosa     | 21 | 29 | 50 |
+| Iris-versicolor | 22 | 28 | 50 |
+| Iris-virginica  | 17 | 33 | 50 |
+| total           | 60 | 90 | 150|
