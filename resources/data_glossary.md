@@ -22,6 +22,7 @@ Please feel free to drop me a note via
 
 #Table of Contents
 
+- [Accuracy](#accuracy)
 - [Backtesting](#backtesting)
 - [Bagging](#bagging)
 - [Big Data](#big-data)
@@ -75,7 +76,7 @@ Please feel free to drop me a note via
 - [Overfitting](#overfitting)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
-- [Precision and Recall](#precision-recall)
+- [Precision and Recall](#precision-and-recall)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Proportion of Variance Explained (PVE)](#proportion-of-variance-explained-pve)
 - [Purity Measure](#purity-measure)
@@ -96,8 +97,14 @@ Please feel free to drop me a note via
 - [Whitening transformation](#whitening-transformation)
 
 
+<br>
+<br>
 
+<a class="mk-toclify" id="accuracy"></a>
+#### Accuracy
+[[back to top](#table-of-contents)]
 
+Accuracy is defined as the fraction of correct classifications out of the total number of samples; it resembles one way to assess the performance of a predictor and is often used synonymous to [specificity](#specificity)/[precision](#precision-and-recall) although it is calculated differently. Accuracy is calculated as (TP+TN)/(P+N), where TP=True Positives, TN=True Negatives, P=Positives, N=Negatives.
 <br>
 <br>
 
@@ -620,11 +627,11 @@ A linear transformation technique that is commonly used to project a dataset (wi
 <br>
 <br>
 
-<a class="mk-toclify" id="precision-recall"></a>
+<a class="mk-toclify" id="precision-and-recall"></a>
 #### Precision and Recall
 [[back to top](#table-of-contents)]
 
-Precision and recall are two measures to assess performance of a classifier if class label distributions are skewed.
+Precision (synonymous to [specificity](#specificity)) and recall (synonymous to [sensitivity](#sensitivity)) are two measures to assess performance of a classifier if class label distributions are skewed.
 Precision is defined as the ratio of number of relevant items out of total retrieved items, whereas recall is the fraction of relevant items which are retrieved.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
@@ -727,7 +734,7 @@ Ridge regression is a regularized regression technique in which the squared sum 
 
 [[back to top](#table-of-contents)]
 
-Sensitivity, which is related to [specificity](#specificity) -- in the context of error rate evaluation -- describes the "True Positive Rate" for a binary classification problem: The probability to make a correct prediction for a "positive/true" case (e.g., in an attempt to predict a disease, the disease is correctly predicted for a patient who truly has this disease).
+Sensitivity (synonymous to [precision](#precision-and-recall)), which is related to [specificity](#specificity) -- in the context of error rate evaluation -- describes the "True Positive Rate" for a binary classification problem: The probability to make a correct prediction for a "positive/true" case (e.g., in an attempt to predict a disease, the disease is correctly predicted for a patient who truly has this disease). Sensitivity is calculated as (TP)/(TP+FN), where TP=True Positives, FN=False Negatives.
 
 <br>
 <br>
@@ -737,7 +744,7 @@ Sensitivity, which is related to [specificity](#specificity) -- in the context o
 
 [[back to top](#table-of-contents)]
 
-Specificity, which is related to [sensitivity](#sensitivity) -- in the context of error rate evaluation -- describes the "True Negative Rate" for a binary classification problem: The probability to make a correct prediction for a "false/negative" case (e.g., in an attempt to predict a disease, no disease is predicted for a healthy patient).
+Specificity (synonymous to [recall](#precision-and-recall)), which is related to [sensitivity](#sensitivity) -- in the context of error rate evaluation -- describes the "True Negative Rate" for a binary classification problem: The probability to make a correct prediction for a "false/negative" case (e.g., in an attempt to predict a disease, no disease is predicted for a healthy patient). Specificity is calculated as (TN)/(FP+TN), where TN=True Negatives, FP=False Positives.
 
 <br>
 <br>
