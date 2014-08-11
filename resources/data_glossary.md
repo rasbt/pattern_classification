@@ -578,7 +578,7 @@ A technique to estimate the parameters that have been fit to a model by maximizi
 #### Naive Bayes Classifier
 [[back to top](#table-of-contents)]
 
-A classifier based on a statistical model (i.e., Bayes theorem: calculating posterior probabilities based on the prior probability and the so-called likelihood) in the field of pattern classification. It is based on the assumption that all features are i.i.d. (independent and identically distributed). 
+A classifier based on a statistical model (i.e., Bayes theorem: calculating posterior probabilities based on the prior probability and the so-called likelihood) in the field of pattern classification. Naive Bayes assumes that all attributes are conditionally independent, thereby, computing the likelihood is simplified to the product of conditional probability of observing individual attributes given class label. 
 
 <br>
 <br>
