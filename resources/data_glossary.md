@@ -49,7 +49,8 @@ Please feel free to drop me a note via
 - [Feature Selection Algorithms](#feature-selection-algorithms)
 - [Feature Space](#feature-space)
 - [Fuzzy C-Means Clustering](#fuzzy-cmeans-clustering)
-- [Generalization error](#generalization-error) 
+- [Generalization error](#generalization-error)
+- [Gradient Descent](#gradient-descent) 
 - [Imputation](#imputation)
 - [Independent Component Analysis](#independent-component-analysis)
 - [Jackknifing](#jackknifing)
@@ -127,6 +128,15 @@ Backtesting is a specific case of [cross-validation](#cross-validation) in the c
 Bagging is an ensemble method for classification (or regression analysis) in which individual models are trained by random sampling of data, and the final decision is made by voting among individual models with equal weights (or averaging for regression analysis).   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
+<br>
+<br>
+
+<a class="mk-toclify" id="batch-gradient-descent-sgd"></a>
+#### Batch Gradient Descent
+
+[[back to top](#table-of-contents)]
+
+Batch Gradient descent is a variant of a [Gradient Descent](#gradient-descent) algorithm to optimize a function by finding its local minimum. In contrast to [Stochastic Gradient Descent](#stochastic-gradient-descent-sgd) the gradient is computed from the whole dataset.
 <br>
 <br>
 
@@ -369,11 +379,20 @@ Fuzzy C-Means is a soft clustering algorithm in which each sample point has a me
 <br>
 
 <a class="mk-toclify" id="generalization-error"></a>
-
 #### Generalization error
 [[back to top](#table-of-contents)]
 
 The generalization error describes how well new data can be classified and is a useful metric to assess the performance of a classifier. Typically, the generalization error is computed via [cross-validation](cross-validation) or simply the absolute difference between the error rate on the training and test dataset.
+
+
+<br>
+<br>
+
+<a class="mk-toclify" id="gradient-descent"></a>
+#### Gradient Descent
+[[back to top](#table-of-contents)]
+
+Gradient descent is an algorithm that optimizes a function by finding its local minimum. After the algorithm was initialized with an initial guess, it takes the derivative of the function to make a step towards the direction of deepest descent. This step-wise process is repeated until convergence.
 
 
 <br>
@@ -578,16 +597,7 @@ A technique to estimate the parameters that have been fit to a model by maximizi
 #### Naive Bayes Classifier
 [[back to top](#table-of-contents)]
 
-A classifier based on a statistical model (i.e., Bayes theorem: calculating posterior probabilities based on the prior probability and the so-called likelihood) in the field of pattern classification. Naive Bayes assumes that all attributes are conditionally independent, thereby, computing the likelihood is simplified to the product of conditional probability of observing individual attributes given class label. 
-
-<br>
-<br>
-
-<a class="mk-toclify" id="objective-function"></a>
-#### Objective function
-[[back to top](#table-of-contents)]
-
-A function that is to be optimized (minimizing or maximizing a numerical value depending on a particular task or problem), for example, an objective function in pattern classification tasks could be to minimize the error rate of a classifier.
+A classifier based on a statistical model (i.e., Bayes theorem: calculating posterior probabilities based on the prior probability and the so-called likelihood) in the field of pattern classification. Naive Bayes assumes that all attributes are conditionally independent, thereby, computing the likelihood is simplified to the product of the conditional probabilities of observing individual attributes given a particular class label. 
 
 <br>
 <br>
@@ -606,6 +616,15 @@ A data pre-processing step (also often referred to as "Feature Scaling") for fit
 [[back to top](#table-of-contents)]
 
 A data pre-processing step (also often just called "Standardization") for re-scaling features from different measurements to match proportions of a standard normal distribution (unit variance centered at mean=0).
+
+<br>
+<br>
+
+<a class="mk-toclify" id="objective-function"></a>
+#### Objective function
+[[back to top](#table-of-contents)]
+
+A function that is to be optimized (minimizing or maximizing a numerical value depending on a particular task or problem), for example, an objective function in pattern classification tasks could be to minimize the error rate of a classifier.
 
 <br>
 <br>
@@ -798,8 +817,7 @@ Singular value decomposition (SVD) is linear algebra technique that decomposes m
 
 [[back to top](#table-of-contents)]
 
-Stochastic Gradient Descent (SGD) is a machine learning algorithm that seeks to minimize an objective (or cost) function and can be grouped into the category of linear classifiers for supervised learning tasks. SGD is easy to implement and especially popular for its computational efficiency.
-
+Stochastic Gradient Descent (SGD) (also see [Gradient Descent](#gradient-descent)) is a machine learning algorithm that seeks to minimize an objective (or cost) function and can be grouped into the category of linear classifiers for supervised learning tasks. In contrast to [Batch Gradient Descent](#batch-gradient-descent), the gradient is computed from a single sample.
 <br>
 <br>
 
