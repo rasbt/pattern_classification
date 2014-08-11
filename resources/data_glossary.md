@@ -90,6 +90,7 @@ Please feel free to drop me a note via
 - [Ridge Regression](#ridge-regression)
 - [Sensitivity](#sensitivity)
 - [Specificity](#specificity)
+- [Silhoutte Measure (clustering)](#silhoutte-measure-clustering)
 - [Singular Value Decomposition (SVD)](#singular-value-decomposition-svd)
 - [Stochastic Gradient Descent (SGD)](#stochastic-gradient-descent-sgd)
 - [Supervised learning](#supervised-learning)
@@ -765,6 +766,16 @@ Sensitivity (synonymous to [precision](#precision-and-recall)), which is related
 [[back to top](#table-of-contents)]
 
 Specificity (synonymous to [recall](#precision-and-recall)), which is related to [sensitivity](#sensitivity) -- in the context of error rate evaluation -- describes the "True Negative Rate" for a binary classification problem: The probability to make a correct prediction for a "false/negative" case (e.g., in an attempt to predict a disease, no disease is predicted for a healthy patient). Specificity is calculated as (TN)/(FP+TN), where TN=True Negatives, FP=False Positives.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="silhoutte-measure-clustering"></a>
+#### Silhoutte Measure (clustering)
+
+[[back to top](#table-of-contents)]
+
+Silhoutte measure provides a metric to evaluate the performance of a clustering analysis. For each data point *i*, it measures the average distance of point *i* to all other points in the same cluster *(a(i))*, and the minimum distance to points from other clusters *(b(i))*. Then $s(i)=\frac{b(i)-a(i)}{\max{a(i),b(i)}}$. Average silhoute measures for each cluster can provide a visual way to pick the proper number of clusters.
 
 <br>
 <br>
