@@ -25,6 +25,7 @@ Please feel free to drop me a note via
 - [Accuracy](#accuracy)
 - [Backtesting](#backtesting)
 - [Bagging](#bagging)
+- [Batch Gradient Descent](#batch-gradient-descent)
 - [Big Data](#big-data)
 - [Bootstrapping](#bootstrapping)
 - [Central Limit Theorem](#central-limit-theorem)
