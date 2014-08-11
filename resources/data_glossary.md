@@ -90,7 +90,7 @@ Please feel free to drop me a note via
 - [Ridge Regression](#ridge-regression)
 - [Sensitivity](#sensitivity)
 - [Specificity](#specificity)
-- [Silhoutte Measure (clustering)](#silhoutte-measure-clustering)
+- [Silhouette Measure (clustering)](#silhouette-measure-clustering)
 - [Singular Value Decomposition (SVD)](#singular-value-decomposition-svd)
 - [Stochastic Gradient Descent (SGD)](#stochastic-gradient-descent-sgd)
 - [Supervised learning](#supervised-learning)
@@ -770,8 +770,8 @@ Specificity (synonymous to [recall](#precision-and-recall)), which is related to
 <br>
 <br>
 
-<a class="mk-toclify" id="silhoutte-measure-clustering"></a>
-#### Silhoutte Measure (clustering)
+<a class="mk-toclify" id="silhouette-measure-clustering"></a>
+#### Silhouette Measure (clustering)
 
 [[back to top](#table-of-contents)]
 
