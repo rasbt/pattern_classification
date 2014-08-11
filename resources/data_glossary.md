@@ -775,7 +775,8 @@ Specificity (synonymous to [recall](#precision-and-recall)), which is related to
 
 [[back to top](#table-of-contents)]
 
-Silhoutte measure provides a metric to evaluate the performance of a clustering analysis. For each data point *i*, it measures the average distance of point *i* to all other points in the same cluster *(a(i))*, and the minimum distance to points from other clusters *(b(i))*. Then $s(i)=\frac{b(i)-a(i)}{\max{a(i),b(i)}}$. Average silhoute measures for each cluster can provide a visual way to pick the proper number of clusters.
+Silhouette measure provides a metric to evaluate the performance of a clustering analysis. For each data point *i*, it measures the average distance of point *i* to all other points in the same cluster *(a(i))*, and the minimum distance to points from other clusters *(b(i))*. The average silhouette measures for each cluster can provide a visual way to pick the proper number of clusters.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
