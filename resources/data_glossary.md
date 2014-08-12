@@ -67,7 +67,7 @@ Please feel free to drop me a note via
 - [Least Squares fit](#least-squares-fit)
 - [Least Squares fit - linear](#least-squares-fit-linear)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
-- [Local Outlier Factor (LOF)](#local-outlier-factor)
+- [Local Outlier Factor (LOF)](#local-outlier-factor-lof)
 - [Logistic Regression](#logistic-regression)
 - [Machine learning](#machine-learning)
 - [Mahalanobis distance](#mahalanobis-distance)
@@ -116,11 +116,11 @@ Accuracy is defined as the fraction of correct classifications out of the total 
 <br>
 
 <a class="mk-toclify" id="anomaly-detection"></a>
-#### Accuracy
+#### Anomaly detection
 [[back to top](#table-of-contents)]
 
-Anomaly detection is the task of identifying points that deviate from the patterns in a dataset, also called outliers. Anomaly detection can be performed by supervised or unsupervised approaches. Different types of anomaly detection methods include graph-based, statistical-based and distance-based techniques.  
-(submitted by [Vahid Mirjalil(#https://github.com/mirjalil/))
+Anomaly detection describes the task of identifying points that deviate from specific patterns in a dataset --  the so-called outliers. Different types of anomaly detection methods include graph-based, statistical-based and distance-based techniques and can be used in both unsupervised and supervised learning tasks.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 <br>
 <br>
 
@@ -548,8 +548,8 @@ A linear transformation technique (related to Principal Component Analysis) that
 #### Local Outlier Factor (LOF)
 [[back to top](#table-of-contents)]
 
-LOF is a density-based [anomaly detection](#anomaly-detection) technique which identifies outliers by calculating the deviations at each sample point. LOF for point *p* referes to the average of the ratio of density of point *p* to the density of its nearest neighbours. Then outliers are identified as points with largest LOF values.  
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+LOF is a density-based [anomaly detection](#anomaly-detection) technique for outlier identification. The LOF for a point *p* refers to the average "reachability distance" towards its nearest neighbors. Eventually, the points with the largest LOF values (given a particular threshold) are identified as outliers.   
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
 <br>
 <br>
