@@ -23,6 +23,7 @@ Please feel free to drop me a note via
 #Table of Contents
 
 - [Accuracy](#accuracy)
+- [Anomaly Detection](#anomaly-detection)
 - [Backtesting](#backtesting)
 - [Bagging](#bagging)
 - [Batch Gradient Descent](#batch-gradient-descent)
@@ -110,6 +111,15 @@ Please feel free to drop me a note via
 [[back to top](#table-of-contents)]
 
 Accuracy is defined as the fraction of correct classifications out of the total number of samples; it resembles one way to assess the performance of a predictor and is often used synonymous to [specificity](#specificity)/[precision](#precision-and-recall) although it is calculated differently. Accuracy is calculated as (TP+TN)/(P+N), where TP=True Positives, TN=True Negatives, P=Positives, N=Negatives.
+<br>
+<br>
+
+<a class="mk-toclify" id="anomaly-detection"></a>
+#### Accuracy
+[[back to top](#table-of-contents)]
+
+Anomaly detection is the task of identifying points that deviate from the patterns in a dataset, also called outliers. Anomaly detection can be performed by supervised or unsupervised approaches. Different types of anomaly detection methods include graph-based, statistical-based and distance-based techniques.  
+(submitted by [Vahid Mirjalil(#https://github.com/mirjalil/))
 <br>
 <br>
 
