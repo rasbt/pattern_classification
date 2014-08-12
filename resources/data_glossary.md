@@ -66,6 +66,7 @@ Please feel free to drop me a note via
 - [Least Squares fit](#least-squares-fit)
 - [Least Squares fit - linear](#least-squares-fit-linear)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
+- [Local Outlier Factor (LOF)](#local-outlier-factor)
 - [Logistic Regression](#logistic-regression)
 - [Machine learning](#machine-learning)
 - [Mahalanobis distance](#mahalanobis-distance)
@@ -529,6 +530,16 @@ A linear regression technique that fits a straight line to a data set (or overde
 [[back to top](#table-of-contents)]
 
 A linear transformation technique (related to Principal Component Analysis) that is commonly used to project a dataset onto a new feature space or feature subspace, where the new component axes maximize the spread between multiple classes, or for classification of data.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="local-outlier-factor"></a>
+#### Local Outlier Factor (LOF)
+[[back to top](#table-of-contents)]
+
+LOF is a density-based [anomaly detection](#anomaly-detection) technique which identifies outliers by calculating the deviations at each sample point. LOF for point *p* referes to the average of the ratio of density of point *p* to the density of its nearest neighbours. Then outliers are identified as points with largest LOF values.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
