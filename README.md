@@ -22,7 +22,7 @@
 - [Machine learning and pattern classification with scikit-learn](#machine-learning-and-pattern-classification-with-scikit-learn)
 - [Pre-Processing](#pre-processing)
 - [Parameter Estimation](#parameter-estimation)
-- [Statistical Pattern Recognition Examples](#statistical-pattern-recognition-examples)
+- [Statistical Pattern Classification Examples](#statistical-pattern-classification-examples)
 - [Resources](#resources)
 
 
