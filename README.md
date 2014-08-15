@@ -21,8 +21,7 @@
 
 - [Machine learning and pattern classification with scikit-learn](#machine-learning-and-pattern-classification-with-scikit-learn)
 - [Pre-Processing](#pre-processing)
-- [Techniques for Dimensionality Reduction](#techniques-for-dimensionality-reduction)
-- [Techniques for Parameter Estimation](#techniques-for-parameter-estimation)
+- [Parameter Estimation](#parameter-estimation)
 - [Statistical Pattern Recognition Examples](#statistical-pattern-recognition-examples)
 - [Resources](#resources)
 
@@ -45,6 +44,8 @@
 
 - An Introduction to simple linear supervised classification using `scikit-learn` [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/scikit_linear_classification.ipynb)]
 
+- Streamline your cross-validation workflow - scikit-learn's Pipeline in action [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/scikit-pipeline.ipynb)]
+
 <br>
 <br>
 <br>
@@ -55,41 +56,24 @@
 
 [[back to top](#machine-learning-and-pattern-classification)]
 
-- About Feature Scaling: Standardization and Min-Max-Scaling (Normalization) [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/preprocessing/about_standardization_normalization.ipynb)]
-
-
-
-<br>
-<br>
-<br>
-<hr>
-<br>
-
-<hr>
-<br>
-
-### Techniques for Dimensionality Reduction
-[[back to top](#machine-learning-and-pattern-classification)]
-
-- **Projection**
-	- Component Analyses
-		- Linear Transformation
-			- Principal Component Analysis (PCA) [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/principal_component_analysis.ipynb)]
-			- Linear Discriminant Analysis (LDA) [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/linear_discriminant_analysis.ipynb)]
-
+- **Scaling and Normalization**
+	- About Feature Scaling: Standardization and Min-Max-Scaling (Normalization) [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/preprocessing/about_standardization_normalization.ipynb)]
 
 
 - **Feature Selection**
-	- Sequential Feature Selection Algorithms [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/feature_selection/sequential_selection_algorithms.ipynb)]
+	- Sequential Feature Selection Algorithms [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/feature_selection/sequential_selection_algorithms.ipynb)] 
+
+- **Dimensionality Reduction**
+	- Principal Component Analysis (PCA) [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/principal_component_analysis.ipynb)] 
+	- Linear Discriminant Analysis (LDA) [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/linear_discriminant_analysis.ipynb)]
 
 
 <br>
 <hr>
 <br>
 
-### Techniques for Parameter Estimation
+### Parameter Estimation
 [[back to top](#machine-learning-and-pattern-classification)]
-
 
 - **Parametric Techniques**
     - Introduction to the Maximum Likelihood Estimate (MLE) [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/maximum_likelihood_estimate.ipynb)]
@@ -112,7 +96,7 @@
 <br>
 
 
-### Statistical Pattern Recognition Examples
+### Statistical Pattern Classification Examples
 [[back to top](#machine-learning-and-pattern-classification)]
 
 - **Supervised Learning**
@@ -133,7 +117,6 @@
     		
     - Non-Parametric Techniques
 
-- **Unsupervised Learning**
 
 <br>
 <hr>
