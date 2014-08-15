@@ -37,7 +37,7 @@
 <br>
 
 ### Machine learning and pattern classification with scikit-learn 
-[[back to top](#machine-learning-and-pattern-classification)]
+[[back to top](#sections)]
 
 - Entry Point: Data - Using Python's sci-packages to prepare data for Machine Learning tasks and other data analyses [[IPython nb](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/python_data_entry_point.ipynb)]
 
@@ -54,7 +54,7 @@
 
 ### Pre-processing
 
-[[back to top](#machine-learning-and-pattern-classification)]
+[[back to top](#sections)]
 
 - **Scaling and Normalization**
 	- About Feature Scaling: Standardization and Min-Max-Scaling (Normalization) [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/preprocessing/about_standardization_normalization.ipynb)]
@@ -73,7 +73,7 @@
 <br>
 
 ### Parameter Estimation
-[[back to top](#machine-learning-and-pattern-classification)]
+[[back to top](#sections)]
 
 - **Parametric Techniques**
     - Introduction to the Maximum Likelihood Estimate (MLE) [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/parameter_estimation_techniques/maximum_likelihood_estimate.ipynb)]
@@ -97,7 +97,7 @@
 
 
 ### Statistical Pattern Classification Examples
-[[back to top](#machine-learning-and-pattern-classification)]
+[[back to top](#sections)]
 
 - **Supervised Learning**
     	
@@ -123,7 +123,7 @@
 <br>
 
 ## Resources
-[[back to top](#machine-learning-and-pattern-classification)]
+[[back to top](#sections)]
 
 - Copy-and-paste ready LaTex equations [[Markdown](./resources/latex_equations.md)]
 
