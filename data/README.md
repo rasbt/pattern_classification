@@ -3,6 +3,7 @@
 - [titanic.csv](#titaniccsv)
 - [wine.csv](#winecsv)
 - [iris.csv](#iriscsv)
+- [sms_spam_collection.csv](#sms_spam_collection.csv)
 
 
 
@@ -147,3 +148,27 @@ The datasets `iris_test40.csv` and `iris_train60.csv` are randomly sampled from 
 | Iris-versicolor | 22 | 28 | 50 |
 | Iris-virginica  | 17 | 33 | 50 |
 | total           | 60 | 90 | 150|
+
+
+<br>
+<hr>
+<br>
+
+## sms_spam_collection.csv
+[[back to top](#table-of-contents)]
+
+A public dataset of 5572 SMS messages that are labeled as either "spam" or "ham" (not spam).
+
+| 0    | 1    |                                                   |
+|------|------|---------------------------------------------------|
+| ...  | ...  | ... |
+| 5567 | spam | This is the 2nd time we have tried 2 contact u... |
+| 5568 | ham  | Will ü b going to esplanade fr home?              |
+| 5569 | ham  | Pity, * was in mood for that. So...any other s... |
+| 5570 | ham  | The guy did some bitching but I acted like i'd... |
+| 5571 | ham  | Rofl. Its true to its name                        |
+
+
+Source: [http://www.dt.fee.unicamp.br/%7Etiago/smsspamcollection/](http://www.dt.fee.unicamp.br/%7Etiago/smsspamcollection/)
+
+Almeida, Tiago A., José María G. Hidalgo, and Akebo Yamakami. 2011. “Contributions to the Study of SMS Spam Filtering: New Collection and Results.” In Proceedings of the 11th ACM Symposium on Document Engineering, 259–62. DocEng ’11. New York, NY, USA: ACM. doi:10.1145/2034691.2034742.
