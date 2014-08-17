@@ -75,7 +75,10 @@ Last updated 09/08/2014
 - Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) are two examples of commonly used dimensionality reduction. The goal is to reduce computational costs, remove "uninformative" (zero-variance) features and while retaining discriminatory information. Typically, LDA tends to outperform PCA for supervised training tasks since it does not only choose the directions of maximum variance like PCA, but also tries to maximize the class-separability.  
 However, [A.M. Martinez et al., 2001](#http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=908974) showed that PCA can outperform LDA if the number of samples per class is relatively small.
 
-- If you perform standardization, PCA, LDA, and any other transformation technique on the training dataset, it is important to always use the same parameters on the test dataset: E.g., in the case of standardization, use the same mean and standard deviation that was used to scale the training dataset.
+- For standardization, PCA, LDA, and any other transformation technique on the training dataset, it is important to always use the same parameters on the test dataset: E.g., in the case of standardization, use the same mean and standard deviation that was used to scale the training dataset.
+
+
+
 
 <br>
 <br>

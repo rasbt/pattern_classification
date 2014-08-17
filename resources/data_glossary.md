@@ -23,6 +23,7 @@ Please feel free to drop me a note via
 #Table of Contents
 
 - [Accuracy](#accuracy)
+- [Aggregation](#aggregation)
 - [Anomaly Detection](#anomaly-detection)
 - [Backtesting](#backtesting)
 - [Bagging](#bagging)
@@ -96,6 +97,7 @@ Please feel free to drop me a note via
 - [Reinforcement learning](#reinforcement-learning)
 - [Resubstitution error](#resubstitution-error)
 - [Ridge Regression](#ridge-regression)
+- [Sampling](#sampling)
 - [Sensitivity](#sensitivity)
 - [Specificity](#specificity)
 - [Silhouette Measure (clustering)](#silhouette-measure-clustering)
@@ -116,8 +118,20 @@ Please feel free to drop me a note via
 [[back to top](#table-of-contents)]
 
 Accuracy is defined as the fraction of correct classifications out of the total number of samples; it resembles one way to assess the performance of a predictor and is often used synonymous to [specificity](#specificity)/[precision](#precision-and-recall) although it is calculated differently. Accuracy is calculated as (TP+TN)/(P+N), where TP=True Positives, TN=True Negatives, P=Positives, N=Negatives.
+
 <br>
 <br>
+
+
+<a class="mk-toclify" id="aggregation"></a>
+#### Aggregation
+[[back to top](#table-of-contents)]
+
+Aggregation is a data pre-processing procedure that is used to reduce the overall size of a dataset by combining attributes. An example of aggregation would be the averaging of daily temperature measurements to monthly temperature measurements.
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="anomaly-detection"></a>
 #### Anomaly detection
@@ -830,6 +844,17 @@ The resubstitution error represents the classification error rate on the trainin
 
 Ridge regression is a regularized regression technique in which the squared sum of the model coefficients is used to penalize model complexity.   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+
+<a class="mk-toclify" id="sampling"></a>
+#### Sampling
+
+[[back to top](#table-of-contents)]
+
+Sampling is data pre-processing procedure that is used to reduce the overall size of a dataset and to reduce computational costs by selecting a representative subset from the whole input dataset.
 
 <br>
 <br>
