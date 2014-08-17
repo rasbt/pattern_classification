@@ -82,6 +82,7 @@ Please feel free to drop me a note via
 - [Overfitting](#overfitting)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
+- [Permissive transformations](#permissive-transformations)
 - [Power transform](#power-transform)
 - [Precision and Recall](#precision-and-recall)
 - [Predictive Modeling](#predictive-modeling)
@@ -673,7 +674,6 @@ A non-parametric kernel density estimation technique for probability densities o
 <br>
 
 <a class="mk-toclify" id="pattern-classification"></a>
-
 #### Pattern classification
 
 [[back to top](#table-of-contents)]
@@ -682,6 +682,18 @@ The usage of patterns in datasets to discriminate between classes, i.e., to assi
 
 <br>
 <br>
+
+
+<a class="mk-toclify" id="permissive-transformations"></a>
+#### Permissive transformations
+
+[[back to top](#table-of-contents)]
+
+Permissive transformations are transformations of data that that do not change the "meaning" of the attributes, such as scaling or mapping. For example, the transformation of temperature measurements from a Celsius to a Kelvin scale would be a permissive transformation of a numerical attribute.
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="power-transform"></a>
 #### Power transform
