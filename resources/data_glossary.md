@@ -84,6 +84,7 @@ Please feel free to drop me a note via
 - [Pattern classification](#pattern-classification)
 - [Power transform](#power-transform)
 - [Precision and Recall](#precision-and-recall)
+- [Predictive Modeling](#predictive-modeling)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Proportion of Variance Explained (PVE)](#proportion-of-variance-explained-pve)
 - [Purity Measure](#purity-measure)
@@ -687,6 +688,7 @@ The usage of patterns in datasets to discriminate between classes, i.e., to assi
 [[back to top](#table-of-contents)]
 
 Power transforms form a category of statistical transformation techniques that are used to transform non-normal distributed data to normality.
+
 <br>
 <br>
 
@@ -706,6 +708,15 @@ A linear transformation technique that is commonly used to project a dataset (wi
 Precision (synonymous to [specificity](#specificity)) and recall (synonymous to [sensitivity](#sensitivity)) are two measures to assess performance of a classifier if class label distributions are skewed.
 Precision is defined as the ratio of number of relevant items out of total retrieved items, whereas recall is the fraction of relevant items which are retrieved.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
+
+<a class="mk-toclify" id="predictive-modeling"></a>
+#### Predictive Modeling]
+[[back to top](#table-of-contents)]
+
+Predictive modeling is the process of collecting data and training a classifier. Eventually, the the goal is to create a statistical model that can be used to make predictions about future trends and behaviors, e.g., predictions of stock market trends or the classifications of spam vs. non-spam e-mails.
 
 <br>
 <br>
