@@ -88,6 +88,7 @@ Please feel free to drop me a note via
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Proportion of Variance Explained (PVE)](#proportion-of-variance-explained-pve)
 - [Purity Measure](#purity-measure)
+- [Quantitative and qualitative attributes](#quantitative-and-qualitative-attributes)
 - [Random forest](#random-forest)
 - [Receiver Operating Characteristic (ROC)](#receiver-operating-characteristic-roc))
 - [Regularization](#regularization)
@@ -713,10 +714,10 @@ Precision is defined as the ratio of number of relevant items out of total retri
 <br>
 
 <a class="mk-toclify" id="predictive-modeling"></a>
-#### Predictive Modeling]
+#### Predictive Modeling
 [[back to top](#table-of-contents)]
 
-Predictive modeling is the process of collecting data and training a classifier. Eventually, the the goal is to create a statistical model that can be used to make predictions about future trends and behaviors, e.g., predictions of stock market trends or the classifications of spam vs. non-spam e-mails.
+Predictive modeling is a [data mining](#data-mining) technique that describes the process of collecting data and training a classifier. Eventually, the the goal is to create a statistical model that can be used to make predictions about future trends and behaviors, e.g., predictions of stock market trends or the classifications of spam vs. non-spam e-mails.
 
 <br>
 <br>
@@ -742,6 +743,15 @@ In a cluster analysis with given truth cluster memberships (or classes), "purity
 <br>
 <br>
 
+<a class="mk-toclify" id="quantitative-and-qualitative-attributes"></a>
+
+#### Quantitative and qualitative attributes    
+[[back to top](#table-of-contents)]
+
+Quantitative attributes are also often called "numeric"; those are attributes for which calculations and comparisons like ratios and intervals make sense (e.g., temperature in Celsius). Qualitative, or "categorical", attributes can be grouped into to subclasses: nominal and ordinal. Where ordinal attributes (e.g., street numbers) can be ordered, nominal attributes can only distinguished by their category names (e.g., colors). 
+
+<br>
+<br>
 
 <a class="mk-toclify" id="random-forest"></a>
 #### Random forest
