@@ -9,6 +9,9 @@ Last updated 09/08/2014
 
 - [A typical pattern classification workflow](#a-typical-pattern-classification-workflow)
 - [Resampling of training and test datasets](#resampling-of-training-and-test-datasets)
+- [Dealing with Missing Data](#dealing-with-missing-data)
+- [A typical KDD workflow](#a-typical-kdd-workflow)
+
 <br>
 <br>
 
@@ -77,17 +80,38 @@ However, [A.M. Martinez et al., 2001](#http://ieeexplore.ieee.org/xpl/articleDet
 <br>
 <br>
 
-### Missing Data
+### Dealing with Missing Data
 
-- Many machine learning algorithms will fail if missing data in a dataset is not treated appropriately.
+[[back to top](#sections)]
 
-- In general resubstitution via k-nearest neighbor imputation is considered to be superior over resubstitution of missing data by the overall sample mean.
+Many machine learning algorithms will fail if missing data in a dataset is not treated appropriately. 
+There are three main approaches for dealing with missing data: Elimination, estimation, and ignoral.
+
+##### Elimination
+
+- Only recommended if a few attributes are missing.
+- Elimination can be done in two ways: The whole attribute columns for which data is missing can be removed from the dataset, or only those samples which contain missing attribute values can be removed.
+
+##### Estimation
+
+- Estimation is the interpolation of values from other values.
+- For categorical data, the missing value can be interpolated from the most frequent category.
+- For numerical data, the missing value can be interpolated by the average of other values.
+- In general, resubstitution via k-nearest neighbor imputation is considered to be superior over resubstitution of missing data by the overall sample mean.
+
+
+##### Ignoral
+
+- Ignoral is typically used in clustering where only the "available" attributes are being used to calculate "relatedness"/similarity between samples.
+
 
 <br>
 <br>
 
 
 ### A typical KDD workflow
+
+[[back to top](#sections)]
 
 A typical Knowledge Discovery in Databases (KDD) workflow:
 
