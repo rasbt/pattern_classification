@@ -86,5 +86,20 @@ However, [A.M. Martinez et al., 2001](#http://ieeexplore.ieee.org/xpl/articleDet
 <br>
 <br>
 
+
+### A typical KDD workflow
+
+A typical Knowledge Discovery in Databases (KDD) workflow:
+
+**Input data -> Data Preprocessing<sup>1</sup> -> Data Mining -> Post-processing -> information retrieval**
+
+<sup>1</sup>Feature selection, dimensionality reduction, normalization, data subsetting ...
+
+[[back to top](#sections)]
+
+<br>
+<br>
+
+
 ### in progress ...
 [[back to top](#sections)]

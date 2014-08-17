@@ -62,6 +62,7 @@ Please feel free to drop me a note via
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
 - [K-Medoids Clustering](#k-medoids-clustering)
+- [Knowledge Discovery in Databases (KDD)](#knowledge-discovery-in-databases-kdd)
 - [LASSO Regression](#lasso-regression)
 - [Law of Large Numbers](#law-of-large-numbers)
 - [Least Squares fit](#least-squares-fit)
@@ -287,7 +288,7 @@ For a fixed number of training samples, the curse of dimensionality describes th
 #### Data mining
 [[back to top](#table-of-contents)]
 
-A field that is closely related to machine learning and pattern classification. The focus of data mining is often on the collection of data and combines different techniques the data in order to extract meaningful information out of data.
+A field that is closely related to machine learning and pattern classification. The focus of data mining does not lie in the collection of data, but the extraction of useful information, the discovery of patterns, inferences, and predictions. 
 
 <br>
 <br>
@@ -494,6 +495,15 @@ A variant of [k-means](#k-means-clustering) where instead of choosing all initia
 
 K-Medoids clustering is a variant of [k-means](#k-means-clustering) algorithm in which cluster centroids are picked among the sample points rather than the mean point of each cluster. K-Medoids can overcome some of the limitations of [k-means](#k-means-clustering) algorithm by avoiding empty clusters, being more robust to outliers, and being more easily applicable to non-numeric data types.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="knowledge-discovery-in-databases-kdd"></a>
+#### Knowledge Discovery in Databases (KDD)
+
+Knowledge Discovery in Databases (KDD) describes a popular workflow in the field of data mining for extracting useful and meaningful information. Typically, the individual steps consist of data preprocessing (feature selection, dimensionality reduction, normalization, etc.), the discovery of patterns, post-processing, and eventually information retrieval.
+
 
 <br>
 <br>
