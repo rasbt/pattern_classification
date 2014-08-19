@@ -12,6 +12,7 @@ Last updated 07/12/2014
 - [Co-Variance](#co-variance)
 - [Eigenvector and Eigenvalue](#eigenvector-and-eigenvalue)
 - [Least-squares fit regression](#least-squares-fit-regression)
+- [Lennard Jones Potential](#lennard-jones-potential)
 - [Linear Discriminant Analysis](#linear-discriminant-analysis)
 - [Maximum Likelihood Estimate](#maximum-likelihood-estimate)
 - [Min-Max scaling](#min-max-scaling)
@@ -204,6 +205,22 @@ where
 <br>
 <br>
 
+### Lennard-Jones Potential
+[[back to top](#table-of-contents)]
+
+The Lennard-Jones potential describes the energy potential between two non-bonded atoms based on their distance to each other.
+
+![](../Images/latex_equations/lennard_jones_1.gif)
+
+	V = 4 \epsilon \bigg[ \bigg(\frac{\sigma}{r}\bigg)^{12}  - \bigg(\frac{\sigma}{r}\bigg)^{6} \bigg]
+	
+V = intermolecular potential  
+&sigma; = distance where V is 0  
+r = distance between atoms, measured from one center to the other  
+&epsilon; = interaction strength
+
+<br>
+<br>
 
 
 ### Linear Discriminant Analysis
