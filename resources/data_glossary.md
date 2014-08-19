@@ -63,6 +63,7 @@ Please feel free to drop me a note via
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
 - [K-Medoids Clustering](#k-medoids-clustering)
+- [K-nearest neighbors algorithms](#k-nearest-neighbors-algorithms)
 - [Knowledge Discovery in Databases (KDD)](#knowledge-discovery-in-databases-kdd)
 - [LASSO Regression](#lasso-regression)
 - [Law of Large Numbers](#law-of-large-numbers)
@@ -507,7 +508,7 @@ A variant of [k-means](#k-means-clustering) where instead of choosing all initia
 <br>
 
 <a class="mk-toclify" id="k-medoids-clustering"></a>
-#### K-Medoids Clustering
+#### K-Medoids Clustering  
 [[back to top](#table-of-contents)]
 
 K-Medoids clustering is a variant of [k-means](#k-means-clustering) algorithm in which cluster centroids are picked among the sample points rather than the mean point of each cluster. K-Medoids can overcome some of the limitations of [k-means](#k-means-clustering) algorithm by avoiding empty clusters, being more robust to outliers, and being more easily applicable to non-numeric data types.  
@@ -516,8 +517,18 @@ K-Medoids clustering is a variant of [k-means](#k-means-clustering) algorithm in
 <br>
 <br>
 
+<a class="mk-toclify" id="k-nearest-neighbors-algorithms"></a>
+#### K-nearest neighbors algorithms  
+[[back to top](#table-of-contents)]  
+
+K-nearest neighbors algorithms find the k-points that are closest to a point of interest based on their attributes using a certain distance measure (e.g., Euclidean distance). K-nearest neighbors algorithms are being used in many different contexts: Non-parametric density estimation, missing value imputation, dimensionality reduction, and classifiers in supervised and unsupervised pattern classification and regression problems.
+
+<br>
+<br>
+
 <a class="mk-toclify" id="knowledge-discovery-in-databases-kdd"></a>
-#### Knowledge Discovery in Databases (KDD)
+#### Knowledge Discovery in Databases (KDD)  
+[[back to top](#table-of-contents)]
 
 Knowledge Discovery in Databases (KDD) describes a popular workflow in the field of data mining for extracting useful and meaningful information. Typically, the individual steps consist of data preprocessing (feature selection, dimensionality reduction, normalization, etc.), the discovery of patterns, post-processing, and eventually information retrieval.
 
