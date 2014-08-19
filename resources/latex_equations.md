@@ -23,6 +23,7 @@ Last updated 07/12/2014
 - [Poisson distribution (univariate)](#poisson-distribution-univariate)
 - [Principal Component Analysis](#principal-component-analysis)
 - [Rayleigh distribution (univariate)](#rayleigh-distribution-univariate)
+- [R-factor](#r-factor)
 - [Standard deviation](#standard-deviation)
 - [Variance](#variance)
 - [Z-score](#z-score)
@@ -460,6 +461,19 @@ where
 ![](../Images/latex_equations/pca_mean_vector.gif)
 
 	\pmb m = \frac{1}{n} \sum\limits_{k=1}^n \; \pmb x_k \text{   (mean vector)}
+
+<br>
+<br>
+
+### R-factor
+
+[[back to top](#table-of-contents)]
+
+The R-factor is one of several measures to assess the quality of a protein crystal structure. After building and refining an atomistic model of the crystal structure, the R-factor measures how well this model can describe the experimental diffraction patterns via the equation:
+
+![](../Images/latex_equations/r_factor.gif)
+
+	R = \frac{\sum ||F_{obs}| - |F_{calc}||}{\sum|F_{obs}|}
 
 <br>
 <br>
