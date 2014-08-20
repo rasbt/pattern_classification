@@ -25,8 +25,9 @@
 - [Statistical Pattern Classification Examples](#statistical-pattern-classification-examples)
 - [Resources](#resources)
 
+<br>
 
-
+<img src="./Images/supervised_learning_flowchart.png" style="width: 700px; height:600px;">
 
 
 
