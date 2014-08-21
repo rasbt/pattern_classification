@@ -12,6 +12,7 @@ Last updated 07/12/2014
 - [Co-Variance](#co-variance)
 - [Eigenvector and Eigenvalue](#eigenvector-and-eigenvalue)
 - [Least-squares fit regression](#least-squares-fit-regression)
+- [Lennard Jones Potential](#lennard-jones-potential)
 - [Linear Discriminant Analysis](#linear-discriminant-analysis)
 - [Maximum Likelihood Estimate](#maximum-likelihood-estimate)
 - [Min-Max scaling](#min-max-scaling)
@@ -22,6 +23,7 @@ Last updated 07/12/2014
 - [Poisson distribution (univariate)](#poisson-distribution-univariate)
 - [Principal Component Analysis](#principal-component-analysis)
 - [Rayleigh distribution (univariate)](#rayleigh-distribution-univariate)
+- [R-factor](#r-factor)
 - [Standard deviation](#standard-deviation)
 - [Variance](#variance)
 - [Z-score](#z-score)
@@ -204,6 +206,22 @@ where
 <br>
 <br>
 
+### Lennard-Jones Potential
+[[back to top](#table-of-contents)]
+
+The Lennard-Jones potential describes the energy potential between two non-bonded atoms based on their distance to each other.
+
+![](../Images/latex_equations/lennard_jones_1.gif)
+
+	V = 4 \epsilon \bigg[ \bigg(\frac{\sigma}{r}\bigg)^{12}  - \bigg(\frac{\sigma}{r}\bigg)^{6} \bigg]
+	
+V = intermolecular potential  
+&sigma; = distance where V is 0  
+r = distance between atoms, measured from one center to the other  
+&epsilon; = interaction strength
+
+<br>
+<br>
 
 
 ### Linear Discriminant Analysis
@@ -443,6 +461,19 @@ where
 ![](../Images/latex_equations/pca_mean_vector.gif)
 
 	\pmb m = \frac{1}{n} \sum\limits_{k=1}^n \; \pmb x_k \text{   (mean vector)}
+
+<br>
+<br>
+
+### R-factor
+
+[[back to top](#table-of-contents)]
+
+The R-factor is one of several measures to assess the quality of a protein crystal structure. After building and refining an atomistic model of the crystal structure, the R-factor measures how well this model can describe the experimental diffraction patterns via the equation:
+
+![](../Images/latex_equations/r_factor.gif)
+
+	R = \frac{\sum ||F_{obs}| - |F_{calc}||}{\sum|F_{obs}|}
 
 <br>
 <br>

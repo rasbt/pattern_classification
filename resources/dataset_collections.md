@@ -1,11 +1,22 @@
 Sebastian Raschka  
-Last updated: 09/04/2014
+Last updated: 08/19/2014
 
 A collection of links to various free and open-source datasets.
 
 <br>
+## Sections
 
+- [Dataset repositories](#dataset-repositories)
+- [Datasets by topics](#datasets-by-topics)	
+	- [Images](#images)
+	- [Audio](#audio)
+	- [Natural sciences](#natural-sciences)
+	- [Web, technology, and social networks](#web-technology-and-social-networks)
+	- [Historical data and human resources](historical-data-and-human-resources)
+	- [Finance and companies](#finance-and-companies)
+	- [Government data and politics](#government-data-and-politics)
 
+<hr>
 <br>
 <br>
 

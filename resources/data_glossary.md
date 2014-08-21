@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/07/2014
+last updated: 09/20/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -23,6 +23,7 @@ Please feel free to drop me a note via
 #Table of Contents
 
 - [Accuracy](#accuracy)
+- [Aggregation](#aggregation)
 - [Anomaly Detection](#anomaly-detection)
 - [Backtesting](#backtesting)
 - [Bagging](#bagging)
@@ -52,7 +53,9 @@ Please feel free to drop me a note via
 - [Feature Space](#feature-space)
 - [Fuzzy C-Means Clustering](#fuzzy-cmeans-clustering)
 - [Generalization error](#generalization-error)
-- [Gradient Descent](#gradient-descent) 
+- [Gradient Descent](#gradient-descent)
+- [Grid Search](#grid-search)
+- [Hyperparameters](#hyperparameters)
 - [Imputation](#imputation)
 - [Independent Component Analysis](#independent-component-analysis)
 - [Jackknifing](#jackknifing)
@@ -62,6 +65,8 @@ Please feel free to drop me a note via
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
 - [K-Medoids Clustering](#k-medoids-clustering)
+- [K-nearest neighbors algorithms](#k-nearest-neighbors-algorithms)
+- [Knowledge Discovery in Databases (KDD)](#knowledge-discovery-in-databases-kdd)
 - [LASSO Regression](#lasso-regression)
 - [Law of Large Numbers](#law-of-large-numbers)
 - [Least Squares fit](#least-squares-fit)
@@ -71,6 +76,7 @@ Please feel free to drop me a note via
 - [Logistic Regression](#logistic-regression)
 - [Machine learning](#machine-learning)
 - [Mahalanobis distance](#mahalanobis-distance)
+- [MapRedcue](#mapreduce)
 - [Markov chains](#markov-chains)
 - [Monte Carlo simulation](#monte-carlo-simulation)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
@@ -81,17 +87,21 @@ Please feel free to drop me a note via
 - [Overfitting](#overfitting)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
+- [Permissive transformations](#permissive-transformations)
 - [Power transform](#power-transform)
 - [Precision and Recall](#precision-and-recall)
+- [Predictive Modeling](#predictive-modeling)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Proportion of Variance Explained (PVE)](#proportion-of-variance-explained-pve)
 - [Purity Measure](#purity-measure)
+- [Quantitative and qualitative attributes](#quantitative-and-qualitative-attributes)
 - [Random forest](#random-forest)
 - [Receiver Operating Characteristic (ROC)](#receiver-operating-characteristic-roc))
 - [Regularization](#regularization)
 - [Reinforcement learning](#reinforcement-learning)
 - [Resubstitution error](#resubstitution-error)
 - [Ridge Regression](#ridge-regression)
+- [Sampling](#sampling)
 - [Sensitivity](#sensitivity)
 - [Specificity](#specificity)
 - [Silhouette Measure (clustering)](#silhouette-measure-clustering)
@@ -112,8 +122,20 @@ Please feel free to drop me a note via
 [[back to top](#table-of-contents)]
 
 Accuracy is defined as the fraction of correct classifications out of the total number of samples; it resembles one way to assess the performance of a predictor and is often used synonymous to [specificity](#specificity)/[precision](#precision-and-recall) although it is calculated differently. Accuracy is calculated as (TP+TN)/(P+N), where TP=True Positives, TN=True Negatives, P=Positives, N=Negatives.
+
 <br>
 <br>
+
+
+<a class="mk-toclify" id="aggregation"></a>
+#### Aggregation
+[[back to top](#table-of-contents)]
+
+Aggregation is a data pre-processing procedure that is used to reduce the overall size of a dataset by combining attributes. An example of aggregation would be the averaging of daily temperature measurements to monthly temperature measurements.
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="anomaly-detection"></a>
 #### Anomaly detection
@@ -287,7 +309,7 @@ For a fixed number of training samples, the curse of dimensionality describes th
 #### Data mining
 [[back to top](#table-of-contents)]
 
-A field that is closely related to machine learning and pattern classification. The focus of data mining is often on the collection of data and combines different techniques the data in order to extract meaningful information out of data.
+A field that is closely related to machine learning and pattern classification. The focus of data mining does not lie in merely the collection of data, but the extraction of useful information: Discovery of patterns, and making inferences and predictions. Common techniques in data mining include predictive modeling, classification, and anomaly detection.
 
 <br>
 <br>
@@ -406,6 +428,23 @@ The generalization error describes how well new data can be classified and is a 
 
 Gradient descent is an algorithm that optimizes a function by finding its local minimum. After the algorithm was initialized with an initial guess, it takes the derivative of the function to make a step towards the direction of deepest descent. This step-wise process is repeated until convergence.
 
+<br>
+<br>
+
+<a class="mk-toclify" id="grid-search"></a>
+#### Grid Search
+[[back to top](#table-of-contents)]
+
+Grid Search is a procedure to optimize parameters of a learning algorithm that are not learned from the training data (i.e., [hyperparameters](#hyperparameters)). Typically, Grid Search is implemented as an exhaustive search (in contrast to randomized parameter optimization) of candidate parameter values. After all possible parameter combination for a model are evaluated, the best combination will be retained.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="hyperparameters"></a>
+#### Hyperparameters
+[[back to top](#table-of-contents)]
+
+Hyperparameters are the parameters of a classifier or estimator that are not directly learned in the machine learning step from the training data but are optimized separately (e.g., via [Grid Search](#grid-search)). The goal of hyperparameter optimization is to achieve good generalization of a learning algorithm and to avoid overfitting to the training data.
 
 <br>
 <br>
@@ -489,11 +528,30 @@ A variant of [k-means](#k-means-clustering) where instead of choosing all initia
 <br>
 
 <a class="mk-toclify" id="k-medoids-clustering"></a>
-#### K-Medoids Clustering
+#### K-Medoids Clustering  
 [[back to top](#table-of-contents)]
 
 K-Medoids clustering is a variant of [k-means](#k-means-clustering) algorithm in which cluster centroids are picked among the sample points rather than the mean point of each cluster. K-Medoids can overcome some of the limitations of [k-means](#k-means-clustering) algorithm by avoiding empty clusters, being more robust to outliers, and being more easily applicable to non-numeric data types.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="k-nearest-neighbors-algorithms"></a>
+#### K-nearest neighbors algorithms  
+[[back to top](#table-of-contents)]  
+
+K-nearest neighbors algorithms find the k-points that are closest to a point of interest based on their attributes using a certain distance measure (e.g., Euclidean distance). K-nearest neighbors algorithms are being used in many different contexts: Non-parametric density estimation, missing value imputation, dimensionality reduction, and classifiers in supervised and unsupervised pattern classification and regression problems.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="knowledge-discovery-in-databases-kdd"></a>
+#### Knowledge Discovery in Databases (KDD)  
+[[back to top](#table-of-contents)]
+
+Knowledge Discovery in Databases (KDD) describes a popular workflow in the field of data mining for extracting useful and meaningful information. Typically, the individual steps consist of data preprocessing (feature selection, dimensionality reduction, normalization, etc.), the discovery of patterns, post-processing, and eventually information retrieval.
+
 
 <br>
 <br>
@@ -584,6 +642,17 @@ The Mahalanobis distance measure accounts for the covariance among variables by 
 <br>
 <br>
 
+<a class="mk-toclify" id="mapreduce"></a>
+#### MapReduce
+
+[[back to top](#table-of-contents)]
+
+MapRedcue is a programming model for analyzing large datasets on distributed computer clusters, in which the task is divided into two steps, a map step and a reducer step. In the map step, the data are filtered by some factors on each compute node, then filtered data are shuffled and passed to the reducer function which performs further analysis on each portion of filtered data separately.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
 <a class="mk-toclify" id="markov-chains"></a>
 #### Markov chains
 
@@ -661,7 +730,6 @@ A non-parametric kernel density estimation technique for probability densities o
 <br>
 
 <a class="mk-toclify" id="pattern-classification"></a>
-
 #### Pattern classification
 
 [[back to top](#table-of-contents)]
@@ -671,12 +739,25 @@ The usage of patterns in datasets to discriminate between classes, i.e., to assi
 <br>
 <br>
 
+
+<a class="mk-toclify" id="permissive-transformations"></a>
+#### Permissive transformations
+
+[[back to top](#table-of-contents)]
+
+Permissive transformations are transformations of data that that do not change the "meaning" of the attributes, such as scaling or mapping. For example, the transformation of temperature measurements from a Celsius to a Kelvin scale would be a permissive transformation of a numerical attribute.
+
+<br>
+<br>
+
+
 <a class="mk-toclify" id="power-transform"></a>
 #### Power transform
 
 [[back to top](#table-of-contents)]
 
 Power transforms form a category of statistical transformation techniques that are used to transform non-normal distributed data to normality.
+
 <br>
 <br>
 
@@ -696,6 +777,15 @@ A linear transformation technique that is commonly used to project a dataset (wi
 Precision (synonymous to [specificity](#specificity)) and recall (synonymous to [sensitivity](#sensitivity)) are two measures to assess performance of a classifier if class label distributions are skewed.
 Precision is defined as the ratio of number of relevant items out of total retrieved items, whereas recall is the fraction of relevant items which are retrieved.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
+
+<a class="mk-toclify" id="predictive-modeling"></a>
+#### Predictive Modeling
+[[back to top](#table-of-contents)]
+
+Predictive modeling is a [data mining](#data-mining) technique that describes the process of collecting data and training a classifier. Eventually, the the goal is to create a statistical model that can be used to make predictions about future trends and behaviors, e.g., predictions of stock market trends or the classifications of spam vs. non-spam e-mails.
 
 <br>
 <br>
@@ -721,6 +811,15 @@ In a cluster analysis with given truth cluster memberships (or classes), "purity
 <br>
 <br>
 
+<a class="mk-toclify" id="quantitative-and-qualitative-attributes"></a>
+
+#### Quantitative and qualitative attributes    
+[[back to top](#table-of-contents)]
+
+Quantitative attributes are also often called "numeric"; those are attributes for which calculations and comparisons like ratios and intervals make sense (e.g., temperature in Celsius). Qualitative, or "categorical", attributes can be grouped into to subclasses: nominal and ordinal. Where ordinal attributes (e.g., street numbers) can be ordered, nominal attributes can only distinguished by their category names (e.g., colors). 
+
+<br>
+<br>
 
 <a class="mk-toclify" id="random-forest"></a>
 #### Random forest
@@ -787,6 +886,17 @@ The resubstitution error represents the classification error rate on the trainin
 
 Ridge regression is a regularized regression technique in which the squared sum of the model coefficients is used to penalize model complexity.   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+
+<a class="mk-toclify" id="sampling"></a>
+#### Sampling
+
+[[back to top](#table-of-contents)]
+
+Sampling is data pre-processing procedure that is used to reduce the overall size of a dataset and to reduce computational costs by selecting a representative subset from the whole input dataset.
 
 <br>
 <br>

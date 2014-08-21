@@ -9,6 +9,9 @@ Last updated 09/08/2014
 
 - [A typical pattern classification workflow](#a-typical-pattern-classification-workflow)
 - [Resampling of training and test datasets](#resampling-of-training-and-test-datasets)
+- [Dealing with Missing Data](#dealing-with-missing-data)
+- [A typical KDD workflow](#a-typical-kdd-workflow)
+
 <br>
 <br>
 
@@ -72,19 +75,58 @@ Last updated 09/08/2014
 - Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) are two examples of commonly used dimensionality reduction. The goal is to reduce computational costs, remove "uninformative" (zero-variance) features and while retaining discriminatory information. Typically, LDA tends to outperform PCA for supervised training tasks since it does not only choose the directions of maximum variance like PCA, but also tries to maximize the class-separability.  
 However, [A.M. Martinez et al., 2001](#http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=908974) showed that PCA can outperform LDA if the number of samples per class is relatively small.
 
-- If you perform standardization, PCA, LDA, and any other transformation technique on the training dataset, it is important to always use the same parameters on the test dataset: E.g., in the case of standardization, use the same mean and standard deviation that was used to scale the training dataset.
+- For standardization, PCA, LDA, and any other transformation technique on the training dataset, it is important to always use the same parameters on the test dataset: E.g., in the case of standardization, use the same mean and standard deviation that was used to scale the training dataset.
+
+
+
 
 <br>
 <br>
 
-### Missing Data
+### Dealing with Missing Data
 
-- Many machine learning algorithms will fail if missing data in a dataset is not treated appropriately.
+[[back to top](#sections)]
 
-- In general resubstitution via k-nearest neighbor imputation is considered to be superior over resubstitution of missing data by the overall sample mean.
+Many machine learning algorithms will fail if missing data in a dataset is not treated appropriately. 
+There are three main approaches for dealing with missing data: Elimination, estimation, and ignoral.
+
+##### Elimination
+
+- Only recommended if a few attributes are missing.
+- Elimination can be done in two ways: The whole attribute columns for which data is missing can be removed from the dataset, or only those samples which contain missing attribute values can be removed.
+
+##### Estimation
+
+- Estimation is the interpolation of values from other values.
+- For categorical data, the missing value can be interpolated from the most frequent category.
+- For numerical data, the missing value can be interpolated by the average of other values.
+- In general, resubstitution via k-nearest neighbor imputation is considered to be superior over resubstitution of missing data by the overall sample mean.
+
+
+##### Ignoral
+
+- Ignoral is typically used in clustering where only the "available" attributes are being used to calculate "relatedness"/similarity between samples.
+
 
 <br>
 <br>
+
+
+### A typical KDD workflow
+
+[[back to top](#sections)]
+
+A typical Knowledge Discovery in Databases (KDD) workflow:
+
+**Input data -> Data Preprocessing<sup>1</sup> -> Data Mining -> Post-processing -> information retrieval**
+
+<sup>1</sup>Feature selection, dimensionality reduction, normalization, data subsetting ...
+
+[[back to top](#sections)]
+
+<br>
+<br>
+
 
 ### in progress ...
 [[back to top](#sections)]
