@@ -29,7 +29,7 @@
 
 <img src="./Images/supervised_learning_flowchart.png" style="width: 700px; height:600px;">
 
-
+[[Download a PDF version](https://github.com/rasbt/pattern_classification/raw/master/PDFs/supervised_learning_flowchart.pdf)] of this flowchart.
 
 <br>
 <br>
