@@ -53,7 +53,9 @@ Please feel free to drop me a note via
 - [Feature Space](#feature-space)
 - [Fuzzy C-Means Clustering](#fuzzy-cmeans-clustering)
 - [Generalization error](#generalization-error)
-- [Gradient Descent](#gradient-descent) 
+- [Gradient Descent](#gradient-descent)
+- [Grid Search](#grid-search)
+- [Hyperparameters](#hyperparameters)
 - [Imputation](#imputation)
 - [Independent Component Analysis](#independent-component-analysis)
 - [Jackknifing](#jackknifing)
@@ -426,6 +428,23 @@ The generalization error describes how well new data can be classified and is a 
 
 Gradient descent is an algorithm that optimizes a function by finding its local minimum. After the algorithm was initialized with an initial guess, it takes the derivative of the function to make a step towards the direction of deepest descent. This step-wise process is repeated until convergence.
 
+<br>
+<br>
+
+<a class="mk-toclify" id="grid-search"></a>
+#### Grid Search
+[[back to top](#table-of-contents)]
+
+Grid Search is a procedure to optimize parameters of a learning algorithm that are not learned from the training data (i.e., [hyperparameters](#hyperparameters)). Typically, Grid Search is implemented as an exhaustive search (in contrast to randomized parameter optimization) of candidate parameter values. After all possible parameter combination for a model are evaluated, the best combination will be retained.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="hyperparameters"></a>
+#### Hyperparameters
+[[back to top](#table-of-contents)]
+
+Hyperparameters are the parameters of a classifier or estimator that are not directly learned in the machine learning step from the training data but are optimized separately (e.g., via [Grid Search](#grid-search)). The goal of hyperparameter optimization is to achieve good generalization of a learning algorithm and to avoid overfitting to the training data.
 
 <br>
 <br>
