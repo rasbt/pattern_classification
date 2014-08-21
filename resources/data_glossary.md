@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/07/2014
+last updated: 09/20/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -628,7 +628,8 @@ The Mahalanobis distance measure accounts for the covariance among variables by 
 
 [[back to top](#table-of-contents)]
 
-MapRedcue is a programming model for analyzing large datasets on distributed computer clusters, in which the task is divided into two steps, a map step and a reducer step. In the map step, the data are filtered by some factors on each compute node, then filtered data are shuffled and passed to the reducer function which performs further analysis on each portion of filtered data separately. 
+MapRedcue is a programming model for analyzing large datasets on distributed computer clusters, in which the task is divided into two steps, a map step and a reducer step. In the map step, the data are filtered by some factors on each compute node, then filtered data are shuffled and passed to the reducer function which performs further analysis on each portion of filtered data separately.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
