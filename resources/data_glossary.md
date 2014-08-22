@@ -33,6 +33,7 @@ Please feel free to drop me a note via
 - [Central Limit Theorem](#central-limit-theorem)
 - [Confusion Matrix](#confusion-matrix)
 - [Correlation analysis](#correlation-analysis)
+- [Correlation analysis - Kendall](##correlation-analysis-kendall)
 - [Correlation analysis - Pearson](#correlation-analysis-pearson)
 - [Correlation analysis - Spearman](#correlation-analysis-spearman)
 - [Cosine Similarity](#cosine-similarity)
@@ -219,20 +220,29 @@ Correlation analysis describes and quantifies the relationship between two indep
 <br>
 <br>
 
+<a class="mk-toclify" id="correlation-analysis-kendall"></a>
+#### Correlation analysis - Kendall
+[[back to top](#table-of-contents)]
+
+Similar to [Pearson correlation coefficient](correlation-analysis-pearson), Kendall's tau measures the degree of a monotone relationship between variables, and like [Spearman's rho](correlation-analysis-spearman), it calculates the dependence between ranked variables, which makes is feasible for non-normal distributed data. Kendall tau can be calculated for continuous as well as ordinal data. Roughly speaking, Kendall's tau distinguishes itself from Spearman's rho by stronger penalization of non-sequential (in context of the ranked variables) dislocations.
+
+<br>
+<br>
+
 <a class="mk-toclify" id="correlation-analysis-pearson"></a>
 #### Correlation analysis - Pearson
 [[back to top](#table-of-contents)]
 
-The Pearson correlation coefficientis probably the most widely used measure for a linear relationship between two normal distributed variables and thus often just called "correlation coefficient". Usually, the Pearson coefficient is obtained via a [Least-Squares fit](#least-squares-fit) and a value of 1 represents a perfect positive relation-ship, -1 a perfect negative relationship, and 0 indicates the absence of a relationship between variables.
+The Pearson correlation coefficient is probably the most widely used measure for linear relationships between two normal distributed variables and thus often just called "correlation coefficient". Usually, the Pearson coefficient is obtained via a [Least-Squares fit](#least-squares-fit) and a value of 1 represents a perfect positive relation-ship, -1 a perfect negative relationship, and 0 indicates the absence of a relationship between variables.
 
 <br>
 <br>
 
-<a class="mk-toclify" id="correlation"></a>
+<a class="mk-toclify" id="correlation-analysis-spearman"></a>
 #### Correlation analysis - Spearman
 [[back to top](#table-of-contents)]
 
-The Spearman correlation coefficient is a rank-based version of [Pearson's correlation coefficient](correlation-analysis-pearson), which can be used for variables that are not normal-distributed and have a non-linear relationship.
+Related to the [Pearson correlation coefficient](correlation-analysis-pearson), the Spearman correlation coefficient (rho) measures the relationship between two variables. Spearman's rho can be understood as a rank-based version of [Pearson's correlation coefficient](correlation-analysis-pearson), which can be used for variables that are not normal-distributed and have a non-linear relationship. Also, its use is not only restricted to continuous data, but can also be used in analyses of ordinal attributes.
 
 <br>
 <br>
