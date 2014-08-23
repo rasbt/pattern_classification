@@ -192,6 +192,20 @@ Related to the [Pearson correlation coefficient](#correlation-pearson), the Spea
 <br>
 <br>
 
+### Cosine Similarity
+
+[[back to top](#table-of-contents)]
+
+Cosine similarity measures the orientation of two *n*-dimensional sample vectors irrespective to their magnitude. It is calculated by the dot product of two numeric vectors, and it is normalized by the product of the vector lengths, so that output values close to 1 indicate high similarity. 
+
+![](../Images/latex_equations/cosine_similarity_1.gif)
+
+	cos(\pmb x, \pmb y) = \frac {\pmb x \cdot \pmb y}{||\pmb x|| \cdot ||\pmb y||}
+ 
+
+<br>
+<br>
+
 ### Co-Variance
 [[back to top](#table-of-contents)]
 
