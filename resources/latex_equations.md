@@ -13,6 +13,9 @@ Last updated 07/12/2014
 - [Correlation - Pearson](#correlation-pearson)
 - [Correlation - Spearman](#correlation-spearman)
 - [Co-Variance](#co-variance)
+- [Distance, Euclidean](#distance-euclidean)
+- [Distance, Manhattan](#distance-manhattan)
+- [Distance, Minkowski](#distance-minkowski)
 - [Eigenvector and Eigenvalue](#eigenvector-and-eigenvalue)
 - [Least-squares fit regression](#least-squares-fit-regression)
 - [Lennard Jones Potential](#lennard-jones-potential)
@@ -239,7 +242,41 @@ example covariance matrix:
     \pmb{v} = \text{Eigenvector}\\
     \lambda = \text{Eigenvalue}
     
-   
+<br>
+<br>
+
+### Distance, Euclidean
+[[back to top](#table-of-contents)]
+
+The Euclidean distance is a distance measure between two points or or vectors in a two- or multidimensional (Euclidean) space based on Pythagoras' theorem. The distance is calculated by taking the square root of the sum of the squared pair-wise distances of every dimension.  
+
+![](../Images/latex_equations/distance_euclidean_1.gif)
+
+	\sqrt{\sum_{i=1}^n (x_i-y_i)^2}     
+
+<br>
+<br>
+
+### Distance, Manhattan
+[[back to top](#table-of-contents)]
+
+The Manhattan distance (sometimes also called Taxicab distance) metric is related to the Euclidean distance, but instead of calculating the shortest diagonal path ("beeline") between two points, it calculates the distance based on gridlines. The Manhattan distance was named after the block-like layout of the streets in Manhattan. 
+
+![](../Images/latex_equations/distance_manhattan_1.gif)
+
+	\left(\sum_{i=1}^n |x_i-y_i|^p\right)^{1/p}
+
+<br>
+<br>
+
+### Distance, Minkowski
+[[back to top](#table-of-contents)]
+
+The Minkowski distance is a generalized form of the Euclidean distance (if *p=2*) and the Manhattan distance (if *p=1*).  
+
+![](../Images/latex_equations/distance_minkowski_1.gif)
+
+	\left(\sum_{i=1}^n |x_i-y_i|^p\right)^{1/p}
 
 <br>
 <br>

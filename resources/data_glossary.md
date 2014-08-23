@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/20/2014
+last updated: 09/23/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -48,6 +48,9 @@ Please feel free to drop me a note via
 - [Decision tree classifier](#decision-tree-classifier)
 - [Density-based clustering](#density-based-clustering)
 - [Distance Metric Learning](#distance-metric-learning)
+- [Distance, Euclidean](#distance-euclidean)
+- [Distance, Manhattan](#distance-manhattan)
+- [Distance, Minkowski](#distance-minkowski)
 - [Eigenvectors and Eigenvalues](#eigenvectors-and-eigenvalues)
 - [Ensemble methods](#ensemble-methods)
 - [Feature Selection Algorithms](#feature-selection-algorithms)
@@ -373,6 +376,41 @@ In density-based clustering, regions of high density in n-dimensional space are 
 
 Distance metrics are fundamental for many machine learning algorithms. Distance metric learning - instead of learning a model - incorporates estimated relevances of features to obtain a distance metric for potentially optimal separation of classes and clusters: Large distances for objects from different classes, and small distances for objects of the same class, respectively.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
+
+<a class="mc-toclify" id="distance-euclidean"></a>
+#### Distance, Euclidean
+[[back to top](#table-of-contents)]
+
+The Euclidean distance is a distance measure between two points or or vectors in a two- or multidimensional (Euclidean) space based on Pythagoras' theorem. The distance is calculated by taking the square root of the sum of the squared pair-wise distances of every dimension.  
+
+![](../Images/latex_equations/distance_euclidean_1.gif)
+
+<br>
+<br>
+
+<a class="mc-toclify" id="distance-manhattan"></a>
+#### Distance, Manhattan
+[[back to top](#table-of-contents)]
+
+The Manhattan distance (sometimes also called Taxicab distance) metric is related to the Euclidean distance, but instead of calculating the shortest diagonal path ("beeline") between two points, it calculates the distance based on gridlines. The Manhattan distance was named after the block-like layout of the streets in Manhattan. 
+
+![](../Images/latex_equations/distance_manhattan_1.gif)
+
+
+<br>
+<br>
+
+
+<a class="mc-toclify" id="distance-minkowski"></a>
+#### Distance, Minkowski
+[[back to top](#table-of-contents)]
+
+The Minkowski distance is a generalized form of the Euclidean distance (if *p=2*) and the Manhattan distance (if *p=1*).  
+
+![](../Images/latex_equations/distance_minkowski_1.gif)
 
 <br>
 <br>
