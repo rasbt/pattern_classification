@@ -59,6 +59,7 @@ Please feel free to drop me a note via
 - [Hyperparameters](#hyperparameters)
 - [Imputation](#imputation)
 - [Independent Component Analysis](#independent-component-analysis)
+- [Jaccard coefficient](#jaccard-coefficient)
 - [Jackknifing](#jackknifing)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Methods](#kernel-methods)
@@ -106,6 +107,7 @@ Please feel free to drop me a note via
 - [Sensitivity](#sensitivity)
 - [Specificity](#specificity)
 - [Silhouette Measure (clustering)](#silhouette-measure-clustering)
+- [Simple Matching Coefficient](#simple-matching-coefficient)
 - [Singular Value Decomposition (SVD)](#singular-value-decomposition-svd)
 - [Stochastic Gradient Descent (SGD)](#stochastic-gradient-descent-sgd)
 - [Supervised learning](#supervised-learning)
@@ -251,7 +253,7 @@ Related to the [Pearson correlation coefficient](#correlation-analysis-pearson),
 #### Cosine Similarity
 [[back to top](#table-of-contents)]
 
-Cosine similarity measures the orientation of two *n*-dimensional sample vectors irrespective to their magnitude. It is calculated by the dot product of two numeric vectors, and it is normalized by the vector lengths, so that output values close to 1 indicate high similarity.  
+Cosine similarity measures the orientation of two *n*-dimensional sample vectors irrespective to their magnitude. It is calculated by the dot product of two numeric vectors, and it is normalized by the product of the vector lengths, so that output values close to 1 indicate high similarity.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
@@ -479,12 +481,20 @@ A popular example is the separation of overlapping voice samples -- the so-calle
 <br>
 <br>
 
+<a class="mk-toclify" id="jaccard-coefficient"></a>
+#### Jaccard coefficient
+[[back to top](#table-of-contents)]
+
+The Jaccard coefficient is used as similarity measure for asymmetric binary data and calculated by taking the number of matching attributes and divide it by the number of all attributes except those where both variables have a value 0 in contrast to a [simple matching coefficient](#simple-matching -coefficient).
+
+<br>
+<br>
+
 <a class="mk-toclify" id="jackknifing"></a>
 #### Jackknifing
 [[back to top](#table-of-contents)]
 
 Jackknifing is a resampling technique that predates the related [cross-validation](#cross-validation) and [bootstrapping](#bootstrapping) techniques and is mostly used for bias and variance estimations. In jackknifing, a dataset is split into N subsets where exactly one sample is removed from every subset so that every subset is of size N-1.
-
 
 <br>
 <br>
@@ -921,15 +931,7 @@ Sensitivity (synonymous to [precision](#precision-and-recall)), which is related
 <br>
 <br>
 
-<a class="mk-toclify" id="specificity"></a>
-#### Specificity
 
-[[back to top](#table-of-contents)]
-
-Specificity (synonymous to [recall](#precision-and-recall)), which is related to [sensitivity](#sensitivity) -- in the context of error rate evaluation -- describes the "True Negative Rate" for a binary classification problem: The probability to make a correct prediction for a "false/negative" case (e.g., in an attempt to predict a disease, no disease is predicted for a healthy patient). Specificity is calculated as (TN)/(FP+TN), where TN=True Negatives, FP=False Positives.
-
-<br>
-<br>
 
 <a class="mk-toclify" id="silhouette-measure-clustering"></a>
 #### Silhouette Measure (clustering)
@@ -942,6 +944,16 @@ Silhouette measure provides a metric to evaluate the performance of a clustering
 <br>
 <br>
 
+<a class="mk-toclify" id="simple-matching-coefficient"></a>
+#### Simple Matching Coefficient
+
+[[back to top](#table-of-contents)]
+
+The simple matching coefficient is a similarity measure for binary data and calculated by dividing the total number of matches by the total number of attributes. For asymmetric binary data, the related [Jaccard coefficient](#jaccard-coefficient) is to be preferred in order to avoid highly similar scores.
+
+<br>
+<br>
+
 <a class="mk-toclify" id="singular-value-decomposition-svd"></a>
 #### Singular Value Decomposition (SVD)
 
@@ -950,6 +962,16 @@ Silhouette measure provides a metric to evaluate the performance of a clustering
 Singular value decomposition (SVD) is linear algebra technique that decomposes matrix ***X*** into  
 ***U D V<sup>T</sup>*** where ***U*** (left-singular vectors) and ***V*** (right-singular vector) are both column-orthogonal, and D is a diagonal matrix that contains singular values. [PCA](#principal-component-analysis) is closely related to the right0singular vectors of SVD.  
  (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="specificity"></a>
+#### Specificity
+
+[[back to top](#table-of-contents)]
+
+Specificity (synonymous to [recall](#precision-and-recall)), which is related to [sensitivity](#sensitivity) -- in the context of error rate evaluation -- describes the "True Negative Rate" for a binary classification problem: The probability to make a correct prediction for a "false/negative" case (e.g., in an attempt to predict a disease, no disease is predicted for a healthy patient). Specificity is calculated as (TN)/(FP+TN), where TN=True Negatives, FP=False Positives.
 
 <br>
 <br>
