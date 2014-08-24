@@ -126,6 +126,8 @@
 ## Resources
 [[back to top](#sections)]
 
+- Matplotlib examples - Visualization techniques for exploratory data analysis [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/resources/matplotlib_viz_gallery.ipynb)]
+
 - Copy-and-paste ready LaTex equations [[Markdown](./resources/latex_equations.md)]
 
 - Open-source datasets [[Markdown](./resources/dataset_collections.md)]
