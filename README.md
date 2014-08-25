@@ -18,12 +18,16 @@
 # Sections
 
 
-
-- [Machine learning and pattern classification with scikit-learn](#machine-learning-and-pattern-classification-with-scikit-learn)
+- [Introduction to Machine Learning and Pattern Classification](#introduction-to-machine-learning-and-pattern-classification)
 - [Pre-Processing](#pre-processing)
+- [Model Evaluation](#model-evaluation)
 - [Parameter Estimation](#parameter-estimation)
 - [Statistical Pattern Classification Examples](#statistical-pattern-classification-examples)
 - [Resources](#resources)
+
+<br>
+
+
 
 <br>
 
@@ -37,15 +41,16 @@
 <hr>
 <br>
 
-### Machine learning and pattern classification with scikit-learn 
+### Introduction to Machine Learning and Pattern Classification
 [[back to top](#sections)]
+
+- Predictive modeling, supervised machine learning, and pattern classification - the big picture [[Markdown](./machine_learning/supervised_intro/introduction_to_supervised_machine_learning.md)]
 
 - Entry Point: Data - Using Python's sci-packages to prepare data for Machine Learning tasks and other data analyses [[IPython nb](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/python_data_entry_point.ipynb)]
 
-
 - An Introduction to simple linear supervised classification using `scikit-learn` [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/scikit_linear_classification.ipynb)]
 
-- Streamline your cross-validation workflow - scikit-learn's Pipeline in action [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/scikit-pipeline.ipynb)]
+
 
 <br>
 <br>
@@ -68,6 +73,15 @@
 	- Principal Component Analysis (PCA) [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/principal_component_analysis.ipynb)] 
 	- Linear Discriminant Analysis (LDA) [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/linear_discriminant_analysis.ipynb)]
 
+<br>
+<hr>
+<br>
+
+### Model Evaluation
+[[back to top](#sections)]
+
+- **Cross-validation**
+	- Streamline your cross-validation workflow - scikit-learn's Pipeline in action [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/scikit-pipeline.ipynb)]
 
 <br>
 <hr>
