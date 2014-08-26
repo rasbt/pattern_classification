@@ -32,6 +32,7 @@ Please feel free to drop me a note via
 - [Bootstrapping](#bootstrapping)
 - [Central Limit Theorem](#central-limit-theorem)
 - [Confusion Matrix](#confusion-matrix)
+- [Contingency Table](#contingency-table)
 - [Correlation analysis](#correlation-analysis)
 - [Correlation analysis - Kendall](##correlation-analysis-kendall)
 - [Correlation analysis - Pearson](#correlation-analysis-pearson)
@@ -212,6 +213,15 @@ that the distribution of sample means (from independent random variables) conver
 [[back to top](#table-of-contents)]
 
 The confusion matrix is used as a way to represent the performance of a classifier and is sometimes also called "error matrix". This square matrix consists of columns and rows that list the number of instances as absolute or relative "actual class" vs. "predicted class" ratios.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="contingency-table"></a>
+#### Contingency Table
+[[back to top](#table-of-contents)]
+
+Contingency table is used in clustering analysis to compare the overlap between two different clustering (groupings) results. The partitions from the two clustering results are represented in rows and columns of the table, and the elements of the table represent the number of elements that are shared between two partitions from each clustering results.
 
 <br>
 <br>
