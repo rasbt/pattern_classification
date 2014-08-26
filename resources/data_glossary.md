@@ -84,9 +84,9 @@ Please feel free to drop me a note via
 - [Mahalanobis distance](#mahalanobis-distance)
 - [MapRedcue](#mapreduce)
 - [Markov chains](#markov-chains)
+- [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
 - [Monte Carlo simulation](#monte-carlo-simulation)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
-- [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
 - [Normalization - Min-Max Scaling](#normalization-min-max-scaling)
 - [Normalization - Standard Scores](#normalization-standard-scores)
 - [Objective function](#objective-function)
@@ -221,7 +221,8 @@ The confusion matrix is used as a way to represent the performance of a classifi
 #### Contingency Table
 [[back to top](#table-of-contents)]
 
-Contingency table is used in clustering analysis to compare the overlap between two different clustering (groupings) results. The partitions from the two clustering results are represented in rows and columns of the table, and the elements of the table represent the number of elements that are shared between two partitions from each clustering results.
+A contingency table is used in clustering analysis to compare the overlap between two different clustering (grouping) results. The partitions from the two clustering results are represented as rows and columns in the table, and the individual elements of the table represent the number of elements that are shared between two partitions from each clustering result.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
