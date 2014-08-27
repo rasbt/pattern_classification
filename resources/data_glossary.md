@@ -34,9 +34,9 @@ Please feel free to drop me a note via
 - [Confusion Matrix](#confusion-matrix)
 - [Contingency Table](#contingency-table)
 - [Correlation analysis](#correlation-analysis)
-- [Correlation analysis - Kendall](##correlation-analysis-kendall)
-- [Correlation analysis - Pearson](#correlation-analysis-pearson)
-- [Correlation analysis - Spearman](#correlation-analysis-spearman)
+- [Correlation analysis - Kendall](##correlation-analysis---kendall)
+- [Correlation analysis - Pearson](#correlation-analysis---pearson)
+- [Correlation analysis - Spearman](#correlation-analysis---spearman)
 - [Cosine Similarity](#cosine-similarity)
 - [Cost function](#cost-function)
 - [Covariate creation](#covariate-creation)
@@ -242,7 +242,7 @@ Correlation analysis describes and quantifies the relationship between two indep
 <br>
 <br>
 
-<a class="mk-toclify" id="correlation-analysis-kendall"></a>
+<a class="mk-toclify" id="correlation-analysis---kendall"></a>
 #### Correlation analysis - Kendall
 [[back to top](#table-of-contents)]
 
@@ -251,7 +251,7 @@ Similar to the [Pearson correlation coefficient](#correlation-analysis-pearson),
 <br>
 <br>
 
-<a class="mk-toclify" id="correlation-analysis-pearson"></a>
+<a class="mk-toclify" id="correlation-analysis---pearson"></a>
 #### Correlation analysis - Pearson
 [[back to top](#table-of-contents)]
 
@@ -260,7 +260,7 @@ The Pearson correlation coefficient is probably the most widely used measure for
 <br>
 <br>
 
-<a class="mk-toclify" id="correlation-analysis-spearman"></a>
+<a class="mk-toclify" id="correlation-analysis---spearman"></a>
 #### Correlation analysis - Spearman
 [[back to top](#table-of-contents)]
 
