@@ -9,9 +9,9 @@ Last updated 07/12/2014
 
 - [Bayes Theorem](#bayes-theorem)
 - [Binomial distribution](#binomial-distribution)
-- [Correlation - Kendall](#correlation-kendall)
-- [Correlation - Pearson](#correlation-pearson)
-- [Correlation - Spearman](#correlation-spearman)
+- [Correlation - Kendall](#correlation---kendall)
+- [Correlation - Pearson](#correlation---pearson)
+- [Correlation - Spearman](#correlation---spearman)
 - [Co-Variance](#co-variance)
 - [Distance, Euclidean](#distance-euclidean)
 - [Distance, Manhattan](#distance-manhattan)
