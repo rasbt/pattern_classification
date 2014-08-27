@@ -54,7 +54,8 @@ Please feel free to drop me a note via
 - [Distance, Minkowski](#distance-minkowski)
 - [Eigenvectors and Eigenvalues](#eigenvectors-and-eigenvalues)
 - [Ensemble methods](#ensemble-methods)
-- [Feature Selection Algorithms](#feature-selection-algorithms)
+- [Exhaustive search](#exhaustive-search)
+- [Feature Selection](#feature-selection )
 - [Feature Space](#feature-space)
 - [Fuzzy C-Means Clustering](#fuzzy-cmeans-clustering)
 - [Generalization error](#generalization-error)
@@ -445,11 +446,30 @@ Ensemble methods combine multiple classifiers which may differ in algorithms, in
 <br>
 <br>
 
-<a class="mk-toclify" id="feature-selection-algorithms"></a>
-#### Feature Selection Algorithms
+<a class="mc-toclify" id="ensemble-methods"></a>
+#### Ensemble methods
 [[back to top](#table-of-contents)]
 
-Algorithmic approaches as alternative to projection-based techniques like Principal Component and Linear Discriminant Analysis for dimensionality reduction of a dataset via the selection a "sufficiently reduced" feature subsets with minimal decline of the recognition rate of a classifier.
+Ensemble methods combine multiple classifiers which may differ in algorithms, input features, or input samples. Statistical analyses showed that ensemble methods yield better classification performances and are also less prone to overfitting. Different methods, e.g., bagging or boosting, are used to construct the final classification decision based on weighted votes.  
+
+<br>
+<br>
+
+<a class="mk-toclify" id="exhaustive-search"></a>
+#### Exhaustive search
+[[back to top](#table-of-contents)]
+
+Exhaustive search (synonymous to brute-force search) is a problem-solving approach where all possible combinations are sequentially evaluated to find the optimal solution. Exhaustive search guarantees to find the optimal solution whereas other approaches (e.g., [heuristic searches](#heuristic-search)) are regarded as sub-optimal. A downside of exhaustive searches is that computational costs increase proportional to the number of combinations to be evaluated.
+
+
+<br>
+<br>
+
+<a class="mk-toclify" id="feature-selection"></a>
+#### Feature Selection
+[[back to top](#table-of-contents)]
+
+Feature selection is an important pre-processing step in many machine learning applications in order to avoid the [curse of dimensionality](#curse-of-dimensionality) and [overfitting](#overfitting). A subset of features is typically selected by evaluating different combinations of features and eventually retain the subset that minimizes a specified [cost function](#cost-function). Commonly used algorithms for feature selection as alternative to [exhaustive search](#exhaustive-search) algorithms include sequential selection algorithms and genetic algorithms
 
 <br>
 <br>
