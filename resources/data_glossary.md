@@ -56,6 +56,7 @@ Please feel free to drop me a note via
 - [Distance, Minkowski](#distance-minkowski)
 - [Eigenvectors and Eigenvalues](#eigenvectors-and-eigenvalues)
 - [Ensemble methods](#ensemble-methods)
+- [Evolutionary algorithms](#evolutionary-algorithms)
 - [Exhaustive search](#exhaustive-search)
 - [Feature Selection](#feature-selection )
 - [Feature Space](#feature-space)
@@ -477,6 +478,15 @@ Ensemble methods combine multiple classifiers which may differ in algorithms, in
 <br>
 <br>
 
+<a class="mc-toclify" id="evolutionary-algorithms"></a>
+#### Evolutionary algorithms
+[[back to top](#table-of-contents)]
+
+Evolutionary algorithms are a class of algorithms that are based on [heuristic search](#heuristic-search) methods inspired by biological evolution in order to solve optimization problems.
+
+<br>
+<br>
+
 <a class="mk-toclify" id="exhaustive-search"></a>
 #### Exhaustive search
 [[back to top](#table-of-contents)]
@@ -521,6 +531,14 @@ Fuzzy C-Means is a soft clustering algorithm in which each sample point has a me
 
 The generalization error describes how well new data can be classified and is a useful metric to assess the performance of a classifier. Typically, the generalization error is computed via [cross-validation](cross-validation) or simply the absolute difference between the error rate on the training and test dataset.
 
+<br>
+<br>
+
+<a class="mc-toclify" id="evolutionary-algorithms"></a>
+#### Genetic algorithm
+[[back to top](#table-of-contents)]
+
+The Genetic algorithm is a subclass of [evolutionary algorithms](#evolutionary-algorithms) that takes a heuristic approach inspired by Charles Darwin's theory of "natural selection" in order to solve optimization problems.
 
 <br>
 <br>
