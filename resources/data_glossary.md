@@ -62,6 +62,7 @@ Please feel free to drop me a note via
 - [Feature Space](#feature-space)
 - [Fuzzy C-Means Clustering](#fuzzy-cmeans-clustering)
 - [Generalization error](#generalization-error)
+- [Genetic algorithm](#genetic-algorithm)
 - [Gradient Descent](#gradient-descent)
 - [Grid Search](#grid-search)
 - [Heuristic search](#heuristic-search)
