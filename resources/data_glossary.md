@@ -48,6 +48,7 @@ Please feel free to drop me a note via
 - [Decision rule](#decision-rule)
 - [Decision tree classifier](#decision-tree-classifier)
 - [Density-based clustering](#density-based-clustering)
+- [Dimensionality reduction](#dimensionality-reduction)
 - [Distance Metric Learning](#distance-metric-learning)
 - [Distance, Euclidean](#distance-euclidean)
 - [Distance, Manhattan](#distance-manhattan)
@@ -378,6 +379,15 @@ Decision tree classifiers are tree like graphs, where nodes in the graph test ce
 
 In density-based clustering, regions of high density in n-dimensional space are identified as clusters. The best advantage of this class of clustering algorithms is that they do not require apriori knowledge of number of clusters (as opposed to [k-means](#k-means-clustering) algorithm).   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
+
+<a class="mc-toclify" id="distance-metric-learning"></a>
+#### Dimensionality reduction
+[[back to top](#table-of-contents)]
+
+Dimensionality reduction is a data pre-processing step in machine learning applications that aims to avoid the [curse of dimensionality](#curse-of-dimensionality) and reduce the effect of overfitting.  Dimensionality reduction is related to [feature selection](#feature-selection), but instead of selecting a feature subset, dimensionality reduction takes as projection-based approach (e.g, linear transformation) in order to create a new feature subspace.
 
 <br>
 <br>
