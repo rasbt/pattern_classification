@@ -38,6 +38,7 @@ Please feel free to drop me a note via
 - [Correlation analysis - Pearson](#correlation-analysis-pearson)
 - [Correlation analysis - Spearman](#correlation-analysis-spearman)
 - [Cosine Similarity](#cosine-similarity)
+- [Cost function](#cost-function)
 - [Covariate creation](#covariate-creation)
 - [Cross-validation](#cross-validation)
 - [Cross-validation, K-fold](#cross-validation-k-fold)
@@ -62,6 +63,7 @@ Please feel free to drop me a note via
 - [Generalization error](#generalization-error)
 - [Gradient Descent](#gradient-descent)
 - [Grid Search](#grid-search)
+- [Heuristic search](#heuristic-search)
 - [Hyperparameters](#hyperparameters)
 - [Imputation](#imputation)
 - [Independent Component Analysis](#independent-component-analysis)
@@ -275,11 +277,21 @@ Cosine similarity measures the orientation of two *n*-dimensional sample vectors
 <br>
 <br>
 
-<a class="mk-toclify" id="covariate-creation"></a>
-#### Covariate creation
+<a class="mk-toclify" id="cosine-similarity"></a>
+#### Cosine Similarity
 [[back to top](#table-of-contents)]
 
-Covariate creation describes the general procedure of creating a set of features from raw data that are used for prediction or classification. The goal is to find a good balance between summarization/compression and information loss by creating and extracting features that represent the data well and contain the most information (variance).
+Cosine similarity measures the orientation of two *n*-dimensional sample vectors irrespective to their magnitude. It is calculated by the dot product of two numeric vectors, and it is normalized by the product of the vector lengths, so that output values close to 1 indicate high similarity.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="cost-function"></a>
+#### Cost function
+[[back to top](#table-of-contents)]
+
+A cost function (synonymous to loss function) is a special case of an [objective function](#objective-function), i.e., a function that is used for solving optimization problems. A cost function can take one or more input variables and the output variable is to be minimized. A typical use case for cost functions is parameter optimization.
 
 <br>
 <br>
@@ -527,6 +539,16 @@ Gradient descent is an algorithm that optimizes a function by finding its local 
 [[back to top](#table-of-contents)]
 
 Grid Search is a procedure to optimize parameters of a learning algorithm that are not learned from the training data (i.e., [hyperparameters](#hyperparameters)). Typically, Grid Search is implemented as an exhaustive search (in contrast to randomized parameter optimization) of candidate parameter values. After all possible parameter combination for a model are evaluated, the best combination will be retained.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="heuristic-search"></a>
+#### Heuristic search
+[[back to top](#table-of-contents)]
+
+Heuristic search is a problem-solving approach that is focussed on efficiency rather than completeness in order to find a suboptimal solution to a problem. Heuristic search is often used as alternative approach where [exhaustive search](#exhaustive-search) is too computationally intensive and where solutions need to be approximated.
+
 
 <br>
 <br>
@@ -814,7 +836,7 @@ A data pre-processing step (also often just called "Standardization") for re-sca
 #### Objective function
 [[back to top](#table-of-contents)]
 
-A function that is to be optimized (minimizing or maximizing a numerical value depending on a particular task or problem), for example, an objective function in pattern classification tasks could be to minimize the error rate of a classifier.
+Objective functions are mathematical function that are used for problem-solving and optimization tasks. Depending on the task, the objective function can be omtpimized through minimization ([cost or loss functions](#cost-function)) or maximization (reward function). A typical application of an objective function in pattern classification tasks is to minimize the error rate of a classifier.
 
 <br>
 <br>
