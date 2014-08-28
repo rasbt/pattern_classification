@@ -68,6 +68,7 @@ Please feel free to drop me a note via
 - [Grid Search](#grid-search)
 - [Heuristic search](#heuristic-search)
 - [Hyperparameters](#hyperparameters)
+- [iid](#iid)
 - [Imputation](#imputation)
 - [Independent Component Analysis](#independent-component-analysis)
 - [Jaccard coefficient](#jaccard-coefficient)
@@ -362,7 +363,7 @@ For a fixed number of training samples, the curse of dimensionality describes th
 #### Data mining
 [[back to top](#table-of-contents)]
 
-A field that is closely related to machine learning and pattern classification. The focus of data mining does not lie in merely the collection of data, but the extraction of useful information: Discovery of patterns, and making inferences and predictions. Common techniques in data mining include predictive modeling, classification, and anomaly detection.
+A field that is closely related to machine learning and pattern classification. The focus of data mining does not lie in merely the collection of data, but the extraction of useful information: Discovery of patterns, and making inferences and predictions. Common techniques in data mining include predictive modeling, clustering, association rules, and anomaly detection.
 
 <br>
 <br>
@@ -588,6 +589,16 @@ Heuristic search is a problem-solving approach that is focussed on efficiency ra
 [[back to top](#table-of-contents)]
 
 Hyperparameters are the parameters of a classifier or estimator that are not directly learned in the machine learning step from the training data but are optimized separately (e.g., via [Grid Search](#grid-search)). The goal of hyperparameter optimization is to achieve good generalization of a learning algorithm and to avoid overfitting to the training data.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="iid"></a>
+####iid
+
+[[back to top](#table-of-contents)]
+
+The abbreviation "iid" stands for "independent and identically distributed" and describes random variables that are independent from one another and are drawn from a similar probability distribution. Independence means that the probability of one observation does not affect the probability of another variable (e.g., time series and network graphs are not independent).  One popular example of iid would be the tossing of a coin: One coin toss does not affect the outcome of another coin toss, and the probability of the coin landing on either "heads" or "tails" is the same for every coin toss.
 
 <br>
 <br>
