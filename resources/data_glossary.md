@@ -936,8 +936,7 @@ Precision is defined as the ratio of number of relevant items out of total retri
 #### Predictive Modeling
 [[back to top](#table-of-contents)]
 
-Predictive modeling is a [data mining](#data-mining) technique that describes the process of collecting data and training a classifier. Eventually, the the goal is to create a statistical model that can be used to make predictions about future trends and behaviors, e.g., predictions of stock market trends or the classifications of spam vs. non-spam e-mails.
-
+Predictive modeling is a task in [data mining](#data-mining) for making predicting outcomes based on a statistical model that was build on previous observations. Predictive modeling can be further decided into the three sub-tasks: Regression, classification, and ranking.
 <br>
 <br>
 
