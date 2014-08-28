@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/20/2014
+last updated: 09/28/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -30,12 +30,16 @@ Please feel free to drop me a note via
 - [Batch Gradient Descent](#batch-gradient-descent)
 - [Big Data](#big-data)
 - [Bootstrapping](#bootstrapping)
+- [Bregman divergence](#bregman-divergence)
 - [Central Limit Theorem](#central-limit-theorem)
 - [Confusion Matrix](#confusion-matrix)
+- [Contingency Table](#contingency-table)
 - [Correlation analysis](#correlation-analysis)
-- [Correlation analysis - Pearson](#correlation-analysis-pearson)
-- [Correlation analysis - Spearman](#correlation-analysis-spearman)
+- [Correlation analysis - Kendall](##correlation-analysis---kendall)
+- [Correlation analysis - Pearson](#correlation-analysis---pearson)
+- [Correlation analysis - Spearman](#correlation-analysis---spearman)
 - [Cosine Similarity](#cosine-similarity)
+- [Cost function](#cost-function)
 - [Covariate creation](#covariate-creation)
 - [Cross-validation](#cross-validation)
 - [Cross-validation, K-fold](#cross-validation-k-fold)
@@ -46,18 +50,28 @@ Please feel free to drop me a note via
 - [Decision rule](#decision-rule)
 - [Decision tree classifier](#decision-tree-classifier)
 - [Density-based clustering](#density-based-clustering)
+- [Dimensionality reduction](#dimensionality-reduction)
 - [Distance Metric Learning](#distance-metric-learning)
+- [Distance, Euclidean](#distance-euclidean)
+- [Distance, Manhattan](#distance-manhattan)
+- [Distance, Minkowski](#distance-minkowski)
 - [Eigenvectors and Eigenvalues](#eigenvectors-and-eigenvalues)
 - [Ensemble methods](#ensemble-methods)
-- [Feature Selection Algorithms](#feature-selection-algorithms)
+- [Evolutionary algorithms](#evolutionary-algorithms)
+- [Exhaustive search](#exhaustive-search)
+- [Feature Selection](#feature-selection )
 - [Feature Space](#feature-space)
 - [Fuzzy C-Means Clustering](#fuzzy-cmeans-clustering)
 - [Generalization error](#generalization-error)
+- [Genetic algorithm](#genetic-algorithm)
 - [Gradient Descent](#gradient-descent)
 - [Grid Search](#grid-search)
+- [Heuristic search](#heuristic-search)
 - [Hyperparameters](#hyperparameters)
+- [iid](#iid)
 - [Imputation](#imputation)
 - [Independent Component Analysis](#independent-component-analysis)
+- [Jaccard coefficient](#jaccard-coefficient)
 - [Jackknifing](#jackknifing)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Methods](#kernel-methods)
@@ -78,9 +92,9 @@ Please feel free to drop me a note via
 - [Mahalanobis distance](#mahalanobis-distance)
 - [MapRedcue](#mapreduce)
 - [Markov chains](#markov-chains)
+- [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
 - [Monte Carlo simulation](#monte-carlo-simulation)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
-- [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
 - [Normalization - Min-Max Scaling](#normalization-min-max-scaling)
 - [Normalization - Standard Scores](#normalization-standard-scores)
 - [Objective function](#objective-function)
@@ -106,6 +120,7 @@ Please feel free to drop me a note via
 - [Sensitivity](#sensitivity)
 - [Specificity](#specificity)
 - [Silhouette Measure (clustering)](#silhouette-measure-clustering)
+- [Simple Matching Coefficient](#simple-matching-coefficient)
 - [Singular Value Decomposition (SVD)](#singular-value-decomposition-svd)
 - [Stochastic Gradient Descent (SGD)](#stochastic-gradient-descent-sgd)
 - [Supervised learning](#supervised-learning)
@@ -172,6 +187,7 @@ Bagging is an ensemble method for classification (or regression analysis) in whi
 [[back to top](#table-of-contents)]
 
 Batch Gradient descent is a variant of a [Gradient Descent](#gradient-descent) algorithm to optimize a function by finding its local minimum. In contrast to [Stochastic Gradient Descent](#stochastic-gradient-descent-sgd) the gradient is computed from the whole dataset.
+
 <br>
 <br>
 
@@ -188,7 +204,16 @@ There are many different, controversial interpretations and definitions for the 
 #### Bootstrapping
 [[back to top](#table-of-contents)]
 
-A resampling technique to that is closely related to [cross-validation](#cross-validation) where a training dataset is divided into random subsets. Bootstrapping -- in contrast to cross-validation -- is a random sampling **with** replacement. Bootstrapping is typically be used for statistical estimation of bias and standard error, and a common application in machine learning is to estimate the generalization error of an predictor.
+A resampling technique to that is closely related to [cross-validation](#cross-validation) where a training dataset is divided into random subsets. Bootstrapping -- in contrast to cross-validation -- is a random sampling **with** replacement. Bootstrapping is typically used for statistical estimation of bias and standard error, and a common application in machine learning is to estimate the generalization error of a predictor.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="bregman-divergence"></a>
+#### Bregman divergence
+[[back to top](#table-of-contents)]
+
+Bregman divergence describes are family of proximity functions (or distance measures) that share common properties and are often used in clustering algorithms. A popular example is the squared Euclidean distance.
 
 <br>
 <br>
@@ -211,6 +236,16 @@ The confusion matrix is used as a way to represent the performance of a classifi
 <br>
 <br>
 
+<a class="mk-toclify" id="contingency-table"></a>
+#### Contingency Table
+[[back to top](#table-of-contents)]
+
+A contingency table is used in clustering analysis to compare the overlap between two different clustering (grouping) results. The partitions from the two clustering results are represented as rows and columns in the table, and the individual elements of the table represent the number of elements that are shared between two partitions from each clustering result.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
 <a class="mk-toclify" id="correlation"></a>
 #### Correlation analysis
 [[back to top](#table-of-contents)]
@@ -220,20 +255,29 @@ Correlation analysis describes and quantifies the relationship between two indep
 <br>
 <br>
 
-<a class="mk-toclify" id="correlation-analysis-pearson"></a>
+<a class="mk-toclify" id="correlation-analysis---kendall"></a>
+#### Correlation analysis - Kendall
+[[back to top](#table-of-contents)]
+
+Similar to the [Pearson correlation coefficient](#correlation-analysis-pearson), Kendall's tau measures the degree of a monotone relationship between variables, and like [Spearman's rho](#correlation-analysis-spearman), it calculates the dependence between ranked variables, which makes it feasible for non-normal distributed data. Kendall tau can be calculated for continuous as well as ordinal data. Roughly speaking, Kendall's tau distinguishes itself from Spearman's rho by stronger penalization of non-sequential (in context of the ranked variables) dislocations.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="correlation-analysis---pearson"></a>
 #### Correlation analysis - Pearson
 [[back to top](#table-of-contents)]
 
-The Pearson correlation coefficientis probably the most widely used measure for a linear relationship between two normal distributed variables and thus often just called "correlation coefficient". Usually, the Pearson coefficient is obtained via a [Least-Squares fit](#least-squares-fit) and a value of 1 represents a perfect positive relation-ship, -1 a perfect negative relationship, and 0 indicates the absence of a relationship between variables.
+The Pearson correlation coefficient is probably the most widely used measure for linear relationships between two normal distributed variables and thus often just called "correlation coefficient". Usually, the Pearson coefficient is obtained via a [Least-Squares fit](#least-squares-fit) and a value of 1 represents a perfect positive relation-ship, -1 a perfect negative relationship, and 0 indicates the absence of a relationship between variables.
 
 <br>
 <br>
 
-<a class="mk-toclify" id="correlation"></a>
+<a class="mk-toclify" id="correlation-analysis---spearman"></a>
 #### Correlation analysis - Spearman
 [[back to top](#table-of-contents)]
 
-The Spearman correlation coefficient is a rank-based version of [Pearson's correlation coefficient](correlation-analysis-pearson), which can be used for variables that are not normal-distributed and have a non-linear relationship.
+Related to the [Pearson correlation coefficient](#correlation-analysis-pearson), the Spearman correlation coefficient (rho) measures the relationship between two variables. Spearman's rho can be understood as a rank-based version of [Pearson's correlation coefficient](#correlation-analysis-pearson), which can be used for variables that are not normal-distributed and have a non-linear relationship. Also, its use is not only restricted to continuous data, but can also be used in analyses of ordinal attributes.
 
 <br>
 <br>
@@ -242,17 +286,27 @@ The Spearman correlation coefficient is a rank-based version of [Pearson's corre
 #### Cosine Similarity
 [[back to top](#table-of-contents)]
 
-Cosine similarity measures the orientation of two *n*-dimensional sample vectors irrespective to their magnitude. It is calculated by the dot product of two numeric vectors, and it is normalized by the vector lengths, so that output values close to 1 indicate high similarity.  
+Cosine similarity measures the orientation of two *n*-dimensional sample vectors irrespective to their magnitude. It is calculated by the dot product of two numeric vectors, and it is normalized by the product of the vector lengths, so that output values close to 1 indicate high similarity.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
 
-<a class="mk-toclify" id="covariate-creation"></a>
-#### Covariate creation
+<a class="mk-toclify" id="cosine-similarity"></a>
+#### Cosine Similarity
 [[back to top](#table-of-contents)]
 
-Covariate creation describes the general procedure of creating a set of features from raw data that are used for prediction or classification. The goal is to find a good balance between summarization/compression and information loss by creating and extracting features that represent the data well and contain the most information (variance).
+Cosine similarity measures the orientation of two *n*-dimensional sample vectors irrespective to their magnitude. It is calculated by the dot product of two numeric vectors, and it is normalized by the product of the vector lengths, so that output values close to 1 indicate high similarity.  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="cost-function"></a>
+#### Cost function
+[[back to top](#table-of-contents)]
+
+A cost function (synonymous to loss function) is a special case of an [objective function](#objective-function), i.e., a function that is used for solving optimization problems. A cost function can take one or more input variables and the output variable is to be minimized. A typical use case for cost functions is parameter optimization.
 
 <br>
 <br>
@@ -310,7 +364,7 @@ For a fixed number of training samples, the curse of dimensionality describes th
 #### Data mining
 [[back to top](#table-of-contents)]
 
-A field that is closely related to machine learning and pattern classification. The focus of data mining does not lie in merely the collection of data, but the extraction of useful information: Discovery of patterns, and making inferences and predictions. Common techniques in data mining include predictive modeling, classification, and anomaly detection.
+A field that is closely related to machine learning and pattern classification. The focus of data mining does not lie in merely the collection of data, but the extraction of useful information: Discovery of patterns, and making inferences and predictions. Common techniques in data mining include predictive modeling, clustering, association rules, and anomaly detection.
 
 <br>
 <br>
@@ -357,11 +411,55 @@ In density-based clustering, regions of high density in n-dimensional space are 
 <br>
 
 <a class="mc-toclify" id="distance-metric-learning"></a>
+#### Dimensionality reduction
+[[back to top](#table-of-contents)]
+
+Dimensionality reduction is a data pre-processing step in machine learning applications that aims to avoid the [curse of dimensionality](#curse-of-dimensionality) and reduce the effect of overfitting.  Dimensionality reduction is related to [feature selection](#feature-selection), but instead of selecting a feature subset, dimensionality reduction takes as projection-based approach (e.g, linear transformation) in order to create a new feature subspace.
+
+<br>
+<br>
+
+<a class="mc-toclify" id="distance-metric-learning"></a>
 #### Distance Metric Learning
 [[back to top](#table-of-contents)]
 
 Distance metrics are fundamental for many machine learning algorithms. Distance metric learning - instead of learning a model - incorporates estimated relevances of features to obtain a distance metric for potentially optimal separation of classes and clusters: Large distances for objects from different classes, and small distances for objects of the same class, respectively.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
+
+<a class="mc-toclify" id="distance-euclidean"></a>
+#### Distance, Euclidean
+[[back to top](#table-of-contents)]
+
+The Euclidean distance is a distance measure between two points or or vectors in a two- or multidimensional (Euclidean) space based on Pythagoras' theorem. The distance is calculated by taking the square root of the sum of the squared pair-wise distances of every dimension.  
+
+![](../Images/latex_equations/distance_euclidean_1.gif)
+
+<br>
+<br>
+
+<a class="mc-toclify" id="distance-manhattan"></a>
+#### Distance, Manhattan
+[[back to top](#table-of-contents)]
+
+The Manhattan distance (sometimes also called Taxicab distance) metric is related to the Euclidean distance, but instead of calculating the shortest diagonal path ("beeline") between two points, it calculates the distance based on gridlines. The Manhattan distance was named after the block-like layout of the streets in Manhattan. 
+
+![](../Images/latex_equations/distance_manhattan_1.gif)
+
+
+<br>
+<br>
+
+
+<a class="mc-toclify" id="distance-minkowski"></a>
+#### Distance, Minkowski
+[[back to top](#table-of-contents)]
+
+The Minkowski distance is a generalized form of the Euclidean distance (if *p=2*) and the Manhattan distance (if *p=1*).  
+
+![](../Images/latex_equations/distance_minkowski_1.gif)
 
 <br>
 <br>
@@ -385,11 +483,39 @@ Ensemble methods combine multiple classifiers which may differ in algorithms, in
 <br>
 <br>
 
-<a class="mk-toclify" id="feature-selection-algorithms"></a>
-#### Feature Selection Algorithms
+<a class="mc-toclify" id="ensemble-methods"></a>
+#### Ensemble methods
 [[back to top](#table-of-contents)]
 
-Algorithmic approaches as alternative to projection-based techniques like Principal Component and Linear Discriminant Analysis for dimensionality reduction of a dataset via the selection a "sufficiently reduced" feature subsets with minimal decline of the recognition rate of a classifier.
+Ensemble methods combine multiple classifiers which may differ in algorithms, input features, or input samples. Statistical analyses showed that ensemble methods yield better classification performances and are also less prone to overfitting. Different methods, e.g., bagging or boosting, are used to construct the final classification decision based on weighted votes.  
+
+<br>
+<br>
+
+<a class="mc-toclify" id="evolutionary-algorithms"></a>
+#### Evolutionary algorithms
+[[back to top](#table-of-contents)]
+
+Evolutionary algorithms are a class of algorithms that are based on [heuristic search](#heuristic-search) methods inspired by biological evolution in order to solve optimization problems.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="exhaustive-search"></a>
+#### Exhaustive search
+[[back to top](#table-of-contents)]
+
+Exhaustive search (synonymous to brute-force search) is a problem-solving approach where all possible combinations are sequentially evaluated to find the optimal solution. Exhaustive search guarantees to find the optimal solution whereas other approaches (e.g., [heuristic searches](#heuristic-search)) are regarded as sub-optimal. A downside of exhaustive searches is that computational costs increase proportional to the number of combinations to be evaluated.
+
+
+<br>
+<br>
+
+<a class="mk-toclify" id="feature-selection"></a>
+#### Feature Selection
+[[back to top](#table-of-contents)]
+
+Feature selection is an important pre-processing step in many machine learning applications in order to avoid the [curse of dimensionality](#curse-of-dimensionality) and [overfitting](#overfitting). A subset of features is typically selected by evaluating different combinations of features and eventually retain the subset that minimizes a specified [cost function](#cost-function). Commonly used algorithms for feature selection as alternative to [exhaustive search](#exhaustive-search) algorithms include sequential selection algorithms and genetic algorithms
 
 <br>
 <br>
@@ -419,6 +545,14 @@ Fuzzy C-Means is a soft clustering algorithm in which each sample point has a me
 
 The generalization error describes how well new data can be classified and is a useful metric to assess the performance of a classifier. Typically, the generalization error is computed via [cross-validation](cross-validation) or simply the absolute difference between the error rate on the training and test dataset.
 
+<br>
+<br>
+
+<a class="mc-toclify" id="evolutionary-algorithms"></a>
+#### Genetic algorithm
+[[back to top](#table-of-contents)]
+
+The Genetic algorithm is a subclass of [evolutionary algorithms](#evolutionary-algorithms) that takes a heuristic approach inspired by Charles Darwin's theory of "natural selection" in order to solve optimization problems.
 
 <br>
 <br>
@@ -441,11 +575,31 @@ Grid Search is a procedure to optimize parameters of a learning algorithm that a
 <br>
 <br>
 
+<a class="mk-toclify" id="heuristic-search"></a>
+#### Heuristic search
+[[back to top](#table-of-contents)]
+
+Heuristic search is a problem-solving approach that is focussed on efficiency rather than completeness in order to find a suboptimal solution to a problem. Heuristic search is often used as alternative approach where [exhaustive search](#exhaustive-search) is too computationally intensive and where solutions need to be approximated.
+
+
+<br>
+<br>
+
 <a class="mk-toclify" id="hyperparameters"></a>
 #### Hyperparameters
 [[back to top](#table-of-contents)]
 
 Hyperparameters are the parameters of a classifier or estimator that are not directly learned in the machine learning step from the training data but are optimized separately (e.g., via [Grid Search](#grid-search)). The goal of hyperparameter optimization is to achieve good generalization of a learning algorithm and to avoid overfitting to the training data.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="iid"></a>
+####iid
+
+[[back to top](#table-of-contents)]
+
+The abbreviation "iid" stands for "independent and identically distributed" and describes random variables that are independent from one another and are drawn from a similar probability distribution. Independence means that the probability of one observation does not affect the probability of another variable (e.g., time series and network graphs are not independent).  One popular example of iid would be the tossing of a coin: One coin toss does not affect the outcome of another coin toss, and the probability of the coin landing on either "heads" or "tails" is the same for every coin toss.
 
 <br>
 <br>
@@ -470,12 +624,20 @@ A popular example is the separation of overlapping voice samples -- the so-calle
 <br>
 <br>
 
+<a class="mk-toclify" id="jaccard-coefficient"></a>
+#### Jaccard coefficient
+[[back to top](#table-of-contents)]
+
+The Jaccard coefficient is used as similarity measure for asymmetric binary data and calculated by taking the number of matching attributes and divide it by the number of all attributes except those where both variables have a value 0 in contrast to a [simple matching coefficient](#simple-matching -coefficient).
+
+<br>
+<br>
+
 <a class="mk-toclify" id="jackknifing"></a>
 #### Jackknifing
 [[back to top](#table-of-contents)]
 
 Jackknifing is a resampling technique that predates the related [cross-validation](#cross-validation) and [bootstrapping](#bootstrapping) techniques and is mostly used for bias and variance estimations. In jackknifing, a dataset is split into N subsets where exactly one sample is removed from every subset so that every subset is of size N-1.
-
 
 <br>
 <br>
@@ -716,7 +878,7 @@ A data pre-processing step (also often just called "Standardization") for re-sca
 #### Objective function
 [[back to top](#table-of-contents)]
 
-A function that is to be optimized (minimizing or maximizing a numerical value depending on a particular task or problem), for example, an objective function in pattern classification tasks could be to minimize the error rate of a classifier.
+Objective functions are mathematical function that are used for problem-solving and optimization tasks. Depending on the task, the objective function can be omtpimized through minimization ([cost or loss functions](#cost-function)) or maximization (reward function). A typical application of an objective function in pattern classification tasks is to minimize the error rate of a classifier.
 
 <br>
 <br>
@@ -786,8 +948,7 @@ Precision is defined as the ratio of number of relevant items out of total retri
 #### Predictive Modeling
 [[back to top](#table-of-contents)]
 
-Predictive modeling is a [data mining](#data-mining) technique that describes the process of collecting data and training a classifier. Eventually, the the goal is to create a statistical model that can be used to make predictions about future trends and behaviors, e.g., predictions of stock market trends or the classifications of spam vs. non-spam e-mails.
-
+Predictive modeling is a task in [data mining](#data-mining) for making predicting outcomes based on a statistical model that was build on previous observations. Predictive modeling can be further decided into the three sub-tasks: Regression, classification, and ranking.
 <br>
 <br>
 
@@ -921,15 +1082,7 @@ Sensitivity (synonymous to [precision](#precision-and-recall)), which is related
 <br>
 <br>
 
-<a class="mk-toclify" id="specificity"></a>
-#### Specificity
 
-[[back to top](#table-of-contents)]
-
-Specificity (synonymous to [recall](#precision-and-recall)), which is related to [sensitivity](#sensitivity) -- in the context of error rate evaluation -- describes the "True Negative Rate" for a binary classification problem: The probability to make a correct prediction for a "false/negative" case (e.g., in an attempt to predict a disease, no disease is predicted for a healthy patient). Specificity is calculated as (TN)/(FP+TN), where TN=True Negatives, FP=False Positives.
-
-<br>
-<br>
 
 <a class="mk-toclify" id="silhouette-measure-clustering"></a>
 #### Silhouette Measure (clustering)
@@ -942,6 +1095,16 @@ Silhouette measure provides a metric to evaluate the performance of a clustering
 <br>
 <br>
 
+<a class="mk-toclify" id="simple-matching-coefficient"></a>
+#### Simple Matching Coefficient
+
+[[back to top](#table-of-contents)]
+
+The simple matching coefficient is a similarity measure for binary data and calculated by dividing the total number of matches by the total number of attributes. For asymmetric binary data, the related [Jaccard coefficient](#jaccard-coefficient) is to be preferred in order to avoid highly similar scores.
+
+<br>
+<br>
+
 <a class="mk-toclify" id="singular-value-decomposition-svd"></a>
 #### Singular Value Decomposition (SVD)
 
@@ -950,6 +1113,16 @@ Silhouette measure provides a metric to evaluate the performance of a clustering
 Singular value decomposition (SVD) is linear algebra technique that decomposes matrix ***X*** into  
 ***U D V<sup>T</sup>*** where ***U*** (left-singular vectors) and ***V*** (right-singular vector) are both column-orthogonal, and D is a diagonal matrix that contains singular values. [PCA](#principal-component-analysis) is closely related to the right0singular vectors of SVD.  
  (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="specificity"></a>
+#### Specificity
+
+[[back to top](#table-of-contents)]
+
+Specificity (synonymous to [recall](#precision-and-recall)), which is related to [sensitivity](#sensitivity) -- in the context of error rate evaluation -- describes the "True Negative Rate" for a binary classification problem: The probability to make a correct prediction for a "false/negative" case (e.g., in an attempt to predict a disease, no disease is predicted for a healthy patient). Specificity is calculated as (TN)/(FP+TN), where TN=True Negatives, FP=False Positives.
 
 <br>
 <br>

@@ -9,7 +9,13 @@ Last updated 07/12/2014
 
 - [Bayes Theorem](#bayes-theorem)
 - [Binomial distribution](#binomial-distribution)
+- [Correlation - Kendall](#correlation---kendall)
+- [Correlation - Pearson](#correlation---pearson)
+- [Correlation - Spearman](#correlation---spearman)
 - [Co-Variance](#co-variance)
+- [Distance, Euclidean](#distance-euclidean)
+- [Distance, Manhattan](#distance-manhattan)
+- [Distance, Minkowski](#distance-minkowski)
 - [Eigenvector and Eigenvalue](#eigenvector-and-eigenvalue)
 - [Least-squares fit regression](#least-squares-fit-regression)
 - [Lennard Jones Potential](#lennard-jones-potential)
@@ -106,6 +112,103 @@ or prepend `/begin{equation}` and append `/end{equation}`
 <br>
 <br>
 
+
+### Correlation - Kendall
+
+[[back to top](#table-of-contents)]
+
+Similar to the [Pearson correlation coefficient](#correlation-pearson), Kendall's tau measures the degree of a monotone relationship between variables, and like [Spearman's rho](#correlation-pearson), it calculates the dependence between ranked variables, which makes is feasible for non-normal distributed data. Kendall tau can be calculated for continuous as well as ordinal data. Roughly speaking, Kendall's tau distinguishes itself from Spearman's rho by stronger penalization of non-sequential (in context of the ranked variables) dislocations.
+
+![](../Images/latex_equations/kendall_tau_1.gif)
+
+	\tau = \frac{c-d}{c+d} = \frac{S}{
+   		\left(
+   		\begin{matrix} 
+     	n \\
+     	2
+  	\end{matrix}
+  	\right)}
+	= \frac{2S}{n(n-1)}
+
+where 
+
+*c* = the number of concordant pairs   
+*d* = the number of discordant pairs  
+
+[[ref](http://www.encyclopediaofmath.org/index.php/Kendall_tau_metric)]
+
+If ties are present among the 2 ranked variables, the following equation shall be used instead:
+
+![](../Images/latex_equations/kendall_tau_2.gif)
+
+	\tau = \frac{S}{\sqrt{n(n-1)/2-T}\sqrt{n(n-1)/2-U}}  \\
+	\\
+	T = \sum_t t(t-1)/2 \\
+	\\
+	U = \sum_u u(u-1)/2 \\
+
+
+where  
+
+*t* = number of observations of variable *x* that are tied  
+*u* = number of observations of variable *y* that are tied  
+
+
+<br>
+<br>
+
+### Correlation - Pearson
+
+[[back to top](#table-of-contents)]
+
+The Pearson correlation coefficient is probably the most widely used measure for linear relationships between two normal distributed variables and thus often just called "correlation coefficient". Usually, the Pearson coefficient is obtained via a [Least-Squares fit](#least-squares-fit-regression) and a value of 1 represents a perfect positive relation-ship, -1 a perfect negative relationship, and 0 indicates the absence of a relationship between variables.
+
+![](../Images/latex_equations/pearson_rho_1.gif)
+
+    \rho = \frac{\text{cov}(X,Y)}{\sigma_x \sigma_y}
+    
+And the estimate  
+
+![](../Images/latex_equations/pearson_rho_2.gif)
+
+	r = \frac{{}\sum_{i=1}^{n} (x_i - \overline{x})(y_i - \overline{y})}
+	{\sqrt{\sum_{i=1}^{n} (x_i - \overline{x})^2(y_i - \overline{y})^2}}
+
+<br>
+<br>
+
+### Correlation - Spearman
+
+[[back to top](#table-of-contents)]
+
+Related to the [Pearson correlation coefficient](#correlation-pearson), the Spearman correlation coefficient (rho) measures the relationship between two variables. Spearman's rho can be understood as a rank-based version of [Pearson's correlation coefficient](#correlation-pearson), which can be used for variables that are not normal-distributed and have a non-linear relationship. Also, its use is not only restricted to continuous data, but can also be used in analyses of ordinal attributes.
+
+![](../Images/latex_equations/spearman_rho_1.gif)
+
+	\rho = 1- {\frac {6 \sum d_i^2}{n(n^2 - 1)}}
+ 
+ where  
+ *d* = the pairwise distances of the ranks of the variables *x<sub>i</sub>* and *y<sub>i</sub>* .  
+ *n* = the number of samples.
+ 
+
+<br>
+<br>
+
+### Cosine Similarity
+
+[[back to top](#table-of-contents)]
+
+Cosine similarity measures the orientation of two *n*-dimensional sample vectors irrespective to their magnitude. It is calculated by the dot product of two numeric vectors, and it is normalized by the product of the vector lengths, so that output values close to 1 indicate high similarity. 
+
+![](../Images/latex_equations/cosine_similarity_1.gif)
+
+	cos(\pmb x, \pmb y) = \frac {\pmb x \cdot \pmb y}{||\pmb x|| \cdot ||\pmb y||}
+ 
+
+<br>
+<br>
+
 ### Co-Variance
 [[back to top](#table-of-contents)]
 
@@ -139,7 +242,41 @@ example covariance matrix:
     \pmb{v} = \text{Eigenvector}\\
     \lambda = \text{Eigenvalue}
     
-   
+<br>
+<br>
+
+### Distance, Euclidean
+[[back to top](#table-of-contents)]
+
+The Euclidean distance is a distance measure between two points or or vectors in a two- or multidimensional (Euclidean) space based on Pythagoras' theorem. The distance is calculated by taking the square root of the sum of the squared pair-wise distances of every dimension.  
+
+![](../Images/latex_equations/distance_euclidean_1.gif)
+
+	\sqrt{\sum_{i=1}^n (x_i-y_i)^2}     
+
+<br>
+<br>
+
+### Distance, Manhattan
+[[back to top](#table-of-contents)]
+
+The Manhattan distance (sometimes also called Taxicab distance) metric is related to the Euclidean distance, but instead of calculating the shortest diagonal path ("beeline") between two points, it calculates the distance based on gridlines. The Manhattan distance was named after the block-like layout of the streets in Manhattan. 
+
+![](../Images/latex_equations/distance_manhattan_1.gif)
+
+	\left(\sum_{i=1}^n |x_i-y_i|^p\right)^{1/p}
+
+<br>
+<br>
+
+### Distance, Minkowski
+[[back to top](#table-of-contents)]
+
+The Minkowski distance is a generalized form of the Euclidean distance (if *p=2*) and the Manhattan distance (if *p=1*).  
+
+![](../Images/latex_equations/distance_minkowski_1.gif)
+
+	\left(\sum_{i=1}^n |x_i-y_i|^p\right)^{1/p}
 
 <br>
 <br>
