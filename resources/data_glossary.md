@@ -91,6 +91,7 @@ Please feel free to drop me a note via
 - [Power transform](#power-transform)
 - [Precision and Recall](#precision-and-recall)
 - [Predictive Modeling](#predictive-modeling)
+- [Preprocessing](#preprocessing)
 - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
 - [Proportion of Variance Explained (PVE)](#proportion-of-variance-explained-pve)
 - [Purity Measure](#purity-measure)
@@ -790,12 +791,21 @@ Predictive modeling is a [data mining](#data-mining) technique that describes th
 <br>
 <br>
 
-<a class="mk-toclify" id="proportion-of-variance-explained-pve"></a>
+<a class="mk-toclify" id="predictive-modeling"></a>
+#### Predictive Modeling
+[[back to top](#table-of-contents)]
+
+Predictive modeling is a [data mining](#data-mining) technique that describes the process of collecting data and training a classifier. Eventually, the the goal is to create a statistical model that can be used to make predictions about future trends and behaviors, e.g., predictions of stock market trends or the classifications of spam vs. non-spam e-mails.
+
+<br>
+<br>
+
+
+<a class="Preprocessing" id="preprocessing"></a>
 #### Proportion of Variance Explained
 [[back to top](#table-of-contents)]
 
-In the context of dimensionality reduction, the proportion of variance explained (PVE) describes how much of the total variance is captured by the new selected axes, for example,  principal components or discriminant axes. It is computed by the sum of variance of new component axes divided by the total variance.   
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+Preprocessing is a crucial series of steps of many workflows in order to prepares raw for downstream tasks, such as predictive modeling, clustering, anomaly detection, and association analysis. The individual steps in preprocessing vary by application and the type of data; typical steps are feature scaling and normalization, removal of noise, handling of missing data, feature selection, and projection via transformation and dimensionality reduction.
 
 <br>
 <br>
