@@ -117,10 +117,11 @@ Please feel free to drop me a note via
 - [Ridge Regression](#ridge-regression)
 - [Sampling](#sampling)
 - [Sensitivity](#sensitivity)
-- [Specificity](#specificity)
 - [Silhouette Measure (clustering)](#silhouette-measure-clustering)
 - [Simple Matching Coefficient](#simple-matching-coefficient)
 - [Singular Value Decomposition (SVD)](#singular-value-decomposition-svd)
+- [Soft classification](#soft-classification)
+- [Specificity](#specificity)
 - [Stochastic Gradient Descent (SGD)](#stochastic-gradient-descent-sgd)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
@@ -1103,6 +1104,17 @@ The simple matching coefficient is a similarity measure for binary data and calc
 Singular value decomposition (SVD) is linear algebra technique that decomposes matrix ***X*** into  
 ***U D V<sup>T</sup>*** where ***U*** (left-singular vectors) and ***V*** (right-singular vector) are both column-orthogonal, and D is a diagonal matrix that contains singular values. [PCA](#principal-component-analysis) is closely related to the right0singular vectors of SVD.  
  (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="soft-classification"></a>
+#### Soft classification
+
+[[back to top](#table-of-contents)]
+
+The general goal of a  [pattern classification](#pattern-classification) is to assign 
+a pre-defined class labels to particular observations. Typically, in (hard) classification, only one class label is assigned to every instance whereas in soft classification, an instance can have multiple class labels. The degree to which an instance belongs to different classes is then defined by a so-called membership function.
 
 <br>
 <br>
