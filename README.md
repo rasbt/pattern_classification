@@ -23,8 +23,8 @@
 - [Pre-Processing](#pre-processing)
 - [Parameter Estimation](#parameter-estimation)
 - [Statistical Pattern Classification Examples](#statistical-pattern-classification-examples)
-- [Resources](#resources)
-
+- [Useful Resources](#useful-resources) (datasets, definitions, ebooks, libraries, and more)
+	
 <br>
 
 <img src="./Images/supervised_learning_flowchart.png" style="width: 700px; height:600px;">
@@ -123,7 +123,7 @@
 <hr>
 <br>
 
-## Resources
+## Useful Resources
 [[back to top](#sections)]
 
 - Copy-and-paste ready LaTex equations [[Markdown](./resources/latex_equations.md)]

@@ -550,7 +550,7 @@ K-nearest neighbors algorithms find the k-points that are closest to a point of 
 #### Knowledge Discovery in Databases (KDD)  
 [[back to top](#table-of-contents)]
 
-Knowledge Discovery in Databases (KDD) describes a popular workflow in the field of data mining for extracting useful and meaningful information. Typically, the individual steps consist of data preprocessing (feature selection, dimensionality reduction, normalization, etc.), the discovery of patterns, post-processing, and eventually information retrieval.
+Knowledge Discovery in Databases (KDD) describes a popular workflow including [data mining](#data-mining) for extracting useful and meaningful information out of data. Typically, the individual steps are feature selection, pre-processing, transformation, [data mining](#data-mining), and post-processing (evaluation and interpretation).
 
 
 <br>
