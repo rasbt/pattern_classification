@@ -30,6 +30,7 @@ Please feel free to drop me a note via
 - [Batch Gradient Descent](#batch-gradient-descent)
 - [Big Data](#big-data)
 - [Bootstrapping](#bootstrapping)
+- [Bregman divergence](#bregman-divergence)
 - [Central Limit Theorem](#central-limit-theorem)
 - [Confusion Matrix](#confusion-matrix)
 - [Contingency Table](#contingency-table)
@@ -184,6 +185,7 @@ Bagging is an ensemble method for classification (or regression analysis) in whi
 [[back to top](#table-of-contents)]
 
 Batch Gradient descent is a variant of a [Gradient Descent](#gradient-descent) algorithm to optimize a function by finding its local minimum. In contrast to [Stochastic Gradient Descent](#stochastic-gradient-descent-sgd) the gradient is computed from the whole dataset.
+
 <br>
 <br>
 
@@ -201,6 +203,15 @@ There are many different, controversial interpretations and definitions for the 
 [[back to top](#table-of-contents)]
 
 A resampling technique to that is closely related to [cross-validation](#cross-validation) where a training dataset is divided into random subsets. Bootstrapping -- in contrast to cross-validation -- is a random sampling **with** replacement. Bootstrapping is typically used for statistical estimation of bias and standard error, and a common application in machine learning is to estimate the generalization error of a predictor.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="bregman-divergence"></a>
+#### Bregman divergence
+[[back to top](#table-of-contents)]
+
+Bregman divergence describes are family of proximity functions (or distance measures) that share common properties and are often used in clustering algorithms. A popular example is the squared Euclidean distance.
 
 <br>
 <br>
