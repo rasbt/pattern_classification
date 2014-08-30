@@ -98,6 +98,7 @@ Please feel free to drop me a note via
 - [Normalization - Min-Max Scaling](#normalization-min-max-scaling)
 - [Normalization - Standard Scores](#normalization-standard-scores)
 - [Objective function](#objective-function)
+- [On-Line Analytical Processing (OLAP)](#on-line-analytical-processing-olap)
 - [Overfitting](#overfitting)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
@@ -879,6 +880,15 @@ A data pre-processing step (also often just called "Standardization") for re-sca
 [[back to top](#table-of-contents)]
 
 Objective functions are mathematical function that are used for problem-solving and optimization tasks. Depending on the task, the objective function can be omtpimized through minimization ([cost or loss functions](#cost-function)) or maximization (reward function). A typical application of an objective function in pattern classification tasks is to minimize the error rate of a classifier.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="on-line-analytical-processing-olap"></a>
+#### On-Line Analytical Processing (OLAP)
+[[back to top](#table-of-contents)]
+
+On-Line Analytical Processing (OLAP) describes the general process of working with multidimensional arrays for exploratory analysis and information retrieval; often, OLAP is used to create summary data, e.g., via data aggregation across multiple dimensions or columns.
 
 <br>
 <br>
