@@ -127,6 +127,45 @@ A typical Knowledge Discovery in Databases (KDD) workflow:
 <br>
 <br>
 
+### ACCENT principles for effective graphical display
+
+[Michael Friendly summarized](http://www.datavis.ca/gallery/accent.php) 6 simple principles (ACCENT, based on D.A. Burn) that provide helpful guidance to design effective data graphs and plots.
+
+**A**pprehension
+
+- Ability to correctly perceive relations among variables. 
+- Does the graph maximize apprehension of the relations among variables?
+
+**C**larity
+
+- Ability to visually distinguish all the elements of a graph. 
+- Are the most important elements or relations visually most prominent?
+
+**C**onsistency
+
+- Ability to interpret a graph based on similarity to previous graphs. 
+- Are the elements, symbol shapes and colors consistent with their use in previous graphs?
+
+**E**fficiency
+
+- Ability to portray a possibly complex relation in as simple a way as possible. 
+- Are the elements of the graph economically used? 
+- Is the graph easy to interpret?
+
+**N**ecessity
+
+- The need for the graph, and the graphical elements. 
+- Is the graph a more useful way to represent the data than alternatives (table, text)? 
+- Are all the graph elements necessary to convey the relations?
+
+**T**ruthfulness
+
+- Ability to determine the true value represented by any graphical element by its magnitude
+- relative to the implicit or explicit scale. 
+- Are the graph elements accurately positioned and scaled?
+
+
+After Michael Friendly, based on: D. A. Burn (1993), "[Designing Effective Statistical Graphs](http://www.sciencedirect.com/science/article/pii/S0169716105801464)". In C. R. Rao, ed., Handbook of Statistics, vol. 9, Chapter 22.
 
 ### in progress ...
 [[back to top](#sections)]

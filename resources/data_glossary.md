@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/28/2014
+last updated: 09/30/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -50,6 +50,7 @@ Please feel free to drop me a note via
 - [Decision rule](#decision-rule)
 - [Decision tree classifier](#decision-tree-classifier)
 - [Density-based clustering](#density-based-clustering)
+- [Descriptive modeling](#descriptive-modeling)
 - [Dimensionality reduction](#dimensionality-reduction)
 - [Distance Metric Learning](#distance-metric-learning)
 - [Distance, Euclidean](#distance-euclidean)
@@ -408,6 +409,14 @@ Decision tree classifiers are tree like graphs, where nodes in the graph test ce
 In density-based clustering, regions of high density in n-dimensional space are identified as clusters. The best advantage of this class of clustering algorithms is that they do not require apriori knowledge of number of clusters (as opposed to [k-means](#k-means-clustering) algorithm).   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
 
+<br>
+<br>
+
+<a class="mc-toclify" id="descriptive-modeling"></a>
+#### Descriptive modeling
+[[back to top](#table-of-contents)]
+
+Descriptive modeling is a common task in the field of [data mining](#data-mining) where a model is build in order to distinguish between objects  and categorize them into classes - a form of data summary. In contrast to [predictive modeling](#predictive-modeling), the scope of descriptive modeling does not extend to making prediction for unseen objects.
 <br>
 <br>
 
@@ -958,7 +967,7 @@ Precision is defined as the ratio of number of relevant items out of total retri
 #### Predictive Modeling
 [[back to top](#table-of-contents)]
 
-Predictive modeling is a task in [data mining](#data-mining) for making predicting outcomes based on a statistical model that was build on previous observations. Predictive modeling can be further decided into the three sub-tasks: Regression, classification, and ranking.
+Predictive modeling a [data mining](#data-mining) task for predicting outcomes based on a statistical model that was build on previous observations (in contrast to [descriptive modeling](#descriptive-modeling)). Predictive modeling can be further divided into the three sub-tasks: Regression, classification, and ranking.
 <br>
 <br>
 
