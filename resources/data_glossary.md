@@ -56,6 +56,7 @@ Please feel free to drop me a note via
 - [Distance, Euclidean](#distance-euclidean)
 - [Distance, Manhattan](#distance-manhattan)
 - [Distance, Minkowski](#distance-minkowski)
+- [Eager learners](#eager-learners)
 - [Eigenvectors and Eigenvalues](#eigenvectors-and-eigenvalues)
 - [Ensemble methods](#ensemble-methods)
 - [Evolutionary algorithms](#evolutionary-algorithms)
@@ -84,6 +85,7 @@ Please feel free to drop me a note via
 - [K-nearest neighbors algorithms](#k-nearest-neighbors-algorithms)
 - [Knowledge Discovery in Databases (KDD)](#knowledge-discovery-in-databases-kdd)
 - [LASSO Regression](#lasso-regression)
+- [Lazy learners](#lazy-learners)
 - [Law of Large Numbers](#law-of-large-numbers)
 - [Least Squares fit](#least-squares-fit)
 - [Least Squares fit - linear](#least-squares-fit-linear)
@@ -477,6 +479,15 @@ The Minkowski distance is a generalized form of the Euclidean distance (if *p=2*
 <br>
 <br>
 
+<a class="mc-toclify" id="eager-learners"></a>
+#### Eager learners
+[[back to top](#table-of-contents)]
+
+Eager learners (in contrast to [lazy learners](lazy-learners)) describe machine learning algorithms that learn a model for mapping attributes to class labels as soon as the data becomes available (e.g., [Decision tree classifiers](#decision-tree-classifier) or [naive Bayes classifiers](#naive-bayes-classifier)) and do not require the training data for making predictions on unseen samples once the model was built. The most computationally expensive step is the creation of a prediction model from the training data, and the actual prediction is considered as relatively inexpensive.
+
+<br>
+<br>
+
 <a class="mc-toclify" id="eigenvectors-and-eigenvalues"></a>
 #### Eigenvectors and Eigenvalues
 [[back to top](#table-of-contents)]
@@ -746,6 +757,15 @@ Knowledge Discovery in Databases (KDD) describes a popular workflow including [d
 
 LASSO (Least Absolute Shrinkage and Selection Operator) is a regression model that uses the L1-norm (sum of absolute values) of model coefficients to penalize the model complexity. LASSO has the advantage that some coefficients can become zero, as opposed to [ridge regression](#ridge-regression) that uses the squared sum of model coefficients.  
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+
+<br>
+<br>
+
+<a class="mk-toclify" id="lazy-learners"></a>
+#### Lazy learners
+[[back to top](#table-of-contents)]
+
+Lazy learners (in contrast to [eager learners](#eager-learners)) are memorizing training data in order to make predictions for unseen samples. While there is no expensive learning step involved, the prediction step is generally considered to be more expensive compared to [eager learners](#eager-learners) since it involves the evaluation of training data. One example of lazy learners are [k-nearest neighbor algorithms](#k-nearest-neighbors-algorithms) where the class label of a unseen sample is estimated by e.g., the majority of class labels of its neighbors in the training data.
 
 <br>
 <br>
