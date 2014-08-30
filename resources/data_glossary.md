@@ -97,6 +97,7 @@ Please feel free to drop me a note via
 - [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
 - [Monte Carlo simulation](#monte-carlo-simulation)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
+- [Non-parametric statistics](#non-parametric-statistics)
 - [Normalization - Min-Max Scaling](#normalization-min-max-scaling)
 - [Normalization - Standard Scores](#normalization-standard-scores)
 - [Objective function](#objective-function)
@@ -118,6 +119,7 @@ Please feel free to drop me a note via
 - [Reinforcement learning](#reinforcement-learning)
 - [Resubstitution error](#resubstitution-error)
 - [Ridge Regression](#ridge-regression)
+- [Rule-based classifier](#rule-based-classifier)
 - [Sampling](#sampling)
 - [Sensitivity](#sensitivity)
 - [Silhouette Measure (clustering)](#silhouette-measure-clustering)
@@ -590,7 +592,7 @@ Gradient descent is an algorithm that optimizes a function by finding its local 
 #### Greedy Algorithm
 [[back to top](#table-of-contents)]
 
-Greedy Algorithms are a family of algorithms that are used in optimization problems. A greedy algorithm makes locally optimal choices in order to find a local optimum (suboptimal solution, also see ([heuristic problem solving](#heuristic-search))
+Greedy Algorithms are a family of algorithms that are used in optimization problems. A greedy algorithm makes locally optimal choices in order to find a local optimum (suboptimal solution, also see ([heuristic problem solving](#heuristic-search)).
 <br>
 <br>
 
@@ -875,6 +877,15 @@ A classifier based on a statistical model (i.e., Bayes theorem: calculating post
 <br>
 <br>
 
+
+<a class="mk-toclify" id="non-parametric-statistics"></a>
+#### Non-parametric statistics
+[[back to top](#table-of-contents)]
+
+In contrast to parametric approaches, non-parametric statistics or approaches do not make prior assumptions about the underlying probability distribution of a particular variable or attribute.
+<br>
+<br>
+
 <a class="mk-toclify" id="normalization-min-max-scaling"></a>
 #### Normalization - Min-Max scaling
 [[back to top](#table-of-contents)]
@@ -1080,6 +1091,15 @@ Ridge regression is a regularized regression technique in which the squared sum 
 <br>
 <br>
 
+<a class="mk-toclify" id="rule-based-classifier"></a>
+#### Rule-based classifier
+
+[[back to top](#table-of-contents)]
+
+Rule-based classifiers are classifiers that are based on one or more "IF ... THEN ..." rules. Rule-based classifiers are related to decision trees and can be extracted from the latter. If the requirements for a rule-based classifier (mutually exclusive: at most one rule per sample; mutuallyy exhaustive: at least one rule per sample) are violated, possible remedies include the addition of rules or the ordering of rules.
+
+<br>
+<br>
 
 <a class="mk-toclify" id="sampling"></a>
 #### Sampling
