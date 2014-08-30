@@ -66,6 +66,7 @@ Please feel free to drop me a note via
 - [Generalization error](#generalization-error)
 - [Genetic algorithm](#genetic-algorithm)
 - [Gradient Descent](#gradient-descent)
+- [Greedy Algorithm](#greedy-algorithm)
 - [Grid Search](#grid-search)
 - [Heuristic search](#heuristic-search)
 - [Hyperparameters](#hyperparameters)
@@ -576,12 +577,20 @@ Gradient descent is an algorithm that optimizes a function by finding its local 
 <br>
 <br>
 
-<a class="mk-toclify" id="grid-search"></a>
-#### Grid Search
+<a class="mk-toclify" id="gradient-descent"></a>
+#### Gradient Descent
 [[back to top](#table-of-contents)]
 
-Grid Search is a procedure to optimize parameters of a learning algorithm that are not learned from the training data (i.e., [hyperparameters](#hyperparameters)). Typically, Grid Search is implemented as an exhaustive search (in contrast to randomized parameter optimization) of candidate parameter values. After all possible parameter combination for a model are evaluated, the best combination will be retained.
+Gradient descent is an algorithm that optimizes a function by finding its local minimum. After the algorithm was initialized with an initial guess, it takes the derivative of the function to make a step towards the direction of deepest descent. This step-wise process is repeated until convergence.
 
+<br>
+<br>
+
+<a class="mk-toclify" id="greedy-algorithm"></a>
+#### Greedy Algorithm
+[[back to top](#table-of-contents)]
+
+Greedy Algorithms are a family of algorithms that are used in optimization problems. A greedy algorithm makes locally optimal choices in order to find a local optimum (suboptimal solution, also see ([heuristic problem solving](#heuristic-search))
 <br>
 <br>
 
