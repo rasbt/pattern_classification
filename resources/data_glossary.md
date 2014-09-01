@@ -96,6 +96,7 @@ Please feel free to drop me a note via
 - [Mahalanobis distance](#mahalanobis-distance)
 - [MapRedcue](#mapreduce)
 - [Markov chains](#markov-chains)
+- [Matthew's Correlation Coefficient](#matthews-correlation-coefficient)
 - [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
 - [Monte Carlo simulation](#monte-carlo-simulation)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
@@ -863,6 +864,18 @@ MapRedcue is a programming model for analyzing large datasets on distributed com
 [[back to top](#table-of-contents)]
 
 Markov chains (names after Andrey Markov) are mathematical systems that describe the transitioning between different states in a model. The transitioning from one state to the other (or back to itself) is a stochastic process.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="matthews-correlation-coefficient"></a>
+#### Matthew's Correlation Coefficient (MCC)
+
+[[back to top](#table-of-contents)]
+
+MCC is an assessment metric for clustering or binary classification analyses, that represents the correlation between the observed (ground-truth) and predicted labels. MCC can be directly computed from [confusion matrix](#confusion-matrix) and returns a value between -1 and 1.  
+$MCC=\frac{TP\timesTN - FP\timesFN}{\sqrt{(TP+FP)(TP+FN)(TN+FP)(TN+FN)}}$  
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
 <br>
 <br>
