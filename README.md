@@ -154,6 +154,7 @@
 
 - General Tips and Advices [[Markdown](./resources/general_tips_and_advices.md)]
 
+- A matrix cheatsheat for Python, R, Julia, and MATLAB  [[HTML](http://sebastianraschka.com/github/pattern_classification/matrix_cheatsheet_table.html)]
 
 
 
