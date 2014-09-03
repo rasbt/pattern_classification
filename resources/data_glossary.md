@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/30/2014
+last updated: 09/03/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -25,6 +25,7 @@ Please feel free to drop me a note via
 - [Accuracy](#accuracy)
 - [Aggregation](#aggregation)
 - [Anomaly Detection](#anomaly-detection)
+- [Artificial Neural Networks (ANN)](#artificial-neural-networks-ann)
 - [Backtesting](#backtesting)
 - [Bagging](#bagging)
 - [Batch Gradient Descent](#batch-gradient-descent)
@@ -35,7 +36,7 @@ Please feel free to drop me a note via
 - [Confusion Matrix](#confusion-matrix)
 - [Contingency Table](#contingency-table)
 - [Correlation analysis](#correlation-analysis)
-- [Correlation analysis - Matthews Correlation Coefficient (MCC)](#correlation-analysis-matthews-correlation-coefficient)
+- [Correlation analysis - Matthews Correlation Coefficient (MCC)](#correlation-analysis---matthews-correlation-coefficient)
 - [Correlation analysis - Kendall](#correlation-analysis---kendall)
 - [Correlation analysis - Pearson](#correlation-analysis---pearson)
 - [Correlation analysis - Spearman](#correlation-analysis---spearman)
@@ -108,6 +109,7 @@ Please feel free to drop me a note via
 - [Overfitting](#overfitting)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
+- [Perceptron](#perceptron)
 - [Permissive transformations](#permissive-transformations)
 - [Power transform](#power-transform)
 - [Precision and Recall](#precision-and-recall)
@@ -169,6 +171,17 @@ Anomaly detection describes the task of identifying points that deviate from spe
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 <br>
 <br>
+
+<a class="mk-toclify" id="artificial-neural-networks-ann"></a>
+#### Artificial Neural Networks (ANN)
+[[back to top](#table-of-contents)]
+
+Artificial Neural Networks (ANN) are a class of machine learning algorithms that are inspired by the neuron architecture of the human brain. Typically, a (multi-layer) ANN consists of a layer of input nodes, a layer of output nodes, and hidden layers in-between. The nodes are connected by weighted links that can be interpreted as the neuron-connections by axons of different strengths.
+The simplest version of an ANN is a single-layer [perceptron](#perceptron).
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="backtesting"></a>
 #### Backtesting
@@ -974,6 +987,15 @@ The usage of patterns in datasets to discriminate between classes, i.e., to assi
 <br>
 <br>
 
+<a class="mk-toclify" id="perceptron"></a>
+#### Perceptron
+
+[[back to top](#table-of-contents)]
+
+A (single-layer) perceptron is a simple [Artificial Neural Network](#artificial-neural-network) algorithm that consists of only two types of nodes: Input nodes and output nodes connected by weighted links. Perceptrons are being used as linear classifiers in supervised machine learning tasks.
+
+<br>
+<br>
 
 <a class="mk-toclify" id="permissive-transformations"></a>
 #### Permissive transformations
