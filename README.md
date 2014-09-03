@@ -23,8 +23,8 @@
 - [Model Evaluation](#model-evaluation)
 - [Parameter Estimation](#parameter-estimation)
 - [Statistical Pattern Classification Examples](#statistical-pattern-classification-examples)
-- [Resources](#resources)
-
+- [Useful Resources](#useful-resources) (datasets, definitions, ebooks, libraries, and more)
+	
 <br>
 
 
@@ -137,7 +137,7 @@
 <hr>
 <br>
 
-## Resources
+## Useful Resources
 [[back to top](#sections)]
 
 - Matplotlib examples - Visualization techniques for exploratory data analysis [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/resources/matplotlib_viz_gallery.ipynb)]

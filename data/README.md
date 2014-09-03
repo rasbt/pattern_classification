@@ -3,7 +3,7 @@
 - [titanic.csv](#titaniccsv)
 - [wine.csv](#winecsv)
 - [iris.csv](#iriscsv)
-- [sms_spam_collection.csv](#sms_spam_collection.csv)
+- [sms_spam_collection.txt](#sms_spam_collectiontxt)
 
 
 
@@ -154,7 +154,7 @@ The datasets `iris_test40.csv` and `iris_train60.csv` are randomly sampled from 
 <hr>
 <br>
 
-## sms_spam_collection.csv
+## sms_spam_collection.txt
 [[back to top](#table-of-contents)]
 
 A public dataset of 5572 SMS messages that are labeled as either "spam" or "ham" (not spam).
@@ -169,6 +169,6 @@ A public dataset of 5572 SMS messages that are labeled as either "spam" or "ham"
 | 5571 | ham  | Rofl. Its true to its name                        |
 
 
-Source: [http://www.dt.fee.unicamp.br/%7Etiago/smsspamcollection/](http://www.dt.fee.unicamp.br/%7Etiago/smsspamcollection/)
+Source: [http://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection](http://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection)
 
 Almeida, Tiago A., José María G. Hidalgo, and Akebo Yamakami. 2011. “Contributions to the Study of SMS Spam Filtering: New Collection and Results.” In Proceedings of the 11th ACM Symposium on Document Engineering, 259–62. DocEng ’11. New York, NY, USA: ACM. doi:10.1145/2034691.2034742.
