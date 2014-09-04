@@ -87,8 +87,9 @@ Please feel free to drop me a note via
 - [K-nearest neighbors algorithms](#k-nearest-neighbors-algorithms)
 - [Knowledge Discovery in Databases (KDD)](#knowledge-discovery-in-databases-kdd)
 - [LASSO Regression](#lasso-regression)
-- [Lazy learners](#lazy-learners)
+- [Latent Semantic Indexing](#latent-semantic-indexing)
 - [Law of Large Numbers](#law-of-large-numbers)
+- [Lazy learners](#lazy-learners)
 - [Least Squares fit](#least-squares-fit)
 - [Least Squares fit - linear](#least-squares-fit-linear)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
@@ -785,11 +786,11 @@ LASSO (Least Absolute Shrinkage and Selection Operator) is a regression model th
 <br>
 <br>
 
-<a class="mk-toclify" id="lazy-learners"></a>
-#### Lazy learners
+<a class="mk-toclify" id="latent-semantic-indexing"></a>
+#### Latent Semantic Indexing
 [[back to top](#table-of-contents)]
 
-Lazy learners (in contrast to [eager learners](#eager-learners)) are memorizing training data in order to make predictions for unseen samples. While there is no expensive learning step involved, the prediction step is generally considered to be more expensive compared to [eager learners](#eager-learners) since it involves the evaluation of training data. One example of lazy learners are [k-nearest neighbor algorithms](#k-nearest-neighbors-algorithms) where the class label of a unseen sample is estimated by e.g., the majority of class labels of its neighbors in the training data.
+Latent Semantic Indexing (LSI) is a [data mining](#data-mining) technique to characterize documents by topics, word usage, or other contexts. The structures of the documents are compared by applying  [singular value decomposition](#singular-value-decomposition-svd) to an input term-document matrix (e.g., a data table of word counts with terms as row labels and document numbers as column labels) in order to obtain the singular values and vectors.
 
 <br>
 <br>
@@ -799,6 +800,15 @@ Lazy learners (in contrast to [eager learners](#eager-learners)) are memorizing 
 [[back to top](#table-of-contents)]
 
 The Law of Large Numbers is a theorem in the field of probability theory that expresses the idea that the actual value of a random sampling process approaches the expected value for growing sample sizes. A common example is that the observed ratio of "heads" in an unbiased coin-flip experiment will approach 0.5 for large sample sizes. 
+
+<br>
+<br>
+
+<a class="mk-toclify" id="lazy-learners"></a>
+#### Lazy learners
+[[back to top](#table-of-contents)]
+
+Lazy learners (in contrast to [eager learners](#eager-learners)) are memorizing training data in order to make predictions for unseen samples. While there is no expensive learning step involved, the prediction step is generally considered to be more expensive compared to [eager learners](#eager-learners) since it involves the evaluation of training data. One example of lazy learners are [k-nearest neighbor algorithms](#k-nearest-neighbors-algorithms) where the class label of a unseen sample is estimated by e.g., the majority of class labels of its neighbors in the training data.
 
 <br>
 <br>
