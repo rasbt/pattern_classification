@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/30/2014
+last updated: 09/03/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -25,6 +25,7 @@ Please feel free to drop me a note via
 - [Accuracy](#accuracy)
 - [Aggregation](#aggregation)
 - [Anomaly Detection](#anomaly-detection)
+- [Artificial Neural Networks (ANN)](#artificial-neural-networks-ann)
 - [Backtesting](#backtesting)
 - [Bagging](#bagging)
 - [Batch Gradient Descent](#batch-gradient-descent)
@@ -35,7 +36,7 @@ Please feel free to drop me a note via
 - [Confusion Matrix](#confusion-matrix)
 - [Contingency Table](#contingency-table)
 - [Correlation analysis](#correlation-analysis)
-- [Correlation analysis - Matthews Correlation Coefficient (MCC)](#correlation-analysis-matthews-correlation-coefficient)
+- [Correlation analysis - Matthews Correlation Coefficient (MCC)](#correlation-analysis---matthews-correlation-coefficient)
 - [Correlation analysis - Kendall](#correlation-analysis---kendall)
 - [Correlation analysis - Pearson](#correlation-analysis---pearson)
 - [Correlation analysis - Spearman](#correlation-analysis---spearman)
@@ -86,8 +87,9 @@ Please feel free to drop me a note via
 - [K-nearest neighbors algorithms](#k-nearest-neighbors-algorithms)
 - [Knowledge Discovery in Databases (KDD)](#knowledge-discovery-in-databases-kdd)
 - [LASSO Regression](#lasso-regression)
-- [Lazy learners](#lazy-learners)
+- [Latent Semantic Indexing](#latent-semantic-indexing)
 - [Law of Large Numbers](#law-of-large-numbers)
+- [Lazy learners](#lazy-learners)
 - [Least Squares fit](#least-squares-fit)
 - [Least Squares fit - linear](#least-squares-fit-linear)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
@@ -108,6 +110,7 @@ Please feel free to drop me a note via
 - [Overfitting](#overfitting)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
+- [Perceptron](#perceptron)
 - [Permissive transformations](#permissive-transformations)
 - [Power transform](#power-transform)
 - [Precision and Recall](#precision-and-recall)
@@ -169,6 +172,17 @@ Anomaly detection describes the task of identifying points that deviate from spe
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 <br>
 <br>
+
+<a class="mk-toclify" id="artificial-neural-networks-ann"></a>
+#### Artificial Neural Networks (ANN)
+[[back to top](#table-of-contents)]
+
+Artificial Neural Networks (ANN) are a class of machine learning algorithms that are inspired by the neuron architecture of the human brain. Typically, a (multi-layer) ANN consists of a layer of input nodes, a layer of output nodes, and hidden layers in-between. The nodes are connected by weighted links that can be interpreted as the neuron-connections by axons of different strengths.
+The simplest version of an ANN is a single-layer [perceptron](#perceptron).
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="backtesting"></a>
 #### Backtesting
@@ -772,11 +786,11 @@ LASSO (Least Absolute Shrinkage and Selection Operator) is a regression model th
 <br>
 <br>
 
-<a class="mk-toclify" id="lazy-learners"></a>
-#### Lazy learners
+<a class="mk-toclify" id="latent-semantic-indexing"></a>
+#### Latent Semantic Indexing
 [[back to top](#table-of-contents)]
 
-Lazy learners (in contrast to [eager learners](#eager-learners)) are memorizing training data in order to make predictions for unseen samples. While there is no expensive learning step involved, the prediction step is generally considered to be more expensive compared to [eager learners](#eager-learners) since it involves the evaluation of training data. One example of lazy learners are [k-nearest neighbor algorithms](#k-nearest-neighbors-algorithms) where the class label of a unseen sample is estimated by e.g., the majority of class labels of its neighbors in the training data.
+Latent Semantic Indexing (LSI) is a [data mining](#data-mining) technique to characterize documents by topics, word usage, or other contexts. The structures of the documents are compared by applying  [singular value decomposition](#singular-value-decomposition-svd) to an input term-document matrix (e.g., a data table of word counts with terms as row labels and document numbers as column labels) in order to obtain the singular values and vectors.
 
 <br>
 <br>
@@ -786,6 +800,15 @@ Lazy learners (in contrast to [eager learners](#eager-learners)) are memorizing 
 [[back to top](#table-of-contents)]
 
 The Law of Large Numbers is a theorem in the field of probability theory that expresses the idea that the actual value of a random sampling process approaches the expected value for growing sample sizes. A common example is that the observed ratio of "heads" in an unbiased coin-flip experiment will approach 0.5 for large sample sizes. 
+
+<br>
+<br>
+
+<a class="mk-toclify" id="lazy-learners"></a>
+#### Lazy learners
+[[back to top](#table-of-contents)]
+
+Lazy learners (in contrast to [eager learners](#eager-learners)) are memorizing training data in order to make predictions for unseen samples. While there is no expensive learning step involved, the prediction step is generally considered to be more expensive compared to [eager learners](#eager-learners) since it involves the evaluation of training data. One example of lazy learners are [k-nearest neighbor algorithms](#k-nearest-neighbors-algorithms) where the class label of a unseen sample is estimated by e.g., the majority of class labels of its neighbors in the training data.
 
 <br>
 <br>
@@ -974,6 +997,15 @@ The usage of patterns in datasets to discriminate between classes, i.e., to assi
 <br>
 <br>
 
+<a class="mk-toclify" id="perceptron"></a>
+#### Perceptron
+
+[[back to top](#table-of-contents)]
+
+A (single-layer) perceptron is a simple [Artificial Neural Network](#artificial-neural-network) algorithm that consists of only two types of nodes: Input nodes and output nodes connected by weighted links. Perceptrons are being used as linear classifiers in supervised machine learning tasks.
+
+<br>
+<br>
 
 <a class="mk-toclify" id="permissive-transformations"></a>
 #### Permissive transformations
