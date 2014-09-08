@@ -28,6 +28,7 @@ Please feel free to drop me a note via
 - [Artificial Neural Networks (ANN)](#artificial-neural-networks-ann)
 - [Backtesting](#backtesting)
 - [Bagging](#bagging)
+- [Bag of words](#bag-of-words)
 - [Batch Gradient Descent](#batch-gradient-descent)
 - [Big Data](#big-data)
 - [Bootstrapping](#bootstrapping)
@@ -136,6 +137,7 @@ Please feel free to drop me a note via
 - [Stochastic Gradient Descent (SGD)](#stochastic-gradient-descent-sgd)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
+- [Term frequency](#term-frequency)
 - [Unsupervised learning](#unsupervised-learning)
 - [White noise](#white-noise)
 - [Whitening transformation](#whitening-transformation)
@@ -200,6 +202,14 @@ Backtesting is a specific case of [cross-validation](#cross-validation) in the c
 Bagging is an ensemble method for classification (or regression analysis) in which individual models are trained by random sampling of data, and the final decision is made by voting among individual models with equal weights (or averaging for regression analysis).   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
+<br>
+<br>
+
+<a class="mk-toclify" id="bag-of-words"></a>
+#### Bag of words
+[[back to top](#table-of-contents)]
+
+Bag of words is a model that is used to construct sparse feature vectors for text classification tasks. The bag of words is an unordered set of all words that occur in all documents that are part of the training set. Every word is then associated with a count of how often it occurs whereas the positional information is ignored. Sometimes, the bag of words is also called "dictionary" or "vocabulary" based on the training data.
 <br>
 <br>
 
