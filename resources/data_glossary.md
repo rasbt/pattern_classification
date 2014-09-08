@@ -137,7 +137,8 @@ Please feel free to drop me a note via
 - [Stochastic Gradient Descent (SGD)](#stochastic-gradient-descent-sgd)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
-- [Term frequency](#term-frequency)
+- [Term frequency and document frequency](#term-frequency-and-document-frequency)
+- [Term frequency - inverse document frequency, Tf-idf](#term-frequency-inverse-document-frequency-tf-idf)
 - [Unsupervised learning](#unsupervised-learning)
 - [White noise](#white-noise)
 - [Whitening transformation](#whitening-transformation)
@@ -1279,6 +1280,25 @@ The problem of inferring a mapping between the input space X and a target variab
 
 SMV is a classification  method that tries to find the hyperplane which separates classes with highest margin. The margin is defined as the minimum distance from sample points to the hyperplane. The sample point(s) that form margin are called support vectors and eventually establish the SVM model.   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
+
+<a class="mk-toclify" id="term-frequency-and-document-frequency"></a>
+#### Term frequency and document frequency
+
+[[back to top](#table-of-contents)]
+
+Term frequency and document frequency are commonly used measures in context of text classification tasks. Term frequency is the count of how often a particular word occurs in a particular document. In contrast, document frequency measures the presence or absence of a particular word in a document as a binary value. Thus, for a single document, the document frequency is either 1 or 0.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="term-frequency-inverse-document-frequency-tf-idf"></a>
+#### Term frequency - inverse document frequency, Tf-idf
+[[back to top](#table-of-contents)]
+
+Term frequency - inverse document frequency (Tf-idf) is a weighting scheme for [term frequencies and document frequencies](#term-frequency-and-document-frequency) in text classification tasks that favors terms that occur in relatively few documents. The Tf-idf is  calculated as a simple product of [term frequency](#term-frequency-and-document-frequency) and the inverse document frequency, and the latter is calculated is calculated by log("number of documents in total" / "number of documents that contain a particular term").
 
 <br>
 <br>
