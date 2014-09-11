@@ -1,5 +1,5 @@
 Sebastian Raschka  
-Last updated: 08/19/2014
+Last updated: 09/08/2014
 
 A collection of links to various free and open-source datasets.
 
@@ -8,13 +8,15 @@ A collection of links to various free and open-source datasets.
 
 - [Dataset repositories](#dataset-repositories)
 - [Datasets by topics](#datasets-by-topics)	
-	- [Images](#images)
-	- [Audio](#audio)
-	- [Natural sciences](#natural-sciences)
-	- [Web, technology, and social networks](#web-technology-and-social-networks)
-	- [Historical data and human resources](historical-data-and-human-resources)
-	- [Finance and companies](#finance-and-companies)
-	- [Government data and politics](#government-data-and-politics)
+    - [Images](#images)
+    - [Audio](#audio)
+    - [Text](#text)
+    - [Natural sciences](#natural-sciences)
+    - [Web, technology, and social networks](#web-technology-and-social-networks)
+    - [Historical data and human resources](historical-data-and-human-resources)
+    - [Finance and companies](#finance-and-companies)
+    - [Government data and politics](#government-data-and-politics)
+    
 
 <hr>
 <br>
@@ -90,6 +92,15 @@ by governments, companies and organizations.
 
 <br>
 <br>
+
+## Text
+
+[[back to top](#sections)]
+
+- [TechTC](http://techtc.cs.technion.ac.il/techtc300/techtc300.html) - Technion Repository of Text Categorization Datasets containing 300 labeled datasets with categorization difficulties indicated by baseline SVM accuracies.
+<br>
+<br>
+
 
 ## Natural sciences
 

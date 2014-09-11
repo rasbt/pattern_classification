@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/03/2014
+last updated: 09/10/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -28,6 +28,7 @@ Please feel free to drop me a note via
 - [Artificial Neural Networks (ANN)](#artificial-neural-networks-ann)
 - [Backtesting](#backtesting)
 - [Bagging](#bagging)
+- [Bag of words](#bag-of-words)
 - [Batch Gradient Descent](#batch-gradient-descent)
 - [Big Data](#big-data)
 - [Bootstrapping](#bootstrapping)
@@ -63,6 +64,7 @@ Please feel free to drop me a note via
 - [Ensemble methods](#ensemble-methods)
 - [Evolutionary algorithms](#evolutionary-algorithms)
 - [Exhaustive search](#exhaustive-search)
+- [Expectation Maximization algorithm - EM](#expectation-maximization-algorithm-em)
 - [Feature Selection](#feature-selection )
 - [Feature Space](#feature-space)
 - [Fuzzy C-Means Clustering](#fuzzy-cmeans-clustering)
@@ -80,6 +82,7 @@ Please feel free to drop me a note via
 - [Jackknifing](#jackknifing)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Methods](#kernel-methods)
+- [k-D Trees](#k-d-trees)
 - [K-fold cross-validation](#k-fold-cross-validation)
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
@@ -87,18 +90,21 @@ Please feel free to drop me a note via
 - [K-nearest neighbors algorithms](#k-nearest-neighbors-algorithms)
 - [Knowledge Discovery in Databases (KDD)](#knowledge-discovery-in-databases-kdd)
 - [LASSO Regression](#lasso-regression)
-- [Lazy learners](#lazy-learners)
+- [Latent Semantic Indexing](#latent-semantic-indexing)
 - [Law of Large Numbers](#law-of-large-numbers)
+- [Lazy learners](#lazy-learners)
 - [Least Squares fit](#least-squares-fit)
 - [Least Squares fit - linear](#least-squares-fit-linear)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
 - [Local Outlier Factor (LOF)](#local-outlier-factor-lof)
+- [Locality-sensitive hashing (LSH)](#locality-sensitive-hashing-lsh)
 - [Logistic Regression](#logistic-regression)
 - [Machine learning](#machine-learning)
 - [Mahalanobis distance](#mahalanobis-distance)
 - [MapRedcue](#mapreduce)
 - [Markov chains](#markov-chains)
 - [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
+- [MinHash](#minhash)
 - [Monte Carlo simulation](#monte-carlo-simulation)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
 - [Non-parametric statistics](#non-parametric-statistics)
@@ -139,6 +145,8 @@ Please feel free to drop me a note via
 - [Stochastic Gradient Descent (SGD)](#stochastic-gradient-descent-sgd)
 - [Supervised learning](#supervised-learning)
 - [Support Vector Machine (SVM)](#support-vector-machine)
+- [Term frequency and document frequency](#term-frequency-and-document-frequency)
+- [Term frequency - inverse document frequency, Tf-idf](#term-frequency-inverse-document-frequency-tf-idf)
 - [Unsupervised learning](#unsupervised-learning)
 - [White noise](#white-noise)
 - [Whitening transformation](#whitening-transformation)
@@ -203,6 +211,14 @@ Backtesting is a specific case of [cross-validation](#cross-validation) in the c
 Bagging is an ensemble method for classification (or regression analysis) in which individual models are trained by random sampling of data, and the final decision is made by voting among individual models with equal weights (or averaging for regression analysis).   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil))
 
+<br>
+<br>
+
+<a class="mk-toclify" id="bag-of-words"></a>
+#### Bag of words
+[[back to top](#table-of-contents)]
+
+Bag of words is a model that is used to construct sparse feature vectors for text classification tasks. The bag of words is an unordered set of all words that occur in all documents that are part of the training set. Every word is then associated with a count of how often it occurs whereas the positional information is ignored. Sometimes, the bag of words is also called "dictionary" or "vocabulary" based on the training data.
 <br>
 <br>
 
@@ -559,6 +575,14 @@ Evolutionary algorithms are a class of algorithms that are based on [heuristic s
 
 Exhaustive search (synonymous to brute-force search) is a problem-solving approach where all possible combinations are sequentially evaluated to find the optimal solution. Exhaustive search guarantees to find the optimal solution whereas other approaches (e.g., [heuristic searches](#heuristic-search)) are regarded as sub-optimal. A downside of exhaustive searches is that computational costs increase proportional to the number of combinations to be evaluated.
 
+<br>
+<br>
+
+<a class="mk-toclify" id="expectation-maximization-algorithm-em"></a>
+#### Expectation Maximization algorithm - EM
+[[back to top](#table-of-contents)]
+
+The Expectation Maximization algorithm (EM) is a technique to estimate parameters of a distribution based on the [Maximum Likelihood Estimate (MLE)](#maximum-likelihood-estimates-mle) that is often used for the imputation of missing values in incomplete datasets. After the EM algorithm is initialized with a starting value, alternating iterations between expectation and maximization steps are repeated until convergence. In the expectation step, parameters are estimated based on the current model to impute missing values. In the maximization step, the log-likelihood function of the statistical model is to be maximized by re-estimating the parameters based on the imputed values from the expectation step.
 
 <br>
 <br>
@@ -688,7 +712,7 @@ A popular example is the separation of overlapping voice samples -- the so-calle
 #### Jaccard coefficient
 [[back to top](#table-of-contents)]
 
-The Jaccard coefficient is used as similarity measure for asymmetric binary data and calculated by taking the number of matching attributes and divide it by the number of all attributes except those where both variables have a value 0 in contrast to a [simple matching coefficient](#simple-matching -coefficient).
+The Jaccard coefficient (bounded at [0, 1)) is used as similarity measure for asymmetric binary data and calculated by taking the number of matching attributes and divide it by the number of all attributes except those where both variables have a value 0 in contrast to a [simple matching coefficient](#simple-matching-coefficient). A popular application is the identification of near-duplicate documents for which the Jaccard coefficient can be calculated by the dividing the intersection of the set of words by the union of the set words in both documents.
 
 <br>
 <br>
@@ -701,6 +725,16 @@ Jackknifing is a resampling technique that predates the related [cross-validatio
 
 <br>
 <br>
+
+<a class="mk-toclify" id="k-d-trees"></a>
+#### k-D Trees
+[[back to top](#table-of-contents)]
+
+k-D trees are a data structures (recursive space partitioning trees) that result from the binary partitioning of multi-dimensional feature spaces. A typical application of k-D trees is to increase the search efficiency for nearest-neighbor searches. A k-D tree construction can be described as a iterating process with the following steps: Select the dimension of largest variance, draw a cutting plane based at the median along the dimension to split the data into 2 halves, choose the next dimension.
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="kernel-density-estimation"></a>
 #### Kernel Density Estimation
@@ -789,11 +823,11 @@ LASSO (Least Absolute Shrinkage and Selection Operator) is a regression model th
 <br>
 <br>
 
-<a class="mk-toclify" id="lazy-learners"></a>
-#### Lazy learners
+<a class="mk-toclify" id="latent-semantic-indexing"></a>
+#### Latent Semantic Indexing
 [[back to top](#table-of-contents)]
 
-Lazy learners (in contrast to [eager learners](#eager-learners)) are memorizing training data in order to make predictions for unseen samples. While there is no expensive learning step involved, the prediction step is generally considered to be more expensive compared to [eager learners](#eager-learners) since it involves the evaluation of training data. One example of lazy learners are [k-nearest neighbor algorithms](#k-nearest-neighbors-algorithms) where the class label of a unseen sample is estimated by e.g., the majority of class labels of its neighbors in the training data.
+Latent Semantic Indexing (LSI) is a [data mining](#data-mining) technique to characterize documents by topics, word usage, or other contexts. The structures of the documents are compared by applying  [singular value decomposition](#singular-value-decomposition-svd) to an input term-document matrix (e.g., a data table of word counts with terms as row labels and document numbers as column labels) in order to obtain the singular values and vectors.
 
 <br>
 <br>
@@ -803,6 +837,15 @@ Lazy learners (in contrast to [eager learners](#eager-learners)) are memorizing 
 [[back to top](#table-of-contents)]
 
 The Law of Large Numbers is a theorem in the field of probability theory that expresses the idea that the actual value of a random sampling process approaches the expected value for growing sample sizes. A common example is that the observed ratio of "heads" in an unbiased coin-flip experiment will approach 0.5 for large sample sizes. 
+
+<br>
+<br>
+
+<a class="mk-toclify" id="lazy-learners"></a>
+#### Lazy learners
+[[back to top](#table-of-contents)]
+
+Lazy learners (in contrast to [eager learners](#eager-learners)) are memorizing training data in order to make predictions for unseen samples. While there is no expensive learning step involved, the prediction step is generally considered to be more expensive compared to [eager learners](#eager-learners) since it involves the evaluation of training data. One example of lazy learners are [k-nearest neighbor algorithms](#k-nearest-neighbors-algorithms) where the class label of a unseen sample is estimated by e.g., the majority of class labels of its neighbors in the training data.
 
 <br>
 <br>
@@ -840,6 +883,16 @@ A linear transformation technique (related to Principal Component Analysis) that
 
 LOF is a density-based [anomaly detection](#anomaly-detection) technique for outlier identification. The LOF for a point *p* refers to the average "reachability distance" towards its nearest neighbors. Eventually, the points with the largest LOF values (given a particular threshold) are identified as outliers.   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
+
+<a class="mk-toclify" id="locality-sensitive-hashing-lsh)"></a>
+#### Locality-sensitive hashing (LSH)
+[[back to top](#table-of-contents)]
+
+Locality-sensitive hashing (LSH) is a dimensionality reduction technique that groups  objects that are likely similar (based on a similarity signature such as [MinHash](#minhash)) into the same buckets in order to reduce the search space for pair-wise similarity comparisons.
+One application of LSH could be a combination with other dimensionality reduction techniques, e.g., [MinHash](#minhash), in order to reduce the computational costs of finding near-duplicate document pairs.
 
 <br>
 <br>
@@ -915,6 +968,15 @@ A Monte Carlo simulation is an iterative sampling method for solving determinist
 
 A technique to estimate the parameters that have been fit to a model by maximizing a known likelihood function. One common application is the estimation of "mean" and "variance" for a Gaussian distribution.
 
+<br>
+<br>
+
+<a class="mk-toclify" id="minxish"></a>
+#### MinHash
+
+[[back to top](#table-of-contents)]
+
+MinHash is a commonly used technique for dimensionality reduction in document similarity comparisons. The idea behind MinHash is to create a signature of reduced dimensionality while preserving the [Jaccard similarity coefficient](#jaccard-coefficient). A common implementation of MinHash is to generate *k* random permutations of the columns in a *m*x*n*-document matrix (rows represent the sparse vectors of words for each document as binary data) and generate a new matrix of size *m*x*k*. The cells of the new matrix now contain the position labels of the first non-zero value for every document (1 column for each round of random permutation). Based on similarities of the position labels, the Jaccard coefficient for the pairs of documents can be calculated.
 <br>
 <br>
 
@@ -1272,6 +1334,25 @@ The problem of inferring a mapping between the input space X and a target variab
 
 SMV is a classification  method that tries to find the hyperplane which separates classes with highest margin. The margin is defined as the minimum distance from sample points to the hyperplane. The sample point(s) that form margin are called support vectors and eventually establish the SVM model.   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
+
+<a class="mk-toclify" id="term-frequency-and-document-frequency"></a>
+#### Term frequency and document frequency
+
+[[back to top](#table-of-contents)]
+
+Term frequency and document frequency are commonly used measures in context of text classification tasks. Term frequency is the count of how often a particular word occurs in a particular document. In contrast, document frequency measures the presence or absence of a particular word in a document as a binary value. Thus, for a single document, the document frequency is either 1 or 0.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="term-frequency-inverse-document-frequency-tf-idf"></a>
+#### Term frequency - inverse document frequency, Tf-idf
+[[back to top](#table-of-contents)]
+
+Term frequency - inverse document frequency (Tf-idf) is a weighting scheme for [term frequencies and document frequencies](#term-frequency-and-document-frequency) in text classification tasks that favors terms that occur in relatively few documents. The Tf-idf is  calculated as a simple product of [term frequency](#term-frequency-and-document-frequency) and the inverse document frequency, and the latter is calculated is calculated by log("number of documents in total" / "number of documents that contain a particular term").
 
 <br>
 <br>
