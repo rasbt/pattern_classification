@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/03/2014
+last updated: 09/10/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -102,6 +102,7 @@ Please feel free to drop me a note via
 - [MapRedcue](#mapreduce)
 - [Markov chains](#markov-chains)
 - [Maximum Likelihood Estimates (MLE)](#maximum-likelihood-estimates-mle)
+- [MinHash](#minhash)
 - [Monte Carlo simulation](#monte-carlo-simulation)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
 - [Non-parametric statistics](#non-parametric-statistics)
@@ -575,7 +576,8 @@ Exhaustive search (synonymous to brute-force search) is a problem-solving approa
 #### Expectation Maximization algorithm - EM
 [[back to top](#table-of-contents)]
 
-The Expectation Maximization algorithm (EM) is a technique to estimate parameters of a distribution based on the [Maximum Likelihood Estimate (MLE)](#maximum-likelihood-estimates-mle) or [Maximum a posteriori (MAP) estimate](#maximum-a-posteriori-estimate-map). After the EM algorithm is initialized with a starting value,  alternating iterations between expectation and maximization steps are repeated until convergence. A popular application of EM algorithms is the imputation of missing values in data tables with continuous attributes.
+The Expectation Maximization algorithm (EM) is a technique to estimate parameters of a distribution based on the [Maximum Likelihood Estimate (MLE)](#maximum-likelihood-estimates-mle) that is often used for the imputation of missing values in incomplete datasets. After the EM algorithm is initialized with a starting value, alternating iterations between expectation and maximization steps are repeated until convergence. In the expectation step, parameters are estimated based on the current model to impute missing values. In the maximization step, the log-likelihood function of the statistical model is to be maximized by re-estimating the parameters based on the imputed values from the expectation step.
+
 <br>
 <br>
 
@@ -704,7 +706,7 @@ A popular example is the separation of overlapping voice samples -- the so-calle
 #### Jaccard coefficient
 [[back to top](#table-of-contents)]
 
-The Jaccard coefficient is used as similarity measure for asymmetric binary data and calculated by taking the number of matching attributes and divide it by the number of all attributes except those where both variables have a value 0 in contrast to a [simple matching coefficient](#simple-matching -coefficient).
+The Jaccard coefficient (bounded at [0, 1)) is used as similarity measure for asymmetric binary data and calculated by taking the number of matching attributes and divide it by the number of all attributes except those where both variables have a value 0 in contrast to a [simple matching coefficient](#simple-matching-coefficient). A popular application is the identification of near-duplicate documents for which the Jaccard coefficient can be calculated by the dividing the intersection of the set of words by the union of the set words in both documents.
 
 <br>
 <br>
@@ -940,6 +942,15 @@ A Monte Carlo simulation is an iterative sampling method for solving determinist
 
 A technique to estimate the parameters that have been fit to a model by maximizing a known likelihood function. One common application is the estimation of "mean" and "variance" for a Gaussian distribution.
 
+<br>
+<br>
+
+<a class="mk-toclify" id="minxish"></a>
+#### MinHash
+
+[[back to top](#table-of-contents)]
+
+MinHash is a commonly used technique for dimensionality reduction in document similarity comparisons. The idea behind MinHash is to create a signature of reduced dimensionality while preserving the [Jaccard similarity coefficient](#jaccard-coefficient). A common implementation of MinHash is to generate *k* random permutations of the columns in a *m*x*n*-document matrix (rows represent the sparse vectors of words for each document as binary data) and generate a new matrix of size *m*x*k*. The cells of the new matrix now contain the position labels of the first non-zero value for every document (1 column for each round of random permutation). Based on similarities of the position labels, the Jaccard coefficient for the pairs of documents can be calculated.
 <br>
 <br>
 
