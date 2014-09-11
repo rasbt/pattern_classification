@@ -82,6 +82,7 @@ Please feel free to drop me a note via
 - [Jackknifing](#jackknifing)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel Methods](#kernel-methods)
+- [k-D Trees](#k-d-trees)
 - [K-fold cross-validation](#k-fold-cross-validation)
 - [K-Means Clustering](#k-means-clustering)
 - [K-Means++ Clustering](#k-means-clustering-1)
@@ -719,6 +720,16 @@ Jackknifing is a resampling technique that predates the related [cross-validatio
 
 <br>
 <br>
+
+<a class="mk-toclify" id="k-d-trees"></a>
+#### k-D Trees
+[[back to top](#table-of-contents)]
+
+k-D trees are a data structures (recursive space partitioning trees) that result from the binary partitioning of multi-dimensional feature spaces. A typical application of k-D trees is to increase the search efficiency for nearest-neighbor searches. A k-D tree construction can be described as a iterating process with the following steps: Select the dimension of largest variance, draw a cutting plane based at the median along the dimension to split the data into 2 halves, choose the next dimension.
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="kernel-density-estimation"></a>
 #### Kernel Density Estimation
