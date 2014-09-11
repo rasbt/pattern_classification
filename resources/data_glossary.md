@@ -64,6 +64,7 @@ Please feel free to drop me a note via
 - [Ensemble methods](#ensemble-methods)
 - [Evolutionary algorithms](#evolutionary-algorithms)
 - [Exhaustive search](#exhaustive-search)
+- [Expectation Maximization algorithm - EM](#expectation-maximization-algorithm-em)
 - [Feature Selection](#feature-selection )
 - [Feature Space](#feature-space)
 - [Fuzzy C-Means Clustering](#fuzzy-cmeans-clustering)
@@ -567,7 +568,14 @@ Evolutionary algorithms are a class of algorithms that are based on [heuristic s
 
 Exhaustive search (synonymous to brute-force search) is a problem-solving approach where all possible combinations are sequentially evaluated to find the optimal solution. Exhaustive search guarantees to find the optimal solution whereas other approaches (e.g., [heuristic searches](#heuristic-search)) are regarded as sub-optimal. A downside of exhaustive searches is that computational costs increase proportional to the number of combinations to be evaluated.
 
+<br>
+<br>
 
+<a class="mk-toclify" id="expectation-maximization-algorithm-em"></a>
+#### Expectation Maximization algorithm - EM
+[[back to top](#table-of-contents)]
+
+The Expectation Maximization algorithm (EM) is a technique to estimate parameters of a distribution based on the [Maximum Likelihood Estimate (MLE)](#maximum-likelihood-estimates-mle) or [Maximum a posteriori (MAP) estimate](#maximum-a-posteriori-estimate-map). After the EM algorithm is initialized with a starting value,  alternating iterations between expectation and maximization steps are repeated until convergence. A popular application of EM algorithms is the imputation of missing values in data tables with continuous attributes.
 <br>
 <br>
 
