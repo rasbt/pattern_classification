@@ -97,6 +97,7 @@ Please feel free to drop me a note via
 - [Least Squares fit - linear](#least-squares-fit-linear)
 - [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-lda)
 - [Local Outlier Factor (LOF)](#local-outlier-factor-lof)
+- [Locality-sensitive hashing (LSH)](#locality-sensitive-hashing-lsh)
 - [Logistic Regression](#logistic-regression)
 - [Machine learning](#machine-learning)
 - [Mahalanobis distance](#mahalanobis-distance)
@@ -878,6 +879,16 @@ A linear transformation technique (related to Principal Component Analysis) that
 
 LOF is a density-based [anomaly detection](#anomaly-detection) technique for outlier identification. The LOF for a point *p* refers to the average "reachability distance" towards its nearest neighbors. Eventually, the points with the largest LOF values (given a particular threshold) are identified as outliers.   
 (submitted by [Vahid Mirjalili](https://github.com/mirjalil); edited)
+
+<br>
+<br>
+
+<a class="mk-toclify" id="locality-sensitive-hashing-lsh)"></a>
+#### Locality-sensitive hashing (LSH)
+[[back to top](#table-of-contents)]
+
+Locality-sensitive hashing (LSH) is a dimensionality reduction technique that groups  objects that are likely similar (based on a similarity signature such as [MinHash](#minhash)) into the same buckets in order to reduce the search space for pair-wise similarity comparisons.
+One application of LSH could be a combination with other dimensionality reduction techniques, e.g., [MinHash](#minhash), in order to reduce the computational costs of finding near-duplicate document pairs.
 
 <br>
 <br>
