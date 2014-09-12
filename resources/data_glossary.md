@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/10/2014
+last updated: 09/12/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -1181,6 +1181,16 @@ Regularization is a technique to overcome overfitting by introducing a penalty t
 [[back to top](#table-of-contents)]
 
 Reinforcement learning is a machine learning algorithm that learns from a series of actions by maximizing a "reward function". The reward function can either be maximized by penalizing "bad actions" and/or rewarding "good actions".
+
+<br>
+<br>
+
+<a class="mk-toclify" id="rejection-sampling"></a>
+#### Rejection sampling
+
+[[back to top](#table-of-contents)]
+
+Rejection sampling is similar to the popular [Monte Carlo sampling](#monte-carlo-simulation) with the difference of an additional bound. The goal of rejection sampling is to simplify the task of drawing random samples from a complex probability distribution by using a uniform distribution instead; random samples drawn from the uniform distribution that lie outside certain boundary criteria are rejected, and all samples within the boundary are accepted, respectively.
 
 <br>
 <br>
