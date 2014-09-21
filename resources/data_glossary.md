@@ -81,7 +81,9 @@ Please feel free to drop me a note via
 - [Jaccard coefficient](#jaccard-coefficient)
 - [Jackknifing](#jackknifing)
 - [Kernel Density Estimation](#kernel-density-estimation)
+- [Kernel (in statistics)](#kernel-in-statistics)
 - [Kernel Methods](#kernel-methods)
+- [Kernel Trick](#kernel-trick)
 - [k-D Trees](#k-d-trees)
 - [K-fold cross-validation](#k-fold-cross-validation)
 - [K-Means Clustering](#k-means-clustering)
@@ -741,11 +743,30 @@ Non-parametric techniques to estimate probability densities from the available d
 <br>
 <br>
 
+<a class="mk-toclify" id="kernel-in-statistics"></a>
+#### Kernel (in statistics)
+[[back to top](#table-of-contents)]
+
+In the context of [kernel methods](#kernel-methods the term “kernel” describes a function that calculates the dot product of the images of the samples **x** under the kernel function &phi; (see kernel methods). Roughly speaking, a kernel can be understood as a similarity measure in higher-dimensional space.
+
+<br>
+<br>
+
 <a class="mk-toclify" id="kernel-methods"></a>
 #### Kernel Methods
 [[back to top](#table-of-contents)]
 
-Kernel methods are algorithms that map the sample vectors of a dataset onto a (typically) higher-dimensional feature space via a so-called kernel function. The goal is to identify  and simplify general relationships between data, which is especially useful for linearly non-separable datasets.  
+Kernel methods are algorithms that map the sample vectors of a dataset onto a higher-dimensional feature space via a so-called kernel function (&phi;(x)). The goal is to identify  and simplify general relationships between data, which is especially useful for linearly non-separable datasets.  
+
+<br>
+<br>
+
+
+<a class="mk-toclify" id="kernel-trick"></a>
+#### Kernel Trick
+[[back to top](#table-of-contents)]
+
+Since the explicit computation of the [kernel](#kernel-in-statistics) is increasingly computationally expensive for large sample sizes and high numbers of dimensions, the kernel trick uses approximations to calculate the kernel implicitly. The most popular kernels used for the kernel trick are Gaussian Radius Basis Function (RBF) kernels, sigmoidal kernels, and polynomial kernels.
 
 <br>
 <br>
