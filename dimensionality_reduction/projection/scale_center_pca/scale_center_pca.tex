@@ -1,0 +1,112 @@
+\documentclass[fleqn]{article}
+
+% start meta data
+\title{The effect of scaling and mean centering of variables prior to a Principal Component Analysis}
+\author{Sebastian Raschka\\ \texttt{se.raschka@gmail.com}} 
+\date{09\slash 22\slash 2014}
+% end meta data
+
+\usepackage{amsmath}
+
+% start header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Sebastian Raschka}
+\rhead{Centering and scaling variables for PCA}
+\cfoot{\thepage} % centered footer
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+% end header and footer
+
+
+
+
+\begin{document} % start main document
+
+\maketitle % makes the title page from meta data
+
+
+Let us think about whether it matters or not if the variables are centered for applications such as Principal Component Analysis (PCA) if the PCA is calculated from the covariance matrix (i.e., the $k$ principal components are the eigenvectors of the covariance matrix that correspond to the $k$ largest eigenvalues.
+
+
+
+\section{Mean centering does not affect the covariance matrix}
+\label{meancenteringdoesnotaffectthecovariancematrix}
+
+Here, the rational is: If the covariance is the same whether the variables are centered or not, the result of the PCA will be the same.
+
+Let's assume we have the 2 variables $\bf{x}$ and $\bf{y}$ Then the covariance between the attributes is calculated as
+
+\begin{equation} \sigma_{xy} = \frac{1}{n-1} \sum_{i}^{n} (x_i - \bar{x})(y_i - \bar{y})   \end{equation}
+
+Let us write the centered variables as 
+
+\begin{equation} x' = x - \bar{x} \text{ and } y' = y - \bar{y} \end{equation}
+
+The centered covariance would then be calculated as follows:
+
+\begin{equation} \sigma_{xy}' = \frac{1}{n-1} \sum_{i}^{n} (x_i' - \bar{x}')(y_i' - \bar{y}')   \end{equation}
+
+But since after centering, $\bar{x}' = 0$ and $\bar{y}' = 0$ we have 
+
+\begin{equation} \sigma_{xy}' = \frac{1}{n-1} \sum_{i}^{n} x_i' y_i'   \end{equation} which is our original covariance matrix if we resubstitute back the terms
+\begin{equation} x' = x - \bar{x} \text{ and } y' = y - \bar{y} \end{equation}.
+
+Even centering only one variable, e.g., $\bf{x}$ wouldn't affect the covariance:
+
+\begin{equation} \sigma_{\text{xy}} = \frac{1}{n-1} \sum_{i}^{n} (x_i' - \bar{x}')(y_i - \bar{y})   \end{equation}
+\begin{equation}  =  \frac{1}{n-1} \sum_{i}^{n} (x_i' - 0)(y_i - \bar{y})   \end{equation}
+\begin{equation}  =  \frac{1}{n-1} \sum_{i}^{n} (x_i - \bar{x})(y_i - \bar{y})   \end{equation}
+
+
+
+\section{Scaling of variables does affect the covariance matrix}
+\label{scalingofvariablesdoesaffectthecovariancematrix}
+
+If one variable is scaled, e.g, from pounds into kilogram (1 pound = 0.453592 kg), it does affect the covariance and therefore influences the results of a PCA.
+
+Let $c$ be the scaling factor for $\bf{x}$
+
+Given that the ``original'' covariance is calculated as
+
+\begin{equation} \sigma_{xy} = \frac{1}{n-1} \sum_{i}^{n} (x_i - \bar{x})(y_i - \bar{y})   \end{equation}
+
+the covariance after scaling would be calculated as:
+
+\begin{equation} \sigma_{xy}' = \frac{1}{n-1} \sum_{i}^{n} (c \cdot x_i - c \cdot  \bar{x})(y_i - \bar{y})   \end{equation}
+\begin{equation} =  \frac{c}{n-1} \sum_{i}^{n} (x_i -   \bar{x})(y_i - \bar{y})   \end{equation}
+
+\begin{equation} \Rightarrow \sigma_{xy} = \frac{\sigma_{xy}'}{c} \end{equation}
+\begin{equation} \Rightarrow \sigma_{xy}' = c \cdot \sigma_{xy} \end{equation}
+
+Therefore, the covariance after scaling one attribute by the constant $c$ will result in a rescaled covariance $c \sigma_{xy}$ So if we'd scaled $\bf{x}$ from pounds to kilograms, the covariance between $\bf{x}$ and $\bf{y}$ will be 0.453592 times smaller.
+
+
+
+\section{Standardizing affects the covariance}
+\label{standardizingaffectsthecovariance}
+
+Standardization of features will have an effect on the outcome of a PCA (assuming that the variables are originally not standardized). This is because we are scaling the covariance between every pair of variables by the product of the standard deviations of each pair of variables.
+
+The equation for standardization of a variable is written as 
+
+\begin{equation} z = \frac{x_i - \bar{x}}{\sigma} \end{equation}
+
+The ``original'' covariance matrix:
+
+\begin{equation} \sigma_{xy} = \frac{1}{n-1} \sum_{i}^{n} (x_i - \bar{x})(y_i - \bar{y})   \end{equation}
+
+And after standardizing both variables:
+
+\begin{equation} x' = \frac{x - \bar{x}}{\sigma_x} \text{ and } y' =\frac{y - \bar{y}}{\sigma_y} \end{equation}
+
+\begin{equation} \sigma_{xy}' =  \frac{1}{n-1} \sum_{i}^{n} (x_i' - 0)(y_i' - 0)   \end{equation}
+
+\begin{equation}  =  \frac{1}{n-1} \sum_{i}^{n} \bigg(\frac{x - \bar{x}}{\sigma_x}\bigg)\bigg(\frac{y - \bar{y}}{\sigma_y}\bigg)   \end{equation}
+
+\begin{equation}   = \frac{1}{(n-1) \cdot \sigma_x \sigma_y} \sum_{i}^{n} (x_i - \bar{x})(y_i - \bar{y})   \end{equation}
+
+\begin{equation} \Rightarrow \sigma_{xy}' = \frac{\sigma_{xy}}{\sigma_x \sigma_y} \end{equation}
+
+
+\end{document} % end main document

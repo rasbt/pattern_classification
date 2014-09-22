@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+
+<h1 id="theeffectofscalingandmeancenteringofvariablespriortoaprincipalcomponentanalysis">The effect of scaling and mean centering of variables prior to a Principal Component Analysis</h1>
+
+<p>Let us think about whether it matters or not if the variables are centered for applications such as Principal Component Analysis (PCA) if the PCA is calculated from the covariance matrix (i.e., the <span class="math">\(k\)</span> principal components are the eigenvectors of the covariance matrix that correspond to the <span class="math">\(k\)</span> largest eigenvalues.</p>
+
+<p><br></p>
+
+<h3 id="1.meancenteringdoesnotaffectthecovariancematrix">1. Mean centering does not affect the covariance matrix</h3>
+
+<p>Here, the rational is: If the covariance is the same whether the variables are centered or not, the result of the PCA will be the same.</p>
+
+<p>Let&#8217;s assume we have the 2 variables <span class="math">\(\bf{x}\)</span> and <span class="math">\(\bf{y}\)</span> Then the covariance between the attributes is calculated as</p>
+
+<p><span class="math">\[ \sigma_{xy} = \frac{1}{n-1} \sum_{i}^{n} (x_i - \bar{x})(y_i - \bar{y})   \]</span></p>
+
+<p>Let us write the centered variables as </p>
+
+<p><span class="math">\[ x' = x - \bar{x} \text{ and } y' = y - \bar{y} \]</span></p>
+
+<p>The centered covariance would then be calculated as follows:</p>
+
+<p><span class="math">\[ \sigma_{xy}' = \frac{1}{n-1} \sum_{i}^{n} (x_i' - \bar{x}')(y_i' - \bar{y}')   \]</span></p>
+
+<p>But since after centering, <span class="math">\(\bar{x}' = 0\)</span> and <span class="math">\(\bar{y}' = 0\)</span> we have </p>
+
+<p><span class="math">\[ \sigma_{xy}' = \frac{1}{n-1} \sum_{i}^{n} x_i' y_i'   \]</span> which is our original covariance matrix if we resubstitute back the terms
+<span class="math">\[ x' = x - \bar{x} \text{ and } y' = y - \bar{y} \]</span>.</p>
+
+<p>Even centering only one variable, e.g., <span class="math">\(\bf{x}\)</span> wouldn&#8217;t affect the covariance:</p>
+
+<p><span class="math">\[ \sigma_{\text{xy}} = \frac{1}{n-1} \sum_{i}^{n} (x_i' - \bar{x}')(y_i - \bar{y})   \]</span>
+<span class="math">\[  =  \frac{1}{n-1} \sum_{i}^{n} (x_i' - 0)(y_i - \bar{y})   \]</span>
+<span class="math">\[  =  \frac{1}{n-1} \sum_{i}^{n} (x_i - \bar{x})(y_i - \bar{y})   \]</span></p>
+
+<p><br></p>
+
+<h3 id="2.scalingofvariablesdoesaffectthecovariancematrix">2. Scaling of variables does affect the covariance matrix</h3>
+
+<p>If one variable is scaled, e.g, from pounds into kilogram (1 pound = 0.453592 kg), it does affect the covariance and therefore influences the results of a PCA.</p>
+
+<p>Let <span class="math">\(c\)</span> be the scaling factor for <span class="math">\(\bf{x}\)</span></p>
+
+<p>Given that the &#8220;original&#8221; covariance is calculated as</p>
+
+<p><span class="math">\[ \sigma_{xy} = \frac{1}{n-1} \sum_{i}^{n} (x_i - \bar{x})(y_i - \bar{y})   \]</span></p>
+
+<p>the covariance after scaling would be calculated as:</p>
+
+<p><span class="math">\[ \sigma_{xy}' = \frac{1}{n-1} \sum_{i}^{n} (c \cdot x_i - c \cdot  \bar{x})(y_i - \bar{y})   \]</span>
+<span class="math">\[ =  \frac{c}{n-1} \sum_{i}^{n} (x_i -   \bar{x})(y_i - \bar{y})   \]</span></p>
+
+<p><span class="math">\[ \Rightarrow \sigma_{xy} = \frac{\sigma_{xy}'}{c} \]</span>
+<span class="math">\[ \Rightarrow \sigma_{xy}' = c \cdot \sigma_{xy} \]</span></p>
+
+<p>Therefore, the covariance after scaling one attribute by the constant <span class="math">\(c\)</span> will result in a rescaled covariance <span class="math">\(c \sigma_{xy}\)</span> So if we&#8217;d scaled <span class="math">\(\bf{x}\)</span> from pounds to kilograms, the covariance between <span class="math">\(\bf{x}\)</span> and <span class="math">\(\bf{y}\)</span> will be 0.453592 times smaller.</p>
+
+<p><br></p>
+
+<h3 id="3.standardizingaffectsthecovariance">3. Standardizing affects the covariance</h3>
+
+<p>Standardization of features will have an effect on the outcome of a PCA (assuming that the variables are originally not standardized). This is because we are scaling the covariance between every pair of variables by the product of the standard deviations of each pair of variables.</p>
+
+<p>The equation for standardization of a variable is written as </p>
+
+<p><span class="math">\[ z = \frac{x_i - \bar{x}}{\sigma} \]</span></p>
+
+<p>The &#8220;original&#8221; covariance matrix:</p>
+
+<p><span class="math">\[ \sigma_{xy} = \frac{1}{n-1} \sum_{i}^{n} (x_i - \bar{x})(y_i - \bar{y})   \]</span></p>
+
+<p>And after standardizing both variables:</p>
+
+<p><span class="math">\[ x' = \frac{x - \bar{x}}{\sigma_x} \text{ and } y' =\frac{y - \bar{y}}{\sigma_y} \]</span></p>
+
+<p><span class="math">\[ \sigma_{xy}' =  \frac{1}{n-1} \sum_{i}^{n} (x_i' - 0)(y_i' - 0)   \]</span></p>
+
+<p><span class="math">\[  =  \frac{1}{n-1} \sum_{i}^{n} \bigg(\frac{x - \bar{x}}{\sigma_x}\bigg)\bigg(\frac{y - \bar{y}}{\sigma_y}\bigg)   \]</span></p>
+
+<p><span class="math">\[   = \frac{1}{(n-1) \cdot \sigma_x \sigma_y} \sum_{i}^{n} (x_i - \bar{x})(y_i - \bar{y})   \]</span></p>
+
+<p><span class="math">\[ \Rightarrow \sigma_{xy}' = \frac{\sigma_{xy}}{\sigma_x \sigma_y} \]</span></p>
+
+</body>
+</html>
