@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/12/2014
+last updated: 09/25/2014
 
 # Terms in data science defined in less than 50 words
 
@@ -23,6 +23,7 @@ Please feel free to drop me a note via
 #Table of Contents
 
 - [Accuracy](#accuracy)
+- [Active Learning](#active-learning)
 - [Aggregation](#aggregation)
 - [Anomaly Detection](#anomaly-detection)
 - [Artificial Neural Networks (ANN)](#artificial-neural-networks-ann)
@@ -30,6 +31,7 @@ Please feel free to drop me a note via
 - [Bagging](#bagging)
 - [Bag of words](#bag-of-words)
 - [Batch Gradient Descent](#batch-gradient-descent)
+- [Batch Learning](#batch-learning)
 - [Big Data](#big-data)
 - [Bootstrapping](#bootstrapping)
 - [Bregman divergence](#bregman-divergence)
@@ -114,6 +116,7 @@ Please feel free to drop me a note via
 - [Normalization - Standard Scores](#normalization-standard-scores)
 - [Objective function](#objective-function)
 - [On-Line Analytical Processing (OLAP)](#on-line-analytical-processing-olap)
+- [On-Line Learning](#on-line-learning)
 - [Overfitting](#overfitting)
 - [Parzen-Rosenblatt Window technique](#parzen-rosenblatt-window-technique)
 - [Pattern classification](#pattern-classification)
@@ -162,12 +165,20 @@ Accuracy is defined as the fraction of correct classifications out of the total 
 <br>
 <br>
 
-
-<a class="mk-toclify" id="aggregation"></a>
-#### Aggregation
+<a class="mk-toclify" id="accuracy"></a>
+#### Accuracy
 [[back to top](#table-of-contents)]
 
-Aggregation is a data pre-processing procedure that is used to reduce the overall size of a dataset by combining attributes. An example of aggregation would be the averaging of daily temperature measurements to monthly temperature measurements.
+Accuracy is defined as the fraction of correct classifications out of the total number of samples; it resembles one way to assess the performance of a predictor and is often used synonymous to [specificity](#specificity)/[precision](#precision-and-recall) although it is calculated differently. Accuracy is calculated as (TP+TN)/(P+N), where TP=True Positives, TN=True Negatives, P=Positives, N=Negatives.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="active-learning"></a>
+#### Active Learning
+[[back to top](#table-of-contents)]
+
+Active learning is a variant of the [on-line learning](#on-line-learning) machine learning architecture where feedback about the ground truth class labels of unseen data can be requested if the classification is uncertain. New training data that was labeled can then be used to update the model as in [on-line learning](#on-line-learning).
 
 <br>
 <br>
@@ -220,7 +231,7 @@ Bag of words is a model that is used to construct sparse feature vectors for tex
 <br>
 <br>
 
-<a class="mk-toclify" id="batch-gradient-descent-sgd"></a>
+<a class="mk-toclify" id="batch-gradient-descent"></a>
 #### Batch Gradient Descent
 
 [[back to top](#table-of-contents)]
@@ -229,6 +240,17 @@ Batch Gradient descent is a variant of a [Gradient Descent](#gradient-descent) a
 
 <br>
 <br>
+
+<a class="mk-toclify" id="batch-learning"></a>
+#### Batch Learning
+
+[[back to top](#table-of-contents)]
+
+Batch learning is an architecture used in machine learning tasks where the entire training dataset is available upfront to build the model. In contrast to [on-line learning](#on-line-learning), the model is not updated once it was build on a training dataset.
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="big-data"></a>
 #### Big Data
@@ -1039,6 +1061,14 @@ A data pre-processing step (also often just called "Standardization") for re-sca
 
 Objective functions are mathematical function that are used for problem-solving and optimization tasks. Depending on the task, the objective function can be omtpimized through minimization ([cost or loss functions](#cost-function)) or maximization (reward function). A typical application of an objective function in pattern classification tasks is to minimize the error rate of a classifier.
 
+<br>
+<br>
+
+<a class="mk-toclify" id="on-line-learning"></a>
+#### On-Line Learning
+[[back to top](#table-of-contents)]
+
+On-line learning is a machine learning architecture where the model is being updated consecutively as new training data arrives in contrast to [batch-learning](#batch-learning), which requires the entire training dataset to be available upfront. On-line has the advantage that a model can be updated and refined over time to account for changes in the population of training samples. A popular example where on-line learning is beneficial is the task of spam detection.
 <br>
 <br>
 
