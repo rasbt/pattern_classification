@@ -1,7 +1,7 @@
 Sebastian Raschka  
-last updated: 09/25/2014
+last updated: 09/27/2014
 
-# Terms in data science defined in less than 50 words
+# Terms in data science defined in one paragraph
 
 <br>
 
@@ -112,6 +112,7 @@ Please feel free to drop me a note via
 - [Monte Carlo simulation](#monte-carlo-simulation)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
 - [Non-parametric statistics](#non-parametric-statistics)
+- [Normal Modes](#normal-modes)
 - [Normalization - Min-Max Scaling](#normalization-min-max-scaling)
 - [Normalization - Standard Scores](#normalization-standard-scores)
 - [Objective function](#objective-function)
@@ -1034,6 +1035,17 @@ A classifier based on a statistical model (i.e., Bayes theorem: calculating post
 [[back to top](#table-of-contents)]
 
 In contrast to parametric approaches, non-parametric statistics or approaches do not make prior assumptions about the underlying probability distribution of a particular variable or attribute.
+
+<br>
+<br>
+
+<a class="mk-toclify" id="normal-modes"></a>
+#### Normal Modes
+[[back to top](#table-of-contents)]
+
+Normal modes are the harmonic oscillations of a system of masses connected by springs, or roughly speaking "concerted motions," and all normal modes of a system are independent from each other.  A classic example describes two masses connected by a middle spring, and each mass is connected to a fixed outer edge ( |~~~m1~~m2~~~|). The oscillation of this system where the middle spring does not move is defined as its normal mode.
+
+
 <br>
 <br>
 
