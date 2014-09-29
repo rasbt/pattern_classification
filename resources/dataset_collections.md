@@ -1,5 +1,5 @@
 Sebastian Raschka  
-Last updated: 09/08/2014
+Last updated: 09/29/2014
 
 A collection of links to various free and open-source datasets.
 
@@ -90,6 +90,10 @@ by governments, companies and organizations.
 
 - [Mobio](https://www.idiap.ch/dataset/mobio) - bi-modal (audio and video) data taken from 152 people
 
+- [Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/) - The Million Song Dataset is a freely-available collection of audio features and metadata for a million contemporary popular music tracks.
+
+- [Music Data Mining](http://users.cis.fiu.edu/~lli003/Music/music.html) - A collection of research done on music analysis and links to various datasets.
+
 <br>
 <br>
 
@@ -98,6 +102,13 @@ by governments, companies and organizations.
 [[back to top](#sections)]
 
 - [TechTC](http://techtc.cs.technion.ac.il/techtc300/techtc300.html) - Technion Repository of Text Categorization Datasets containing 300 labeled datasets with categorization difficulties indicated by baseline SVM accuracies.
+
+- [SMS Spam Collection](http://www.dt.fee.unicamp.br/%7Etiago/smsspamcollection/) - A public dataset of 5572 SMS messages that are labeled as either "spam" or "ham" (not spam).
+
+- [musiXmatch](http://labrosa.ee.columbia.edu/millionsong/musixmatch) - A dataset of lyrics for the songs in the one million songs dataset. The lyrics are pre-processed and available as "bag of words" after stemming.
+
+- [Google books Ngram Viewer](http://storage.googleapis.com/books/ngrams/books/datasetsv2.html) - The corpus of Google books as n-grams available for quick online queries or download.
+
 <br>
 <br>
 
