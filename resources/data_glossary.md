@@ -111,6 +111,7 @@ Please feel free to drop me a note via
 - [MinHash](#minhash)
 - [Monte Carlo simulation](#monte-carlo-simulation)
 - [Naive Bayes Classifier](#naive-bayes-classifier)
+- [N-grams](#n-grams)
 - [Non-parametric statistics](#non-parametric-statistics)
 - [Normal Modes](#normal-modes)
 - [Normalization - Min-Max Scaling](#normalization-min-max-scaling)
@@ -149,6 +150,7 @@ Please feel free to drop me a note via
 - [Support Vector Machine (SVM)](#support-vector-machine)
 - [Term frequency and document frequency](#term-frequency-and-document-frequency)
 - [Term frequency - inverse document frequency, Tf-idf](#term-frequency-inverse-document-frequency-tf-idf)
+- [Tokenization](#tokenization)
 - [Unsupervised learning](#unsupervised-learning)
 - [White noise](#white-noise)
 - [Whitening transformation](#whitening-transformation)
@@ -1029,6 +1031,14 @@ A classifier based on a statistical model (i.e., Bayes theorem: calculating post
 <br>
 <br>
 
+<a class="mk-toclify" id="n-grams"></a>
+#### N-grams
+[[back to top](#table-of-contents)]
+
+In context of natural language processing (NLP), a text is typically broken down into individual elements (see [tokenization](#tokenization)). N-grams describe the length of the individual elements where n refers to the number of words or symbols in every token. E.g., a unigram (or 1-gram) can represent a single word, and a bigram (or 2-gram) describes a token that consists of 2 words etc.
+
+<br>
+<br>
 
 <a class="mk-toclify" id="non-parametric-statistics"></a>
 #### Non-parametric statistics
@@ -1416,6 +1426,16 @@ Term frequency - inverse document frequency (Tf-idf) is a weighting scheme for [
 
 <br>
 <br>
+
+<a class="mk-toclify" id="tokenization"></a>
+#### Tokenization
+[[back to top](#table-of-contents)]
+
+Tokenization, in the context of natural language processing (NLP) is the process of breaking down a text into individual elements which can consist of words or symbols. Tokenization is usually accompanied by other processing procedures such as stemming, the removal of stop words, or the creation of n-grams.
+
+<br>
+<br>
+
 
 <a class="mk-toclify" id="unsupervised-learning"></a>
 #### Unsupervised Learning
