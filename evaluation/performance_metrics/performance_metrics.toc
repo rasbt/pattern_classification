@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Confusion matrix}{1}
+\contentsline {section}{\numberline {2}Prediction Error and Accuracy}{2}
+\contentsline {section}{\numberline {3}False and True Positive Rates}{2}
+\contentsline {section}{\numberline {4}Precision, Recall, and the $F_1$-Score}{3}
+\contentsline {section}{\numberline {5}Receiver Operator Characteristic (ROC)}{3}

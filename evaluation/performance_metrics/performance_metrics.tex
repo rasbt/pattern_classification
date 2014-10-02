@@ -1,0 +1,124 @@
+\documentclass{article}
+
+% start meta data
+\title{An Overview of General Performance Metrics of Binary Classifier Systems}
+\author{Sebastian Raschka\\ \texttt{se.raschka@gmail.com}} 
+\date{\today}
+% end meta data
+
+\usepackage{cite}
+\usepackage{graphicx}	
+\usepackage{hyperref}
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+
+% start header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Sebastian Raschka}
+\rhead{Performance Metrics}
+\cfoot{\thepage} % centered footer
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+% end header and footer
+
+
+%confusion matrix
+\usepackage{array}
+\usepackage{multirow}
+
+\newcommand\MyBox[2]{
+  \fbox{\lower0.75cm
+    \vbox to 1.7cm{\vfil
+      \hbox to 1.7cm{\hfil\parbox{1.4cm}{#1\\#2}\hfil}
+      \vfil}%
+  }%
+}
+
+
+\begin{document} % start main document
+
+
+
+\maketitle % makes the title page from meta data
+
+
+\noindent  The purpose of this document is to provide a brief overview of different metrics and terminology that is used to measure the performance of binary classification systems. The equations are based on \emph{An introduction to ROC analysis} by Tom Fawcett \cite{fawcett2006introduction}.
+
+
+\section{Confusion matrix}
+
+The \emph{confusion matrix} (or \emph {error matrix}) is one way to summarize the performance of a classifier for binary classification tasks. This square matrix consists of columns and rows that list the number of instances as absolute or relative "actual class" vs. "predicted class" ratios.
+
+
+\noindent Let $P$ be the label of class 1 and $N$ be the label of a second class or the label of all classes that are \emph{not class 1} in a multi-class setting.
+
+\noindent
+\renewcommand\arraystretch{1.5}
+\setlength\tabcolsep{0pt}
+\begin{tabular}{c >{\bfseries}r @{\hspace{0.7em}}c @{\hspace{0.4em}}c @{\hspace{0.7em}}l}
+  \multirow{10}{*}{\parbox{1.1cm}{\bfseries\raggedleft Actual\\ Class}} 
+    & \multicolumn{3}{c}{\bfseries Predicted class} & \\
+  & & \bfseries $P$  & \bfseries $N$ & \\
+  & $P$ & \MyBox{True}{Positives (TP)} & \MyBox{False}{Negatives (FN)}  &\\[2.4em]
+  & $N$ & \MyBox{False}{Positives (FP)} & \MyBox{True}{Negatives (TN)} & \\
+\end{tabular}
+
+
+\section{Prediction Error and Accuracy}
+
+Both the prediction \emph{error (ERR)} and \emph{accuracy (ACC)} provide general information about how many samples are misclassified. The \emph{error} can be understood as the sum of all false predictions divided by the number of total predications, and the the accuracy is calculated as the sum of correct predictions divided by the total number of predictions, respectively. 
+
+\begin{equation} ERR = \frac{FP + FN}{FP+ FN + TP + TN} = 1-ACC\end{equation}
+
+\begin{equation} ACC = \frac{TP + TN}{FP+ FN + TP + TN} = 1-ERR\end{equation}
+
+
+
+
+\section{False and True Positive Rates}
+
+The \emph{True Positive Rate (TPR)} and \emph{False Positive Rate (FPR)} are performance metrics that are especially useful for imbalanced class problems. In \emph{Spam classification}, for example, we are of course primarily interested in the detection and filtering out of \emph{spam}. However, it is also important to decrease the number of messages that were incorrectly classified as \emph{spam} (\emph{False Positives}): A situation where a person misses an important message is considered as "worse" than a situation where a person ends up with a few \emph{spam} messages in his e-mail inbox. In contrast to the \emph{FPR}, the \emph{True Positive Rate} provides useful information about the fraction of \emph{positive} (or \emph{relevant}) samples that were correctly identified out of the total pool of \emph{Positives}.
+
+\begin{equation} FPR = \frac{FP}{N} =  \frac{FP}{FP + TN} \end{equation}
+
+\begin{equation} TPR = \frac{TP}{P} =  \frac{TP}{FN + TP} \end{equation}
+
+
+\section{Precision, Recall, and the $F_1$-Score}
+
+\emph{Precision (PRE)} and \emph{Recall (REC)} are metrics that are more commonly used in \emph{Information Technology} and related to the \emph {False} and \emph{True Prositive Rates}. In fact, \emph{Recall} is synonymous to the \emph{True Positive Rate} and also sometimes called \emph{Sensititivity}. The $F_1$-Score can be understood as a combination of both \emph{Precision} and \emph{Recall} \cite{goutte2005probabilistic}.
+
+\begin{equation} PRE = \frac{TP}{TP + FP} \end{equation}
+
+\begin{equation} REC = TPR = \frac{TP}{P} =  \frac{TP}{FN + TP} \end{equation}
+
+\begin{equation} F_1 = 2 \cdot \frac{PRE \cdot REC}{PRE + REC}\end{equation}
+
+
+\section{Receiver Operator Characteristic (ROC)}
+
+\emph{Receiver Operator Characteristics (ROC) graphs} are useful tools to select classification models based on their performance with respect to the \emph{False Positive} and \emph{True Positive} rates. 
+
+
+The diagonal of a ROC graph can be interpreted as \emph{random guessing} and classification models that fall below the diagonal are considered as worse than random guessing. A perfect classifier would fall into the top left corner of the graph with a \emph{True Positive Rate} of 1 and a  \emph{False Positive Rate} of 0.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./plot/roc.png}
+    \caption{Example of a Receiver Operating Characteristic. This plot was created using the Python \href{http://scikit-learn.org/stable/auto_examples/plot_roc.html}{scikit-learn} machine learning library.}
+
+\end{figure}
+
+
+\noindent The ROC \emph{curve} can be computed by shifting the decision threshold of a classifier (e.g., the posterior probabilities of a naive Bayes classifier). Based on the  ROC \emph{curve}, the so-called \emph{Area Under the Curve (AUC)} can be calculated to characterize the performance of a classification model.
+
+
+
+\bibliography{./references/bib}{}
+\bibliographystyle{plain}
+
+
+\end{document} % end main document

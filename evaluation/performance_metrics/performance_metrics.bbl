@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{fawcett2006introduction}
+Tom Fawcett.
+\newblock An introduction to roc analysis.
+\newblock {\em Pattern recognition letters}, 27(8):861--874, 2006.
+
+\bibitem{goutte2005probabilistic}
+Cyril Goutte and Eric Gaussier.
+\newblock A probabilistic interpretation of precision, recall and f-score, with
+  implication for evaluation.
+\newblock In {\em Advances in Information Retrieval}, pages 345--359. Springer,
+  2005.
+
+\end{thebibliography}
