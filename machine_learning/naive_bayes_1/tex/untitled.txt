@@ -1,0 +1,5 @@
+Copyright by Sebastian Raschka 2014
+
+How-To compile
+
+"ht5mjlatex.cfg, charset=utf-8" " -cunihtf -utf8"

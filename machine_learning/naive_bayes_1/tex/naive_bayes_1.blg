@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: naive_bayes_1.aux
+The style file: unsrt.bst
+Database file #1: ../references/bayes.bib
+You've used 13 entries,
+            1791 wiz_defined-function locations,
+            530 strings with 5817 characters,
+and the built_in function-call counts, 3821 in all, are:
+= -- 363
+> -- 130
+< -- 9
++ -- 49
+- -- 36
+* -- 262
+:= -- 551
+add.period$ -- 40
+call.type$ -- 13
+change.case$ -- 13
+chr.to.int$ -- 0
+cite$ -- 13
+duplicate$ -- 180
+empty$ -- 377
+format.name$ -- 36
+if$ -- 881
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 13
+newline$ -- 68
+num.names$ -- 13
+pop$ -- 37
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 109
+stack$ -- 0
+substring$ -- 329
+swap$ -- 69
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 43
+width$ -- 15
+write$ -- 149

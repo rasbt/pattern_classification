@@ -1,0 +1,39 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Contents}}{3}\relax 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-20001}{QQ2-1-2}{Introduction}}{4}\relax 
+\doTocEntry\toclof{1}{\csname a:TocLink\endcsname{1}{x1-2001r1}{}{\ignorespaces A simplified diagram of the general model building procedure for pattern classification.}}{figure}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-30002}{QQ2-1-4}{Naive Bayes Classification}}{7}\relax 
+\doTocEntry\tocsubsection{2.1}{\csname a:TocLink\endcsname{1}{x1-40002.1}{QQ2-1-5}{Overview}}{7}\relax 
+\doTocEntry\toclof{2}{\csname a:TocLink\endcsname{1}{x1-4001r2}{}{\ignorespaces Linear (A) vs. non-linear problems (B). Random samples for two different classes are shown as colored spheres, and the dotted lines indicate the class boundaries that classifiers try to approximate by computing the decision boundaries. A non-linear problem (B) would be a case where linear classifiers, such as naive Bayes, would not be suitable since the classes are not linearly separable. In such a scenario, non-linear classifiers (e.g.,instance-based nearest neighbor classifiers) should be preferred.}}{figure}\relax 
+\doTocEntry\tocsubsection{2.2}{\csname a:TocLink\endcsname{1}{x1-50002.2}{QQ2-1-7}{Posterior Probabilities}}{10}\relax 
+\doTocEntry\tocsubsection{2.3}{\csname a:TocLink\endcsname{1}{x1-60002.3}{QQ2-1-8}{Class-conditional Probabilities}}{12}\relax 
+\doTocEntry\tocsubsection{2.4}{\csname a:TocLink\endcsname{1}{x1-70002.4}{QQ2-1-9}{Prior Probabilities}}{15}\relax 
+\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-7008r3}{}{\ignorespaces The effect of prior probabilities on the decision regions. The figure shows a 1-dimensional random sample from two different classes (blue and green crosses). The data points for both classes are normally distributed with standard deviation 1, and the bell curves denote the class conditional probabilities. If the class priors are equal, the decision boundary of a naive Bayes classifier is placed at the center between both distributions (gray bar). An increase of the class-conditional probability of the blue class ($\omega _2$) leads to an extension of the decision region R1 by moving the decision boundary (blue-dotted bar) towards the other class and vice versa.}}{figure}\relax 
+\doTocEntry\tocsubsection{2.5}{\csname a:TocLink\endcsname{1}{x1-80002.5}{QQ2-1-11}{Evidence}}{21}\relax 
+\doTocEntry\tocsubsection{2.6}{\csname a:TocLink\endcsname{1}{x1-90002.6}{QQ2-1-12}{Multinomial Naive Bayes - A Toy Example}}{23}\relax 
+\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-9001r4}{}{\ignorespaces A simple toy dataset of 12 samples 2 different classes $+, -$ . Each sample consists of 2 features: color and geometrical shape.}}{figure}\relax 
+\doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-9003r5}{}{\ignorespaces A new sample from class $+$ and the features $\textbf  {x} = \text  {[blue, square]}$ that is to be classified using the training data in Figure \o:ref {fig:toy_dataset}.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{2.6.1}{\csname a:TocLink\endcsname{1}{x1-100002.6.1}{QQ2-1-15}{Maximum-Likelihood Estimates}}{29}\relax 
+\doTocEntry\tocsubsubsection{2.6.2}{\csname a:TocLink\endcsname{1}{x1-110002.6.2}{QQ2-1-16}{Classification}}{31}\relax 
+\doTocEntry\tocsubsubsection{2.6.3}{\csname a:TocLink\endcsname{1}{x1-120002.6.3}{QQ2-1-17}{Additive Smoothening}}{32}\relax 
+\doTocEntry\toclof{6}{\csname a:TocLink\endcsname{1}{x1-12001r6}{}{\ignorespaces A new sample from class $+$ and the features $\textbf  {x} = \text  {[yellow, square]}$ that is to be classified using the training data in Figure \o:ref {fig:toy_dataset}.}}{figure}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-130003}{QQ2-1-19}{Naive Bayes and Text Classification}}{36}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-140003.1}{QQ2-1-20}{The Bag of Words Model}}{36}\relax 
+\doTocEntry\toclot{1}{\csname a:TocLink\endcsname{1}{x1-14002r1}{}{\ignorespaces Bag of words representation of two sample documents $D_1$ and $D_2$.}}{table}\relax 
+\doTocEntry\tocsubsubsection{3.1.1}{\csname a:TocLink\endcsname{1}{x1-150003.1.1}{QQ2-1-22}{Tokenization}}{41}\relax 
+\doTocEntry\toclot{2}{\csname a:TocLink\endcsname{1}{x1-15001r2}{}{\ignorespaces Example of tokenization.}}{table}\relax 
+\doTocEntry\tocsubsubsection{3.1.2}{\csname a:TocLink\endcsname{1}{x1-160003.1.2}{QQ2-1-24}{Stop Words}}{44}\relax 
+\doTocEntry\toclot{3}{\csname a:TocLink\endcsname{1}{x1-16001r3}{}{\ignorespaces Example of stop word removal.}}{table}\relax 
+\doTocEntry\tocsubsubsection{3.1.3}{\csname a:TocLink\endcsname{1}{x1-170003.1.3}{QQ2-1-26}{Stemming and Lemmatization}}{47}\relax 
+\doTocEntry\toclot{4}{\csname a:TocLink\endcsname{1}{x1-17001r4}{}{\ignorespaces Example of Porter stemming.}}{table}\relax 
+\doTocEntry\toclot{5}{\csname a:TocLink\endcsname{1}{x1-17002r5}{}{\ignorespaces Example of lemmatization.}}{table}\relax 
+\doTocEntry\tocsubsubsection{3.1.4}{\csname a:TocLink\endcsname{1}{x1-180003.1.4}{QQ2-1-29}{\emph  {N}-grams}}{53}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-190003.2}{QQ2-1-30}{The Decision Rule for Spam Classification}}{53}\relax 
+\doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-200003.3}{QQ2-1-31}{Mutli-variate Bernoulli Naive Bayes}}{55}\relax 
+\doTocEntry\tocsubsection{3.4}{\csname a:TocLink\endcsname{1}{x1-210003.4}{QQ2-1-32}{Multinomial Naive Bayes}}{57}\relax 
+\doTocEntry\tocsubsubsection{3.4.1}{\csname a:TocLink\endcsname{1}{x1-220003.4.1}{QQ2-1-33}{Term Frequency}}{57}\relax 
+\doTocEntry\tocsubsubsection{3.4.2}{\csname a:TocLink\endcsname{1}{x1-230003.4.2}{QQ2-1-34}{Term Frequency - Inverse Document Frequency (Tf-idf)}}{59}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-240004}{QQ2-1-35}{Variants of the Naive Bayes Model}}{60}\relax 
+\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-250004.1}{QQ2-1-36}{Continuous Variables}}{60}\relax 
+\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-260004.2}{QQ2-1-37}{Eager and Lazy Learning Algorithms}}{61}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-270004.2}{QQ2-1-38}{References}}{62}\relax 

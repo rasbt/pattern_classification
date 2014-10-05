@@ -1,0 +1,4490 @@
+<!DOCTYPE html> 
+<html> 
+<head> <title>Naive Bayes and Text Classification I
+ Introduction and Theory</title> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<link rel="stylesheet" type="text/css" href="naive_bayes_1.css" /> 
+<script type="text/javascript" 
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" 
+></script> 
+<style type="text/css"> 
+.MathJax_MathML {text-indent: 0;} 
+</style> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class="titleHead">Naive Bayes and Text Classification I<br />
+Introduction and Theory</h2>
+   <div class="author" ><span 
+class="cmr-12">Sebastian Raschka</span>
+<br /><span 
+class="cmtt-12">se.raschka@gmail.com</span></div><br />
+<div class="date" ><span 
+class="cmr-12">October 4, 2014</span></div>
+   </div>
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+   <div class="tableofcontents">
+   <span class="sectionToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Introduction</a></span>
+<br />   <span class="sectionToc" >2 <a 
+href="#x1-30002" id="QQ2-1-4">Naive Bayes Classification</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.1 <a 
+href="#x1-40002.1" id="QQ2-1-5">Overview</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.2 <a 
+href="#x1-50002.2" id="QQ2-1-7">Posterior Probabilities</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.3 <a 
+href="#x1-60002.3" id="QQ2-1-8">Class-conditional Probabilities</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.4 <a 
+href="#x1-70002.4" id="QQ2-1-9">Prior Probabilities</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.5 <a 
+href="#x1-80002.5" id="QQ2-1-11">Evidence</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.6 <a 
+href="#x1-90002.6" id="QQ2-1-12">Multinomial Naive Bayes - A Toy Example</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >2.6.1 <a 
+href="#x1-100002.6.1" id="QQ2-1-15">Maximum-Likelihood Estimates</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >2.6.2 <a 
+href="#x1-110002.6.2" id="QQ2-1-16">Classification</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >2.6.3 <a 
+href="#x1-120002.6.3" id="QQ2-1-17">Additive Smoothening</a></span>
+<br />   <span class="sectionToc" >3 <a 
+href="#x1-130003" id="QQ2-1-19">Naive Bayes and Text Classification</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.1 <a 
+href="#x1-140003.1" id="QQ2-1-20">The Bag of Words Model</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >3.1.1 <a 
+href="#x1-150003.1.1" id="QQ2-1-22">Tokenization</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >3.1.2 <a 
+href="#x1-160003.1.2" id="QQ2-1-24">Stop Words</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >3.1.3 <a 
+href="#x1-170003.1.3" id="QQ2-1-26">Stemming and Lemmatization</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >3.1.4 <a 
+href="#x1-180003.1.4" id="QQ2-1-29"><span 
+class="cmti-10">N</span>-grams</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.2 <a 
+href="#x1-190003.2" id="QQ2-1-30">The Decision Rule for Spam Classification</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.3 <a 
+href="#x1-200003.3" id="QQ2-1-31">Mutli-variate Bernoulli Naive Bayes</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.4 <a 
+href="#x1-210003.4" id="QQ2-1-32">Multinomial Naive Bayes</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >3.4.1 <a 
+href="#x1-220003.4.1" id="QQ2-1-33">Term Frequency</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >3.4.2 <a 
+href="#x1-230003.4.2" id="QQ2-1-34">Term Frequency - Inverse Document Frequency (Tf-idf)</a></span>
+<br />   <span class="sectionToc" >4 <a 
+href="#x1-240004" id="QQ2-1-35">Variants of the Naive Bayes Model</a></span>
+                                                                  
+
+                                                                  
+<br />   &#x00A0;<span class="subsectionToc" >4.1 <a 
+href="#x1-250004.1" id="QQ2-1-36">Continuous Variables</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >4.2 <a 
+href="#x1-260004.2" id="QQ2-1-37">Eager and Lazy Learning Algorithms</a></span>
+   </div>
+<!--l. 41--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-20001"></a>Introduction</h3>
+<!--l. 44--><p class="noindent" >Starting more than half a century ago, scientists became very serious about
+addressing the question: &#8221;Can we build a model that learns from available data and
+automatically makes the right decisions and predictions?&#8221; Looking back, this sounds
+almost like a rhetoric question, and the answer can be found in numerous
+applications that are emerging from the fields of pattern classification, machine
+learning, and artificial intelligence.
+</p><!--l. 46--><p class="indent" >   Data from various sensoring devices combined with powerful learning algorithms
+and domain knowledge led to many great inventions that we now take for granted in
+our everyday life: Internet queries via search engines like Google, text recognition at
+the post office, barcode scanners at the supermarket, the diagnosis of diseases, speech
+recognition by Siri or Google Now on our mobile phone, just to name a
+few.
+</p><!--l. 48--><p class="indent" >   One of the sub-fields of <span 
+class="cmti-10">predictive modeling </span>is <span 
+class="cmti-10">supervised pattern classification</span>;
+supervised pattern classification is the task of training a model based on labeled
+training data which then can be used to assign a pre-defined class label to new
+objects. One example that we will explore throughout this article is spam filtering via
+naive Bayes classifiers in order to predict whether a new text message can be
+categorized as spam or not-spam. Naive Bayes classifiers, a family of classifiers that
+are based on the popular Bayes&#8217; probability theorem, are known for creating simple
+yet well performing models, especially in the fields of document classification and
+disease prediction.
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                  
+
+                                                                  
+<a 
+ id="x1-2001r1"></a>
+                                                                  
+
+                                                                  
+
+<!--l. 52--><p class="noindent" ><img 
+src="../images/learning_algorithm_1.png" alt="PIC"  
+ />
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;1: </span><span  
+class="content">A simplified diagram of the general model building procedure for
+pattern classification.</span></div><!--tex4ht:label?: x1-2001r1 -->
+                                                                  
+
+                                                                  
+   </div><hr class="endfigure" />
+<!--l. 59--><p class="indent" >   A more detailed overview of predictive modeling can be found in my previous
+article <a 
+href="http://sebastianraschka.com/Articles/2014_intro_supervised_learning.html" ><span 
+class="cmti-10">Predictive Modeling, Supervised Machine Learning, and Pattern Classification</span>
+<span 
+class="cmti-10">- The Big Picture</span></a>.
+</p>
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-30002"></a>Naive Bayes Classification</h3>
+<!--l. 64--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">2.1   </span> <a 
+ id="x1-40002.1"></a>Overview</h4>
+<!--l. 67--><p class="noindent" ><span 
+class="cmti-10">Naive Bayes classifiers </span>are linear classifiers that are known for being simple yet
+very efficient. The probabilistic model of naive Bayes classifiers is based on
+Bayes&#8217; theorem, and the adjective <span 
+class="cmti-10">naive </span>comes from the assumption that the
+features in a dataset are mutually independent. In practice, the independence
+assumption is often violated, but naive Bayes classifiers still tend to perform
+very well under this unrealistic assumption <span class="cite">&#x00A0;[<a 
+href="#Xrish2001empirical">1</a>]</span>. Especially for small sample
+sizes, naive Bayes classifiers can outperform the more powerful alternatives
+<span class="cite">&#x00A0;[<a 
+href="#Xdomingos1997optimality">2</a>]</span>.
+</p><!--l. 70--><p class="indent" >   Being relatively robust, easy to implement, fast, and accurate, naive Bayes
+classifiers are used in many different fields. Some examples include the diagnosis of
+diseases and making decisions about treatment processes <span class="cite">&#x00A0;[<a 
+href="#Xkazmierska2008application">3</a>]</span>, the classification of
+RNA sequences in taxonomic studies <span class="cite">&#x00A0;[<a 
+href="#Xwang2007naive">4</a>]</span>, and spam filtering in e-mail clients <span class="cite">&#x00A0;[<a 
+href="#Xsahami1998bayesian">5</a>]</span>.
+However, strong violations of the independence assumptions and non-linear
+classification problems can lead to very poor performances of naive Bayes classifiers.
+We have to keep in mind that the type of data and the type problem to be solved
+dictate which classification model we want to choose. In practice, it is always
+recommended to compare different classification models on the particular
+dataset and consider the prediction performances as well as computational
+efficiency.
+</p><!--l. 74--><p class="indent" >   In the following sections, we will take a closer look at the probability model of the
+naive Bayes classifier and apply the concept to a simple toy problem. Later, we will
+use a publicly available SMS (text message) collection to train a naive Bayes
+classifier in Python that allows us to classify unseen messages as spam or
+ham.
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                  
+
+                                                                  
+<a 
+ id="x1-4001r2"></a>
+                                                                  
+
+                                                                  
+
+<!--l. 77--><p class="noindent" ><img 
+src="../images/linear_vs_nonlinear_problems.png" alt="PIC"  
+ />
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;2: </span><span  
+class="content">Linear (A) vs. non-linear problems (B). Random samples for two
+different classes are shown as colored spheres, and the dotted lines indicate the
+class boundaries that classifiers try to approximate by computing the decision
+boundaries. A non-linear problem (B) would be a case where linear classifiers,
+such as naive Bayes, would not be suitable since the classes are not linearly
+separable. In such a scenario, non-linear classifiers (e.g.,instance-based nearest
+neighbor classifiers) should be preferred.</span></div><!--tex4ht:label?: x1-4001r2 -->
+                                                                  
+
+                                                                  
+   </div><hr class="endfigure" />
+   <h4 class="subsectionHead"><span class="titlemark">2.2   </span> <a 
+ id="x1-50002.2"></a>Posterior Probabilities</h4>
+<!--l. 86--><p class="noindent" >In order to understand how naive Bayes classifiers work, we have to briefly
+recapitulate the concept of Bayesian probabilities. The probability model that was
+formulated by Thomas Bayes (1701-1761) is quite simple yet powerful; it can be
+written down in simple words as follows:
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-5001r1"></a>
+<!--l. 89--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+      <mstyle 
+class="text"><mtext  >posterior&#x00A0;probability</mtext></mstyle> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mstyle 
+class="text"><mtext  >conditional&#x00A0;probability</mtext></mstyle> <mo 
+class="MathClass-bin">&#x22C5;</mo><mstyle 
+class="text"><mtext  >prior&#x00A0;probibility</mtext></mstyle></mrow> 
+                     <mrow 
+><mstyle 
+class="text"><mtext  >evidence</mtext></mstyle></mrow></mfrac>
+</math></td><td class="eq-no">(1)</td></tr></table>
+<!--l. 91--><p class="indent" >   Bayes&#8217; theorem forms the core of the whole concept of naive Bayes classification.
+The <span 
+class="cmti-10">posterior probability</span>, in the context of a classification problem, can be
+interpreted as: &#8221;What is the probability that a particular object belongs to class
+<!--l. 91--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>i</mi></math> given
+its observed feature values?&#8221; A more concrete example would be: &#8221;What is the
+probability that a person has diabetes given a certain value for a pre-breakfast blood
+glucose measurement and a certain value for a post-breakfast blood glucose
+measurement?&#8221;
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-5002r2"></a>
+<!--l. 94--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >diabetes</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mspace width="2.77695pt" class="tmspace"/><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mn>9</mn><mn>0</mn><mstyle 
+class="text"><mtext  >mg/dl</mtext></mstyle><mo 
+class="MathClass-punc">,</mo><mn>1</mn><mn>4</mn><mn>5</mn><mstyle 
+class="text"><mtext  >mg/dl</mtext></mstyle></mrow><mo 
+class="MathClass-close">]</mo></mrow>
+</math></td><td class="eq-no">(2)</td></tr></table>
+<!--l. 96--><p class="indent" >   Let
+</p>
+                                                                  
+
+                                                                  
+     <ul class="itemize1">
+     <li class="itemize"><!--l. 99--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>
+     be the feature vector of sample <!--l. 99--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>i</mi><mo 
+class="MathClass-punc">,</mo><mspace width="2.77695pt" class="tmspace"/><mi 
+>i</mi> <mo 
+class="MathClass-rel">&#x2208;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>1</mn><mo 
+class="MathClass-punc">,</mo><mn>2</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>,
+     </li>
+     <li class="itemize"><!--l. 100--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>
+     be the notation of class <!--l. 100--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>j</mi><mo 
+class="MathClass-punc">,</mo><mspace width="2.77695pt" class="tmspace"/><mi 
+>j</mi> <mo 
+class="MathClass-rel">&#x2208;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>1</mn><mo 
+class="MathClass-punc">,</mo><mn>2</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>m</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>,
+     </li>
+     <li class="itemize">and <!--l. 101--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     be the probability of observing sample <!--l. 101--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>
+     given that is belongs to class <!--l. 101--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>.</li></ul>
+<!--l. 104--><p class="indent" >   The general notation of the posterior probability can be written as
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-5003r3"></a>
+<!--l. 106--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                    <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow> 
+        <mrow 
+><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></mfrac>
+</math></td><td class="eq-no">(3)</td></tr></table>
+<!--l. 111--><p class="indent" >   In the naive Bayes probability model, objects are classified based on the most probable
+hypothesis, and the <span 
+class="cmti-10">Maximum A Posteriori (MAP) </span>estimation can be used to formulate
+a decision rule given the training data. In other words, the assignment of a class label
+<!--l. 111--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math> to a particular
+observation <!--l. 111--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>
+is determined by the maximization of the posterior probability:
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-5004r4"></a>
+                                                                  
+
+                                                                  
+<!--l. 113--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+           <mstyle 
+class="text"><mtext  >predicted&#x00A0;class&#x00A0;label</mtext></mstyle> <mo 
+class="MathClass-rel">&#x2190;</mo><munder><mrow 
+><mstyle 
+class="text"><mtext  >arg&#x00A0;max</mtext></mstyle></mrow><mrow 
+><mi 
+>j</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>m</mi></mrow></munder><mspace width="2.77695pt" class="tmspace"/><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(4)</td></tr></table>
+<!--l. 115--><p class="indent" >   In contrast to a <span 
+class="cmti-10">maximum-likelihood (ML) </span>approach for parameter estimation,
+MAP includes <span 
+class="cmti-10">prior knowledge </span>in order to make a prediction. To continue with our
+example above, we can formulate the decision rule based on the posterior
+probabilities as follows:
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-5005r5"></a>
+<!--l. 117--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mstyle 
+class="text"><mtext  >person&#x00A0;has&#x00A0;diabetes&#x00A0;if</mtext></mstyle></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >diabetes</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x2265;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >not-diabetes</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mstyle 
+class="text"><mtext  >else&#x00A0;classify&#x00A0;person&#x00A0;as&#x00A0;healthy</mtext></mstyle><mo 
+class="MathClass-punc">.</mo></mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(5)</td></tr></table>
+<!--l. 128--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">2.3   </span> <a 
+ id="x1-60002.3"></a>Class-conditional Probabilities</h4>
+<!--l. 131--><p class="noindent" >One assumption that Bayes classifiers make is that the samples are <span 
+class="cmti-10">i.i.d. </span>The
+abbreviation <span 
+class="cmti-10">i.i.d. </span>stands for &#8221;independent and identically distributed&#8221; and describes
+random variables that are independent from one another and are drawn from a
+similar probability distribution. Independence means that the probability of one
+observation does not affect the probability of another observation (e.g., time series
+and network graphs are not independent). One popular example of <span 
+class="cmti-10">i.i.d. </span>variables
+is the classic coin tossing: The first coin flip does not affect the outcome
+of a second coin flip and so forth. Given a fair coin, the probability of the
+coin landing on &#8221;heads&#8221; is always 0.5 no matter of how often the coin if
+flipped.
+                                                                  
+
+                                                                  
+</p><!--l. 134--><p class="indent" >   An additional assumption of naive Bayes classifiers is the <span 
+class="cmti-10">conditional</span>
+<span 
+class="cmti-10">independence </span>of features. Under this <span 
+class="cmti-10">naive </span>assumption, the <span 
+class="cmti-10">class-conditional</span>
+<span 
+class="cmti-10">probabilities </span>or (<span 
+class="cmti-10">likelihoods</span>) of the samples can be directly estimated from
+the training data instead of evaluating all possibilities of <span 
+class="cmbx-10">x</span>. Thus, given a
+<!--l. 134--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi></math>-dimensional
+feature vector <span 
+class="cmbx-10">x</span>, the class conditional probability can be calculated as follows:
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-6001r6"></a>
+<!--l. 136--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+     <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo><mo 
+class="MathClass-op">&#x2026;</mo> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>d</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> &#x220F;</mo>
+  </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>d</mi></mrow></munderover 
+><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mi 
+>k</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(6)</td></tr></table>
+<!--l. 138--><p class="indent" >   Here, <!--l. 138--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+simply means: &#8221;How likely is it to observe this particular pattern
+<!--l. 138--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></math> given that it
+belongs to class <!--l. 138--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>?&#8221;
+The &#8221;individual&#8221; likelihoods for every feature in the feature vector can be estimated
+via the maximum-likelihood estimate, which is simply a frequency in the case of
+categorical data:
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-6002r7"></a>
+<!--l. 140--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                   <mover 
+accent="true"><mrow 
+><mi 
+>P</mi></mrow><mo 
+class="MathClass-op">^</mo></mover><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>i</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>c</mi></mrow></msub 
+></mrow> 
+ <mrow 
+><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow></mfrac> <mspace width="1em" class="quad"/><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>i</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(7)</td></tr></table>
+     <ul class="itemize1">
+     <li class="itemize"><!--l. 143--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>i</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>c</mi></mrow></msub 
+></math>:
+     Count of feature <!--l. 143--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>
+     in class <!--l. 143--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>.
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize"><!--l. 144--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mi 
+>c</mi></math>:
+     Count of feature <!--l. 144--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>
+     in all classes.</li></ul>
+<!--l. 147--><p class="indent" >   To illustrate this concept with an example, let&#8217;s assume that we have a collection
+of 500 documents where 100 documents are <span 
+class="cmti-10">spam </span>messages. Now, we want to
+calculate the class-conditional probability for a new message &#8221;Hello World&#8221; given
+that it is spam. Here, the pattern consists of two features: &#8221;hello&#8221; and &#8221;world,&#8221; and
+the the class-conditional probability is the product of the &#8221;probability of
+encountering &#8217;hello&#8217; given the message is spam&#8221; &#8212; the probability of encountering
+&#8221;world&#8221; given the message is spam.&#8221;
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-6003r8"></a>
+<!--l. 150--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+     <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mstyle 
+class="text"><mtext  >hello,&#x00A0;world</mtext></mstyle></mrow><mo 
+class="MathClass-close">]</mo></mrow><mo 
+class="MathClass-rel">&#x2223;</mo><mi 
+>&#x03C9;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >spam</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >hello</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mstyle 
+class="text"><mtext  >spam</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >world</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mstyle 
+class="text"><mtext  >spam</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(8)</td></tr></table>
+<!--l. 153--><p class="indent" >   Using the training dataset of 500 documents, we can use the maximum-likelihood
+estimate to estimate those probabilities: We&#8217;d simply calculate how often the words
+occur in the corpus of all spam messages. E.g.,
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-6004r9"></a>
+<!--l. 156--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+          <mover 
+accent="true"><mrow 
+><mi 
+>P</mi></mrow><mo 
+class="MathClass-op">^</mo></mover><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><mstyle 
+class="text"><mtext  >hello,&#x00A0;world</mtext></mstyle></mrow><mo 
+class="MathClass-close">]</mo></mrow><mo 
+class="MathClass-rel">&#x2223;</mo><mi 
+>&#x03C9;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >spam</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo>  <mfrac><mrow 
+><mn>2</mn><mn>0</mn></mrow> 
+<mrow 
+><mn>1</mn><mn>0</mn><mn>0</mn></mrow></mfrac> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mfrac><mrow 
+><mn>2</mn></mrow> 
+<mrow 
+><mn>1</mn><mn>0</mn><mn>0</mn></mrow></mfrac> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>0</mn><mn>0</mn><mn>4</mn>
+</math></td><td class="eq-no">(9)</td></tr></table>
+<!--l. 158--><p class="indent" >   However, with respect to the <span 
+class="cmti-10">naive </span>assumption of conditional independence, we
+notice a problem here: The <span 
+class="cmti-10">naive </span>assumption is that a particular word does not
+influence the chance of encountering other words in the same document. For example,
+given the two words &#8221;peanut&#8221; and &#8221;butter&#8221; in a text document, intuition tells us that
+                                                                  
+
+                                                                  
+this assumption is obviously violated: If a document contains the word &#8221;peanut&#8221; it
+will be more likely that it also contains the word &#8221;butter&#8221; (or &#8221;allergy&#8221;). In
+practice, the conditional independence assumption is indeed often violated,
+but naive Bayes classifiers are known to perform still well in those cases
+<span class="cite">&#x00A0;[<a 
+href="#Xzhang2004optimality">6</a>]</span>.
+</p><!--l. 162--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">2.4   </span> <a 
+ id="x1-70002.4"></a>Prior Probabilities</h4>
+<!--l. 165--><p class="noindent" >In contrast to a frequentist&#8217;s approach, the concept of <span 
+class="cmti-10">Bayesian inference </span>introduces
+an additional <span 
+class="cmti-10">prior probability </span>(or just <span 
+class="cmti-10">prior</span>) that can be interpreted as the <span 
+class="cmti-10">prior</span>
+<span 
+class="cmti-10">belief  </span>or <span 
+class="cmti-10">a priori </span>knowledge.
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-7001r10"></a>
+<!--l. 167--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+      <mstyle 
+class="text"><mtext  >posterior&#x00A0;probability</mtext></mstyle> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mstyle 
+class="text"><mtext  >conditional&#x00A0;probability</mtext></mstyle> <mo 
+class="MathClass-bin">&#x22C5;</mo><mstyle 
+class="text"><mtext  >prior&#x00A0;probibility</mtext></mstyle></mrow> 
+                     <mrow 
+><mstyle 
+class="text"><mtext  >evidence</mtext></mstyle></mrow></mfrac>
+</math></td><td class="eq-no">(10)</td></tr></table>
+<!--l. 169--><p class="indent" >   In the context of pattern classification, the prior probabilities are also called <span 
+class="cmti-10">class</span>
+<span 
+class="cmti-10">priors</span>, which describe &#8221;the general probability of encountering a particular
+class.&#8221; In the case of spam classification, the priors could be formulated
+as
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-7002r11"></a>
+<!--l. 171--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >spam</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >&#8221;the&#x00A0;probability&#x00A0;that&#x00A0;any&#x00A0;new&#x00A0;message&#x00A0;is&#x00A0;a&#x00A0;spam&#x00A0;message&#8221;</mtext></mstyle>
+</math></td><td class="eq-no">(11)</td></tr></table>
+<!--l. 171--><p class="indent" >   and
+                                                                  
+
+                                                                  
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-7003r12"></a>
+<!--l. 173--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                       <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >ham</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn> <mo 
+class="MathClass-bin">-</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >spam</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(12)</td></tr></table>
+<!--l. 175--><p class="indent" >   If the priors are following a uniform distribution, the posterior probabilities will
+be entirely determined by the class-conditional probabilities and the evidence term.
+And since the evidence term is a constant, the decision rule will entirely depend on
+the class-conditional probabilities (similar to a frequentist&#8217;s approach and
+maximum-likelihood estimate).
+</p><!--l. 177--><p class="indent" >   Eventually, the <span 
+class="cmti-10">a priori </span>knowledge can be obtained, e.g., by consulting a domain
+expert or by estimation from the training data (assuming that the training data is
+<span 
+class="cmti-10">i.i.d. </span>and a representative sample of the entire population. The maximum-likelihood
+estimate approach can be formulated as
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-7004r13"></a>
+<!--l. 179--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                          <mover 
+accent="true"><mrow 
+><mi 
+>P</mi></mrow><mo 
+class="MathClass-op">^</mo></mover><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow></msub 
+></mrow> 
+ <mrow 
+><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></mrow></mfrac>
+</math></td><td class="eq-no">(13)</td></tr></table>
+     <ul class="itemize1">
+     <li class="itemize"><!--l. 182--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow></msub 
+></math>:
+     Count of samples from class <!--l. 182--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>.
+     </li>
+     <li class="itemize"><!--l. 183--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>c</mi></mrow></msub 
+></math>:
+     Count of all samples.</li></ul>
+                                                                  
+
+                                                                  
+<!--l. 186--><p class="indent" >   And in context of <span 
+class="cmti-10">spam classification</span>:
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-7005r14"></a>
+<!--l. 189--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+            <mover 
+accent="true"><mrow 
+><mi 
+>P</mi></mrow><mo 
+class="MathClass-op">^</mo></mover><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >spam</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mstyle 
+class="text"><mtext  >#&#x00A0;of&#x00A0;spam&#x00A0;messages&#x00A0;in&#x00A0;training&#x00A0;data</mtext></mstyle></mrow> 
+  <mrow 
+><mstyle 
+class="text"><mtext  >&#x00A0;#&#x00A0;of&#x00A0;all&#x00A0;mesages&#x00A0;in&#x00A0;training&#x00A0;data</mtext></mstyle></mrow></mfrac>
+</math></td><td class="eq-no">(14)</td></tr></table>
+<!--l. 192--><p class="indent" >   Figure <a 
+href="#x1-7008r3">3<!--tex4ht:ref: fig:effect_priors --></a> illustrates the effect of the prior probabilities on the decision
+rule. Given an 1-dimensional pattern <span 
+class="cmbx-10">x </span>(continuous attribute, plotted
+as &#8221;x&#8221; symbols) that follows a normal distribution and belongs to one
+out of two classes (<span 
+class="cmti-10">blue </span>and <span 
+class="cmti-10">green</span>). The patterns from the first class
+(<!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >blue</mtext></mstyle></math>)
+are drawn from a normal distribution with mean
+<!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn></math> and a standard
+deviation <!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03C3;</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn></math>.
+The probability distribution of the second class
+(<!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >green</mtext></mstyle></math>)
+is centered at x=10 with a similar standard deviation of
+<!--l. 192--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03C3;</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn></math>.
+The bell-curves denote the probability densities of the samples that were
+drawn from the two different normal distributions. Considering only the class
+conditional probabilities, the maximum-likelihood estimate in this case would
+be
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-7006r15"></a>
+                                                                  
+
+                                                                  
+<!--l. 194--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x2248;</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>4</mn><mstyle 
+class="text"><mtext  >&#x00A0;and&#x00A0;</mtext></mstyle><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mn>0</mn><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003C;</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>0</mn><mn>0</mn><mn>1</mn></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003C;</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>0</mn><mn>0</mn><mn>1</mn><mstyle 
+class="text"><mtext  >&#x00A0;and&#x00A0;</mtext></mstyle><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mn>0</mn><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x2248;</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>4</mn><mo 
+class="MathClass-punc">.</mo></mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(15)</td></tr></table>
+<!--l. 202--><p class="indent" >   Now, given uniform priors, that is <!--l. 202--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>5</mn></math>,
+the decision rule would be entirely dependent on those class-conditional
+probabilities, so that the decision rule would fall directly between the two
+distributions
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-7007r16"></a>
+<!--l. 204--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                        <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(16)</td></tr></table>
+<!--l. 206--><p class="indent" >   However, if the prior probability was
+<!--l. 206--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>5</mn></math>, the decision
+region of class <!--l. 206--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>
+would expand as shown in Figure <a 
+href="#x1-7008r3">3<!--tex4ht:ref: fig:effect_priors --></a>. In the context of spam classification, this could
+be interpreted as encountering a new message that only contains words which are
+equally likely to appear in <span 
+class="cmti-10">spam </span>or <span 
+class="cmti-10">ham </span>messages. In this case, the decision would be
+entirely dependent on <span 
+class="cmti-10">prior knowledge</span>, e.g., we could assume that a random message
+is in 9 out of 10 cases not <span 
+class="cmti-10">spam </span>and therefore classify the new message as
+<span 
+class="cmti-10">ham</span>.
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                  
+
+                                                                  
+<a 
+ id="x1-7008r3"></a>
+                                                                  
+
+                                                                  
+
+<!--l. 211--><p class="noindent" ><img 
+src="../images/effect_priors_1.png" alt="PIC"  
+ />
+<br /> </p><div class="caption" 
+><span class="id">Figure&#x00A0;3:  </span><span  
+class="content">The  effect  of  prior  probabilities  on  the  decision  regions.  The
+figure  shows  a  1-dimensional  random  sample  from  two  different  classes
+(blue  and  green  crosses).  The  data  points  for  both  classes  are  normally
+distributed  with  standard  deviation  1,  and  the  bell  curves  denote  the  class
+conditional probabilities. If the class priors are equal, the decision boundary
+of a naive Bayes classifier is placed at the center between both distributions
+(gray bar). An increase of the class-conditional probability of the blue class
+(<!--l. 212--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math>)
+leads to an extension of the decision region R1 by moving the decision boundary
+(blue-dotted bar) towards the other class and vice versa.</span></div><!--tex4ht:label?: x1-7008r3 -->
+                                                                  
+
+                                                                  
+   </div><hr class="endfigure" />
+   <h4 class="subsectionHead"><span class="titlemark">2.5   </span> <a 
+ id="x1-80002.5"></a>Evidence</h4>
+<!--l. 221--><p class="noindent" >After defining the <span 
+class="cmti-10">class-conditional probability </span>and <span 
+class="cmti-10">prior probability</span>, there is
+only one term missing in order to compute <span 
+class="cmti-10">posterior probability</span>, that is the
+<span 
+class="cmti-10">evidence</span>.
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-8001r17"></a>
+<!--l. 223--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+      <mstyle 
+class="text"><mtext  >posterior&#x00A0;probability</mtext></mstyle> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mstyle 
+class="text"><mtext  >conditional&#x00A0;probability</mtext></mstyle> <mo 
+class="MathClass-bin">&#x22C5;</mo><mstyle 
+class="text"><mtext  >prior&#x00A0;probibility</mtext></mstyle></mrow> 
+                     <mrow 
+><mstyle 
+class="text"><mtext  >evidence</mtext></mstyle></mrow></mfrac>
+</math></td><td class="eq-no">(17)</td></tr></table>
+<!--l. 225--><p class="indent" >   The evidence <!--l. 225--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+can be understood as the probability of encountering a particular pattern
+<!--l. 225--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></math>
+independent from the class label. Given the more formal definition of posterior
+probability </p><table class="equation"><tr><td> <a 
+ id="x1-8002r18"></a>
+<!--l. 226--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                    <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow> 
+        <mrow 
+><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></mfrac>        <mo 
+class="MathClass-punc">,</mo>
+</math></td><td class="eq-no">(18)</td></tr></table>
+<!--l. 228--><p class="indent" >   the evidence can be calculated as follows
+(<!--l. 228--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow><mrow 
+><mi 
+>C</mi></mrow></msubsup 
+></math>
+stands for &#8221;complement&#8221; and basically translate to &#8221;<span 
+class="cmbx-10">not </span>class
+<!--l. 228--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>.&#8221;
+):
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-8003r19"></a>
+                                                                  
+
+                                                                  
+<!--l. 230--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+             <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msubsup><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow><mrow 
+><mi 
+>C</mi></mrow></msubsup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msubsup><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+>
+<mi 
+>j</mi></mrow><mrow 
+><mi 
+>C</mi></mrow></msubsup 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(19)</td></tr></table>
+<!--l. 234--><p class="indent" >   Although the evidence term is required to accurately calculate the posterior
+probabilities, it can be removed from the <span 
+class="cmti-10">decision rule </span>&#8221;Classify sample
+<!--l. 234--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math> as
+<!--l. 234--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math> if
+<!--l. 234--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003E;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> else classify the
+sample as <!--l. 234--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math>,&#8221;
+since it is merely a scaling factor:
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-8004r20"></a>
+<!--l. 237--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                 <mfrac><mrow 
+><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow>
+        <mrow 
+><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></mfrac>      <mo 
+class="MathClass-rel">&#x003E;</mo> <mfrac><mrow 
+><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow> 
+        <mrow 
+><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></mfrac>
+</math></td><td class="eq-no">(20)</td></tr></table>
+   <table class="equation"><tr><td> <a 
+ id="x1-8005r21"></a>
+<!--l. 239--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                <mo 
+class="MathClass-rel">&#x221D;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x003E;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(21)</td></tr></table>
+                                                                  
+
+                                                                  
+<!--l. 244--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">2.6   </span> <a 
+ id="x1-90002.6"></a>Multinomial Naive Bayes - A Toy Example</h4>
+<!--l. 247--><p class="noindent" >After covering the basics concepts of a naive Bayes classifier, the <span 
+class="cmti-10">posterior</span>
+<span 
+class="cmti-10">probabilities </span>and <span 
+class="cmti-10">decision rules</span>, let us walk through a simple toy example based on
+the training set shown in Figure <a 
+href="#x1-9001r4">4<!--tex4ht:ref: fig:toy_dataset --></a>.
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                  
+
+                                                                  
+<a 
+ id="x1-9001r4"></a>
+                                                                  
+
+                                                                  
+<!--l. 250--><p class="noindent" ><img 
+src="../images/toy_dataset_1.png" alt="PIC"  
+ />
+<br />  </p><div class="caption" 
+><span class="id">Figure&#x00A0;4:   </span><span  
+class="content">A   simple   toy   dataset   of   12   samples   2   different   classes
+<!--l. 251--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-bin">+</mo><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-bin">-</mo></math>
+. Each sample consists of 2 features: color and geometrical shape.</span></div><!--tex4ht:label?: x1-9001r4 -->
+                                                                  
+
+                                                                  
+   </div><hr class="endfigure" />
+<!--l. 255--><p class="indent" >   Let
+</p>
+     <ul class="itemize1">
+     <li class="itemize"><!--l. 258--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>
+     be the class labels: <!--l. 258--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x2208;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mo 
+class="MathClass-bin">+</mo><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-bin">-</mo></mrow><mo 
+class="MathClass-close">}</mo></mrow></math>
+     </li>
+     <li class="itemize">and <!--l. 259--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>
+     be the 2-dimensional feature vectors: <!--l. 259--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi><mn>1</mn></mrow></msub 
+><mspace width="2.77695pt" class="tmspace"/><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">]</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x2208;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mstyle 
+class="text"><mtext  >blue</mtext></mstyle><mo 
+class="MathClass-punc">,</mo><mstyle 
+class="text"><mtext  >green</mtext></mstyle><mo 
+class="MathClass-punc">,</mo><mstyle 
+class="text"><mtext  >red</mtext></mstyle><mo 
+class="MathClass-punc">,</mo><mstyle 
+class="text"><mtext  >yellow</mtext></mstyle></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x2208;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mstyle 
+class="text"><mtext  >circle</mtext></mstyle><mo 
+class="MathClass-punc">,</mo><mstyle 
+class="text"><mtext  >square</mtext></mstyle></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">.</mo></math></li></ul>
+<!--l. 262--><p class="indent" >   The 2 class labels are <!--l. 262--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x2208;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mo 
+class="MathClass-bin">+</mo><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-bin">-</mo></mrow><mo 
+class="MathClass-close">}</mo></mrow></math> and
+the feature vector for sample <!--l. 262--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>i</mi></math>
+can be written as
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-9002r22"></a>
+<!--l. 264--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi><mn>1</mn></mrow></msub 
+><mspace width="2.77695pt" class="tmspace"/><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi><mn>2</mn></mrow></msub 
+></mrow><mo 
+class="MathClass-close">]</mo></mrow></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mstyle 
+class="text"><mtext  >for&#x00A0;</mtext></mstyle><mi 
+>i</mi> <mo 
+class="MathClass-rel">&#x2208;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mn>1</mn><mo 
+class="MathClass-punc">,</mo><mn>2</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>n</mi></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="2.77695pt" class="tmspace"/><mstyle 
+class="text"><mtext  >&#x00A0;with&#x00A0;</mtext></mstyle><mi 
+>n</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mn>2</mn></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mstyle 
+class="text"><mtext  >and&#x00A0;</mtext></mstyle><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x2208;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mstyle 
+class="text"><mtext  >blue</mtext></mstyle><mo 
+class="MathClass-punc">,</mo><mstyle 
+class="text"><mtext  >green</mtext></mstyle><mo 
+class="MathClass-punc">,</mo><mstyle 
+class="text"><mtext  >red</mtext></mstyle><mo 
+class="MathClass-punc">,</mo><mstyle 
+class="text"><mtext  >yellow</mtext></mstyle></mrow><mo 
+class="MathClass-close">}</mo></mrow><mo 
+class="MathClass-punc">,</mo><mspace width="1em" class="quad"/><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi><mn>2</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">&#x2208;</mo><mrow ><mo 
+class="MathClass-open">{</mo><mrow><mstyle 
+class="text"><mtext  >circle</mtext></mstyle><mo 
+class="MathClass-punc">,</mo><mstyle 
+class="text"><mtext  >square</mtext></mstyle></mrow><mo 
+class="MathClass-close">}</mo></mrow></mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(22)</td></tr></table>
+<!--l. 272--><p class="indent" >   The task now is to classify a new sample &#8212; pretending hat we don&#8217;t know that its
+true class label is &#8221;+&#8221;:
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                  
+
+                                                                  
+<a 
+ id="x1-9003r5"></a>
+                                                                  
+
+                                                                  
+<!--l. 276--><p class="noindent" ><img 
+src="../images/toy_dataset_2.png" alt="PIC"  
+ />
+<br />       </p><div class="caption" 
+><span class="id">Figure&#x00A0;5:          </span><span  
+class="content">A          new          sample          from          class
+<!--l. 277--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-bin">+</mo></math>
+and                                          the                                          features
+<!--l. 277--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >[blue,&#x00A0;square]</mtext></mstyle></math>
+that is to be classified using the training data in Figure <a 
+href="#x1-9001r4">4<!--tex4ht:ref: fig:toy_dataset --></a>.</span></div><!--tex4ht:label?: x1-9003r5 -->
+                                                                  
+
+                                                                  
+   </div><hr class="endfigure" />
+   <h5 class="subsubsectionHead"><span class="titlemark">2.6.1   </span> <a 
+ id="x1-100002.6.1"></a>Maximum-Likelihood Estimates</h5>
+<!--l. 284--><p class="noindent" >The <span 
+class="cmti-10">decision rule </span>can be defined as
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-10001r23"></a>
+<!--l. 286--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mstyle 
+class="text"><mtext  >Classify&#x00A0;sample&#x00A0;as&#x00A0;</mtext></mstyle> <mo 
+class="MathClass-bin">+</mo> <mstyle 
+class="text"><mtext  >&#x00A0;if</mtext></mstyle></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x03C9;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >+</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >[blue,&#x00A0;square]</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x2265;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x03C9;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >-</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >[blue,&#x00A0;square]</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mstyle 
+class="text"><mtext  >else&#x00A0;classify&#x00A0;sample&#x00A0;as</mtext></mstyle> <mo 
+class="MathClass-bin">-</mo> <mo 
+class="MathClass-punc">.</mo></mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(23)</td></tr></table>
+<!--l. 296--><p class="indent" >   Under the assumption that the samples are <span 
+class="cmti-10">i.i.d</span>, the <span 
+class="cmti-10">prior probabilities </span>can be
+obtained via the maximum-likelihood estimate (i.e., the frequencies of how often each
+class label is represented in the training dataset):
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-10002r24"></a>
+                                                                  
+
+                                                                  
+<!--l. 298--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >+</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo>  <mfrac><mrow 
+><mn>7</mn></mrow> 
+<mrow 
+><mn>1</mn><mn>2</mn></mrow></mfrac> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>5</mn><mn>8</mn></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >-</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo>  <mfrac><mrow 
+><mn>5</mn></mrow> 
+<mrow 
+><mn>1</mn><mn>2</mn></mrow></mfrac> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>4</mn><mn>2</mn></mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(24)</td></tr></table>
+<!--l. 306--><p class="indent" >   Under the <span 
+class="cmti-10">naive </span>assumption that the features &#8221;color&#8221; and &#8221;shape&#8221; are mutually
+independent, the <span 
+class="cmti-10">class-conditional probabilities </span>can be calculated as a simple product
+of the individual conditional probabilities.
+</p><!--l. 308--><p class="indent" >   Via maximum-likelihood estimate, e.g.,
+<!--l. 308--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >blue</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mo 
+class="MathClass-bin">-</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> is
+simply the frequency of observing a &#8221;blue&#8221; sample among all samples in the training
+dataset that belong to class &#8221;+.&#8221;
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-10003r25"></a>
+<!--l. 310--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mo 
+class="MathClass-bin">+</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >blue</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mo 
+class="MathClass-bin">+</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >square</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mo 
+class="MathClass-bin">+</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>3</mn></mrow> 
+<mrow 
+><mn>7</mn></mrow></mfrac> <mo 
+class="MathClass-bin">&#x22C5;</mo><mfrac><mrow 
+><mn>5</mn></mrow> 
+<mrow 
+><mn>7</mn></mrow></mfrac> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>3</mn><mn>1</mn></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mo 
+class="MathClass-bin">-</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >blue</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mo 
+class="MathClass-bin">-</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >square</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mo 
+class="MathClass-bin">-</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>3</mn></mrow> 
+<mrow 
+><mn>5</mn></mrow></mfrac> <mo 
+class="MathClass-bin">&#x22C5;</mo><mfrac><mrow 
+><mn>3</mn></mrow> 
+<mrow 
+><mn>5</mn></mrow></mfrac> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>3</mn><mn>6</mn></mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(25)</td></tr></table>
+<!--l. 318--><p class="indent" >   Now, the <span 
+class="cmti-10">posterior probabilities </span>can be simply calculated as the product of the
+class-conditional and prior probabilities:
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-10004r26"></a>
+                                                                  
+
+                                                                  
+<!--l. 320--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo 
+class="MathClass-bin">+</mo><mo 
+class="MathClass-rel">&#x2223;</mo><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mo 
+class="MathClass-bin">+</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo 
+class="MathClass-bin">+</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>3</mn><mn>1</mn> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>5</mn><mn>8</mn> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>1</mn><mn>8</mn></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo 
+class="MathClass-bin">-</mo><mo 
+class="MathClass-rel">&#x2223;</mo><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mo 
+class="MathClass-bin">-</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo 
+class="MathClass-bin">-</mo></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>3</mn><mn>6</mn> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>4</mn><mn>2</mn> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>1</mn><mn>5</mn></mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(26)</td></tr></table>
+<!--l. 328--><p class="noindent" >
+</p>
+   <h5 class="subsubsectionHead"><span class="titlemark">2.6.2   </span> <a 
+ id="x1-110002.6.2"></a>Classification</h5>
+<!--l. 330--><p class="noindent" >Putting it all together, the new sample can be classified by plugging in the posterior
+probabilities into the decision rule:
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-11001r27"></a>
+<!--l. 332--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mstyle 
+class="text"><mtext  >If&#x00A0;</mtext></mstyle><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo 
+class="MathClass-bin">+</mo><mo 
+class="MathClass-rel">&#x2223;</mo><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x2265;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >-</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mstyle 
+class="text"><mtext  >classify&#x00A0;as&#x00A0;</mtext></mstyle><mo 
+class="MathClass-bin">+</mo><mo 
+class="MathClass-punc">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mstyle 
+class="text"><mtext  >else&#x00A0;</mtext></mstyle><mstyle 
+class="text"><mtext  >classify&#x00A0;as&#x00A0;</mtext></mstyle><mo 
+class="MathClass-bin">-</mo></mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(27)</td></tr></table>
+<!--l. 340--><p class="indent" >   Since <!--l. 340--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>1</mn><mn>8</mn> <mo 
+class="MathClass-rel">&#x003E;</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>1</mn><mn>5</mn></math> the sample
+can be classified as <!--l. 340--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-bin">+</mo></math>.
+Taking a closer look at the calculation of the posterior probabilities, this simple example
+demonstrates the effect of the prior probabilities affected on the decision rule. If the
+                                                                  
+
+                                                                  
+prior probabilities were equal for both classes, the new pattern would be classified as
+<!--l. 340--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-bin">-</mo></math> instead
+of <!--l. 340--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-bin">+</mo></math>.
+This observation also underlines the importance of <span 
+class="cmti-10">representative </span>training datasets;
+in practice, it is usually recommended to additionally consult a domain expert in
+order to define the prior probabilities.
+</p><!--l. 342--><p class="noindent" >
+</p>
+   <h5 class="subsubsectionHead"><span class="titlemark">2.6.3   </span> <a 
+ id="x1-120002.6.3"></a>Additive Smoothening</h5>
+<!--l. 345--><p class="noindent" >The classification was straight-forward given the sample in Figure <a 
+href="#x1-9003r5">5<!--tex4ht:ref: fig:new_sample1 --></a>. A trickier case is
+a sample that has a &#8221;new&#8221; value for the color attribute that is not present in the
+training dataset, e.g., <span 
+class="cmti-10">yellow</span>, as shown in Figure <a 
+href="#x1-9003r5">5<!--tex4ht:ref: fig:new_sample1 --></a>.
+</p>
+   <hr class="figure" /><div class="figure" 
+>
+                                                                  
+
+                                                                  
+<a 
+ id="x1-12001r6"></a>
+                                                                  
+
+                                                                  
+<!--l. 348--><p class="noindent" ><img 
+src="../images/toy_dataset_3.png" alt="PIC"  
+ />
+<br />       </p><div class="caption" 
+><span class="id">Figure&#x00A0;6:          </span><span  
+class="content">A          new          sample          from          class
+<!--l. 349--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-bin">+</mo></math>
+and                                          the                                          features
+<!--l. 349--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >[yellow,&#x00A0;square]</mtext></mstyle></math>
+that is to be classified using the training data in Figure <a 
+href="#x1-9001r4">4<!--tex4ht:ref: fig:toy_dataset --></a>.</span></div><!--tex4ht:label?: x1-12001r6 -->
+                                                                  
+
+                                                                  
+   </div><hr class="endfigure" />
+<!--l. 354--><p class="indent" >   If the color <span 
+class="cmti-10">yellow </span>does not appear in our training dataset, the class-conditional
+probability will be 0, and as a consequence, the posterior probability will also be 0
+since the posterior probability is the product of the prior and class-conditional
+probabilities.
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-12002r28"></a>
+<!--l. 356--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>4</mn><mn>2</mn> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>5</mn><mn>8</mn> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(28)</td></tr></table>
+<!--l. 363--><p class="indent" >   In order to avoid the problem of <span 
+class="cmti-10">zero </span>probabilities, an additional smoothening
+term can be added to the <span 
+class="cmti-10">multinomial Bayes </span>model. The most common
+variants of additive smoothening are the so-called <span 
+class="cmti-10">Lidstone smoothening</span>
+(<!--l. 363--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B1;</mi> <mo 
+class="MathClass-rel">&#x003C;</mo> <mn>1</mn></math>) and <span 
+class="cmti-10">Laplace</span>
+<span 
+class="cmti-10">smoothening </span>(<!--l. 363--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B1;</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn></math>).
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-12003r29"></a>
+<!--l. 366--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                  <mover 
+accent="true"><mrow 
+><mi 
+>P</mi></mrow><mo 
+class="MathClass-op">^</mo></mover><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>i</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>c</mi></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mi 
+>&#x03B1;</mi></mrow> 
+<mrow 
+><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mi 
+>&#x03B1;</mi><mspace width="0.3em" class="thinspace"/><mi 
+>d</mi></mrow></mfrac><mspace width="1em" class="quad"/><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>i</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>1</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(29)</td></tr></table>
+<!--l. 368--><p class="indent" >   where
+</p>
+                                                                  
+
+                                                                  
+     <ul class="itemize1">
+     <li class="itemize"><!--l. 372--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>i</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>c</mi></mrow></msub 
+></math>:
+     Count of observing feature <!--l. 372--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>
+     in class <!--l. 372--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>.
+     </li>
+     <li class="itemize"><!--l. 373--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mi 
+>c</mi></math>:
+     Count of observing feature <!--l. 373--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>
+     in all classes.
+     </li>
+     <li class="itemize"><!--l. 374--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B1;</mi></math>:
+     Parameter for additive smoothening.
+     </li>
+     <li class="itemize"><!--l. 375--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi></math>:
+     Dimensionality of the feature vector <!--l. 375--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">[</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">.</mo><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>d</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>.
+     </li></ul>
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-130003"></a>Naive Bayes and Text Classification</h3>
+<!--l. 383--><p class="noindent" >This section will introduce some of the main concepts and procedures that are
+needed to apply the naive Bayes model to text classification tasks. Although
+the examples are mainly concerning a two 2-class problem &#8212; classifying
+text messages as <span 
+class="cmti-10">spam </span>or <span 
+class="cmti-10">ham </span>&#8212; the same approaches are applicable to
+multi-class problems such as classification of documents into different topic areas
+(e.g., &#8221;Computer Science&#8221;, &#8221;Biology&#8221;, &#8221;Statistics&#8221;, &#8221;Economics&#8221;, &#8221;Politics&#8221;,
+etc.).
+</p><!--l. 385--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.1   </span> <a 
+ id="x1-140003.1"></a>The Bag of Words Model</h4>
+<!--l. 388--><p class="noindent" >One of the most important sub-tasks in pattern classification are <span 
+class="cmti-10">feature</span>
+<span 
+class="cmti-10">extraction </span>and <span 
+class="cmti-10">selection</span>; the three main criteria of good features are listed
+below:
+</p>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="cmti-10">Salient</span>. The features are important and meaningful with respect to the
+     problem domain.
+     </li>
+     <li class="itemize"><span 
+class="cmti-10">Invariant</span>. Invariance is often described in context of image classification:
+     The features are insusceptible to distortion, scaling, orientation, etc. A
+                                                                  
+
+                                                                  
+     nice example is given by C. Yao <span 
+class="cmti-10">et al. </span>in <span 
+class="cmti-10">Rotation-Invariant Features for</span>
+     <span 
+class="cmti-10">Multi-Oriented Text Detection in Natural Images </span><span class="cite">&#x00A0;[<a 
+href="#Xyao2013rotation">7</a>]</span>.
+     </li>
+     <li class="itemize"><span 
+class="cmti-10">Discriminatory.  </span>The  selected  features  bear  enough  information  to
+     distinguish well between patterns when used to train the classifier.</li></ul>
+<!--l. 396--><p class="indent" >   Prior to fitting the model and using machine learning algorithms for
+training, we need to think about how to best represent a text document as a
+feature vector. A commonly used model in <span 
+class="cmti-10">Natural Language Processing</span>
+is the so-called <span 
+class="cmti-10">bag of words </span>model. The idea behind this model really is
+as simple as it sounds. First comes the creation of the <span 
+class="cmti-10">vocabulary </span>&#8212; the
+collection of all different words that occur in the training set and each word is
+associated with a count of how it occurs. This vocabulary can be understood
+as a set of non-redundant items where the order doesn&#8217;t matter. Let
+<!--l. 396--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>D</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math> and
+<!--l. 396--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>D</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math> be
+two documents in a training dataset:
+</p>
+     <ul class="itemize1">
+     <li class="itemize"><!--l. 399--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>D</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>:
+     &#8221;Each state has its own laws.&#8221;
+     </li>
+     <li class="itemize"><!--l. 400--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>D</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math>:
+     &#8221;Every country has its own culture.&#8221;</li></ul>
+<!--l. 403--><p class="indent" >   Based on these two documents, the vocabulary could be written as <br 
+class="newline" />
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-14001r30"></a>
+                                                                  
+
+                                                                  
+<!--l. 405--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>V</mi> <mo 
+class="MathClass-rel">=</mo> <mrow ><mo 
+class="MathClass-open">{</mo><mrow><mi 
+>e</mi><mi 
+>a</mi><mi 
+>c</mi><mi 
+>h</mi> <mo 
+class="MathClass-punc">:</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mi 
+>s</mi><mi 
+>t</mi><mi 
+>a</mi><mi 
+>t</mi><mi 
+>e</mi> <mo 
+class="MathClass-punc">:</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mi 
+>h</mi><mi 
+>a</mi><mi 
+>s</mi> <mo 
+class="MathClass-punc">:</mo> <mn>2</mn><mo 
+class="MathClass-punc">,</mo><mi 
+>i</mi><mi 
+>t</mi><mi 
+>s</mi> <mo 
+class="MathClass-punc">:</mo> <mn>2</mn><mo 
+class="MathClass-punc">,</mo><mi 
+>o</mi><mi 
+>w</mi><mi 
+>n</mi> <mo 
+class="MathClass-punc">:</mo> <mn>2</mn><mo 
+class="MathClass-punc">,</mo></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>l</mi><mi 
+>a</mi><mi 
+>w</mi><mi 
+>s</mi> <mo 
+class="MathClass-punc">:</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mi 
+>e</mi><mi 
+>v</mi><mi 
+>e</mi><mi 
+>r</mi><mi 
+>y</mi> <mo 
+class="MathClass-punc">:</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mi 
+>c</mi><mi 
+>o</mi><mi 
+>u</mi><mi 
+>n</mi><mi 
+>t</mi><mi 
+>r</mi><mi 
+>y</mi> <mo 
+class="MathClass-punc">:</mo> <mn>1</mn><mo 
+class="MathClass-punc">,</mo><mi 
+>c</mi><mi 
+>u</mi><mi 
+>l</mi><mi 
+>t</mi><mi 
+>u</mi><mi 
+>r</mi><mi 
+>e</mi> <mo 
+class="MathClass-punc">:</mo> <mn>1</mn></mrow><mo 
+class="MathClass-close">}</mo></mrow></mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(30)</td></tr></table>
+<!--l. 412--><p class="indent" >   The vocabulary can then be used to construct the
+<!--l. 412--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi></math>-dimensional
+feature vectors for the individual documents where the dimensionality
+is equal to the number of different words in the vocabulary
+(<!--l. 412--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-rel">|</mo><mi 
+>V</mi> <mo 
+class="MathClass-rel">|</mo></math>).
+This process is called <span 
+class="cmti-10">vectorization</span>.
+</p>
+   <div class="table">
+                                                                  
+
+                                                                  
+<!--l. 416--><p class="indent" >   <a 
+ id="x1-14002r1"></a></p><hr class="float" /><div class="float" 
+>
+                                                                  
+
+                                                                  
+  <div class="caption" 
+><span class="id">Table&#x00A0;1:   </span><span  
+class="content">Bag   of   words   representation   of   two   sample   documents
+<!--l. 418--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>D</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>
+and <!--l. 418--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>D</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+></math>.</span></div><!--tex4ht:label?: x1-14002r1 -->
+<div class="tabular"> <table id="TBL-2" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1" /><col 
+id="TBL-2-2" /><col 
+id="TBL-2-3" /><col 
+id="TBL-2-4" /><col 
+id="TBL-2-5" /><col 
+id="TBL-2-6" /><col 
+id="TBL-2-7" /><col 
+id="TBL-2-8" /><col 
+id="TBL-2-9" /><col 
+id="TBL-2-10" /><col 
+id="TBL-2-11" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-1-1"  
+class="td11">                                                                 </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-1-2"  
+class="td11">each</td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-1-3"  
+class="td11">state</td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-1-4"  
+class="td11">has</td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-1-5"  
+class="td11">its</td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-1-6"  
+class="td11">own</td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-1-7"  
+class="td11">laws</td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-1-8"  
+class="td11">every</td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-1-9"  
+class="td11">country</td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-1-10"  
+class="td11">culture</td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-1-11"  
+class="td11"></td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-2-1"  
+class="td11"><!--l. 421--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>D</mi><mn>1</mn></mrow></msub 
+></math></td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-2-2"  
+class="td11">1    </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-2-3"  
+class="td11">1     </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-2-4"  
+class="td11">1   </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-2-5"  
+class="td11">1  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-2-6"  
+class="td11">1    </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-2-7"  
+class="td11">1    </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-2-8"  
+class="td11">0     </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-2-9"  
+class="td11">0         </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-2-10"  
+class="td11">0        </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-3-1"  
+class="td11"><!--l. 422--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>D</mi><mn>2</mn></mrow></msub 
+></math></td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-3-2"  
+class="td11">0    </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-3-3"  
+class="td11">0     </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-3-4"  
+class="td11">1   </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-3-5"  
+class="td11">1  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-3-6"  
+class="td11">1    </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-3-7"  
+class="td11">0    </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-3-8"  
+class="td11">1     </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-3-9"  
+class="td11">1         </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-3-10"  
+class="td11">1        </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-4-1"  
+class="td11"><!--l. 423--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-op">&#x2211;</mo>
+  <!--nolimits--></math></td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-4-2"  
+class="td11">1    </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-4-3"  
+class="td11">1     </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-4-4"  
+class="td11">2   </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-4-5"  
+class="td11">2  </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-4-6"  
+class="td11">2    </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-4-7"  
+class="td11">1    </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-4-8"  
+class="td11">1     </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-4-9"  
+class="td11">1         </td><td  style="text-align:left; white-space:nowrap;" id="TBL-2-4-10"  
+class="td11">1        </td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="text-align:left; white-space:nowrap;" id="TBL-2-5-1"  
+class="td11">                                                                  </td></tr></table>
+</div>
+                                                                  
+
+                                                                  
+   </div><hr class="endfloat" />
+   </div>
+<!--l. 429--><p class="indent" >   Given the example in Table <a 
+href="#x1-14002r1">1<!--tex4ht:ref: fig:bag_of_words --></a> one question is whether the 1s and 0s of the feature
+vectors are binary counts (1 if the word occurs in a particular document, 0 otherwise)
+or absolute counts (how often the word occurs in each document). The answer
+depends on which probabilistic model is used for the naive Bayes classifier: The
+<span 
+class="cmti-10">Multinomial </span>or <span 
+class="cmti-10">Bernoulli </span>model &#8212; more on the probabilistic models in Section <a 
+href="#x1-200003.3">3.3<!--tex4ht:ref: sec:bernoulli_bayes --></a>
+and Section <a 
+href="#x1-210003.4">3.4<!--tex4ht:ref: sec:multinomial_bayes --></a>.
+</p>
+   <h5 class="subsubsectionHead"><span class="titlemark">3.1.1   </span> <a 
+ id="x1-150003.1.1"></a>Tokenization</h5>
+<!--l. 435--><p class="noindent" ><span 
+class="cmti-10">Tokenization </span>describes the general process of breaking down a text corpus into
+individual elements that serve as input for various natural language processing
+algorithms. Usually, tokenization is accompanied by other optional processing steps,
+such as the removal of stop words and punctuation characters, stemming or
+lemmatizing, and the construction of <span 
+class="cmti-10">n-grams</span>. Below is an example of a simple but
+typical tokenization step that splits a sentence into individual words, removes
+punctuation, and converts all letters to lowercase.
+</p>
+   <div class="table">
+                                                                  
+
+                                                                  
+<!--l. 438--><p class="indent" >   <a 
+ id="x1-15001r2"></a></p><hr class="float" /><div class="float" 
+>
+                                                                  
+
+                                                                  
+ <div class="caption" 
+><span class="id">Table&#x00A0;2: </span><span  
+class="content">Example of tokenization.</span></div><!--tex4ht:label?: x1-15001r2 -->
+<div class="center" 
+>
+<!--l. 440--><p class="noindent" >
+</p>
+<div class="tabular"> <table id="TBL-3" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-3-1g"><col 
+id="TBL-3-1" /></colgroup><tr 
+class="hline"><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-1-"><td  style="text-align:center; white-space:nowrap;" id="TBL-3-1-1"  
+class="td11">A swimmer likes swimming, thus he swims.</td>
+</tr><tr 
+class="hline"><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-2-"><td  style="text-align:center; white-space:nowrap;" id="TBL-3-2-1"  
+class="td11">                                     </td></tr></table>
+</div>
+<!--l. 447--><p class="noindent" ><!--l. 447--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mi 
+>&#x2193;</mi></math>
+</p>
+<div class="tabular"> <table id="TBL-4" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-4-1g"><col 
+id="TBL-4-1" /></colgroup><colgroup id="TBL-4-2g"><col 
+id="TBL-4-2" /></colgroup><colgroup id="TBL-4-3g"><col 
+id="TBL-4-3" /></colgroup><colgroup id="TBL-4-4g"><col 
+id="TBL-4-4" /></colgroup><colgroup id="TBL-4-5g"><col 
+id="TBL-4-5" /></colgroup><colgroup id="TBL-4-6g"><col 
+id="TBL-4-6" /></colgroup><colgroup id="TBL-4-7g"><col 
+id="TBL-4-7" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-1-"><td  style="text-align:center; white-space:nowrap;" id="TBL-4-1-1"  
+class="td11">a</td><td  style="text-align:center; white-space:nowrap;" id="TBL-4-1-2"  
+class="td11">swimmer</td><td  style="text-align:center; white-space:nowrap;" id="TBL-4-1-3"  
+class="td11">likes</td><td  style="text-align:center; white-space:nowrap;" id="TBL-4-1-4"  
+class="td11">swimming</td><td  style="text-align:center; white-space:nowrap;" id="TBL-4-1-5"  
+class="td11">thus</td><td  style="text-align:center; white-space:nowrap;" id="TBL-4-1-6"  
+class="td11">he</td><td  style="text-align:center; white-space:nowrap;" id="TBL-4-1-7"  
+class="td11">swims</td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-2-"><td  style="text-align:center; white-space:nowrap;" id="TBL-4-2-1"  
+class="td11">  </td></tr></table>
+</div></div>
+                                                                  
+
+                                                                  
+   </div><hr class="endfloat" />
+   </div>
+   <h5 class="subsubsectionHead"><span class="titlemark">3.1.2   </span> <a 
+ id="x1-160003.1.2"></a>Stop Words</h5>
+<!--l. 463--><p class="noindent" ><span 
+class="cmti-10">Stop words </span>are words that are particularly common in a text corpus and thus
+considered as rather un-informative (e.g., words such as <span 
+class="cmti-10">so</span>, <span 
+class="cmti-10">and</span>, <span 
+class="cmti-10">or</span>, <span 
+class="cmti-10">the</span>, ...&#8221;). One
+approach to stop word removal is to search against a language-specific stop word
+dictionary. An alternative approach is to create a <span 
+class="cmti-10">stop list </span>by sorting all words in the
+entire text corpus by frequency. The stop list &#8212; after conversion into a <span 
+class="cmti-10">set</span>
+of non-redundant words &#8212; is then used to remove all those words from
+the input documents that are ranked among the top <span 
+class="cmti-10">n </span>words in this stop
+list.
+</p>
+   <div class="table">
+                                                                  
+
+                                                                  
+<!--l. 465--><p class="indent" >   <a 
+ id="x1-16001r3"></a></p><hr class="float" /><div class="float" 
+>
+                                                                  
+
+                                                                  
+ <div class="caption" 
+><span class="id">Table&#x00A0;3: </span><span  
+class="content">Example of stop word removal.</span></div><!--tex4ht:label?: x1-16001r3 -->
+<div class="center" 
+>
+<!--l. 467--><p class="noindent" >
+</p>
+<div class="tabular"> <table id="TBL-5" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-5-1g"><col 
+id="TBL-5-1" /></colgroup><tr 
+class="hline"><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-5-1-"><td  style="text-align:center; white-space:nowrap;" id="TBL-5-1-1"  
+class="td11">A swimmer likes swimming, thus he swims.</td>
+</tr><tr 
+class="hline"><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-5-2-"><td  style="text-align:center; white-space:nowrap;" id="TBL-5-2-1"  
+class="td11">                                     </td></tr></table>
+</div>
+<!--l. 473--><p class="noindent" ><!--l. 473--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mi 
+>&#x2193;</mi></math>
+</p>
+<div class="tabular"> <table id="TBL-6" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-6-1g"><col 
+id="TBL-6-1" /></colgroup><colgroup id="TBL-6-2g"><col 
+id="TBL-6-2" /></colgroup><colgroup id="TBL-6-3g"><col 
+id="TBL-6-3" /></colgroup><colgroup id="TBL-6-4g"><col 
+id="TBL-6-4" /></colgroup><colgroup id="TBL-6-5g"><col 
+id="TBL-6-5" /></colgroup><colgroup id="TBL-6-6g"><col 
+id="TBL-6-6" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-1-"><td  style="text-align:center; white-space:nowrap;" id="TBL-6-1-1"  
+class="td11">swimmer</td><td  style="text-align:center; white-space:nowrap;" id="TBL-6-1-2"  
+class="td11">likes</td><td  style="text-align:center; white-space:nowrap;" id="TBL-6-1-3"  
+class="td11">swimming</td><td  style="text-align:center; white-space:nowrap;" id="TBL-6-1-4"  
+class="td11">,</td><td  style="text-align:center; white-space:nowrap;" id="TBL-6-1-5"  
+class="td11">swims</td><td  style="text-align:center; white-space:nowrap;" id="TBL-6-1-6"  
+class="td11">.</td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-2-"><td  style="text-align:center; white-space:nowrap;" id="TBL-6-2-1"  
+class="td11">        </td></tr></table>
+</div></div>
+                                                                  
+
+                                                                  
+   </div><hr class="endfloat" />
+   </div>
+   <h5 class="subsubsectionHead"><span class="titlemark">3.1.3   </span> <a 
+ id="x1-170003.1.3"></a>Stemming and Lemmatization</h5>
+<!--l. 486--><p class="noindent" ><span 
+class="cmti-10">Stemming </span>describes the process of transforming a word into its root form. The
+original stemming algorithm was developed my Martin F. Porter in 1979 and is hence
+known as <span 
+class="cmti-10">Porter stemmer </span><span class="cite">&#x00A0;[<a 
+href="#Xporter1980algorithm">8</a>]</span>.
+</p>
+   <div class="table">
+                                                                  
+
+                                                                  
+<!--l. 488--><p class="indent" >   <a 
+ id="x1-17001r4"></a></p><hr class="float" /><div class="float" 
+>
+                                                                  
+
+                                                                  
+ <div class="caption" 
+><span class="id">Table&#x00A0;4: </span><span  
+class="content">Example of Porter stemming.</span></div><!--tex4ht:label?: x1-17001r4 -->
+<div class="center" 
+>
+<!--l. 490--><p class="noindent" >
+</p>
+<div class="tabular"> <table id="TBL-7" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-7-1g"><col 
+id="TBL-7-1" /></colgroup><tr 
+class="hline"><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-7-1-"><td  style="text-align:center; white-space:nowrap;" id="TBL-7-1-1"  
+class="td11">A swimmer likes swimming, thus he swims.</td>
+</tr><tr 
+class="hline"><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-7-2-"><td  style="text-align:center; white-space:nowrap;" id="TBL-7-2-1"  
+class="td11">                                     </td></tr></table>
+</div>
+<!--l. 496--><p class="noindent" ><!--l. 496--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mi 
+>&#x2193;</mi></math>
+</p>
+<div class="tabular"> <table id="TBL-8" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-8-1g"><col 
+id="TBL-8-1" /></colgroup><colgroup id="TBL-8-2g"><col 
+id="TBL-8-2" /></colgroup><colgroup id="TBL-8-3g"><col 
+id="TBL-8-3" /></colgroup><colgroup id="TBL-8-4g"><col 
+id="TBL-8-4" /></colgroup><colgroup id="TBL-8-5g"><col 
+id="TBL-8-5" /></colgroup><colgroup id="TBL-8-6g"><col 
+id="TBL-8-6" /></colgroup><colgroup id="TBL-8-7g"><col 
+id="TBL-8-7" /></colgroup><colgroup id="TBL-8-8g"><col 
+id="TBL-8-8" /></colgroup><colgroup id="TBL-8-9g"><col 
+id="TBL-8-9" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-8-1-"><td  style="text-align:center; white-space:nowrap;" id="TBL-8-1-1"  
+class="td11">a</td><td  style="text-align:center; white-space:nowrap;" id="TBL-8-1-2"  
+class="td11">swimmer</td><td  style="text-align:center; white-space:nowrap;" id="TBL-8-1-3"  
+class="td11">like</td><td  style="text-align:center; white-space:nowrap;" id="TBL-8-1-4"  
+class="td11">swim</td><td  style="text-align:center; white-space:nowrap;" id="TBL-8-1-5"  
+class="td11">,</td><td  style="text-align:center; white-space:nowrap;" id="TBL-8-1-6"  
+class="td11">thu</td><td  style="text-align:center; white-space:nowrap;" id="TBL-8-1-7"  
+class="td11">he</td><td  style="text-align:center; white-space:nowrap;" id="TBL-8-1-8"  
+class="td11">swim</td><td  style="text-align:center; white-space:nowrap;" id="TBL-8-1-9"  
+class="td11">.</td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-8-2-"><td  style="text-align:center; white-space:nowrap;" id="TBL-8-2-1"  
+class="td11">  </td></tr></table>
+</div></div>
+                                                                  
+
+                                                                  
+   </div><hr class="endfloat" />
+   </div>
+<!--l. 505--><p class="indent" >   Stemming can create non-real words, such as &#8221;thu&#8221; in the example above. In
+contrast to stemming, <span 
+class="cmti-10">lemmatization </span>aims to obtain the canonical (grammatically
+correct) forms of the words, the so-called <span 
+class="cmti-10">lemmas</span>. Lemmatization is computationally
+more difficult and expensive than stemming, and in practice, both stemming and
+lemmatization have little impact on the performance of text classification
+<span class="cite">&#x00A0;[<a 
+href="#Xtoman2006influence">9</a>]</span>.
+</p>
+   <div class="table">
+                                                                  
+
+                                                                  
+<!--l. 507--><p class="indent" >   <a 
+ id="x1-17002r5"></a></p><hr class="float" /><div class="float" 
+>
+                                                                  
+
+                                                                  
+ <div class="caption" 
+><span class="id">Table&#x00A0;5: </span><span  
+class="content">Example of lemmatization.</span></div><!--tex4ht:label?: x1-17002r5 -->
+<div class="center" 
+>
+<!--l. 509--><p class="noindent" >
+</p>
+<div class="tabular"> <table id="TBL-9" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-9-1g"><col 
+id="TBL-9-1" /></colgroup><tr 
+class="hline"><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-9-1-"><td  style="text-align:center; white-space:nowrap;" id="TBL-9-1-1"  
+class="td11">A swimmer likes swimming, thus he swims.</td>
+</tr><tr 
+class="hline"><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-9-2-"><td  style="text-align:center; white-space:nowrap;" id="TBL-9-2-1"  
+class="td11">                                     </td></tr></table>
+</div>
+<!--l. 515--><p class="noindent" ><!--l. 515--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" > <mi 
+>&#x2193;</mi></math>
+</p>
+<div class="tabular"> <table id="TBL-10" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-10-1g"><col 
+id="TBL-10-1" /></colgroup><colgroup id="TBL-10-2g"><col 
+id="TBL-10-2" /></colgroup><colgroup id="TBL-10-3g"><col 
+id="TBL-10-3" /></colgroup><colgroup id="TBL-10-4g"><col 
+id="TBL-10-4" /></colgroup><colgroup id="TBL-10-5g"><col 
+id="TBL-10-5" /></colgroup><colgroup id="TBL-10-6g"><col 
+id="TBL-10-6" /></colgroup><colgroup id="TBL-10-7g"><col 
+id="TBL-10-7" /></colgroup><colgroup id="TBL-10-8g"><col 
+id="TBL-10-8" /></colgroup><colgroup id="TBL-10-9g"><col 
+id="TBL-10-9" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-10-1-"><td  style="text-align:center; white-space:nowrap;" id="TBL-10-1-1"  
+class="td11">A</td><td  style="text-align:center; white-space:nowrap;" id="TBL-10-1-2"  
+class="td11">swimmer</td><td  style="text-align:center; white-space:nowrap;" id="TBL-10-1-3"  
+class="td11">like</td><td  style="text-align:center; white-space:nowrap;" id="TBL-10-1-4"  
+class="td11">swimming</td><td  style="text-align:center; white-space:nowrap;" id="TBL-10-1-5"  
+class="td11">,</td><td  style="text-align:center; white-space:nowrap;" id="TBL-10-1-6"  
+class="td11">thus</td><td  style="text-align:center; white-space:nowrap;" id="TBL-10-1-7"  
+class="td11">he</td><td  style="text-align:center; white-space:nowrap;" id="TBL-10-1-8"  
+class="td11">swim</td><td  style="text-align:center; white-space:nowrap;" id="TBL-10-1-9"  
+class="td11">.</td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-10-2-"><td  style="text-align:center; white-space:nowrap;" id="TBL-10-2-1"  
+class="td11">  </td></tr></table>
+</div></div>
+                                                                  
+
+                                                                  
+   </div><hr class="endfloat" />
+   </div>
+<!--l. 524--><p class="indent" >   The stemming and lemmatization examples were created by using the Python
+NLTK library (<a 
+href="http://www.nltk.org" >http://www.nltk.org</a>).
+</p>
+   <h5 class="subsubsectionHead"><span class="titlemark">3.1.4   </span> <a 
+ id="x1-180003.1.4"></a><span 
+class="cmti-10">N</span>-grams</h5>
+<!--l. 531--><p class="noindent" >In the <span 
+class="cmti-10">n-gram </span>model, a token can be defined as a sequence of <span 
+class="cmti-10">n </span>items. The simplest
+case is the so-called <span 
+class="cmti-10">unigram </span>(1-gram) where each word consists of exactly one word,
+letter, or symbol. All previous examples were unigrams so far. Choosing
+the optimal number <span 
+class="cmti-10">n </span>depends on the language as well as the particular
+application. For example, Andelka Zecevic found in his study that <span 
+class="cmti-10">n</span>-grams with
+<!--l. 531--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>3</mn> <mo 
+class="MathClass-rel">&#x2264;</mo> <mi 
+>n</mi> <mo 
+class="MathClass-rel">&#x2264;</mo> <mn>7</mn></math> were the best
+choice to determine authorship of Serbian text documents <span class="cite">&#x00A0;[<a 
+href="#Xzevcevic2011n">10</a>]</span>. In a different study, the
+<span 
+class="cmti-10">n</span>-grams of size <!--l. 531--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>4</mn> <mo 
+class="MathClass-rel">&#x2264;</mo> <mi 
+>n</mi> <mo 
+class="MathClass-rel">&#x2264;</mo> <mn>8</mn></math>
+yielded the highest accuracy in authorship determination of English text books <span class="cite">&#x00A0;[<a 
+href="#Xkevselj2003n">11</a>]</span>
+and Kanaris <span 
+class="cmti-10">e. al. </span>report that <span 
+class="cmti-10">n</span>-grams of size 3 and 4 yield good performances in
+anti-spam filtering of e-mail messages <span class="cite">&#x00A0;[<a 
+href="#Xkanaris2007words">12</a>]</span>.
+</p>
+     <ul class="itemize1">
+     <li class="itemize">unigram (1-gram):
+     <div class="tabular"> <table id="TBL-11" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-11-1g"><col 
+id="TBL-11-1" /></colgroup><colgroup id="TBL-11-2g"><col 
+id="TBL-11-2" /></colgroup><colgroup id="TBL-11-3g"><col 
+id="TBL-11-3" /></colgroup><colgroup id="TBL-11-4g"><col 
+id="TBL-11-4" /></colgroup><colgroup id="TBL-11-5g"><col 
+id="TBL-11-5" /></colgroup><colgroup id="TBL-11-6g"><col 
+id="TBL-11-6" /></colgroup><colgroup id="TBL-11-7g"><col 
+id="TBL-11-7" /></colgroup><colgroup id="TBL-11-8g"><col 
+id="TBL-11-8" /></colgroup><colgroup id="TBL-11-9g"><col 
+id="TBL-11-9" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-1-"><td  style="text-align:center; white-space:nowrap;" id="TBL-11-1-1"  
+class="td11">a</td><td  style="text-align:center; white-space:nowrap;" id="TBL-11-1-2"  
+class="td11">swimmer</td><td  style="text-align:center; white-space:nowrap;" id="TBL-11-1-3"  
+class="td11">likes</td><td  style="text-align:center; white-space:nowrap;" id="TBL-11-1-4"  
+class="td11">swimming</td><td  style="text-align:center; white-space:nowrap;" id="TBL-11-1-5"  
+class="td11">thus</td><td  style="text-align:center; white-space:nowrap;" id="TBL-11-1-6"  
+class="td11">he</td><td  style="text-align:center; white-space:nowrap;" id="TBL-11-1-7"  
+class="td11">swims</td></tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-2-"><td  style="text-align:center; white-space:nowrap;" id="TBL-11-2-1"  
+class="td11"> </td></tr></table>
+     </div>
+     </li>
+     <li class="itemize">bigram (2-gram):
+     <div class="tabular"> <table id="TBL-12" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-12-1g"><col 
+id="TBL-12-1" /></colgroup><colgroup id="TBL-12-2g"><col 
+id="TBL-12-2" /></colgroup><colgroup id="TBL-12-3g"><col 
+id="TBL-12-3" /></colgroup><colgroup id="TBL-12-4g"><col 
+id="TBL-12-4" /></colgroup><colgroup id="TBL-12-5g"><col 
+id="TBL-12-5" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-12-1-"><td  style="text-align:center; white-space:nowrap;" id="TBL-12-1-1"  
+class="td11">a swimmer</td><td  style="text-align:center; white-space:nowrap;" id="TBL-12-1-2"  
+class="td11">swimmer likes</td><td  style="text-align:center; white-space:nowrap;" id="TBL-12-1-3"  
+class="td11">likes swimming</td><td  style="text-align:center; white-space:nowrap;" id="TBL-12-1-4"  
+class="td11">swimming thus</td><td  style="text-align:center; white-space:nowrap;" id="TBL-12-1-5"  
+class="td11">...</td></tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-12-2-"><td  style="text-align:center; white-space:nowrap;" id="TBL-12-2-1"  
+class="td11"> </td></tr></table>
+     </div>
+     </li>
+     <li class="itemize">trigram (3-gram):
+     <div class="tabular"> <table id="TBL-13" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-13-1g"><col 
+id="TBL-13-1" /></colgroup><colgroup id="TBL-13-2g"><col 
+id="TBL-13-2" /></colgroup><colgroup id="TBL-13-3g"><col 
+id="TBL-13-3" /></colgroup><colgroup id="TBL-13-4g"><col 
+id="TBL-13-4" /></colgroup><colgroup id="TBL-13-5g"><col 
+id="TBL-13-5" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-13-1-"><td  style="text-align:center; white-space:nowrap;" id="TBL-13-1-1"  
+class="td11">a swimmer likes</td><td  style="text-align:center; white-space:nowrap;" id="TBL-13-1-2"  
+class="td11">swimmer likes swimming</td><td  style="text-align:center; white-space:nowrap;" id="TBL-13-1-3"  
+class="td11">likes swimming thus</td><td  style="text-align:center; white-space:nowrap;" id="TBL-13-1-4"  
+class="td11">...</td></tr><tr 
+class="hline"><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-13-2-"><td  style="text-align:center; white-space:nowrap;" id="TBL-13-2-1"  
+class="td11"> </td></tr></table>
+     </div>
+     </li></ul>
+<!--l. 563--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.2   </span> <a 
+ id="x1-190003.2"></a>The Decision Rule for Spam Classification</h4>
+<!--l. 566--><p class="noindent" >In context of spam classification the decision rule of a naive Bayes classifier based on
+the posterior probabilities can be expressed as
+                                                                  
+
+                                                                  
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-19001r31"></a>
+<!--l. 568--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mstyle 
+class="text"><mtext  >if&#x00A0;</mtext></mstyle><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mi 
+>&#x03C9;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >spam</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">&#x2265;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mi 
+>&#x03C9;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >ham</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow><mstyle 
+class="text"><mtext  >&#x00A0;classify&#x00A0;as&#x00A0;spam,&#x00A0;</mtext></mstyle></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mstyle 
+class="text"><mtext  >else&#x00A0;classify&#x00A0;as&#x00A0;ham.&#x00A0;</mtext></mstyle></mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(31)</td></tr></table>
+<!--l. 576--><p class="indent" >   As described in Section <a 
+href="#x1-50002.2">2.2<!--tex4ht:ref: sec:posterior_probabilities_1 --></a> the posterior probability is the product of the
+class-conditional probability and the prior probability; the evidence term in the
+denominator can be dropped since it is constant for both classes.
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-19002r32"></a>
+<!--l. 579--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mi 
+>&#x03C9;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >spam</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x03C9;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >spam</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >spam</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow></mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mi 
+>&#x03C9;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >ham</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x03C9;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >ham</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext  >ham</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow></mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(32)</td></tr></table>
+<!--l. 586--><p class="indent" >   The prior probabilities can be obtained via the maximum-likelihood estimate
+based on the frequencies of spam and ham messages in the training dataset:
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-19003r33"></a>
+                                                                  
+
+                                                                  
+<!--l. 588--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+   <mtable 
+class="equation"><mtr><mtd>
+   <mtable  
+columnalign="right left" class="split">
+<mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mover 
+accent="true"><mrow 
+><mi 
+>P</mi></mrow><mo 
+class="MathClass-op">^</mo></mover><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x03C9;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >spam</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mstyle 
+class="text"><mtext  >#&#x00A0;of&#x00A0;spam&#x00A0;msg.</mtext></mstyle></mrow> 
+  <mrow 
+><mstyle 
+class="text"><mtext  >#&#x00A0;of&#x00A0;all&#x00A0;msg.</mtext></mstyle></mrow></mfrac> </mtd>
+</mtr><mtr class="split-mtr"><mtd 
+class="split-mtd"> </mtd><mtd 
+class="split-mtd"><mover 
+accent="true"><mrow 
+><mi 
+>P</mi></mrow><mo 
+class="MathClass-op">^</mo></mover><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>&#x03C9;</mi> <mo 
+class="MathClass-rel">=</mo> <mstyle 
+class="text"><mtext  >ham</mtext></mstyle></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mstyle 
+class="text"><mtext  >#&#x00A0;of&#x00A0;ham&#x00A0;msg.</mtext></mstyle></mrow> 
+ <mrow 
+><mstyle 
+class="text"><mtext  >#&#x00A0;of&#x00A0;all&#x00A0;msg.</mtext></mstyle></mrow></mfrac> </mtd>
+   </mtr></mtable>                                                               </mtd><mtd>
+   </mtd></mtr></mtable>
+</math></td><td class="eq-no">(33)</td></tr></table>
+<!--l. 595--><p class="indent" >   Assuming that the words in every document are conditionally independent
+(according to the <span 
+class="cmti-10">naive </span>assumption), two different models can be used to compute
+the class-conditional probabilities: The <span 
+class="cmti-10">Multi-variate Bernoulli </span>model (Section <a 
+href="#x1-200003.3">3.3<!--tex4ht:ref: sec:bernoulli_bayes --></a>)
+and the <span 
+class="cmti-10">Multinomial </span>model (Section <a 
+href="#x1-210003.4">3.4<!--tex4ht:ref: sec:multinomial_bayes --></a>).
+</p><!--l. 599--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.3   </span> <a 
+ id="x1-200003.3"></a>Mutli-variate Bernoulli Naive Bayes</h4>
+<!--l. 602--><p class="noindent" >The <span 
+class="cmti-10">Multi-variate Bernoulli </span>model is based on binarydata: Every token in the feature
+vector of a document is associated with the value 1 or 0. The feature vector has
+<!--l. 602--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi></math> dimensions
+where <!--l. 602--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi></math>
+is the number of words in the whole vocabulary (in Section <a 
+href="#x1-140003.1">3.1<!--tex4ht:ref: sec:the_bag_of_words_model --></a>); the value 1 means
+that the word occurs in the particular document, and 0 means that the word does
+not occur in this document. Empirical studies showed that the mutli-variate
+Bernoulli model is inferior to the multinomial Bayes model, and the latter has been
+shown to reduce the error by 27% on average <span class="cite">&#x00A0;[<a 
+href="#Xmccallum1998comparison">13</a>]</span>. The Bernoulli trials can be
+written as
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-20001r34"></a>
+                                                                  
+
+                                                                  
+<!--l. 604--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+       <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> &#x220F;</mo>
+  </mrow><mrow 
+><mi 
+>i</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>m</mi></mrow></munderover 
+><mi 
+>P</mi><msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mi 
+>b</mi></mrow></msup 
+> <mo 
+class="MathClass-bin">&#x22C5;</mo> <msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>1</mn> <mo 
+class="MathClass-bin">-</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>1</mn><mo 
+class="MathClass-bin">-</mo><mi 
+>b</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></msup 
+><mspace width="1em" class="quad"/><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>b</mi> <mo 
+class="MathClass-rel">&#x2208;</mo> <mn>0</mn><mo 
+class="MathClass-punc">,</mo><mn>1</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(34)</td></tr></table>
+<!--l. 607--><p class="indent" >   Let <!--l. 607--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mover 
+accent="true"><mrow 
+><mi 
+>P</mi></mrow><mo 
+class="MathClass-op">^</mo></mover><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+be the maximum-likelihood estimate that a particular word (or token)
+<!--l. 607--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math> occurs in
+class <!--l. 607--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>.
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-20002r35"></a>
+<!--l. 609--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                       <mover 
+accent="true"><mrow 
+><mi 
+>P</mi></mrow><mo 
+class="MathClass-op">^</mo></mover><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>d</mi><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>x</mi><mi 
+>i</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>y</mi></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mn>1</mn></mrow> 
+ <mrow 
+><mi 
+>d</mi><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>y</mi></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn></mrow></mfrac>
+</math></td><td class="eq-no">(35)</td></tr></table>
+<!--l. 611--><p class="indent" >   where
+</p>
+     <ul class="itemize1">
+     <li class="itemize"><!--l. 614--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>x</mi><mi 
+>i</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>y</mi></mrow></msub 
+></math>
+     is the number of documents in the training dataset that contain the feature
+     <!--l. 614--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>
+     and belong to class <!--l. 614--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>.
+     </li>
+     <li class="itemize"><!--l. 615--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>x</mi><mi 
+>i</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>y</mi></mrow></msub 
+></math>
+     is the number of documents in the training dataset that contain <!--l. 615--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>
+     and belong to class <!--l. 615--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>.
+     </li>
+     <li class="itemize"><!--l. 616--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>y</mi></mrow></msub 
+></math>
+     is the number of documents in the training dataset that belong to class
+     <!--l. 616--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>.
+     </li>
+     <li class="itemize">+1 and +2 are the parameters of <span 
+class="cmti-10">Laplace smoothening </span>(Section <a 
+href="#x1-120002.6.3">2.6.3<!--tex4ht:ref: sec:additive_smoothening --></a>).</li></ul>
+                                                                  
+
+                                                                  
+<!--l. 620--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.4   </span> <a 
+ id="x1-210003.4"></a>Multinomial Naive Bayes</h4>
+<!--l. 623--><p class="noindent" >
+</p>
+   <h5 class="subsubsectionHead"><span class="titlemark">3.4.1   </span> <a 
+ id="x1-220003.4.1"></a>Term Frequency</h5>
+<!--l. 626--><p class="noindent" >A alternative approach to characterize text documents &#8212; rather than binary values
+&#8212; is the <span 
+class="cmti-10">term frequency (tf(t, d))</span>. The term frequency is typically defined as the
+number of times a given term <span 
+class="cmti-10">t </span>(i.e., word or token) appears in a document <span 
+class="cmti-10">d </span>(this
+approach is sometimes also called <span 
+class="cmti-10">raw frequency</span>). In practice, the term frequency
+is often normalized by dividing the raw term frequency by the document
+length.
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-22001r36"></a>
+<!--l. 628--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                 <mstyle 
+class="text"><mtext  >normalized&#x00A0;term&#x00A0;frequency</mtext></mstyle> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>t</mi><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow> 
+   <mrow 
+><msub><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mi 
+>d</mi></mrow></msub 
+></mrow></mfrac>
+</math></td><td class="eq-no">(36)</td></tr></table>
+<!--l. 630--><p class="indent" >   where
+</p>
+     <ul class="itemize1">
+     <li class="itemize"><!--l. 633--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>t</mi><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>:
+     Raw term frequency (the count of term <!--l. 633--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>t</mi></math>
+     in document <!--l. 633--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi></math>).
+     </li>
+     <li class="itemize"><!--l. 634--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mi 
+>d</mi></mrow></msub 
+></math>:
+     The total number of terms in document <!--l. 634--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi></math>.</li></ul>
+<!--l. 637--><p class="indent" >   The term frequencies can then be used to compute the maximum-likelihood
+estimate based on the training data to estimate the class-conditional probabilities in
+the multinomial model:
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-22002r37"></a>
+                                                                  
+
+                                                                  
+<!--l. 639--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                  <mover 
+accent="true"><mrow 
+><mi 
+>P</mi></mrow><mo 
+class="MathClass-op">^</mo></mover><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mo mathsize="big" 
+>&#x2211;</mo>
+  <mi 
+>t</mi><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi> <mo 
+class="MathClass-rel">&#x2208;</mo> <msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">+</mo> <mi 
+>&#x03B1;</mi></mrow> 
+  <mrow 
+><mo mathsize="big" 
+>&#x2211;</mo>
+  <msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>d</mi><mo 
+class="MathClass-rel">&#x2208;</mo><mi 
+>&#x03C9;</mi><mi 
+>j</mi></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mi 
+>&#x03B1;</mi> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>V</mi> </mrow></mfrac>
+</math></td><td class="eq-no">(37)</td></tr></table>
+<!--l. 641--><p class="indent" >   where
+</p>
+     <ul class="itemize1">
+     <li class="itemize"><!--l. 644--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>:
+     A word from the feature vector <!--l. 644--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></math>
+     of a particular sample.
+     </li>
+     <li class="itemize"><!--l. 645--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-op">&#x2211;</mo>
+  <!--nolimits--><mi 
+>t</mi><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi> <mo 
+class="MathClass-rel">&#x2208;</mo> <msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>:
+     The sum of raw term frequencies of word <!--l. 645--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>
+     from all documents in the training sample that belong to class <!--l. 645--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>.
+     </li>
+     <li class="itemize"><!--l. 646--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-op">&#x2211;</mo>
+  <!--nolimits--><msub><mrow 
+><mi 
+>N</mi></mrow><mrow 
+><mi 
+>d</mi><mo 
+class="MathClass-rel">&#x2208;</mo><mi 
+>&#x03C9;</mi><mi 
+>j</mi></mrow></msub 
+></math>:
+     The sum of all term frequencies in the training dataset for class <!--l. 646--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>.
+     </li>
+     <li class="itemize"><!--l. 647--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B1;</mi></math>:
+     An addititive smoothening parameter (<!--l. 647--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03B1;</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn></math>
+     for Laplace smoothening).
+     </li>
+     <li class="itemize"><!--l. 648--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>V</mi> </math>:
+     The size of the vocabulary (number of different words in the training set).</li></ul>
+<!--l. 651--><p class="indent" >   The class-conditional probability of encountering the text
+<!--l. 651--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></math> can
+be calculated as the product from the likelihoods of the individual words (under the
+<span 
+class="cmti-10">naive </span>assumption of conditional independence).
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-22003r38"></a>
+                                                                  
+
+                                                                  
+<!--l. 653--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+     <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo><mo 
+class="MathClass-op">&#x2026;</mo> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> &#x220F;</mo>
+  </mrow><mrow 
+><mi 
+>i</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>m</mi></mrow></munderover 
+><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(38)</td></tr></table>
+<!--l. 657--><p class="noindent" >
+</p>
+   <h5 class="subsubsectionHead"><span class="titlemark">3.4.2   </span> <a 
+ id="x1-230003.4.2"></a>Term Frequency - Inverse Document Frequency (Tf-idf)</h5>
+<!--l. 660--><p class="noindent" >The <span 
+class="cmti-10">term frequency - inverse document frequency (Tf-idf) </span>is another alternative for
+characterizing text documents. It can be understood as a weighted <span 
+class="cmti-10">term frequency</span>,
+which is especially useful if stop words have not been removed from the text corpus.
+The Tf-idf approach assumes that the importance of a word is inversely proportional
+to how often it occurs across all documents. Although Tf-idf is most commonly used
+to rank documents by relevance in different text mining tasks, such as page
+ranking by search engines, it can also be applied to text classification via naive
+Bayes.
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-23001r39"></a>
+<!--l. 662--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                       <mstyle 
+class="text"><mtext  >Tf-idf</mtext></mstyle> <mo 
+class="MathClass-rel">=</mo> <mi 
+>t</mi><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>d</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x22C5;</mo> <mi 
+>i</mi><mi 
+>d</mi><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(39)</td></tr></table>
+<!--l. 664--><p class="indent" >   Let <!--l. 664--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>t</mi><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
+>n</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>d</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> be the normalized
+term frequency, and <!--l. 664--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>i</mi><mi 
+>d</mi><mi 
+>f</mi></math>,
+the inverse document frequency, which can be calculated as follows
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-23002r40"></a>
+                                                                  
+
+                                                                  
+<!--l. 666--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                         <mi 
+>i</mi><mi 
+>d</mi><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><mo class="qopname"> log</mo><!--nolimits--><mstyle mathsize="2.45em"><mfenced separators="" 
+open="("  close="" ><mrow></mrow></mfenced></mstyle>  <mfrac><mrow 
+><msub><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mi 
+>d</mi></mrow></msub 
+></mrow> 
+<mrow 
+><msub><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mi 
+>d</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow></mfrac><mstyle mathsize="2.45em"><mfenced separators="" 
+open=")"  close="" ><mrow></mrow></mfenced></mstyle><mo 
+class="MathClass-punc">,</mo>
+</math></td><td class="eq-no">(40)</td></tr></table>
+<!--l. 668--><p class="indent" >   where
+</p>
+     <ul class="itemize1">
+     <li class="itemize"><!--l. 671--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mi 
+>d</mi></mrow></msub 
+></math>:
+     The total number of documents.
+     </li>
+     <li class="itemize"><!--l. 672--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>n</mi></mrow><mrow 
+><mi 
+>d</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>:
+     The number of documents that contain the term <!--l. 672--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>t</mi></math>.</li></ul>
+<!--l. 675--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
+ id="x1-240004"></a>Variants of the Naive Bayes Model</h3>
+<!--l. 678--><p class="noindent" >So far, we have seen two different models for categorical data, namely, the
+multi-variate Bernoulli (Section <a 
+href="#x1-200003.3">3.3<!--tex4ht:ref: sec:bernoulli_bayes --></a>) and multinomial (Section <a 
+href="#x1-210003.4">3.4<!--tex4ht:ref: sec:multinomial_bayes --></a>) models &#8212; and
+two different approaches for the estimation of class-conditional probabilities.
+In Section <a 
+href="#x1-250004.1">4.1<!--tex4ht:ref: sec:continuous_variables --></a>, we will take a brief look at a third model: <span 
+class="cmti-10">Gaussian naive</span>
+<span 
+class="cmti-10">Bayes</span>.
+</p><!--l. 682--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">4.1   </span> <a 
+ id="x1-250004.1"></a>Continuous Variables</h4>
+<!--l. 685--><p class="noindent" >Text classification is a typical case of categorical data, however, naive Bayes can also
+be used on continuous data. The <span 
+class="cmti-10">Iris </span>flower data set would be a simple example for
+a supervised classification task with continuous features: The Iris dataset
+contains widths and lengths of petals and sepals measured in centimeters.
+One strategy for dealing with continuous data in naive Bayes classification
+would be to discretize the features and form distinct categories or to use a
+Gaussian kernel to calculate the class-conditional probabilities. Under the
+assumption that the probability distributions of the features follow a normal
+(Gaussian) distribution, the Gaussian naive Bayes model can be written as
+follows
+                                                                  
+
+                                                                  
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-25001r41"></a>
+<!--l. 687--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi><mi 
+>k</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><mi 
+>&#x03C9;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo>      <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><msqrt><mrow><mn>2</mn><mi 
+>&#x03C0;</mi><msubsup><mrow 
+><mi 
+>&#x03C3;</mi></mrow><mrow 
+><mi 
+>&#x03C9;</mi> </mrow> <mrow 
+>  <mn>2</mn></mrow></msubsup 
+></mrow></msqrt></mrow></mfrac><mo class="qopname"> exp</mo><!--nolimits--> <mfenced separators="" 
+open="("  close=")" ><mrow><mo 
+class="MathClass-bin">-</mo><mfrac><mrow 
+><msup><mrow 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi><mi 
+>k</mi></mrow></msub 
+> <mo 
+class="MathClass-bin">-</mo> <msub><mrow 
+><mi 
+>&#x03BC;</mi></mrow><mrow 
+><mi 
+>&#x03C9;</mi></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow>
+     <mrow 
+><mn>2</mn><msubsup><mrow 
+><mi 
+>&#x03C3;</mi></mrow><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow></mfrac>      </mrow></mfenced> <mo 
+class="MathClass-punc">,</mo>
+</math></td><td class="eq-no">(41)</td></tr></table>
+<!--l. 689--><p class="indent" >   where <!--l. 689--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03BC;</mi></math> (the
+sample mean) and <!--l. 689--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>&#x03C3;</mi></math>
+(the standard deviation) are the parameters that are to be estimated from the
+training data. Under the naive Bayes assumption of conditional independence, the
+class-conditional probability can than be computed as the product of the individual
+probabilities:
+</p>
+   <table class="equation"><tr><td> <a 
+ id="x1-25002r42"></a>
+<!--l. 692--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                     <mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><mi 
+>&#x03C9;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> &#x220F;</mo>
+  </mrow><mrow 
+><mi 
+>k</mi><mo 
+class="MathClass-rel">=</mo><mn>1</mn></mrow><mrow 
+><mi 
+>d</mi></mrow></munderover 
+><mi 
+>P</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msub><mrow 
+><mstyle 
+class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></mrow><mrow 
+>
+<mi 
+>i</mi><mi 
+>k</mi></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2223;</mo><mi 
+>&#x03C9;</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(42)</td></tr></table>
+<!--l. 694--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">4.2   </span> <a 
+ id="x1-260004.2"></a>Eager and Lazy Learning Algorithms</h4>
+<!--l. 697--><p class="noindent" >Being an <span 
+class="cmti-10">eager learner</span>, naive Bayes classifiers are known to be relatively fast in
+classifying new instances. Eeager learners are learning algorithms that learn a model
+from a training dataset as soon as the data becomes available. Once the model is
+learned, the training data does not have to be re-evaluated in order to make a new
+prediction. In case of eager learners, the computationally most expensive step is the
+model building step whereas the classification of new instances is relatively
+fast.
+                                                                  
+
+                                                                  
+</p><!--l. 699--><p class="indent" >   <span 
+class="cmti-10">Lazy learners</span>, however, memorize and re-evaluate the training dataset for
+predicting the class label of new instances. The advantage of <span 
+class="cmti-10">lazy learning </span>is that the
+model building (training) phase is relatively fast. On the other hand, the
+actual prediction is typically slower compared to eager learners due to the
+re-evaluation of the training data. Another disadvantage of lazy learners
+is that the training data has to be retained, which can also be expensive
+in terms of storage space. A typical example of a lazy learner would be a
+<span 
+class="cmti-10">k-nearest neighbor </span>algorithm: Every time a new instance is encountered,
+the algorithm would evaluate the <span 
+class="cmti-10">k</span>-nearest neighbors in order to decide
+upon a class label for the new instance, e.g., via the <span 
+class="cmti-10">majority rule </span>(i.e., the
+assignment of the class label that occurs most frequently amongst the <span 
+class="cmti-10">k</span>-nearest
+neighbors).
+</p><!--l. 1--><p class="noindent" >
+</p>
+   <h3 class="likesectionHead"><a 
+ id="x1-270004.2"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+    </p><div class="thebibliography">
+    <p class="bibitem" ><span class="biblabel">
+  [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xrish2001empirical"></a>Irina Rish.  An empirical study of the naive bayes classifier.  In <span 
+class="cmti-10">IJCAI</span>
+    <span 
+class="cmti-10">2001 workshop on empirical methods in artificial intelligence</span>, pages 41&#8211;46,
+    2001.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xdomingos1997optimality"></a>Pedro Domingos and Michael Pazzani. On the optimality of the simple
+    bayesian classifier under zero-one loss. <span 
+class="cmti-10">Machine learning</span>, 29(2-3):103&#8211;130,
+    1997.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xkazmierska2008application"></a>Joanna  Kazmierska  and  Julian  Malicki.   Application  of  the  naïve
+    bayesian  classifier  to  optimize  treatment  decisions.    <span 
+class="cmti-10">Radiotherapy  and</span>
+    <span 
+class="cmti-10">Oncology</span>, 86(2):211&#8211;216, 2008.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xwang2007naive"></a>Qiong Wang, George&#x00A0;M Garrity, James&#x00A0;M Tiedje, and James&#x00A0;R Cole.
+    Naive  bayesian  classifier  for  rapid  assignment  of  rrna  sequences  into
+    the  new  bacterial  taxonomy.   <span 
+class="cmti-10">Applied  and  environmental  microbiology</span>,
+    73(16):5261&#8211;5267, 2007.
+    </p>
+                                                                  
+
+                                                                  
+    <p class="bibitem" ><span class="biblabel">
+  [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xsahami1998bayesian"></a>Mehran Sahami, Susan Dumais, David Heckerman, and Eric Horvitz.
+    A  bayesian  approach  to  filtering  junk  e-mail.    In  <span 
+class="cmti-10">Learning  for  Text</span>
+    <span 
+class="cmti-10">Categorization: Papers from the 1998 workshop</span>, volume&#x00A0;62, pages 98&#8211;105,
+    1998.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xzhang2004optimality"></a>Harry Zhang. The optimality of naive bayes. <span 
+class="cmti-10">AA</span>, 1(2):3, 2004.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [7]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xyao2013rotation"></a>Cong Yao, Xin Zhang, Xiang Bai, Wenyu Liu, Yi&#x00A0;Ma, and Zhuowen
+    Tu. Rotation-invariant features for multi-oriented text detection in natural
+    images. <span 
+class="cmti-10">PloS one</span>, 8(8):e70173, 2013.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [8]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xporter1980algorithm"></a>Martin&#x00A0;F Porter. An algorithm for suffix stripping. <span 
+class="cmti-10">Program: electronic</span>
+    <span 
+class="cmti-10">library and information systems</span>, 14(3):130&#8211;137, 1980.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xtoman2006influence"></a>Michal  Toman,  Roman  Tesar,  and  Karel  Jezek.   Influence  of  word
+    normalization on text classification. <span 
+class="cmti-10">Proceedings of InSciT</span>, pages 354&#8211;358,
+    2006.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [10]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xzevcevic2011n"></a>Andelka  Zecevic.     N-gram  based  text  classification  according  to
+    authorship. In <span 
+class="cmti-10">Student Research Workshop</span>, pages 145&#8211;149, 2011.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [11]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xkevselj2003n"></a>Vlado  Ke&#353;elj,  Fuchun  Peng,  Nick  Cercone,  and  Calvin  Thomas.
+    N-gram-based author profiles for authorship attribution. In <span 
+class="cmti-10">Proceedings of</span>
+    <span 
+class="cmti-10">the conference pacific association for computational linguistics, PACLING</span>,
+    volume&#x00A0;3, pages 255&#8211;264, 2003.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [12]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xkanaris2007words"></a>Ioannis  Kanaris,  Konstantinos  Kanaris,  Ioannis  Houvardas,  and
+    Efstathios  Stamatatos.   Words  versus  character  n-grams  for  anti-spam
+    filtering.       <span 
+class="cmti-10">International   Journal   on   Artificial   Intelligence   Tools</span>,
+    16(06):1047&#8211;1067, 2007.
+                                                                  
+
+                                                                  
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [13]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xmccallum1998comparison"></a>Andrew McCallum, Kamal Nigam, et&#x00A0;al. A comparison of event models
+    for naive bayes text classification.  In <span 
+class="cmti-10">AAAI-98 workshop on learning for</span>
+    <span 
+class="cmti-10">text categorization</span>, volume 752, pages 41&#8211;48. Citeseer, 1998.
+</p>
+    </div>
+    
+</body> 
+</html>
+                                                                  
+
+
