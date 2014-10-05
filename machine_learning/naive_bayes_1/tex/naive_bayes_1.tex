@@ -225,9 +225,9 @@ After defining the \emph{class-conditional probability} and \emph{prior probabil
 The evidence $P(\textbf x)$ can be understood as the probability of encountering a particular pattern $\textbf x$ independent from the class label. Given the more formal definition of posterior probability
 \begin{equation} P(\omega_j \mid \textbf x_i) = \frac{P(\textbf x_i \mid \omega_j) \cdot P(\omega_j)}{P(\textbf x_i)}, \end{equation}
 
-the evidence can be calculated as follows ($\omega_j^C$ stands for "complement" and basically translate to "\textbf{not} class $\omega_j$." ):
+the evidence can be calculated as follows ($\omega_j^C$ stands for "complement" and basically translates to "\textbf{not} class $\omega_j$." ):
 
-\begin{equation}P(\textbf x_i) = P(\textbf x_i \mid \omega_j) \cdot P(\omega_j) \cdot P(\textbf x_i \mid \omega_j^C) \cdot P(\omega_j^C)\end{equation}
+\begin{equation}P(\textbf x_i) = P(\textbf x_i \mid \omega_j) \cdot P(\omega_j) + P(\textbf x_i \mid \omega_j^C) \cdot P(\omega_j^C)\end{equation}
 
 
 
