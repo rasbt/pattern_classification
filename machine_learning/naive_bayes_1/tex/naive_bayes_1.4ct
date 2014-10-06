@@ -15,7 +15,7 @@
 \doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-9003r5}{}{\ignorespaces A new sample from class $+$ and the features $\textbf  {x} = \text  {[blue, square]}$ that is to be classified using the training data in Figure \o:ref {fig:toy_dataset}.}}{figure}\relax 
 \doTocEntry\tocsubsubsection{2.6.1}{\csname a:TocLink\endcsname{1}{x1-100002.6.1}{QQ2-1-15}{Maximum-Likelihood Estimates}}{29}\relax 
 \doTocEntry\tocsubsubsection{2.6.2}{\csname a:TocLink\endcsname{1}{x1-110002.6.2}{QQ2-1-16}{Classification}}{31}\relax 
-\doTocEntry\tocsubsubsection{2.6.3}{\csname a:TocLink\endcsname{1}{x1-120002.6.3}{QQ2-1-17}{Additive Smoothening}}{32}\relax 
+\doTocEntry\tocsubsubsection{2.6.3}{\csname a:TocLink\endcsname{1}{x1-120002.6.3}{QQ2-1-17}{Additive Smoothing}}{32}\relax 
 \doTocEntry\toclof{6}{\csname a:TocLink\endcsname{1}{x1-12001r6}{}{\ignorespaces A new sample from class $+$ and the features $\textbf  {x} = \text  {[yellow, square]}$ that is to be classified using the training data in Figure \o:ref {fig:toy_dataset}.}}{figure}\relax 
 \doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-130003}{QQ2-1-19}{Naive Bayes and Text Classification}}{36}\relax 
 \doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-140003.1}{QQ2-1-20}{The Bag of Words Model}}{36}\relax 
@@ -29,12 +29,13 @@
 \doTocEntry\toclot{5}{\csname a:TocLink\endcsname{1}{x1-17002r5}{}{\ignorespaces Example of lemmatization.}}{table}\relax 
 \doTocEntry\tocsubsubsection{3.1.4}{\csname a:TocLink\endcsname{1}{x1-180003.1.4}{QQ2-1-29}{\emph  {N}-grams}}{53}\relax 
 \doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-190003.2}{QQ2-1-30}{The Decision Rule for Spam Classification}}{53}\relax 
-\doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-200003.3}{QQ2-1-31}{Mutli-variate Bernoulli Naive Bayes}}{55}\relax 
+\doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-200003.3}{QQ2-1-31}{Multi-variate Bernoulli Naive Bayes}}{55}\relax 
 \doTocEntry\tocsubsection{3.4}{\csname a:TocLink\endcsname{1}{x1-210003.4}{QQ2-1-32}{Multinomial Naive Bayes}}{57}\relax 
 \doTocEntry\tocsubsubsection{3.4.1}{\csname a:TocLink\endcsname{1}{x1-220003.4.1}{QQ2-1-33}{Term Frequency}}{57}\relax 
 \doTocEntry\tocsubsubsection{3.4.2}{\csname a:TocLink\endcsname{1}{x1-230003.4.2}{QQ2-1-34}{Term Frequency - Inverse Document Frequency (Tf-idf)}}{59}\relax 
-\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-240004}{QQ2-1-35}{Variants of the Naive Bayes Model}}{60}\relax 
-\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-250004.1}{QQ2-1-36}{Continuous Variables}}{60}\relax 
-\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-260004.2}{QQ2-1-37}{Eager and Lazy Learning Algorithms}}{61}\relax 
-\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-270004.2}{QQ2-1-38}{References}}{62}\relax 
+\doTocEntry\tocsubsubsection{3.4.3}{\csname a:TocLink\endcsname{1}{x1-240003.4.3}{QQ2-1-35}{Performances of the Multi-variate Bernoulli and Multinomial Model}}{60}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-250004}{QQ2-1-36}{Variants of the Naive Bayes Model}}{60}\relax 
+\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-260004.1}{QQ2-1-37}{Continuous Variables}}{61}\relax 
+\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-270004.2}{QQ2-1-38}{Eager and Lazy Learning Algorithms}}{62}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-280004.2}{QQ2-1-39}{References}}{62}\relax 
 \par 

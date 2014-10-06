@@ -77,4 +77,9 @@ Andrew McCallum, Kamal Nigam, et~al.
 \newblock In {\em AAAI-98 workshop on learning for text categorization}, volume
   752, pages 41--48. Citeseer, 1998.
 
+\bibitem{rudner2002automated}
+Lawrence~M Rudner and Tahung Liang.
+\newblock Automated essay scoring using bayes' theorem.
+\newblock {\em The Journal of Technology, Learning and Assessment}, 1(2), 2002.
+
 \end{thebibliography}

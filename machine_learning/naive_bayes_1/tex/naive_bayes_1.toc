@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {2.6}Multinomial Naive Bayes - A Toy Example}{9}{subsection.2.6}
 \contentsline {subsubsection}{\numberline {2.6.1}Maximum-Likelihood Estimates}{10}{subsubsection.2.6.1}
 \contentsline {subsubsection}{\numberline {2.6.2}Classification}{11}{subsubsection.2.6.2}
-\contentsline {subsubsection}{\numberline {2.6.3}Additive Smoothening}{11}{subsubsection.2.6.3}
+\contentsline {subsubsection}{\numberline {2.6.3}Additive Smoothing}{11}{subsubsection.2.6.3}
 \contentsline {section}{\numberline {3}Naive Bayes and Text Classification}{12}{section.3}
 \contentsline {subsection}{\numberline {3.1}The Bag of Words Model}{12}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Tokenization}{13}{subsubsection.3.1.1}
@@ -16,10 +16,11 @@
 \contentsline {subsubsection}{\numberline {3.1.3}Stemming and Lemmatization}{14}{subsubsection.3.1.3}
 \contentsline {subsubsection}{\numberline {3.1.4}\emph {N}-grams}{15}{subsubsection.3.1.4}
 \contentsline {subsection}{\numberline {3.2}The Decision Rule for Spam Classification}{15}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Mutli-variate Bernoulli Naive Bayes}{16}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.3}Multi-variate Bernoulli Naive Bayes}{16}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Multinomial Naive Bayes}{17}{subsection.3.4}
 \contentsline {subsubsection}{\numberline {3.4.1}Term Frequency}{17}{subsubsection.3.4.1}
 \contentsline {subsubsection}{\numberline {3.4.2}Term Frequency - Inverse Document Frequency (Tf-idf)}{18}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}Performances of the Multi-variate Bernoulli and Multinomial Model}{18}{subsubsection.3.4.3}
 \contentsline {section}{\numberline {4}Variants of the Naive Bayes Model}{18}{section.4}
-\contentsline {subsection}{\numberline {4.1}Continuous Variables}{18}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Continuous Variables}{19}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Eager and Lazy Learning Algorithms}{19}{subsection.4.2}

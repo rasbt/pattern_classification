@@ -209,7 +209,7 @@ However, if the prior probability was $P(\omega_1) > 0.5$, the decision region o
 
 \begin{figure}[h!]
 \includegraphics[width=\linewidth]{../images/effect_priors_1.png}
-\caption{The effect of prior probabilities on the decision regions. The figure shows a 1-dimensional random sample from two different classes (blue and green crosses). The data points for both classes are normally distributed with standard deviation 1, and the bell curves denote the class conditional probabilities. If the class priors are equal, the decision boundary of a naive Bayes classifier is placed at the center between both distributions (gray bar). An increase of the class-conditional probability of the blue class ($\omega_2$) leads to an extension of the decision region R1 by moving the decision boundary (blue-dotted bar) towards the other class and vice versa.}
+\caption{The effect of prior probabilities on the decision regions. The figure shows a 1-dimensional random sample from two different classes (blue and green crosses). The data points for both classes are normally distributed with standard deviation 1, and the bell curves denote the class conditional probabilities. If the class priors are equal, the decision boundary of a naive Bayes classifier is placed at the center between both distributions (gray bar). An increase of the prior probability of the blue class ($\omega_2$) leads to an extension of the decision region R1 by moving the decision boundary (blue-dotted bar) towards the other class and vice versa.}
 \label{fig:effect_priors}
 \end{figure}
 
@@ -269,7 +269,7 @@ The 2 class labels are $\omega_j \in \{+, -\}$ and the feature vector for sample
 \end{split}
 \end{equation}
  
- The task now is to classify a new sample --- pretending hat we don't know that its true class label is "+":
+ The task now is to classify a new sample --- pretending that we don't know that its true class label is "+":
  
  
  \begin{figure}[h!]
@@ -339,8 +339,8 @@ Putting it all together, the new sample can be classified by plugging in the pos
 
 Since $0.18 > 0.15$  the sample can be classified as $+$. Taking a closer look at the calculation of the posterior probabilities, this simple example demonstrates the effect of the prior probabilities affected on the decision rule. If the prior probabilities were equal for both classes, the new pattern would be classified as $-$ instead of $+$. This observation also underlines the importance of \emph{representative} training datasets; in practice, it is usually recommended to additionally consult a domain expert in order to define the prior probabilities.
 
-\subsubsection{Additive Smoothening}
-\label{sec:additive_smoothening}
+\subsubsection{Additive Smoothing}
+\label{sec:additive_smoothing}
 
 The classification was straight-forward given the sample in Figure \ref{fig:new_sample1}. A trickier case is a sample that has a "new" value for the color attribute that is not present in the training dataset, e.g., \emph{yellow}, as shown in Figure \ref{fig:new_sample1}.
 
@@ -360,7 +360,7 @@ If the color \emph{yellow} does not appear in our training dataset, the class-co
 \end{split}
 \end{equation} 
 
-In order to avoid the problem of \emph{zero} probabilities, an additional smoothening term can be added to the \emph{multinomial Bayes} model. The most common variants of additive smoothening are the so-called \emph{Lidstone smoothening} ($\alpha<1$) and  \emph{Laplace smoothening} ($\alpha=1$).
+In order to avoid the problem of \emph{zero} probabilities, an additional smoothing term can be added to the \emph{multinomial Bayes} model. The most common variants of additive smoothing are the so-called \emph{Lidstone smoothing} ($\alpha<1$) and  \emph{Laplace smoothing} ($\alpha=1$).
 
 
 \begin{equation} \hat{P}(x_i \mid \omega_j) = \frac{N_{i,c}+\alpha}{N_i + \alpha \, d}  \quad (i = (1, ..., d))\end{equation}
@@ -371,7 +371,7 @@ where
 
 \item $N_{i,c}$: Count of observing feature $x_i$ in class $\omega_j$.
 \item $N_ic$: Count of observing feature $x_i$ in all classes.
-\item $\alpha$: Parameter for additive smoothening. 
+\item $\alpha$: Parameter for additive smoothing. 
 \item $d$: Dimensionality of the feature vector $\textbf x = [x_1, ..., x_d]$.
 
 \end{itemize}
@@ -596,10 +596,11 @@ Assuming that the words in every document are conditionally independent (accordi
 
 
 
-\subsection{Mutli-variate Bernoulli Naive Bayes}
+\subsection{Multi-variate Bernoulli Naive Bayes}
 \label{sec:bernoulli_bayes}
 
-The \emph{Multi-variate Bernoulli} model is based on binary data: Every token in the feature vector of a document is associated with the value 1 or 0. The  feature vector has $d$ dimensions where $d$ is the number of words in the whole vocabulary (in Section \ref{sec:the_bag_of_words_model}); the value 1 means that the word occurs in the particular document, and 0 means that the word does not occur in this document. Empirical studies showed that the mutli-variate Bernoulli model is inferior to the multinomial Bayes model, and the latter has been shown to reduce the error by 27\% on average \cite{mccallum1998comparison}. The Bernoulli trials can be written as
+The \emph{Multi-variate Bernoulli} model is based on binary data: Every token in the feature vector of a document is associated with the value 1 or 0. The  feature vector has $d$ dimensions where $d$ is the number of words in the whole vocabulary (in Section \ref{sec:the_bag_of_words_model}); the value 1 means that the word occurs in the particular document, and 0 means that the word does
+not occur in this document. The Bernoulli trials can be written as
 
 \begin{equation} P(\textbf x \mid \omega_j) = \prod_{i=1}^{m} P(x_i \mid \omega_j)^b \cdot (1-P(x_i \mid  \omega_j))^{(1-b)}  \quad (b \in {0,1}).
 \end{equation}
@@ -614,7 +615,7 @@ where
 \item $df_{xi, y}$ is the number of documents in the training dataset that contain the feature $x_i$ and belong to class $\omega_j$.
 \item  $df_{xi, y}$ is the number of documents in the training dataset that contain $x_i$ and belong to class $\omega_j$.
 \item  $df_y$ is the number of documents in the training dataset that belong to class $\omega_j$.
-\item  +1 and +2 are the parameters of \emph{Laplace smoothening} (Section \ref{sec:additive_smoothening}).
+\item  +1 and +2 are the parameters of \emph{Laplace smoothing} (Section \ref{sec:additive_smoothing}).
 \end{itemize}
 
 \subsection{Multinomial Naive Bayes}
@@ -644,7 +645,7 @@ where
 \item  $x_i$: A word from the feature vector $\textbf x$ of a particular sample.
 \item  $\sum tf(x_i, d \in \omega_j)$: The sum of raw term frequencies of word $x_i$ from all documents in the training sample that belong to class $\omega_j$.
 \item  $\sum N_{d \in \omega j}$: The sum of all term frequencies in the training dataset for class $\omega_j$.
-\item $\alpha$: An addititive smoothening parameter ($\alpha = 1$ for Laplace smoothening).
+\item $\alpha$: An addititive smoothing parameter ($\alpha = 1$ for Laplace smoothing).
 \item  $V$: The size of the vocabulary (number of different words in the training set).
 \end{itemize}
 
@@ -671,6 +672,11 @@ where
 \item  $n_d$: The total number of documents.
 \item  $n_d(t)$: The number of documents that contain the term $t$.
 \end{itemize}
+
+\subsubsection{Performances of the Multi-variate Bernoulli and Multinomial Model}
+
+Empirical comparisons provide evidence that the multinomial model tends to outperform the multi-variate Bernoulli model if the vocabulary size is relatively large \cite{mccallum1998comparison}. However, the performance of machine learning algorithms is highly dependent on the appropriate choice of features. In the case of naive Bayes classifiers and text classification, large differences in performance can be attributed to the choices of  stop word removal, stemming, and token-length \cite{rudner2002automated}. In practice, it is recommended that the choice between a multi-variate Bernoulli or multinomial model for text classification should precede comparative studies including different combinations of feature extraction and selection steps.
+
 
 \section{Variants of the Naive Bayes Model}
 \label{sec:naive_bayes_variants}

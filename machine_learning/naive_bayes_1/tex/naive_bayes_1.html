@@ -28,7 +28,7 @@ class="cmr-12">Sebastian Raschka</span>
 <br /><span 
 class="cmtt-12">se.raschka@gmail.com</span></div><br />
 <div class="date" ><span 
-class="cmr-12">October 4, 2014</span></div>
+class="cmr-12">October 5, 2014</span></div>
    </div>
    <h3 class="likesectionHead"><a 
  id="x1-1000"></a>Contents</h3>
@@ -54,7 +54,7 @@ href="#x1-100002.6.1" id="QQ2-1-15">Maximum-Likelihood Estimates</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >2.6.2 <a 
 href="#x1-110002.6.2" id="QQ2-1-16">Classification</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >2.6.3 <a 
-href="#x1-120002.6.3" id="QQ2-1-17">Additive Smoothening</a></span>
+href="#x1-120002.6.3" id="QQ2-1-17">Additive Smoothing</a></span>
 <br />   <span class="sectionToc" >3 <a 
 href="#x1-130003" id="QQ2-1-19">Naive Bayes and Text Classification</a></span>
 <br />   &#x00A0;<span class="subsectionToc" >3.1 <a 
@@ -71,22 +71,24 @@ class="cmti-10">N</span>-grams</a></span>
 <br />   &#x00A0;<span class="subsectionToc" >3.2 <a 
 href="#x1-190003.2" id="QQ2-1-30">The Decision Rule for Spam Classification</a></span>
 <br />   &#x00A0;<span class="subsectionToc" >3.3 <a 
-href="#x1-200003.3" id="QQ2-1-31">Mutli-variate Bernoulli Naive Bayes</a></span>
+href="#x1-200003.3" id="QQ2-1-31">Multi-variate Bernoulli Naive Bayes</a></span>
 <br />   &#x00A0;<span class="subsectionToc" >3.4 <a 
 href="#x1-210003.4" id="QQ2-1-32">Multinomial Naive Bayes</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >3.4.1 <a 
 href="#x1-220003.4.1" id="QQ2-1-33">Term Frequency</a></span>
 <br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >3.4.2 <a 
 href="#x1-230003.4.2" id="QQ2-1-34">Term Frequency - Inverse Document Frequency (Tf-idf)</a></span>
-<br />   <span class="sectionToc" >4 <a 
-href="#x1-240004" id="QQ2-1-35">Variants of the Naive Bayes Model</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsubsectionToc" >3.4.3 <a 
+href="#x1-240003.4.3" id="QQ2-1-35">Performances of the Multi-variate Bernoulli and Multinomial Model</a></span>
                                                                   
 
                                                                   
+<br />   <span class="sectionToc" >4 <a 
+href="#x1-250004" id="QQ2-1-36">Variants of the Naive Bayes Model</a></span>
 <br />   &#x00A0;<span class="subsectionToc" >4.1 <a 
-href="#x1-250004.1" id="QQ2-1-36">Continuous Variables</a></span>
+href="#x1-260004.1" id="QQ2-1-37">Continuous Variables</a></span>
 <br />   &#x00A0;<span class="subsectionToc" >4.2 <a 
-href="#x1-260004.2" id="QQ2-1-37">Eager and Lazy Learning Algorithms</a></span>
+href="#x1-270004.2" id="QQ2-1-38">Eager and Lazy Learning Algorithms</a></span>
    </div>
 <!--l. 41--><p class="noindent" >
 </p>
@@ -1408,7 +1410,7 @@ display="inline" ><msubsup><mrow
 ><mi 
 >C</mi></mrow></msubsup 
 ></math>
-stands for &#8221;complement&#8221; and basically translate to &#8221;<span 
+stands for &#8221;complement&#8221; and basically translates to &#8221;<span 
 class="cmbx-10">not </span>class
 <!--l. 228--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
@@ -1428,7 +1430,7 @@ display="inline" ><msub><mrow
 <!--l. 230--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
-             <mi 
+            <mi 
 >P</mi><mrow ><mo 
 class="MathClass-open">(</mo><mrow><msub><mrow 
 ><mstyle 
@@ -1461,7 +1463,7 @@ class="MathClass-open">(</mo><mrow><msub><mrow
 >j</mi></mrow></msub 
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow> <mo 
-class="MathClass-bin">&#x22C5;</mo> <mi 
+class="MathClass-bin">+</mo> <mi 
 >P</mi><mrow ><mo 
 class="MathClass-open">(</mo><mrow><msub><mrow 
 ><mstyle 
@@ -2284,7 +2286,7 @@ order to define the prior probabilities.
 </p><!--l. 342--><p class="noindent" >
 </p>
    <h5 class="subsubsectionHead"><span class="titlemark">2.6.3   </span> <a 
- id="x1-120002.6.3"></a>Additive Smoothening</h5>
+ id="x1-120002.6.3"></a>Additive Smoothing</h5>
 <!--l. 345--><p class="noindent" >The classification was straight-forward given the sample in Figure <a 
 href="#x1-9003r5">5<!--tex4ht:ref: fig:new_sample1 --></a>. A trickier case is
 a sample that has a &#8221;new&#8221; value for the color attribute that is not present in the
@@ -2376,11 +2378,11 @@ class="MathClass-rel">=</mo> <mn>0</mn></mtd>
    </mtd></mtr></mtable>
 </math></td><td class="eq-no">(28)</td></tr></table>
 <!--l. 363--><p class="indent" >   In order to avoid the problem of <span 
-class="cmti-10">zero </span>probabilities, an additional smoothening
-term can be added to the <span 
-class="cmti-10">multinomial Bayes </span>model. The most common
-variants of additive smoothening are the so-called <span 
-class="cmti-10">Lidstone smoothening</span>
+class="cmti-10">zero </span>probabilities, an additional
+smoothing term can be added to the <span 
+class="cmti-10">multinomial Bayes </span>model. The most
+common variants of additive smoothing are the so-called <span 
+class="cmti-10">Lidstone smoothing</span>
 (<!--l. 363--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
@@ -2388,7 +2390,7 @@ display="inline" ><mi
 class="MathClass-rel">&#x003C;</mo> <mn>1</mn></math>) and <span 
 class="cmti-10">Laplace</span>
 <span 
-class="cmti-10">smoothening </span>(<!--l. 363--><math 
+class="cmti-10">smoothing </span>(<!--l. 363--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >&#x03B1;</mi> <mo 
@@ -2507,7 +2509,7 @@ display="inline" ><msub><mrow
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >&#x03B1;</mi></math>:
-     Parameter for additive smoothening.
+     Parameter for additive smoothing.
      </li>
      <li class="itemize"><!--l. 375--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
@@ -3456,9 +3458,9 @@ href="#x1-210003.4">3.4<!--tex4ht:ref: sec:multinomial_bayes --></a>).
 </p><!--l. 599--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">3.3   </span> <a 
- id="x1-200003.3"></a>Mutli-variate Bernoulli Naive Bayes</h4>
+ id="x1-200003.3"></a>Multi-variate Bernoulli Naive Bayes</h4>
 <!--l. 602--><p class="noindent" >The <span 
-class="cmti-10">Multi-variate Bernoulli </span>model is based on binarydata: Every token in the feature
+class="cmti-10">Multi-variate Bernoulli </span>model is based on binary data: Every token in the feature
 vector of a document is associated with the value 1 or 0. The feature vector has
 <!--l. 602--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
@@ -3470,19 +3472,16 @@ display="inline" ><mi
 >d</mi></math>
 is the number of words in the whole vocabulary (in Section <a 
 href="#x1-140003.1">3.1<!--tex4ht:ref: sec:the_bag_of_words_model --></a>); the value 1 means
-that the word occurs in the particular document, and 0 means that the word does
-not occur in this document. Empirical studies showed that the mutli-variate
-Bernoulli model is inferior to the multinomial Bayes model, and the latter has been
-shown to reduce the error by 27% on average <span class="cite">&#x00A0;[<a 
-href="#Xmccallum1998comparison">13</a>]</span>. The Bernoulli trials can be
-written as
+that the word occurs in the particular document, and 0 means that the
+word does not occur in this document. The Bernoulli trials can be written
+as
 </p>
    <table class="equation"><tr><td> <a 
  id="x1-20001r34"></a>
                                                                   
 
                                                                   
-<!--l. 604--><math 
+<!--l. 605--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
        <mi 
@@ -3558,7 +3557,7 @@ class="MathClass-punc">,</mo><mn>1</mn></mrow><mo
 class="MathClass-close">)</mo></mrow><mo 
 class="MathClass-punc">.</mo>
 </math></td><td class="eq-no">(34)</td></tr></table>
-<!--l. 607--><p class="indent" >   Let <!--l. 607--><math 
+<!--l. 608--><p class="indent" >   Let <!--l. 608--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mover 
 accent="true"><mrow 
@@ -3579,7 +3578,7 @@ class="MathClass-rel">&#x2223;</mo><msub><mrow
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow></math>
 be the maximum-likelihood estimate that a particular word (or token)
-<!--l. 607--><math 
+<!--l. 608--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -3587,7 +3586,7 @@ display="inline" ><msub><mrow
 ><mi 
 >i</mi></mrow></msub 
 ></math> occurs in
-class <!--l. 607--><math 
+class <!--l. 608--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -3598,7 +3597,7 @@ display="inline" ><msub><mrow
 </p>
    <table class="equation"><tr><td> <a 
  id="x1-20002r35"></a>
-<!--l. 609--><math 
+<!--l. 610--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
                        <mover 
@@ -3641,39 +3640,9 @@ class="MathClass-bin">+</mo> <mn>1</mn></mrow>
 > <mo 
 class="MathClass-bin">+</mo> <mn>2</mn></mrow></mfrac>
 </math></td><td class="eq-no">(35)</td></tr></table>
-<!--l. 611--><p class="indent" >   where
+<!--l. 612--><p class="indent" >   where
 </p>
      <ul class="itemize1">
-     <li class="itemize"><!--l. 614--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><mi 
->d</mi><msub><mrow 
-><mi 
->f</mi></mrow><mrow 
-><mi 
->x</mi><mi 
->i</mi><mo 
-class="MathClass-punc">,</mo><mi 
->y</mi></mrow></msub 
-></math>
-     is the number of documents in the training dataset that contain the feature
-     <!--l. 614--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><msub><mrow 
-><mi 
->x</mi></mrow><mrow 
-><mi 
->i</mi></mrow></msub 
-></math>
-     and belong to class <!--l. 614--><math 
- xmlns="http://www.w3.org/1998/Math/MathML"  
-display="inline" ><msub><mrow 
-><mi 
->&#x03C9;</mi></mrow><mrow 
-><mi 
->j</mi></mrow></msub 
-></math>.
-     </li>
      <li class="itemize"><!--l. 615--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
@@ -3686,7 +3655,8 @@ display="inline" ><mi
 class="MathClass-punc">,</mo><mi 
 >y</mi></mrow></msub 
 ></math>
-     is the number of documents in the training dataset that contain <!--l. 615--><math 
+     is the number of documents in the training dataset that contain the feature
+     <!--l. 615--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -3710,10 +3680,39 @@ display="inline" ><mi
 ><mi 
 >f</mi></mrow><mrow 
 ><mi 
+>x</mi><mi 
+>i</mi><mo 
+class="MathClass-punc">,</mo><mi 
+>y</mi></mrow></msub 
+></math>
+     is the number of documents in the training dataset that contain <!--l. 616--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mi 
+>i</mi></mrow></msub 
+></math>
+     and belong to class <!--l. 616--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>&#x03C9;</mi></mrow><mrow 
+><mi 
+>j</mi></mrow></msub 
+></math>.
+     </li>
+     <li class="itemize"><!--l. 617--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>d</mi><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mi 
 >y</mi></mrow></msub 
 ></math>
      is the number of documents in the training dataset that belong to class
-     <!--l. 616--><math 
+     <!--l. 617--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -3723,20 +3722,20 @@ display="inline" ><msub><mrow
 ></math>.
      </li>
      <li class="itemize">+1 and +2 are the parameters of <span 
-class="cmti-10">Laplace smoothening </span>(Section <a 
-href="#x1-120002.6.3">2.6.3<!--tex4ht:ref: sec:additive_smoothening --></a>).</li></ul>
+class="cmti-10">Laplace smoothing </span>(Section <a 
+href="#x1-120002.6.3">2.6.3<!--tex4ht:ref: sec:additive_smoothing --></a>).</li></ul>
                                                                   
 
                                                                   
-<!--l. 620--><p class="noindent" >
+<!--l. 621--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">3.4   </span> <a 
  id="x1-210003.4"></a>Multinomial Naive Bayes</h4>
-<!--l. 623--><p class="noindent" >
+<!--l. 624--><p class="noindent" >
 </p>
    <h5 class="subsubsectionHead"><span class="titlemark">3.4.1   </span> <a 
  id="x1-220003.4.1"></a>Term Frequency</h5>
-<!--l. 626--><p class="noindent" >A alternative approach to characterize text documents &#8212; rather than binary values
+<!--l. 627--><p class="noindent" >A alternative approach to characterize text documents &#8212; rather than binary values
 &#8212; is the <span 
 class="cmti-10">term frequency (tf(t, d))</span>. The term frequency is typically defined as the
 number of times a given term <span 
@@ -3749,7 +3748,7 @@ length.
 </p>
    <table class="equation"><tr><td> <a 
  id="x1-22001r36"></a>
-<!--l. 628--><math 
+<!--l. 629--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
                  <mstyle 
@@ -3771,10 +3770,10 @@ class="MathClass-close">)</mo></mrow></mrow>
 >d</mi></mrow></msub 
 ></mrow></mfrac>
 </math></td><td class="eq-no">(36)</td></tr></table>
-<!--l. 630--><p class="indent" >   where
+<!--l. 631--><p class="indent" >   where
 </p>
      <ul class="itemize1">
-     <li class="itemize"><!--l. 633--><math 
+     <li class="itemize"><!--l. 634--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >t</mi><mi 
@@ -3784,16 +3783,16 @@ class="MathClass-open">(</mo><mrow><mi
 class="MathClass-punc">,</mo><mi 
 >d</mi></mrow><mo 
 class="MathClass-close">)</mo></mrow></math>:
-     Raw term frequency (the count of term <!--l. 633--><math 
+     Raw term frequency (the count of term <!--l. 634--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >t</mi></math>
-     in document <!--l. 633--><math 
+     in document <!--l. 634--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >d</mi></math>).
      </li>
-     <li class="itemize"><!--l. 634--><math 
+     <li class="itemize"><!--l. 635--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -3801,11 +3800,11 @@ display="inline" ><msub><mrow
 ><mi 
 >d</mi></mrow></msub 
 ></math>:
-     The total number of terms in document <!--l. 634--><math 
+     The total number of terms in document <!--l. 635--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >d</mi></math>.</li></ul>
-<!--l. 637--><p class="indent" >   The term frequencies can then be used to compute the maximum-likelihood
+<!--l. 638--><p class="indent" >   The term frequencies can then be used to compute the maximum-likelihood
 estimate based on the training data to estimate the class-conditional probabilities in
 the multinomial model:
 </p>
@@ -3814,7 +3813,7 @@ the multinomial model:
                                                                   
 
                                                                   
-<!--l. 639--><math 
+<!--l. 640--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
                   <mover 
@@ -3875,10 +3874,10 @@ class="MathClass-bin">+</mo> <mi
 class="MathClass-bin">&#x22C5;</mo> <mi 
 >V</mi> </mrow></mfrac>
 </math></td><td class="eq-no">(37)</td></tr></table>
-<!--l. 641--><p class="indent" >   where
+<!--l. 642--><p class="indent" >   where
 </p>
      <ul class="itemize1">
-     <li class="itemize"><!--l. 644--><math 
+     <li class="itemize"><!--l. 645--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -3886,13 +3885,13 @@ display="inline" ><msub><mrow
 ><mi 
 >i</mi></mrow></msub 
 ></math>:
-     A word from the feature vector <!--l. 644--><math 
+     A word from the feature vector <!--l. 645--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mstyle 
 class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></math>
      of a particular sample.
      </li>
-     <li class="itemize"><!--l. 645--><math 
+     <li class="itemize"><!--l. 646--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mo 
 class="MathClass-op">&#x2211;</mo>
@@ -3914,7 +3913,7 @@ class="MathClass-rel">&#x2208;</mo> <msub><mrow
 >j</mi></mrow></msub 
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow></math>:
-     The sum of raw term frequencies of word <!--l. 645--><math 
+     The sum of raw term frequencies of word <!--l. 646--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -3922,7 +3921,7 @@ display="inline" ><msub><mrow
 ><mi 
 >i</mi></mrow></msub 
 ></math>
-     from all documents in the training sample that belong to class <!--l. 645--><math 
+     from all documents in the training sample that belong to class <!--l. 646--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -3931,7 +3930,7 @@ display="inline" ><msub><mrow
 >j</mi></mrow></msub 
 ></math>.
      </li>
-     <li class="itemize"><!--l. 646--><math 
+     <li class="itemize"><!--l. 647--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mo 
 class="MathClass-op">&#x2211;</mo>
@@ -3944,7 +3943,7 @@ class="MathClass-rel">&#x2208;</mo><mi
 >&#x03C9;</mi><mi 
 >j</mi></mrow></msub 
 ></math>:
-     The sum of all term frequencies in the training dataset for class <!--l. 646--><math 
+     The sum of all term frequencies in the training dataset for class <!--l. 647--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -3953,24 +3952,24 @@ display="inline" ><msub><mrow
 >j</mi></mrow></msub 
 ></math>.
      </li>
-     <li class="itemize"><!--l. 647--><math 
+     <li class="itemize"><!--l. 648--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >&#x03B1;</mi></math>:
-     An addititive smoothening parameter (<!--l. 647--><math 
+     An addititive smoothing parameter (<!--l. 648--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >&#x03B1;</mi> <mo 
 class="MathClass-rel">=</mo> <mn>1</mn></math>
-     for Laplace smoothening).
+     for Laplace smoothing).
      </li>
-     <li class="itemize"><!--l. 648--><math 
+     <li class="itemize"><!--l. 649--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >V</mi> </math>:
      The size of the vocabulary (number of different words in the training set).</li></ul>
-<!--l. 651--><p class="indent" >   The class-conditional probability of encountering the text
-<!--l. 651--><math 
+<!--l. 652--><p class="indent" >   The class-conditional probability of encountering the text
+<!--l. 652--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mstyle 
 class="text"><mtext class="textbf" mathvariant="bold" >x</mtext></mstyle></math> can
@@ -3983,7 +3982,7 @@ class="cmti-10">naive </span>assumption of conditional independence).
                                                                   
 
                                                                   
-<!--l. 653--><math 
+<!--l. 654--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
      <mi 
@@ -4068,11 +4067,11 @@ class="MathClass-rel">&#x2223;</mo><msub><mrow
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow>
 </math></td><td class="eq-no">(38)</td></tr></table>
-<!--l. 657--><p class="noindent" >
+<!--l. 658--><p class="noindent" >
 </p>
    <h5 class="subsubsectionHead"><span class="titlemark">3.4.2   </span> <a 
  id="x1-230003.4.2"></a>Term Frequency - Inverse Document Frequency (Tf-idf)</h5>
-<!--l. 660--><p class="noindent" >The <span 
+<!--l. 661--><p class="noindent" >The <span 
 class="cmti-10">term frequency - inverse document frequency (Tf-idf) </span>is another alternative for
 characterizing text documents. It can be understood as a weighted <span 
 class="cmti-10">term frequency</span>,
@@ -4085,7 +4084,7 @@ Bayes.
 </p>
    <table class="equation"><tr><td> <a 
  id="x1-23001r39"></a>
-<!--l. 662--><math 
+<!--l. 663--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
                        <mstyle 
@@ -4110,7 +4109,7 @@ class="MathClass-open">(</mo><mrow><mi
 >t</mi></mrow><mo 
 class="MathClass-close">)</mo></mrow>
 </math></td><td class="eq-no">(39)</td></tr></table>
-<!--l. 664--><p class="indent" >   Let <!--l. 664--><math 
+<!--l. 665--><p class="indent" >   Let <!--l. 665--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >t</mi><msub><mrow 
@@ -4124,7 +4123,7 @@ class="MathClass-open">(</mo><mrow><mi
 class="MathClass-punc">,</mo><mi 
 >f</mi></mrow><mo 
 class="MathClass-close">)</mo></mrow></math> be the normalized
-term frequency, and <!--l. 664--><math 
+term frequency, and <!--l. 665--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >i</mi><mi 
@@ -4137,7 +4136,7 @@ the inverse document frequency, which can be calculated as follows
                                                                   
 
                                                                   
-<!--l. 666--><math 
+<!--l. 667--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
                          <mi 
@@ -4168,10 +4167,10 @@ class="MathClass-close">)</mo></mrow></mrow></mfrac><mstyle mathsize="2.45em"><m
 open=")"  close="" ><mrow></mrow></mfenced></mstyle><mo 
 class="MathClass-punc">,</mo>
 </math></td><td class="eq-no">(40)</td></tr></table>
-<!--l. 668--><p class="indent" >   where
+<!--l. 669--><p class="indent" >   where
 </p>
      <ul class="itemize1">
-     <li class="itemize"><!--l. 671--><math 
+     <li class="itemize"><!--l. 672--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -4181,7 +4180,7 @@ display="inline" ><msub><mrow
 ></math>:
      The total number of documents.
      </li>
-     <li class="itemize"><!--l. 672--><math 
+     <li class="itemize"><!--l. 673--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><msub><mrow 
 ><mi 
@@ -4192,29 +4191,49 @@ display="inline" ><msub><mrow
 class="MathClass-open">(</mo><mrow><mi 
 >t</mi></mrow><mo 
 class="MathClass-close">)</mo></mrow></math>:
-     The number of documents that contain the term <!--l. 672--><math 
+     The number of documents that contain the term <!--l. 673--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >t</mi></math>.</li></ul>
-<!--l. 675--><p class="noindent" >
+<!--l. 676--><p class="noindent" >
+</p>
+   <h5 class="subsubsectionHead"><span class="titlemark">3.4.3   </span> <a 
+ id="x1-240003.4.3"></a>Performances of the Multi-variate Bernoulli and Multinomial
+Model</h5>
+<!--l. 678--><p class="noindent" >Empirical comparisons provide evidence that the multinomial model tends to
+outperform multi-variate Bernoulli model if the vocabulary size is relatively large
+<span class="cite">&#x00A0;[<a 
+href="#Xmccallum1998comparison">13</a>]</span>. However, the performance of machine learning algorithms is highly dependent
+on the appropriate choice of features. In the case of naive Bayes classifiers
+and text classification, large differences in performance can be attributed
+to the choices of stop word removal, stemming, and token-length <span class="cite">&#x00A0;[<a 
+href="#Xrudner2002automated">14</a>]</span>. In
+practice, it is recommended that the choice between a multi-variate Bernoulli
+or multinomial model for text classification should precede comparative
+studies including different combinations of feature extraction and selection
+steps.
+</p><!--l. 681--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
- id="x1-240004"></a>Variants of the Naive Bayes Model</h3>
-<!--l. 678--><p class="noindent" >So far, we have seen two different models for categorical data, namely, the
+ id="x1-250004"></a>Variants of the Naive Bayes Model</h3>
+<!--l. 684--><p class="noindent" >So far, we have seen two different models for categorical data, namely, the
 multi-variate Bernoulli (Section <a 
 href="#x1-200003.3">3.3<!--tex4ht:ref: sec:bernoulli_bayes --></a>) and multinomial (Section <a 
 href="#x1-210003.4">3.4<!--tex4ht:ref: sec:multinomial_bayes --></a>) models &#8212; and
 two different approaches for the estimation of class-conditional probabilities.
 In Section <a 
-href="#x1-250004.1">4.1<!--tex4ht:ref: sec:continuous_variables --></a>, we will take a brief look at a third model: <span 
+href="#x1-260004.1">4.1<!--tex4ht:ref: sec:continuous_variables --></a>, we will take a brief look at a third model: <span 
 class="cmti-10">Gaussian naive</span>
+                                                                  
+
+                                                                  
 <span 
 class="cmti-10">Bayes</span>.
-</p><!--l. 682--><p class="noindent" >
+</p><!--l. 688--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">4.1   </span> <a 
- id="x1-250004.1"></a>Continuous Variables</h4>
-<!--l. 685--><p class="noindent" >Text classification is a typical case of categorical data, however, naive Bayes can also
+ id="x1-260004.1"></a>Continuous Variables</h4>
+<!--l. 691--><p class="noindent" >Text classification is a typical case of categorical data, however, naive Bayes can also
 be used on continuous data. The <span 
 class="cmti-10">Iris </span>flower data set would be a simple example for
 a supervised classification task with continuous features: The Iris dataset
@@ -4225,13 +4244,10 @@ Gaussian kernel to calculate the class-conditional probabilities. Under the
 assumption that the probability distributions of the features follow a normal
 (Gaussian) distribution, the Gaussian naive Bayes model can be written as
 follows
-                                                                  
-
-                                                                  
 </p>
    <table class="equation"><tr><td> <a 
- id="x1-25001r41"></a>
-<!--l. 687--><math 
+ id="x1-26001r41"></a>
+<!--l. 693--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
                 <mi 
@@ -4287,11 +4303,11 @@ class="MathClass-close">)</mo></mrow></mrow><mrow
 ></mrow></mfrac>      </mrow></mfenced> <mo 
 class="MathClass-punc">,</mo>
 </math></td><td class="eq-no">(41)</td></tr></table>
-<!--l. 689--><p class="indent" >   where <!--l. 689--><math 
+<!--l. 695--><p class="indent" >   where <!--l. 695--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >&#x03BC;</mi></math> (the
-sample mean) and <!--l. 689--><math 
+sample mean) and <!--l. 695--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >&#x03C3;</mi></math>
@@ -4301,8 +4317,11 @@ class-conditional probability can than be computed as the product of the individ
 probabilities:
 </p>
    <table class="equation"><tr><td> <a 
- id="x1-25002r42"></a>
-<!--l. 692--><math 
+ id="x1-26002r42"></a>
+                                                                  
+
+                                                                  
+<!--l. 698--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
                      <mi 
@@ -4339,11 +4358,11 @@ class="MathClass-rel">&#x2223;</mo><mi
 >&#x03C9;</mi></mrow><mo 
 class="MathClass-close">)</mo></mrow>
 </math></td><td class="eq-no">(42)</td></tr></table>
-<!--l. 694--><p class="noindent" >
+<!--l. 700--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">4.2   </span> <a 
- id="x1-260004.2"></a>Eager and Lazy Learning Algorithms</h4>
-<!--l. 697--><p class="noindent" >Being an <span 
+ id="x1-270004.2"></a>Eager and Lazy Learning Algorithms</h4>
+<!--l. 703--><p class="noindent" >Being an <span 
 class="cmti-10">eager learner</span>, naive Bayes classifiers are known to be relatively fast in
 classifying new instances. Eeager learners are learning algorithms that learn a model
 from a training dataset as soon as the data becomes available. Once the model is
@@ -4351,10 +4370,7 @@ learned, the training data does not have to be re-evaluated in order to make a n
 prediction. In case of eager learners, the computationally most expensive step is the
 model building step whereas the classification of new instances is relatively
 fast.
-                                                                  
-
-                                                                  
-</p><!--l. 699--><p class="indent" >   <span 
+</p><!--l. 705--><p class="indent" >   <span 
 class="cmti-10">Lazy learners</span>, however, memorize and re-evaluate the training dataset for
 predicting the class label of new instances. The advantage of <span 
 class="cmti-10">lazy learning </span>is that the
@@ -4375,7 +4391,7 @@ neighbors).
 </p><!--l. 1--><p class="noindent" >
 </p>
    <h3 class="likesectionHead"><a 
- id="x1-270004.2"></a>References</h3>
+ id="x1-280004.2"></a>References</h3>
 <!--l. 1--><p class="noindent" >
     </p><div class="thebibliography">
     <p class="bibitem" ><span class="biblabel">
@@ -4386,6 +4402,9 @@ class="cmti-10">IJCAI</span>
 class="cmti-10">2001 workshop on empirical methods in artificial intelligence</span>, pages 41&#8211;46,
     2001.
     </p>
+                                                                  
+
+                                                                  
     <p class="bibitem" ><span class="biblabel">
   [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="Xdomingos1997optimality"></a>Pedro Domingos and Michael Pazzani. On the optimality of the simple
@@ -4409,9 +4428,6 @@ class="cmti-10">Oncology</span>, 86(2):211&#8211;216, 2008.
 class="cmti-10">Applied  and  environmental  microbiology</span>,
     73(16):5261&#8211;5267, 2007.
     </p>
-                                                                  
-
-                                                                  
     <p class="bibitem" ><span class="biblabel">
   [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="Xsahami1998bayesian"></a>Mehran Sahami, Susan Dumais, David Heckerman, and Eric Horvitz.
@@ -4446,6 +4462,9 @@ class="cmti-10">library and information systems</span>, 14(3):130&#8211;137, 198
     normalization on text classification. <span 
 class="cmti-10">Proceedings of InSciT</span>, pages 354&#8211;358,
     2006.
+                                                                  
+
+                                                                  
     </p>
     <p class="bibitem" ><span class="biblabel">
  [10]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
@@ -4469,9 +4488,6 @@ class="cmti-10">the conference pacific association for computational linguistics
     filtering.       <span 
 class="cmti-10">International   Journal   on   Artificial   Intelligence   Tools</span>,
     16(06):1047&#8211;1067, 2007.
-                                                                  
-
-                                                                  
     </p>
     <p class="bibitem" ><span class="biblabel">
  [13]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
@@ -4480,6 +4496,13 @@ class="cmti-10">International   Journal   on   Artificial   Intelligence   Tools
 class="cmti-10">AAAI-98 workshop on learning for</span>
     <span 
 class="cmti-10">text categorization</span>, volume 752, pages 41&#8211;48. Citeseer, 1998.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [14]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xrudner2002automated"></a>Lawrence&#x00A0;M Rudner and Tahung Liang. Automated essay scoring using
+    bayes&#8217; theorem. <span 
+class="cmti-10">The Journal of Technology, Learning and Assessment</span>, 1(2),
+    2002.
 </p>
     </div>
     
