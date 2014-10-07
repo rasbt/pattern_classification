@@ -1,9 +1,9 @@
 \documentclass[fleqn]{article}
 
 % start meta data
-\title{The effect of scaling and mean centering of variables prior to a Principal Component Analysis}
+\title{The Effect of Scaling and Mean Centering Prior to a Principal Component Analysis}
 \author{Sebastian Raschka\\ \texttt{se.raschka@gmail.com}} 
-\date{09\slash 22\slash 2014}
+\date{\today}
 % end meta data
 
 \usepackage{amsmath}
@@ -26,33 +26,37 @@
 \maketitle % makes the title page from meta data
 
 
-Let us think about whether it matters or not if the variables are centered for applications such as Principal Component Analysis (PCA) if the PCA is calculated from the covariance matrix (i.e., the $k$ principal components are the eigenvectors of the covariance matrix that correspond to the $k$ largest eigenvalues.
+
+\noindent A frequently asked question is whether data needs to be centered prior to dimensionality reduction via \emph{Principal Component Analysis (PCA)} or not. Here, the assumption is that the PCA is computed based on the \emph{covariance matrix}, i.e., the $k$ principal components are the eigenvectors of the covariance matrix that correspond to the $k$ largest eigenvalues.
 
 
 
-\section{Mean centering does not affect the covariance matrix}
+\section{Mean Centering Does not Affect the Covariance Matrix}
 \label{meancenteringdoesnotaffectthecovariancematrix}
 
-Here, the rational is: If the covariance is the same whether the variables are centered or not, the result of the PCA will be the same.
-
-Let's assume we have the 2 variables $\bf{x}$ and $\bf{y}$ Then the covariance between the attributes is calculated as
+Under the assumption that the PCA is obtained from covariance matrix, the resulting principal components will be the same regardless of whether mean centering was performed or not as long as the covariance matrix stays the same. The following equations will show that \emph{mean centering} does not affect the covariance matrix.
+\noindent Let  $\bf{x}$ and $\bf{y}$  be two random variables so that  the covariance between the attributes is calculated as
 
 \begin{equation} \sigma_{xy} = \frac{1}{n-1} \sum_{i}^{n} (x_i - \bar{x})(y_i - \bar{y})   \end{equation}
 
-Let us write the centered variables as 
+\noindent The centered variables can be written as
 
 \begin{equation} x' = x - \bar{x} \text{ and } y' = y - \bar{y} \end{equation}
 
-The centered covariance would then be calculated as follows:
+\noindent And the centered covariance can be calculated as follows:
 
 \begin{equation} \sigma_{xy}' = \frac{1}{n-1} \sum_{i}^{n} (x_i' - \bar{x}')(y_i' - \bar{y}')   \end{equation}
 
-But since after centering, $\bar{x}' = 0$ and $\bar{y}' = 0$ we have 
+\noindent Mean centering results in samples means of 0, $\bar{x}' = 0$ and $\bar{y}' = 0$, thus
 
-\begin{equation} \sigma_{xy}' = \frac{1}{n-1} \sum_{i}^{n} x_i' y_i'   \end{equation} which is our original covariance matrix if we resubstitute back the terms
-\begin{equation} x' = x - \bar{x} \text{ and } y' = y - \bar{y} \end{equation}.
+\begin{equation} \sigma_{xy}' = \frac{1}{n-1} \sum_{i}^{n} x_i' y_i'   \end{equation} 
 
-Even centering only one variable, e.g., $\bf{x}$ wouldn't affect the covariance:
+
+\noindent This is equal original covariance matrix, which can be shown by resubstitution:
+
+\begin{equation} x' = x - \bar{x} \text{ and } y' = y - \bar{y} \end{equation}
+
+\noindent Even the centering of only one variable,  e.g., $\bf{x}$,  would leave the covariance matrix unaffected. 
 
 \begin{equation} \sigma_{\text{xy}} = \frac{1}{n-1} \sum_{i}^{n} (x_i' - \bar{x}')(y_i - \bar{y})   \end{equation}
 \begin{equation}  =  \frac{1}{n-1} \sum_{i}^{n} (x_i' - 0)(y_i - \bar{y})   \end{equation}
@@ -60,18 +64,16 @@ Even centering only one variable, e.g., $\bf{x}$ wouldn't affect the covariance:
 
 
 
-\section{Scaling of variables does affect the covariance matrix}
+\section{Scaling Does Affect the Covariance Matrix}
 \label{scalingofvariablesdoesaffectthecovariancematrix}
 
-If one variable is scaled, e.g, from pounds into kilogram (1 pound = 0.453592 kg), it does affect the covariance and therefore influences the results of a PCA.
+However, in contrast to mean centering, \emph{scaling} (e.g, pounds into kilogram where 1 pound = 0.453592 kg) \textbf{does} have an effect on the covariance matrix and therefore influences the results of a PCA.
 
-Let $c$ be the scaling factor for $\bf{x}$
-
-Given that the ``original'' covariance is calculated as
+\noindent Let $c$ be the scaling factor for $\bf{x}$. Given that the ``original'' covariance is calculated as
 
 \begin{equation} \sigma_{xy} = \frac{1}{n-1} \sum_{i}^{n} (x_i - \bar{x})(y_i - \bar{y})   \end{equation}
 
-the covariance after scaling would be calculated as:
+\noindent the covariance after scaling is calculated as follows:
 
 \begin{equation} \sigma_{xy}' = \frac{1}{n-1} \sum_{i}^{n} (c \cdot x_i - c \cdot  \bar{x})(y_i - \bar{y})   \end{equation}
 \begin{equation} =  \frac{c}{n-1} \sum_{i}^{n} (x_i -   \bar{x})(y_i - \bar{y})   \end{equation}
@@ -79,16 +81,16 @@ the covariance after scaling would be calculated as:
 \begin{equation} \Rightarrow \sigma_{xy} = \frac{\sigma_{xy}'}{c} \end{equation}
 \begin{equation} \Rightarrow \sigma_{xy}' = c \cdot \sigma_{xy} \end{equation}
 
-Therefore, the covariance after scaling one attribute by the constant $c$ will result in a rescaled covariance $c \sigma_{xy}$ So if we'd scaled $\bf{x}$ from pounds to kilograms, the covariance between $\bf{x}$ and $\bf{y}$ will be 0.453592 times smaller.
+\noindent Therefore, the scaling of one attribute by a constant $c$ will result in a rescaled covariance $c \sigma_{xy}$. E.g., if an attribute $\bf{x}$ measured in pounds is rescaled  into kilograms, the covariance between $\bf{x}$ and $\bf{y}$ will be 0.453592 times less the original value.
 
 
 
-\section{Standardizing affects the covariance}
+\section{Standardizing Does Affect the Covariance Matrix}
 \label{standardizingaffectsthecovariance}
 
-Standardization of features will have an effect on the outcome of a PCA (assuming that the variables are originally not standardized). This is because we are scaling the covariance between every pair of variables by the product of the standard deviations of each pair of variables.
+Standardization of features also has an effect on the outcome of a PCA since standardization can be understood as a scaling the covariance between every pair of variables by the product of the standard deviations of each pair of variables.
 
-The equation for standardization of a variable is written as 
+\noindent The equation for standardization of a variable is written as 
 
 \begin{equation} z = \frac{x_i - \bar{x}}{\sigma} \end{equation}
 

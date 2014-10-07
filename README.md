@@ -22,6 +22,7 @@
 - [Pre-Processing](#pre-processing)
 - [Model Evaluation](#model-evaluation)
 - [Parameter Estimation](#parameter-estimation)
+- [Machine Learning Algorithms and Classification Models](#machine-learning-algorithms-and-classification-models)
 - [Statistical Pattern Classification Examples](#statistical-pattern-classification-examples)
 - [Resources](#resources)
 
@@ -108,6 +109,15 @@
    
    - Non-Linear Regression
 
+<br>
+<hr>
+<br>
+
+
+### Machine Learning Algorithms and Classification Models
+[[back to top](#sections)]
+
+- Naive Bayes and Text Classification I - Introduction and Theory [[View PDF](http://sebastianraschka.com/PDFs/articles/naive_bayes_1.pdf)] [[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/machine_learning/naive_bayes_1/tex/naive_bayes_1.pdf)] 
 
 <br>
 <hr>

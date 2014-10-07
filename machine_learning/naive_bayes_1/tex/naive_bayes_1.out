@@ -1,0 +1,26 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Naive Bayes Classification}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Overview}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Posterior Probabilities}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Class-conditional Probabilities}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Prior Probabilities}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Evidence}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{Multinomial Naive Bayes - A Toy Example}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.6.1}{Maximum-Likelihood Estimates}{subsection.2.6}% 9
+\BOOKMARK [3][-]{subsubsection.2.6.2}{Classification}{subsection.2.6}% 10
+\BOOKMARK [3][-]{subsubsection.2.6.3}{Additive Smoothing}{subsection.2.6}% 11
+\BOOKMARK [1][-]{section.3}{Naive Bayes and Text Classification}{}% 12
+\BOOKMARK [2][-]{subsection.3.1}{The Bag of Words Model}{section.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Tokenization}{subsection.3.1}% 14
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Stop Words}{subsection.3.1}% 15
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Stemming and Lemmatization}{subsection.3.1}% 16
+\BOOKMARK [3][-]{subsubsection.3.1.4}{N-grams}{subsection.3.1}% 17
+\BOOKMARK [2][-]{subsection.3.2}{The Decision Rule for Spam Classification}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.3}{Multi-variate Bernoulli Naive Bayes}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.4}{Multinomial Naive Bayes}{section.3}% 20
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Term Frequency}{subsection.3.4}% 21
+\BOOKMARK [3][-]{subsubsection.3.4.2}{Term Frequency - Inverse Document Frequency \(Tf-idf\)}{subsection.3.4}% 22
+\BOOKMARK [3][-]{subsubsection.3.4.3}{Performances of the Multi-variate Bernoulli and Multinomial Model}{subsection.3.4}% 23
+\BOOKMARK [1][-]{section.4}{Variants of the Naive Bayes Model}{}% 24
+\BOOKMARK [2][-]{subsection.4.1}{Continuous Variables}{section.4}% 25
+\BOOKMARK [2][-]{subsection.4.2}{Eager and Lazy Learning Algorithms}{section.4}% 26

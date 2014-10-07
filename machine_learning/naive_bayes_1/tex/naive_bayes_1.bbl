@@ -1,0 +1,85 @@
+\begin{thebibliography}{10}
+
+\bibitem{rish2001empirical}
+Irina Rish.
+\newblock An empirical study of the naive bayes classifier.
+\newblock In {\em IJCAI 2001 workshop on empirical methods in artificial
+  intelligence}, pages 41--46, 2001.
+
+\bibitem{domingos1997optimality}
+Pedro Domingos and Michael Pazzani.
+\newblock On the optimality of the simple bayesian classifier under zero-one
+  loss.
+\newblock {\em Machine learning}, 29(2-3):103--130, 1997.
+
+\bibitem{kazmierska2008application}
+Joanna Kazmierska and Julian Malicki.
+\newblock Application of the na{\"\i}ve bayesian classifier to optimize
+  treatment decisions.
+\newblock {\em Radiotherapy and Oncology}, 86(2):211--216, 2008.
+
+\bibitem{wang2007naive}
+Qiong Wang, George~M Garrity, James~M Tiedje, and James~R Cole.
+\newblock Naive bayesian classifier for rapid assignment of rrna sequences into
+  the new bacterial taxonomy.
+\newblock {\em Applied and environmental microbiology}, 73(16):5261--5267,
+  2007.
+
+\bibitem{sahami1998bayesian}
+Mehran Sahami, Susan Dumais, David Heckerman, and Eric Horvitz.
+\newblock A bayesian approach to filtering junk e-mail.
+\newblock In {\em Learning for Text Categorization: Papers from the 1998
+  workshop}, volume~62, pages 98--105, 1998.
+
+\bibitem{zhang2004optimality}
+Harry Zhang.
+\newblock The optimality of naive bayes.
+\newblock {\em AA}, 1(2):3, 2004.
+
+\bibitem{yao2013rotation}
+Cong Yao, Xin Zhang, Xiang Bai, Wenyu Liu, Yi~Ma, and Zhuowen Tu.
+\newblock Rotation-invariant features for multi-oriented text detection in
+  natural images.
+\newblock {\em PloS one}, 8(8):e70173, 2013.
+
+\bibitem{porter1980algorithm}
+Martin~F Porter.
+\newblock An algorithm for suffix stripping.
+\newblock {\em Program: electronic library and information systems},
+  14(3):130--137, 1980.
+
+\bibitem{toman2006influence}
+Michal Toman, Roman Tesar, and Karel Jezek.
+\newblock Influence of word normalization on text classification.
+\newblock {\em Proceedings of InSciT}, pages 354--358, 2006.
+
+\bibitem{zevcevic2011n}
+Andelka Zecevic.
+\newblock N-gram based text classification according to authorship.
+\newblock In {\em Student Research Workshop}, pages 145--149, 2011.
+
+\bibitem{kevselj2003n}
+Vlado Ke{\v{s}}elj, Fuchun Peng, Nick Cercone, and Calvin Thomas.
+\newblock N-gram-based author profiles for authorship attribution.
+\newblock In {\em Proceedings of the conference pacific association for
+  computational linguistics, PACLING}, volume~3, pages 255--264, 2003.
+
+\bibitem{kanaris2007words}
+Ioannis Kanaris, Konstantinos Kanaris, Ioannis Houvardas, and Efstathios
+  Stamatatos.
+\newblock Words versus character n-grams for anti-spam filtering.
+\newblock {\em International Journal on Artificial Intelligence Tools},
+  16(06):1047--1067, 2007.
+
+\bibitem{mccallum1998comparison}
+Andrew McCallum, Kamal Nigam, et~al.
+\newblock A comparison of event models for naive bayes text classification.
+\newblock In {\em AAAI-98 workshop on learning for text categorization}, volume
+  752, pages 41--48. Citeseer, 1998.
+
+\bibitem{rudner2002automated}
+Lawrence~M Rudner and Tahung Liang.
+\newblock Automated essay scoring using bayes' theorem.
+\newblock {\em The Journal of Technology, Learning and Assessment}, 1(2), 2002.
+
+\end{thebibliography}

@@ -2,6 +2,6 @@
 \contentsline {section}{\numberline {2}Prediction Error and Accuracy}{2}{section.2}
 \contentsline {section}{\numberline {3}False and True Positive Rates}{3}{section.3}
 \contentsline {section}{\numberline {4}Precision, Recall, and the $F_1$-Score}{3}{section.4}
-\contentsline {section}{\numberline {5}Sensitivity and Specificity}{3}{section.5}
+\contentsline {section}{\numberline {5}Sensitivity and Specificity}{4}{section.5}
 \contentsline {section}{\numberline {6}Matthews correlation coefficient}{4}{section.6}
 \contentsline {section}{\numberline {7}Receiver Operator Characteristic (ROC)}{4}{section.7}
