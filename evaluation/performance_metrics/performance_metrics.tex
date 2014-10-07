@@ -44,8 +44,13 @@
 
 \maketitle % makes the title page from meta data
 
+\noindent  The purpose of this document is to provide a brief overview of different metrics and terminology that is used to measure the performance of binary classification systems.
 
-\noindent  The purpose of this document is to provide a brief overview of different metrics and terminology that is used to measure the performance of binary classification systems. The equations are based on \emph{An introduction to ROC analysis} by Tom Fawcett \cite{fawcett2006introduction}.
+\tableofcontents
+
+\newpage
+
+
 
 
 \section{Confusion matrix}
@@ -66,6 +71,10 @@ The \emph{confusion matrix} (or \emph {error matrix}) is one way to summarize th
   & $N$ & \MyBox{False}{Positives (FP)} & \MyBox{True}{Negatives (TN)} & \\
 \end{tabular}
 
+\vspace{1cm}
+
+\noindent 
+The following equations are based on \emph{An introduction to ROC analysis} by Tom Fawcett \cite{fawcett2006introduction}.
 
 \section{Prediction Error and Accuracy}
 
@@ -87,15 +96,35 @@ The \emph{True Positive Rate (TPR)} and \emph{False Positive Rate (FPR)} are per
 \begin{equation} TPR = \frac{TP}{P} =  \frac{TP}{FN + TP} \end{equation}
 
 
+
 \section{Precision, Recall, and the $F_1$-Score}
 
-\emph{Precision (PRE)} and \emph{Recall (REC)} are metrics that are more commonly used in \emph{Information Technology} and related to the \emph {False} and \emph{True Prositive Rates}. In fact, \emph{Recall} is synonymous to the \emph{True Positive Rate} and also sometimes called \emph{Sensititivity}. The $F_1$-Score can be understood as a combination of both \emph{Precision} and \emph{Recall} \cite{goutte2005probabilistic}.
+\emph{Precision (PRE)} and \emph{Recall (REC)} are metrics that are more commonly used in \emph{Information Technology} and related to the \emph {False} and \emph{True Prositive Rates}. In fact, \emph{Recall} is synonymous to the \emph{True Positive Rate} and also sometimes called \emph{Sensitivity}. The F$_1$-Score can be understood as a combination of both \emph{Precision} and \emph{Recall} \cite{goutte2005probabilistic}.
 
 \begin{equation} PRE = \frac{TP}{TP + FP} \end{equation}
 
 \begin{equation} REC = TPR = \frac{TP}{P} =  \frac{TP}{FN + TP} \end{equation}
 
 \begin{equation} F_1 = 2 \cdot \frac{PRE \cdot REC}{PRE + REC}\end{equation}
+
+
+
+
+
+\section{Sensitivity and Specificity}
+
+\emph{Sensitivity (SEN)} is synonymous to \emph{Recall} and the \emph{True Positive Rate} whereas \emph{Specificity (SPC)} is synonymous to the \emph{True Negative Rate} --- Sensitivity measures the recovery rate of the \emph{Positives} and complimentary, the Specificity  measures the recovery rate of the \emph{Negatives}.
+
+\begin{equation} SEN = TPR = REC = \frac{TP}{P} =  \frac{TP}{FN + TP} \end{equation}
+\begin{equation} SPC = TNR =\frac{TN}{N} =  \frac{TN}{FP + TN} \end{equation}
+
+\section{Matthews correlation coefficient}
+
+\emph{Matthews correlation coefficient (MCC)} was first formulated by Brian W. Matthews \cite{matthews1975comparison} in 1975 to assess the performance of protein secondary structure predictions. The MCC can be understood as a specific case of a linear correlation coefficient (\emph{Pearson r}) for a binary classification setting and especially useful in unbalanced class settings.
+The previous metrics take values in the range between 0 (worst) and 1 (best), whereas the MCC is bounded between the range 1 (perfect correlation between ground truth and predicted outcome) and -1 (inverse or negative correlation) --- a value of 0 denotes a random prediction. 
+
+\begin{equation} MCC = \frac{ TP \cdot TN - FP \cdot FN } {\sqrt{ (TP + FP) ( TP + FN ) ( TN + FP ) ( TN + FN ) } } \end{equation}
+
 
 
 \section{Receiver Operator Characteristic (ROC)}
@@ -116,6 +145,7 @@ The diagonal of a ROC graph can be interpreted as \emph{random guessing} and cla
 \noindent The ROC \emph{curve} can be computed by shifting the decision threshold of a classifier (e.g., the posterior probabilities of a naive Bayes classifier). Based on the  ROC \emph{curve}, the so-called \emph{Area Under the Curve (AUC)} can be calculated to characterize the performance of a classification model.
 
 
+\newpage
 
 \bibliography{./references/bib}{}
 \bibliographystyle{plain}
