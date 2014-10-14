@@ -17,10 +17,10 @@
 \contentsline {subsubsection}{\numberline {3.1.4}\emph {N}-grams}{15}{subsubsection.3.1.4}
 \contentsline {subsection}{\numberline {3.2}The Decision Rule for Spam Classification}{15}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Multi-variate Bernoulli Naive Bayes}{16}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Multinomial Naive Bayes}{17}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Term Frequency}{17}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}Term Frequency - Inverse Document Frequency (Tf-idf)}{18}{subsubsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4}Multinomial Naive Bayes}{16}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Term Frequency}{16}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Term Frequency - Inverse Document Frequency (Tf-idf)}{17}{subsubsection.3.4.2}
 \contentsline {subsubsection}{\numberline {3.4.3}Performances of the Multi-variate Bernoulli and Multinomial Model}{18}{subsubsection.3.4.3}
 \contentsline {section}{\numberline {4}Variants of the Naive Bayes Model}{18}{section.4}
-\contentsline {subsection}{\numberline {4.1}Continuous Variables}{19}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Continuous Variables}{18}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Eager and Lazy Learning Algorithms}{19}{subsection.4.2}

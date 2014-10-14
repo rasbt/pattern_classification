@@ -86,7 +86,7 @@ A non-linear problem (B) would be a case where linear classifiers, such as naive
 In order to understand how naive Bayes classifiers work, we have to briefly recapitulate the concept of Bayesian probabilities.
 The probability model that was formulated by Thomas Bayes (1701-1761) is quite simple yet powerful; it can be written down in simple words as follows:
 
-\begin{equation} \text{posterior probability} = \frac{\text{conditional probability} \cdot \text{prior probibility}}{\text{evidence}} \end{equation}
+\begin{equation} \text{posterior probability} = \frac{\text{conditional probability} \cdot \text{prior probability}}{\text{evidence}} \end{equation}
 
  Bayes' theorem forms the core of the whole concept of naive Bayes classification. The \emph{posterior probability}, in the context of a classification problem, can be interpreted as: "What is the probability that a particular object belongs to class $i$ given its observed feature values?" A more concrete example would be: "What is the probability that a person has diabetes given a certain value for a pre-breakfast blood glucose measurement and a certain value for a post-breakfast blood glucose measurement?"
 
@@ -164,7 +164,7 @@ However, with respect to the \emph{naive} assumption of conditional independence
 
 In contrast to a frequentist's approach, the concept of \emph{Bayesian inference} introduces an additional \emph{prior probability} (or just \emph{prior})   that can be interpreted as the \emph{prior belief} or \emph{a priori} knowledge.
 
-\begin{equation} \text{posterior probability} = \frac{\text{conditional probability} \cdot \text{prior probibility}}{\text{evidence}} \end{equation}
+\begin{equation} \text{posterior probability} = \frac{\text{conditional probability} \cdot \text{prior probability}}{\text{evidence}} \end{equation}
 
 In the context of pattern classification, the prior probabilities are also called \emph{class priors}, which describe "the general probability of encountering a particular class." In the case of spam classification, the priors could be formulated as 
 
@@ -186,7 +186,7 @@ Eventually, the \emph{a priori} knowledge can be obtained, e.g., by consulting a
 And in context of  \emph{spam classification}:
 
 
-\begin{equation}\hat{P}(\text{spam}) = \frac{\text{\# of spam messages in training data}}{\text{ \# of all mesages in training data}} \end{equation}
+\begin{equation}\hat{P}(\text{spam}) = \frac{\text{\# of spam messages in training data}}{\text{ \# of all messages in training data}} \end{equation}
 
 
 Figure \ref{fig:effect_priors} illustrates the effect of the prior probabilities on the decision rule. Given an 1-dimensional pattern \textbf{x} (continuous attribute, plotted as "x" symbols) that follows a normal distribution and belongs to one out of two classes (\emph{blue} and \emph{green}). The patterns from the first class ($\omega_1=\text{blue}$) are drawn from a normal distribution with mean  $x=4$ and a standard deviation $\sigma=1$. The probability distribution of the second class ($\omega_2=\text{green}$) is centered at x=10 with a similar standard deviation of $\sigma=1$. The bell-curves denote the probability densities of the samples that were drawn from the two different normal distributions. Considering only the class conditional probabilities, the maximum-likelihood estimate in this case would be  
@@ -220,7 +220,7 @@ However, if the prior probability was $P(\omega_1) > 0.5$, the decision region o
 
 After defining the \emph{class-conditional probability} and \emph{prior probability}, there is only one term missing in order to compute \emph{posterior probability}, that is the \emph{evidence}.
 
-\begin{equation} \text{posterior probability} = \frac{\text{conditional probability} \cdot \text{prior probibility}}{\text{evidence}} \end{equation}
+\begin{equation} \text{posterior probability} = \frac{\text{conditional probability} \cdot \text{prior probability}}{\text{evidence}} \end{equation}
 
 The evidence $P(\textbf x)$ can be understood as the probability of encountering a particular pattern $\textbf x$ independent from the class label. Given the more formal definition of posterior probability
 \begin{equation} P(\omega_j \mid \textbf x_i) = \frac{P(\textbf x_i \mid \omega_j) \cdot P(\omega_j)}{P(\textbf x_i)}, \end{equation}
@@ -613,7 +613,6 @@ where
 
 \begin{itemize}
 \item $df_{xi, y}$ is the number of documents in the training dataset that contain the feature $x_i$ and belong to class $\omega_j$.
-\item  $df_{xi, y}$ is the number of documents in the training dataset that contain $x_i$ and belong to class $\omega_j$.
 \item  $df_y$ is the number of documents in the training dataset that belong to class $\omega_j$.
 \item  +1 and +2 are the parameters of \emph{Laplace smoothing} (Section \ref{sec:additive_smoothing}).
 \end{itemize}
@@ -645,7 +644,7 @@ where
 \item  $x_i$: A word from the feature vector $\textbf x$ of a particular sample.
 \item  $\sum tf(x_i, d \in \omega_j)$: The sum of raw term frequencies of word $x_i$ from all documents in the training sample that belong to class $\omega_j$.
 \item  $\sum N_{d \in \omega j}$: The sum of all term frequencies in the training dataset for class $\omega_j$.
-\item $\alpha$: An addititive smoothing parameter ($\alpha = 1$ for Laplace smoothing).
+\item $\alpha$: An additive smoothing parameter ($\alpha = 1$ for Laplace smoothing).
 \item  $V$: The size of the vocabulary (number of different words in the training set).
 \end{itemize}
 
@@ -700,7 +699,7 @@ where $\mu$ (the sample mean) and $\sigma$ (the standard deviation) are the para
 \subsection{Eager and Lazy Learning Algorithms}
 \label{sec:eager_and_lazy}
 
-Being an \emph{eager learner}, naive Bayes classifiers are known to be relatively fast in classifying new instances. Eeager learners are learning algorithms that learn a model from a training dataset as soon as the data becomes available. Once the model is learned, the training data does not have to be re-evaluated in order to make a new prediction. In case of eager learners, the computationally most expensive step is the model building step whereas the classification of new instances is relatively fast.  
+Being an \emph{eager learner}, naive Bayes classifiers are known to be relatively fast in classifying new instances. Eager learners are learning algorithms that learn a model from a training dataset as soon as the data becomes available. Once the model is learned, the training data does not have to be re-evaluated in order to make a new prediction. In case of eager learners, the computationally most expensive step is the model building step whereas the classification of new instances is relatively fast.  
 
 \emph{Lazy learners}, however, memorize and re-evaluate the training dataset for predicting the class label of new instances. The advantage of \emph{lazy learning} is that the model building (training) phase is relatively fast. On the other hand, the actual prediction is typically slower compared to eager learners due to the re-evaluation of the training data. Another disadvantage of lazy learners is that the training data has to be retained, which can also be expensive in terms of storage space. A typical example of a lazy learner would be a \emph{k-nearest neighbor} algorithm: Every time a new instance is encountered, the algorithm would evaluate the \emph{k}-nearest neighbors in order to decide upon a class label for the new instance, e.g., via the \emph{majority rule} (i.e., the assignment of the class label that occurs most frequently amongst the \emph{k}-nearest neighbors).
 
