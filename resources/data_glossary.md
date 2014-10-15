@@ -39,11 +39,11 @@ Please feel free to drop me a note via
 - [Confusion Matrix](#confusion-matrix)
 - [Contingency Table](#contingency-table)
 - [Correlation analysis](#correlation-analysis)
+- [Correlation analysis, Canonical ](#correlation-analysis-canonical)
 - [Correlation analysis - Matthews Correlation Coefficient (MCC)](#correlation-analysis---matthews-correlation-coefficient)
 - [Correlation analysis - Kendall](#correlation-analysis---kendall)
 - [Correlation analysis - Pearson](#correlation-analysis---pearson)
 - [Correlation analysis - Spearman](#correlation-analysis---spearman)
-- [Correlation analysis - Canonical Correlation Analysis](#correlation-analysis---canoncal-correlation-analysis)
 - [Cosine Similarity](#cosine-similarity)
 - [Cost function](#cost-function)
 - [Covariate creation](#covariate-creation)
@@ -320,6 +320,14 @@ Correlation analysis describes and quantifies the relationship between two indep
 <br>
 <br>
 
+<a class="mk-toclify" id="correlation-analysis-canonical"></a>
+#### Correlation analysis, Canonical
+Let **x** and **y** be two vectors, the goal of canonical correlation analysis is to maximize the correlation between linear transformations of those original vectors. With applications in dimensionality reduction and feature selection, CCA tries to find common dimensions between two vectors.
+
+
+<br>
+<br>
+
 <a class="mk-toclify" id="correlation-analysis-matthews-correlation-coefficient"></a>
 #### Correlation analysis - Matthews Correlation Coefficient (MCC)
 [[back to top](#table-of-contents)]
@@ -357,9 +365,6 @@ Related to the [Pearson correlation coefficient](#correlation-analysis-pearson),
 <br>
 <br>
 
-<a class="mk-toclify" id="correlation-analysis---canonical-correlation-analysis"></a>
-#### Correlation analysis - Canonical correlation analysis
-Given two vector x and y, the goal in canonical correlation analysis is to find a linear transformation of x and y with two transformation vectors a and b that maximize the correlation of $a^T x$  and $b^T y$. With applications in dimensionality reduction and feature selection, CCA tries to find common dimensions between two vectors.
 
 
 
