@@ -43,6 +43,7 @@ Please feel free to drop me a note via
 - [Correlation analysis - Kendall](#correlation-analysis---kendall)
 - [Correlation analysis - Pearson](#correlation-analysis---pearson)
 - [Correlation analysis - Spearman](#correlation-analysis---spearman)
+- [Correlation analysis - Canonical Correlation Analysis](#correlation-analysis---canoncal-correlation-analysis)
 - [Cosine Similarity](#cosine-similarity)
 - [Cost function](#cost-function)
 - [Covariate creation](#covariate-creation)
@@ -355,6 +356,12 @@ Related to the [Pearson correlation coefficient](#correlation-analysis-pearson),
 
 <br>
 <br>
+
+<a class="mk-toclify" id="correlation-analysis---canonical-correlation-analysis"></a>
+#### Correlation analysis - Canonical correlation analysis
+Given two vector x and y, the goal in canonical correlation analysis is to find a linear transformation of x and y with two transformation vectors a and b that maximize the correlation of $a^T x$  and $b^T y$. With applications in dimensionality reduction and feature selection, CCA tries to find common dimensions between two vectors.
+
+
 
 <a class="mk-toclify" id="cosine-similarity"></a>
 #### Cosine Similarity
