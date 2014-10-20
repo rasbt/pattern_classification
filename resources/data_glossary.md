@@ -83,6 +83,7 @@ Please feel free to drop me a note via
 - [Independent Component Analysis](#independent-component-analysis)
 - [Jaccard coefficient](#jaccard-coefficient)
 - [Jackknifing](#jackknifing)
+- [Jittering](#jittering)
 - [Kernel Density Estimation](#kernel-density-estimation)
 - [Kernel (in statistics)](#kernel-in-statistics)
 - [Kernel Methods](#kernel-methods)
@@ -760,6 +761,17 @@ Jackknifing is a resampling technique that predates the related [cross-validatio
 
 <br>
 <br>
+
+<a class="mk-toclify" id="jittering"></a>
+#### Jackknifing
+[[back to top](#table-of-contents)]
+
+Jittering is a sampling technique that can be used to measure the stability of a given statistical model (classifiction/regression/clustering). In jittering, some noise is added to sample data points, and then a new model is drawn and compared to the original model. 
+(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
+<br>
+<br>
+
+
 
 <a class="mk-toclify" id="k-d-trees"></a>
 #### k-D Trees
