@@ -763,7 +763,7 @@ Jackknifing is a resampling technique that predates the related [cross-validatio
 <br>
 
 <a class="mk-toclify" id="jittering"></a>
-#### Jackknifing
+#### Jittering
 [[back to top](#table-of-contents)]
 
 Jittering is a sampling technique that can be used to measure the stability of a given statistical model (classifiction/regression/clustering). In jittering, some noise is added to sample data points, and then a new model is drawn and compared to the original model. 
