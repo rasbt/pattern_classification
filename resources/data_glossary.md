@@ -1,5 +1,5 @@
 Sebastian Raschka  
-last updated: 09/27/2014
+last updated: 10/20/2014
 
 # Terms in data science defined in one paragraph
 
@@ -142,6 +142,7 @@ Please feel free to drop me a note via
 - [Rule-based classifier](#rule-based-classifier)
 - [Sampling](#sampling)
 - [Sensitivity](#sensitivity)
+- [Sharding](#sharding)
 - [Silhouette Measure (clustering)](#silhouette-measure-clustering)
 - [Simple Matching Coefficient](#simple-matching-coefficient)
 - [Singular Value Decomposition (SVD)](#singular-value-decomposition-svd)
@@ -1345,6 +1346,15 @@ Sensitivity (synonymous to [precision](#precision-and-recall)), which is related
 <br>
 <br>
 
+<a class="mk-toclify" id="sharding"></a>
+#### Sharding
+
+[[back to top](#table-of-contents)]
+
+Sharding is the non-redundant partitioning of a database into smaller databases; this process can also be understood as horizontal splitting. The rationale behind sharing is to divide a database among separate machines to avoid storage or performance issues that are related to growing database sizes.
+
+<br>
+<br>
 
 
 <a class="mk-toclify" id="silhouette-measure-clustering"></a>
