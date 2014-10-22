@@ -2,7 +2,7 @@
 
 
 Sebastian Raschka  
-last updated: 09/04/2014 
+last updated: 10/22/2014 
 
 # Useful libraries for data science in Python
 
@@ -117,7 +117,7 @@ SymPy is a Python library for symbolic mathematical computations. It has a broad
 
 Website: [http://statsmodels.sourceforge.net](http://statsmodels.sourceforge.net)
 
-Statsmodel is a Python libarary that is centered around statistical data analysis mainly through linear models and includes a variety of statistical tests.
+Statsmodel is a Python library that is centered around statistical data analysis mainly through linear models and includes a variety of statistical tests.
 
 <br>
 <br>
@@ -228,7 +228,7 @@ Matplotlib is Python's most popular and comprehensive plotting library that is e
 
 Website: [https://plot.ly](https://plot.ly)
 
-Plotly is a plotting library that is focussed on adding interactivity to data visualizations and to share them via the web for collaborative data analysis.
+Plotly is a plotting library that is focussed on adding interactivity to data visualizations and to share them via the web for collaborative data analysis. To produce interactive plots, plotly requires connection to the internet to stream data to the plotly servers, however, plots can also be saved in common image formats for offline use.
 
 <br>
 
