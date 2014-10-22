@@ -4,7 +4,7 @@
 \title{Naive Bayes and Text Classification I \\ \vspace{2 mm} \large Introduction and Theory}
 
 \author{Sebastian Raschka\\ \texttt{se.raschka@gmail.com}} 
-\date{\today}
+\date{October 4, 2014}
 % end meta data
 
 % general packages
@@ -83,7 +83,7 @@ A non-linear problem (B) would be a case where linear classifiers, such as naive
 \subsection{Posterior Probabilities}
 \label{sec:posterior_probabilities_1}
 
-In order to understand how naive Bayes classifiers work, we have to briefly recapitulate the concept of Bayesian probabilities.
+In order to understand how naive Bayes classifiers work, we have to briefly recapitulate the concept of Bayes' rule.
 The probability model that was formulated by Thomas Bayes (1701-1761) is quite simple yet powerful; it can be written down in simple words as follows:
 
 \begin{equation} \text{posterior probability} = \frac{\text{conditional probability} \cdot \text{prior probability}}{\text{evidence}} \end{equation}
@@ -106,13 +106,11 @@ The probability model that was formulated by Thomas Bayes (1701-1761) is quite s
 \begin{equation} P(\omega_j \mid \textbf x_i) = \frac{P(\textbf x_i \mid \omega_j) \cdot P(\omega_j)}{P(\textbf x_i)} \end{equation}
 
 
-
-
-In the naive Bayes probability model, objects are classified based on the most probable hypothesis, and the \emph{Maximum A Posteriori (MAP)} estimation can be used to formulate a decision rule given the training data. In other words, the assignment of a class label  $\omega_j$ to a particular observation $\textbf x_i$ is determined by the maximization of the posterior probability:
+The objective function in the naive Bayes probability is to maximize the posterior probability given the training data in order to formulate the decision rule. 
 
 \begin{equation} \text{predicted class label} \leftarrow \underset{j = 1 ..., m} {\text{arg max}} \; P(\omega_{j} \mid \textbf x_i)   \end{equation}
 
-In contrast to a \emph{maximum-likelihood (ML)} approach for parameter estimation, MAP includes \emph{prior knowledge} in order to make a prediction. To continue with our example above, we can formulate the decision rule based on the posterior probabilities as follows:
+To continue with our example above, we can formulate the decision rule based on the posterior probabilities as follows:
 
 \begin{equation} 
 \begin{split} 
@@ -162,7 +160,7 @@ However, with respect to the \emph{naive} assumption of conditional independence
 \subsection{Prior Probabilities}
 \label{sec:prior_probabilities_1}
 
-In contrast to a frequentist's approach, the concept of \emph{Bayesian inference} introduces an additional \emph{prior probability} (or just \emph{prior})   that can be interpreted as the \emph{prior belief} or \emph{a priori} knowledge.
+In contrast to a frequentist's approach, an additional \emph{prior probability} (or just \emph{prior}) is introduced that can be interpreted as the \emph{prior belief} or \emph{a priori} knowledge.
 
 \begin{equation} \text{posterior probability} = \frac{\text{conditional probability} \cdot \text{prior probability}}{\text{evidence}} \end{equation}
 
