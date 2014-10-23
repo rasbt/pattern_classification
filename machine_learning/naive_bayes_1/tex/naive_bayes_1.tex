@@ -143,7 +143,7 @@ Here, $P(\textbf x \mid \omega_j)$ simply means: "How likely is it to observe th
 \end{itemize}
 
 To illustrate this concept with an example, let's assume that we have a collection of 500 documents where 100 documents are \emph{spam} messages. Now, we want to calculate the class-conditional probability for a new message "Hello World" given that it is spam.
-Here, the pattern consists of two features: "hello" and "world," and the the class-conditional probability is the product of the "probability of encountering 'hello' given the message is spam" --- the probability of encountering "world" given the message is spam."
+Here, the pattern consists of two features: "hello" and "world," and the class-conditional probability is the product of the "probability of encountering 'hello' given the message is spam" --- the probability of encountering "world" given the message is spam."
 
 \begin{equation} P(\textbf x=[\text{hello, world}] \mid \omega=\text{spam}) = P(\text{hello} \mid \text{spam}) \cdot P(\text{world} \mid \text{spam}) \end{equation}
 
@@ -303,7 +303,7 @@ Under the assumption that the samples are \emph{i.i.d}, the  \emph{prior probabi
 
 Under the \emph{naive} assumption that the features "color" and "shape" are mutually independent, the \emph{class-conditional probabilities} can be calculated as a simple product of the individual conditional probabilities.
 
-Via maximum-likelihood estimate, e.g., $P(\text{blue} \mid -)$ is simply the frequency of observing a "blue" sample among all samples in the training dataset that belong to class "+."
+Via maximum-likelihood estimate, e.g., $P(\text{blue} \mid -)$ is simply the frequency of observing a "blue" sample among all samples in the training dataset that belong to class $-$.
 
 \begin{equation} 
 \begin{split}
