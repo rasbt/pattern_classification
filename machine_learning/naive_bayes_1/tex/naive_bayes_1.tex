@@ -597,7 +597,7 @@ Assuming that the words in every document are conditionally independent (accordi
 \subsection{Multi-variate Bernoulli Naive Bayes}
 \label{sec:bernoulli_bayes}
 
-The \emph{Multi-variate Bernoulli} model is based on binary data: Every token in the feature vector of a document is associated with the value 1 or 0. The  feature vector has $d$ dimensions where $d$ is the number of words in the whole vocabulary (in Section \ref{sec:the_bag_of_words_model}); the value 1 means that the word occurs in the particular document, and 0 means that the word does
+The \emph{Multi-variate Bernoulli} model is based on binary data: Every token in the feature vector of a document is associated with the value 1 or 0. The  feature vector has $m$ dimensions where $m$ is the number of words in the whole vocabulary (in Section \ref{sec:the_bag_of_words_model}); the value 1 means that the word occurs in the particular document, and 0 means that the word does
 not occur in this document. The Bernoulli trials can be written as
 
 \begin{equation} P(\textbf x \mid \omega_j) = \prod_{i=1}^{m} P(x_i \mid \omega_j)^b \cdot (1-P(x_i \mid  \omega_j))^{(1-b)}  \quad (b \in {0,1}).
