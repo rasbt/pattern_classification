@@ -23,6 +23,7 @@
 - [Model Evaluation](#model-evaluation)
 - [Parameter Estimation](#parameter-estimation)
 - [Machine Learning Algorithms and Classification Models](#machine-learning-algorithms-and-classification-models)
+- [Clustering](#clustering)
 - [Statistical Pattern Classification Examples](#statistical-pattern-classification-examples)
 - [Resources](#resources)
 
@@ -124,6 +125,22 @@
 <br>
 <hr>
 <br>
+
+### Clustering
+[[back to top](#sections)]
+
+- **Protoype-based clustering**
+- **Hierarchical clustering**
+	- Complete-Linkage Clustering and Heatmaps in Python [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/clustering/hierarchical/clust_complete_linkage.ipynb)]
+- **Density-based clustering**
+- **Graph-based clustering**
+- **Probabilistic-based clustering**
+
+<br>
+<hr>
+<br>
+
+
 
 
 ### Statistical Pattern Classification Examples
