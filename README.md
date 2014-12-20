@@ -25,6 +25,7 @@
 - [Machine Learning Algorithms and Classification Models](#machine-learning-algorithms-and-classification-models)
 - [Clustering](#clustering)
 - [Statistical Pattern Classification Examples](#statistical-pattern-classification-examples)
+- [Collecting Data](#collecting-data)
 - [Resources](#resources)
 
 <br>
@@ -164,6 +165,17 @@
     		
     - Non-Parametric Techniques
 
+
+<br>
+<hr>
+<br>
+
+## Collecting Data
+[[back to top](#sections)]
+
+- Collecting Fantasy Soccer Data with Python and Beautiful Soup [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_collecting/parse_dreamteamfc_data.ipynb)]
+
+- Download Your Twitter Timeline and Turn into a Word Cloud Using Python [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_collecting/twitter_wordcloud.ipynb)]
 
 <br>
 <hr>
