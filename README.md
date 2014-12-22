@@ -160,7 +160,11 @@
 
 - Exploratory Analysis of the Star Wars API  [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_viz/swapi_viz.ipynb)]
 
+![](./Images/data_viz/data_viz_swapi_1.png)
 
+- Matplotlib examples -Exploratory data analysis of the Iris dataset [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_viz/matplotlib_viz_gallery.ipynb)]
+
+![](./Images/data_viz/data_viz_iris_1.png)
 <br>
 <hr>
 <br>
@@ -195,7 +199,7 @@
 ## Resources
 [[back to top](#sections)]
 
-- Matplotlib examples - Visualization techniques for exploratory data analysis [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/resources/matplotlib_viz_gallery.ipynb)]
+
 
 - Copy-and-paste ready LaTex equations [[Markdown](./resources/latex_equations.md)]
 
