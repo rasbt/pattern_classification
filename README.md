@@ -24,8 +24,9 @@
 - [Parameter Estimation](#parameter-estimation)
 - [Machine Learning Algorithms and Classification Models](#machine-learning-algorithms-and-classification-models)
 - [Clustering](#clustering)
-- [Statistical Pattern Classification Examples](#statistical-pattern-classification-examples)
 - [Collecting Data](#collecting-data)
+- [Data Visualization](#data-visualization)
+- [Statistical Pattern Classification Examples](#statistical-pattern-classification-examples)
 - [Resources](#resources)
 
 <br>
@@ -143,6 +144,27 @@
 
 
 
+## Collecting Data
+[[back to top](#sections)]
+
+- Collecting Fantasy Soccer Data with Python and Beautiful Soup [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_collecting/parse_dreamteamfc_data.ipynb)]
+
+- Download Your Twitter Timeline and Turn into a Word Cloud Using Python [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_collecting/twitter_wordcloud.ipynb)]
+
+<br>
+<hr>
+<br>
+
+## Data Visualization
+[[back to top](#sections)]
+
+- Exploratory Analysis of the Star Wars API  [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_viz/swapi_viz.ipynb)]
+
+
+<br>
+<hr>
+<br>
+
 
 ### Statistical Pattern Classification Examples
 [[back to top](#sections)]
@@ -165,17 +187,6 @@
     		
     - Non-Parametric Techniques
 
-
-<br>
-<hr>
-<br>
-
-## Collecting Data
-[[back to top](#sections)]
-
-- Collecting Fantasy Soccer Data with Python and Beautiful Soup [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_collecting/parse_dreamteamfc_data.ipynb)]
-
-- Download Your Twitter Timeline and Turn into a Word Cloud Using Python [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_collecting/twitter_wordcloud.ipynb)]
 
 <br>
 <hr>
