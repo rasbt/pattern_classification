@@ -11,6 +11,7 @@ A collection of links to various free and open-source datasets.
     - [Images](#images)
     - [Audio](#audio)
     - [Text](#text)
+    - [Time Series](#time-series)
     - [Natural sciences](#natural-sciences)
     - [Web, technology, and social networks](#web-technology-and-social-networks)
     - [Historical data and human resources](historical-data-and-human-resources)
@@ -108,6 +109,14 @@ by governments, companies and organizations.
 - [musiXmatch](http://labrosa.ee.columbia.edu/millionsong/musixmatch) - A dataset of lyrics for the songs in the one million songs dataset. The lyrics are pre-processed and available as "bag of words" after stemming.
 
 - [Google books Ngram Viewer](http://storage.googleapis.com/books/ngrams/books/datasetsv2.html) - The corpus of Google books as n-grams available for quick online queries or download.
+
+<br>
+<br>
+
+## Time Series
+[[back to top](#sections)]
+
+- [NGAFID](http://people.cs.und.edu/%7Etdesell/ngafid_releases.php) - National General Aviation Flight Information Database.  Time series data from various flight data recorders for flights that are approximately an hour long each.
 
 <br>
 <br>
