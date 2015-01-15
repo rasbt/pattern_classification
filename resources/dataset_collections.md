@@ -1,5 +1,5 @@
 Sebastian Raschka  
-Last updated: 09/29/2014
+Last updated: 01/15/2015
 
 A collection of links to various free and open-source datasets.
 
@@ -181,10 +181,11 @@ by governments, companies and organizations.
 
 [[back to top](#sections)]
 
-- [United Nations](#http://data.un.org/) Data about health, environment, energy.. for different nations
-- [United Stated](#http://www.data.gov/) 
-- [Open Government Data](#http://www.data.gov/open-gov/) List of cities/counties in the U.S. with open data, plus other countries involved in open-data project
-- [Survey Data from U.S.](#http://www.asdfree.com/)
+- [United Nations](http://data.un.org/) Data about health, environment, energy, etc.
+
+- [United Stated Government Data](http://www.data.gov/) The home of the U.S. Government’s open data
+
+- [Survey Data from U.S.](http://www.asdfree.com/)
 
 - [EconData](http://inforumweb.umd.edu/econdata/econdata.html) - economic time series, produced by a number of U.S. Government agencies and distributed in a variety of formats and media
 
