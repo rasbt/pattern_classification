@@ -110,6 +110,9 @@ by governments, companies and organizations.
 
 - [Google books Ngram Viewer](http://storage.googleapis.com/books/ngrams/books/datasetsv2.html) - The corpus of Google books as n-grams available for quick online queries or download.
 
+- [Jeb Bush's email archive](http://americanbridgepac.org/jeb-bushs-gubernatorial-email-archive/) - Jeb Bush's emails during his days as the governor of Florida.
+
+
 <br>
 <br>
 
@@ -201,3 +204,5 @@ by governments, companies and organizations.
 - [USGovXML](http://usgovxml.com) - USGovXML is an index to publicly available web services and XML data sources that are provided by the US government
 
 - [Nominate/vote data](http://voteview.com/dwnl.htm) - Datasets including all the D-NOMINATE and W-NOMINATE scores
+
+- [Jeb Bush's email archive](http://americanbridgepac.org/jeb-bushs-gubernatorial-email-archive/) - Jeb Bush's emails during his days as the governor of Florida.
