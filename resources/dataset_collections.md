@@ -8,18 +8,18 @@ I am looking forward to extend this little collection! If you don't find your fa
 <br>
 ## Sections
 
-- [Dataset repositories](#dataset-repositories)
-- [Datasets by format](#datasets-by-format)	
+- [Dataset Repositories](#dataset-repositories)
+- [Datasets by Format](#datasets-by-format)	
     - [Image](#image)
     - [Audio](#audio)
     - [Text](#text)
     - [Time Series](#time-series)
-- [Datasets by topic](#datasets-by-topic)	
-    - [Natural sciences](#natural-sciences)
-    - [Web, technology, and social networks](#web-technology-and-social-networks)
-    - [Historical data and human resources](historical-data-and-human-resources)
-    - [Finance and companies](#finance-and-companies)
-    - [Government data and politics](#government-data-and-politics)
+- [Datasets by Topic](#datasets-by-topic)	
+    - [Natural Sciences](#natural-sciences)
+    - [Web, Technology, and Social Networks](#web-technology-and-social-networks)
+    - [Historical Data and Human Resources](historical-data-and-human-resources)
+    - [Finance and Companies](#finance-and-companies)
+    - [Government Data and Politics](#government-data-and-politics)
     
 
 <hr>
@@ -27,7 +27,7 @@ I am looking forward to extend this little collection! If you don't find your fa
 <br>
 
 
-# Dataset repositories
+# Dataset Repositories
 
 [[back to top](#sections)]
 
@@ -62,7 +62,7 @@ I am looking forward to extend this little collection! If you don't find your fa
 <br>
 <br>
 
-# Datasets by format
+# Datasets by Format
 [[back to top](#sections)]
 
 <br>
@@ -82,6 +82,10 @@ I am looking forward to extend this little collection! If you don't find your fa
 
 - [Amsterdam Library of Object Images (ALOI)](http://aloi.science.uva.nl) - A color image collection of one-thousand small objects, recorded for scientific purposes.
 
+- [Face Recognition Databases](http://www.face-rec.org/databases/) - A large collection of datasets for face recognition.
+
+- [INRIA Holidays and Copydays datasets](http://lear.inrialpes.fr/people/jegou/data.php) - Datasets of personal holidays photos.
+
 
 <br>
 <br>
@@ -96,6 +100,14 @@ I am looking forward to extend this little collection! If you don't find your fa
 - [Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/) - The Million Song Dataset is a freely-available collection of audio features and metadata for a million contemporary popular music tracks.
 
 - [Music Data Mining](http://users.cis.fiu.edu/~lli003/Music/music.html) - A collection of research done on music analysis and links to various datasets.
+
+- [CMU Audio Databases](http://www.speech.cs.cmu.edu/databases/) - A collection of databases for speech recognition.
+
+- [CMU Audio Databases](http://www.speech.cs.cmu.edu/databases/) - A collection of databases for speech recognition.
+
+- [CMU_ARCTIC speech synthesis databases](http://festvox.org/cmu_arctic/) - Phonetically balanced, US English single speaker databases designed for unit selection speech synthesis research.
+
+- [VoxForge](http://www.voxforge.org) - GPL speech audio corpora.
 
 <br>
 <br>
@@ -131,13 +143,13 @@ I am looking forward to extend this little collection! If you don't find your fa
 <br>
 <br>
 
-# Datasets by topic
+# Datasets by Topic
 [[back to top](#sections)]
 
 <br>
 <br>
 
-## Natural sciences
+## Natural Sciences
 
 [[back to top](#sections)]
 
@@ -150,7 +162,7 @@ I am looking forward to extend this little collection! If you don't find your fa
 <br>
 <br>
 
-## Web, technology, and social networks
+## Web, Technology, and Social Networks
 
 [[back to top](#sections)]
 
@@ -174,7 +186,7 @@ I am looking forward to extend this little collection! If you don't find your fa
 <br>
 <br>
 
-## Historical data and human resources
+## Historical Data and Human Resources
 
 [[back to top](#sections)]
 
@@ -185,7 +197,7 @@ I am looking forward to extend this little collection! If you don't find your fa
 <br>
 <br>
 
-## Finance and companies
+## Finance and Companies
 
 [[back to top](#sections)]
 
@@ -201,7 +213,7 @@ I am looking forward to extend this little collection! If you don't find your fa
 <br>
 
 
-## Government data and politics
+## Government Data and Politics
 
 [[back to top](#sections)]
 
