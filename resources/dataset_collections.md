@@ -1,7 +1,9 @@
 Sebastian Raschka  
-Last updated: 01/15/2015
+Last updated: 01/16/2015
 
 A collection of links to various free and open-source datasets.
+
+I am looking forward to extend this little collection! If you don't find your favorite datasets listed here, just let me know (via [email](mailto:mail@sebastianraschka.com) or [twitter](https://twitter.com/rasbt)) and I will add them in no-time! 
 
 <br>
 ## Sections
@@ -112,6 +114,11 @@ A collection of links to various free and open-source datasets.
 
 - [Jeb Bush's email archive](http://americanbridgepac.org/jeb-bushs-gubernatorial-email-archive/) - Jeb Bush's emails during his days as the governor of Florida.
 
+- [Amazon Google Books Ngrams](http://aws.amazon.com/datasets/8172056142375670) - A data set containing Google Books n-gram corpuses.
+
+- [The Wayback Machine](http://blog.archive.org/2012/10/26/80-terabytes-of-archived-web-crawl-data-available-for-research/) - 80 terabytes of archived web crawl data available for research.
+
+- [SMS Spam Collection](http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/) - A collection of 425 SMS spam messages was manually extracted from the Grumbletext Web site.
 
 <br>
 <br>
