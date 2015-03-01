@@ -162,14 +162,6 @@ Please feel free to drop me a note via
 <br>
 <br>
 
-<a class="mk-toclify" id="accuracy"></a>
-#### Accuracy
-[[back to top](#table-of-contents)]
-
-Accuracy is defined as the fraction of correct classifications out of the total number of samples; it resembles one way to assess the performance of a predictor and is often used synonymous to [specificity](#specificity)/[precision](#precision-and-recall) although it is calculated differently. Accuracy is calculated as (TP+TN)/(P+N), where TP=True Positives, TN=True Negatives, P=Positives, N=Negatives.
-
-<br>
-<br>
 
 <a class="mk-toclify" id="accuracy"></a>
 #### Accuracy
