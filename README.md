@@ -27,6 +27,7 @@
 - [Collecting Data](#collecting-data)
 - [Data Visualization](#data-visualization)
 - [Statistical Pattern Classification Examples](#statistical-pattern-classification-examples)
+- [Talks](#talks)
 - [Resources](#resources)
 
 <br>
@@ -195,6 +196,18 @@
     		
     - Non-Parametric Techniques
 
+
+<br>
+<hr>
+<br>
+
+## Talks
+[[back to top](#sections)]
+
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/44568310" width="340" height="290" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/SebastianRaschka/nextgen-talk-022015" title="An Introduction to Supervised Machine Learning and Pattern Classification: The Big Picture" target="_blank">An Introduction to Supervised Machine Learning and Pattern Classification: The Big Picture</a> </strong> from <strong><a href="//www.slideshare.net/SebastianRaschka" target="_blank">Sebastian Raschka</a></strong> </div>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/42579528" width="340" height="290" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/SebastianRaschka/musicmood-20140912" title="MusicMood - Machine Learning in Automatic Music Mood Prediction Based on Song Lyrics" target="_blank">MusicMood - Machine Learning in Automatic Music Mood Prediction Based on Song Lyrics</a> </strong> from <strong><a href="//www.slideshare.net/SebastianRaschka" target="_blank">Sebastian Raschka</a></strong> </div>
 
 <br>
 <hr>
