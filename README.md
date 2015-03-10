@@ -225,6 +225,7 @@
 #### MusicMood - Machine Learning in Automatic Music Mood Prediction Based on Song Lyrics
 
 <a href='http://www.slideshare.net/SebastianRaschka/musicmood-20140912'> ![](./Images/talks/musicmood20140912.png)</a>
+
 [[View on SlideShare](http://www.slideshare.net/SebastianRaschka/musicmood-20140912)]
 
 
