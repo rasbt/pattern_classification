@@ -28,6 +28,7 @@
 - [Data Visualization](#data-visualization)
 - [Statistical Pattern Classification Examples](#statistical-pattern-classification-examples)
 - [Talks](#talks)
+- [Applications](#applications)
 - [Resources](#resources)
 
 <br>
@@ -204,10 +205,55 @@
 ## Talks
 [[back to top](#sections)]
 
+#### An Introduction to Supervised Machine Learning and Pattern Classification: The Big Picture
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/44568310" width="340" height="290" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/SebastianRaschka/nextgen-talk-022015" title="An Introduction to Supervised Machine Learning and Pattern Classification: The Big Picture" target="_blank">An Introduction to Supervised Machine Learning and Pattern Classification: The Big Picture</a> </strong> from <strong><a href="//www.slideshare.net/SebastianRaschka" target="_blank">Sebastian Raschka</a></strong> </div>
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/42579528" width="340" height="290" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/SebastianRaschka/musicmood-20140912" title="MusicMood - Machine Learning in Automatic Music Mood Prediction Based on Song Lyrics" target="_blank">MusicMood - Machine Learning in Automatic Music Mood Prediction Based on Song Lyrics</a> </strong> from <strong><a href="//www.slideshare.net/SebastianRaschka" target="_blank">Sebastian Raschka</a></strong> </div>
+<a href='http://www.slideshare.net/SebastianRaschka/nextgen-talk-022015'>![](./Images/talks/nextgentalk022015.png)</a>
+
+[[View on SlideShare](http://www.slideshare.net/SebastianRaschka/nextgen-talk-022015)]
+
+[[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/PDFs/nextgentalk022015.pdf)]
+
+
+<br>
+<br>
+
+
+
+
+
+#### MusicMood - Machine Learning in Automatic Music Mood Prediction Based on Song Lyrics
+
+<a href='http://www.slideshare.net/SebastianRaschka/musicmood-20140912'> ![](./Images/talks/musicmood20140912.png)</a>
+[[View on SlideShare](http://www.slideshare.net/SebastianRaschka/musicmood-20140912)]
+
+
+[[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/PDFs/musicmood20140912.pdf)]
+
+
+<br>
+<hr>
+<br>
+
+## Applications
+[[back to top](#sections)]
+
+#### MusicMood - Machine Learning in Automatic Music Mood Prediction Based on Song Lyrics
+
+This project is about building a music recommendation system for users who want to listen to happy songs. Such a system can not only be used to brighten up one's mood on a rainy weekend; especially in hospitals, other medical clinics, or public locations such as restaurants, the MusicMood classifier could be used to spread positive mood among people.
+
+![](./Images/applications/musicmood_1.png)
+
+[[musicmood GitHub Repository](https://github.com/rasbt/musicmood)]
+
+<br>
+
+#### mlxtend - A library of extension and helper modules for Python's data analysis and machine learning libraries.
+
+![](./Images/applications/mlxtend_1.png)
+
+[[mlxtend GitHub Repository](https://github.com/rasbt/mlxtend)]
+
 
 <br>
 <hr>
