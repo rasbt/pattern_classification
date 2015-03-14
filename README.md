@@ -126,6 +126,8 @@
 ### Machine Learning Algorithms and Classification Models
 [[back to top](#sections)]
 
+- Artificial Neurons and Single-Layer Neural Networks - How Machine Learning Algorithms Work Part 1 [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/singlelayer_neural_networks/inglelayer_neural_networks.ipynb)]
+
 - Naive Bayes and Text Classification I - Introduction and Theory [[View PDF](http://sebastianraschka.com/PDFs/articles/naive_bayes_1.pdf)] [[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/machine_learning/naive_bayes_1/tex/naive_bayes_1.pdf)] 
 
 - Implementing a Weighted Majority Rule Ensemble Classifier in scikit-learn  [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/ensemble_classifier.ipynb)]
