@@ -135,11 +135,11 @@ An additional assumption of naive Bayes classifiers is the \emph{conditional ind
 
 Here, $P(\textbf x \mid \omega_j)$ simply means: "How likely is it to observe this particular pattern $\textbf x$ given that it belongs to class $ \omega_j$?" The "individual" likelihoods for every feature in the feature vector can be estimated via the maximum-likelihood estimate, which is simply a frequency in the case of categorical data:
     
-\begin{equation} \hat{P}(x_i \mid \omega_j) = \frac{N_{i,c}}{N_i}  \quad (i = (1, ..., d))\end{equation}
+\begin{equation} \hat{P}(x_i \mid \omega_j) = \frac{N_{x_i, \omega_j}}{N_{\omega_j}}  \quad (i = (1, ..., d))\end{equation}
 
 \begin{itemize}
-	\item $N_{i,c}$: Count of feature $x_i$ in class $\omega_j$.
-	\item  $N_ic$: Count of feature $x_i$ in all classes.
+	\item $N_{x_i, \omega_j}$: Number of times feature $x_i$ appears in samples from class $\omega_j$.
+	\item  $N_{\omega_j}$: Total count of all features in class $\omega_j$.
 \end{itemize}
 
 To illustrate this concept with an example, let's assume that we have a collection of 500 documents where 100 documents are \emph{spam} messages. Now, we want to calculate the class-conditional probability for a new message "Hello World" given that it is spam.
@@ -207,7 +207,7 @@ However, if the prior probability was $P(\omega_1) > 0.5$, the decision region o
 
 \begin{figure}[h!]
 \includegraphics[width=\linewidth]{../images/effect_priors_1.png}
-\caption{The effect of prior probabilities on the decision regions. The figure shows a 1-dimensional random sample from two different classes (blue and green crosses). The data points for both classes are normally distributed with standard deviation 1, and the bell curves denote the class conditional probabilities. If the class priors are equal, the decision boundary of a naive Bayes classifier is placed at the center between both distributions (gray bar). An increase of the prior probability of the blue class ($\omega_2$) leads to an extension of the decision region R1 by moving the decision boundary (blue-dotted bar) towards the other class and vice versa.}
+\caption{The effect of prior probabilities on the decision regions. The figure shows an 1-dimensional random sample from two different classes (blue and green crosses). The data points of both the blue and the green class are normally distributed with standard deviation 1, and the bell curves denote the class-conditional probabilities. If the class priors are equal, the decision boundary of a naive Bayes classifier is placed at the center between both distributions (gray bar). An increase of the prior probability of the blue class ($\omega_1$) leads to an extension of the decision region R1 by moving the decision boundary (blue-dotted bar) towards the other class and vice versa.}
 \label{fig:effect_priors}
 \end{figure}
 
@@ -361,14 +361,13 @@ If the color \emph{yellow} does not appear in our training dataset, the class-co
 In order to avoid the problem of \emph{zero} probabilities, an additional smoothing term can be added to the \emph{multinomial Bayes} model. The most common variants of additive smoothing are the so-called \emph{Lidstone smoothing} ($\alpha<1$) and  \emph{Laplace smoothing} ($\alpha=1$).
 
 
-\begin{equation} \hat{P}(x_i \mid \omega_j) = \frac{N_{i,c}+\alpha}{N_i + \alpha \, d}  \quad (i = (1, ..., d))\end{equation}
+\begin{equation} \hat{P}(x_i \mid \omega_j) = \frac{N_{x_i, \omega_j}+\alpha}{N_{\omega_j} + \alpha \, d}  \quad (i = (1, ..., d))\end{equation}
 
 where
 
 \begin{itemize}
-
-\item $N_{i,c}$: Count of observing feature $x_i$ in class $\omega_j$.
-\item $N_ic$: Count of observing feature $x_i$ in all classes.
+\item $N_{x_i, \omega_j}$: Number of times feature $x_i$ appears in samples from class $\omega_j$.
+\item  $N_{\omega_j}$: Total count of all features in class $\omega_j$.
 \item $\alpha$: Parameter for additive smoothing. 
 \item $d$: Dimensionality of the feature vector $\textbf x = [x_1, ..., x_d]$.
 

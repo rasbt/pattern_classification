@@ -8,7 +8,7 @@
 \doTocEntry\tocsubsection{2.2}{\csname a:TocLink\endcsname{1}{x1-50002.2}{QQ2-1-7}{Posterior Probabilities}}{10}\relax 
 \doTocEntry\tocsubsection{2.3}{\csname a:TocLink\endcsname{1}{x1-60002.3}{QQ2-1-8}{Class-conditional Probabilities}}{12}\relax 
 \doTocEntry\tocsubsection{2.4}{\csname a:TocLink\endcsname{1}{x1-70002.4}{QQ2-1-9}{Prior Probabilities}}{15}\relax 
-\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-7008r3}{}{\ignorespaces The effect of prior probabilities on the decision regions. The figure shows a 1-dimensional random sample from two different classes (blue and green crosses). The data points for both classes are normally distributed with standard deviation 1, and the bell curves denote the class conditional probabilities. If the class priors are equal, the decision boundary of a naive Bayes classifier is placed at the center between both distributions (gray bar). An increase of the class-conditional probability of the blue class ($\omega _2$) leads to an extension of the decision region R1 by moving the decision boundary (blue-dotted bar) towards the other class and vice versa.}}{figure}\relax 
+\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-7008r3}{}{\ignorespaces The effect of prior probabilities on the decision regions. The figure shows an 1-dimensional random sample from two different classes (blue and green crosses). The data points of both the blue and the green class are normally distributed with standard deviation 1, and the bell curves denote the class-conditional probabilities. If the class priors are equal, the decision boundary of a naive Bayes classifier is placed at the center between both distributions (gray bar). An increase of the prior probability of the blue class ($\omega _1$) leads to an extension of the decision region R1 by moving the decision boundary (blue-dotted bar) towards the other class and vice versa.}}{figure}\relax 
 \doTocEntry\tocsubsection{2.5}{\csname a:TocLink\endcsname{1}{x1-80002.5}{QQ2-1-11}{Evidence}}{21}\relax 
 \doTocEntry\tocsubsection{2.6}{\csname a:TocLink\endcsname{1}{x1-90002.6}{QQ2-1-12}{Multinomial Naive Bayes - A Toy Example}}{23}\relax 
 \doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-9001r4}{}{\ignorespaces A simple toy dataset of 12 samples 2 different classes $+, -$ . Each sample consists of 2 features: color and geometrical shape.}}{figure}\relax 
@@ -30,7 +30,7 @@
 \doTocEntry\tocsubsubsection{3.1.4}{\csname a:TocLink\endcsname{1}{x1-180003.1.4}{QQ2-1-29}{\emph  {N}-grams}}{53}\relax 
 \doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-190003.2}{QQ2-1-30}{The Decision Rule for Spam Classification}}{53}\relax 
 \doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-200003.3}{QQ2-1-31}{Multi-variate Bernoulli Naive Bayes}}{55}\relax 
-\doTocEntry\tocsubsection{3.4}{\csname a:TocLink\endcsname{1}{x1-210003.4}{QQ2-1-32}{Multinomial Naive Bayes}}{57}\relax 
+\doTocEntry\tocsubsection{3.4}{\csname a:TocLink\endcsname{1}{x1-210003.4}{QQ2-1-32}{Multinomial Naive Bayes}}{56}\relax 
 \doTocEntry\tocsubsubsection{3.4.1}{\csname a:TocLink\endcsname{1}{x1-220003.4.1}{QQ2-1-33}{Term Frequency}}{57}\relax 
 \doTocEntry\tocsubsubsection{3.4.2}{\csname a:TocLink\endcsname{1}{x1-230003.4.2}{QQ2-1-34}{Term Frequency - Inverse Document Frequency (Tf-idf)}}{59}\relax 
 \doTocEntry\tocsubsubsection{3.4.3}{\csname a:TocLink\endcsname{1}{x1-240003.4.3}{QQ2-1-35}{Performances of the Multi-variate Bernoulli and Multinomial Model}}{60}\relax 
