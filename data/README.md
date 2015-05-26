@@ -4,6 +4,7 @@
 - [wine.csv](#winecsv)
 - [iris.csv](#iriscsv)
 - [sms_spam_collection.csv](#sms_spam_collection.csv)
+- [50k_imdb_movie_reviews.csv](#50k_imdb_movie_reviews.csv)
 
 
 
@@ -172,3 +173,25 @@ A public dataset of 5572 SMS messages that are labeled as either "spam" or "ham"
 Source: [http://www.dt.fee.unicamp.br/%7Etiago/smsspamcollection/](http://www.dt.fee.unicamp.br/%7Etiago/smsspamcollection/)
 
 Almeida, Tiago A., José María G. Hidalgo, and Akebo Yamakami. 2011. “Contributions to the Study of SMS Spam Filtering: New Collection and Results.” In Proceedings of the 11th ACM Symposium on Document Engineering, 259–62. DocEng ’11. New York, NY, USA: ACM. doi:10.1145/2034691.2034742.
+
+
+<br>
+<hr>
+<br>
+
+## 50k_imdb_movie_reviews.csv
+[[back to top](#table-of-contents)]
+
+A CSV file assembled from the 50k IMDb movie review dataset. The dataset consists
+of 50,000 movie reviews from the original "train" and "test" subdirectories. The class labels are binary (`1`=positive and `0`=negative) and contain 25,000 positive and 25,000 negative movie reviews, respectively.
+
+| review    | sentiment    | set           |
+|------|------|---------------------------------------------------|
+| ...  | ...  | ... |
+|I saw 'Descent' last night at the Stockholm Fi... | 0 | train
+|Some films that you pick up for a pound turn o... | 0 | train
+|This is one of the dumbest films, I've ever se... | 0 | train
+
+Source: [http://ai.stanford.edu/~amaas/data/sentiment/](http://ai.stanford.edu/~amaas/data/sentiment/)
+
+> AL Maas, RE Daly, PT Pham, D Huang, AY Ng, and C Potts. Learning word vectors for sentiment analysis. In Proceedings of the 49th Annual Meeting of the Association for Computational Lin- guistics: Human Language Technologies, pages 142–150, Portland, Oregon, USA, June 2011. Association for Computational Linguistics.
