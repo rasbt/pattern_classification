@@ -3,8 +3,8 @@
 - [titanic.csv](#titaniccsv)
 - [wine.csv](#winecsv)
 - [iris.csv](#iriscsv)
-- [sms_spam_collection.csv](#sms_spam_collection.csv)
-- [50k_imdb_movie_reviews.csv](#50k_imdb_movie_reviews.csv)
+- [sms_spam_collection.csv](#sms_spam_collectioncsv)
+- [50k_imdb_movie_reviews.csv](#50k_imdb_movie_reviewscsv)
 
 
 
@@ -34,7 +34,7 @@ Source: [http://lib.stat.cmu.edu/S/Harrell/data/descriptions/titanic.html](http:
 | sex       | 2      | integer   | 0   |
 
 
-These data were obtained from Robert Dawson, Saint Mary's University, E-mail. The variables are pclass, age, sex, survived. These data frames are useful for demonstrating many of the functions in Hmisc as well as demonstrating binary logistic regression analysis using the Design library. For more details and references see Simonoff, Jeffrey S (1997): The "unusual episode" and a second statistics course. J Statistics Education, Vol. 5 No. 1.
+These data were obtained from Robert Dawson, Saint Mary's University, E-mail. The variables are `pclass`, `age`, `sex`, `survived`. These data frames are useful for demonstrating many of the functions in Hmisc as well as demonstrating binary logistic regression analysis using the Design library. For more details and references see Simonoff, Jeffrey S (1997): The "unusual episode" and a second statistics course. J Statistics Education, Vol. 5 No. 1.
 
 <br>
 <hr>
@@ -46,7 +46,7 @@ These data were obtained from Robert Dawson, Saint Mary's University, E-mail. Th
 
 Source: [https://archive.ics.uci.edu/ml/datasets/Wine](https://archive.ics.uci.edu/ml/datasets/Wine)
 
-Bache, K. & Lichman, M. (2013). UCI Machine Learning Repository. Irvine, CA: University of California, School of Information and Computer Science.
+> Bache, K. & Lichman, M. (2013). UCI Machine Learning Repository. Irvine, CA: University of California, School of Information and Computer Science.
 
 
 
@@ -86,7 +86,7 @@ Bache, K. & Lichman, M. (2013). UCI Machine Learning Repository. Irvine, CA: Uni
 
 Original Owners: 
 
-Forina, M. et al, PARVUS - 
+> Forina, M. et al, PARVUS - 
 An Extendible Package for Data Exploration, Classification and Correlation. 
 Institute of Pharmaceutical and Food Analysis and Technologies, Via Brigata Salerno, 
 16147 Genoa, Italy. 
@@ -101,7 +101,7 @@ Institute of Pharmaceutical and Food Analysis and Technologies, Via Brigata Sale
 
 Source:[https://archive.ics.uci.edu/ml/datasets/Iris](https://archive.ics.uci.edu/ml/datasets/Iris) 
 
-Bache, K. & Lichman, M. (2013). UCI Machine Learning Repository. Irvine, CA: University of California, School of Information and Computer Science.
+> Bache, K. & Lichman, M. (2013). UCI Machine Learning Repository. Irvine, CA: University of California, School of Information and Computer Science.
 
 |iris.csv					  |		  			|
 |----------------------------|----------------|
@@ -143,7 +143,7 @@ The datasets `iris_test40.csv` and `iris_train60.csv` are randomly sampled from 
 - 3 = Iris-virginica
 
 
-| class | # of samples in test set | # of samples in training set | total
+| class | # of samples in test set | # of samples in training set | total |
 |-------|------|----------|
 | Iris-setosa     | 21 | 29 | 50 |
 | Iris-versicolor | 22 | 28 | 50 |
@@ -172,7 +172,7 @@ A public dataset of 5572 SMS messages that are labeled as either "spam" or "ham"
 
 Source: [http://www.dt.fee.unicamp.br/%7Etiago/smsspamcollection/](http://www.dt.fee.unicamp.br/%7Etiago/smsspamcollection/)
 
-Almeida, Tiago A., José María G. Hidalgo, and Akebo Yamakami. 2011. “Contributions to the Study of SMS Spam Filtering: New Collection and Results.” In Proceedings of the 11th ACM Symposium on Document Engineering, 259–62. DocEng ’11. New York, NY, USA: ACM. doi:10.1145/2034691.2034742.
+> Almeida, Tiago A., José María G. Hidalgo, and Akebo Yamakami. 2011. “Contributions to the Study of SMS Spam Filtering: New Collection and Results.” In Proceedings of the 11th ACM Symposium on Document Engineering, 259–62. DocEng ’11. New York, NY, USA: ACM. doi:10.1145/2034691.2034742.
 
 
 <br>
