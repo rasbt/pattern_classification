@@ -135,6 +135,8 @@
 
 - Implementing a Weighted Majority Rule Ensemble Classifier in scikit-learn  [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/ensemble_classifier.ipynb)]
 
+- Out-of-core Learning and Model Persistence using scikit-learn
+[[IPython nb](./machine_learning/scikit-learn/outofcore_modelpersistence.ipynb)]
 <br>
 <hr>
 <br>
