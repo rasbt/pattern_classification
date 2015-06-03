@@ -12,7 +12,7 @@
 
 <form method=post action="/results">
   <dl>
-	{{ render_field(form.moviereview) }}
+	{{ render_field(form.moviereview, cols='30', rows='10') }}
   </dl>
   <div>
 	  <input type=submit value='Submit review' name='submit_btn'>
