@@ -22,7 +22,11 @@
 - [Pre-Processing](#pre-processing)
 - [Model Evaluation](#model-evaluation)
 - [Parameter Estimation](#parameter-estimation)
-- [Machine Learning Algorithms and Classification Models](#machine-learning-algorithms-and-classification-models)
+- [Machine Learning Algorithms](#machine-learning-algorithms)
+	- [Bayes Classification](#bayes-classification)
+	- [Logistic Regression](#logistic-regression)
+	- [Neural Networks](#neural-networks)
+	- [Ensemble Methods](#ensemble-methods)
 - [Clustering](#clustering)
 - [Collecting Data](#collecting-data)
 - [Data Visualization](#data-visualization)
@@ -126,17 +130,31 @@
 <br>
 
 
-### Machine Learning Algorithms and Classification Models
+
+
+### Machine Learning Algorithms
 [[back to top](#sections)]
 
-- Artificial Neurons and Single-Layer Neural Networks - How Machine Learning Algorithms Work Part 1 [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/singlelayer_neural_networks/singlelayer_neural_networks.ipynb)]
+
+#### Bayes Classification
 
 - Naive Bayes and Text Classification I - Introduction and Theory [[View PDF](http://sebastianraschka.com/PDFs/articles/naive_bayes_1.pdf)] [[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/machine_learning/naive_bayes_1/tex/naive_bayes_1.pdf)] 
 
-- Implementing a Weighted Majority Rule Ensemble Classifier in scikit-learn  [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/ensemble_classifier.ipynb)]
+#### Logistic Regression
 
 - Out-of-core Learning and Model Persistence using scikit-learn
 [[IPython nb](./machine_learning/scikit-learn/outofcore_modelpersistence.ipynb)]
+
+#### Neural Networks
+
+- Artificial Neurons and Single-Layer Neural Networks - How Machine Learning Algorithms Work Part 1 [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/singlelayer_neural_networks/singlelayer_neural_networks.ipynb)]
+
+- Activation Function Cheatsheet [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/neural_networks/ipynb/activation_functions.ipynb)]
+
+#### Ensemble Methods
+
+- Implementing a Weighted Majority Rule Ensemble Classifier in scikit-learn  [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/ensemble_classifier.ipynb)]
+
 <br>
 <hr>
 <br>
