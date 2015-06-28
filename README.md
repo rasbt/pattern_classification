@@ -90,7 +90,7 @@
 	- Kernel tricks and nonlinear dimensionality reduction via PCA [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/dimensionality_reduction/projection/kernel_pca.ipynb)]
 
 - **Representing Text**
-	- Tf-idf Walkthrough for scikit-learn [[IPython nb](./machine_learning/scikit-learn/tfidf_scikit-learn.ipynb)]
+	- Tf-idf Walkthrough for scikit-learn [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/tfidf_scikit-learn.ipynb)]
 
 <br>
 <hr>
