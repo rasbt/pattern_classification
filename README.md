@@ -155,6 +155,10 @@
 
 - Implementing a Weighted Majority Rule Ensemble Classifier in scikit-learn  [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/ensemble_classifier.ipynb)]
 
+#### Decision Trees
+
+- Cheatsheet for Decision Tree Classification [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/decision_trees/decision-tree-cheatsheet.ipynb')]
+
 <br>
 <hr>
 <br>
