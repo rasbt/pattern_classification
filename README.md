@@ -157,7 +157,7 @@
 
 #### Decision Trees
 
-- Cheatsheet for Decision Tree Classification [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/decision_trees/decision-tree-cheatsheet.ipynb')]
+- Cheatsheet for Decision Tree Classification [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/decision_trees/decision-tree-cheatsheet.ipynb)]
 
 <br>
 <hr>
