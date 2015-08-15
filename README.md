@@ -240,9 +240,9 @@
 
 <a href='http://sebastianraschka.com/publications.html'>![](./Images/books/pymle_cover.png)</a>
 
-- [Amazon Link](http://www.amazon.com/Python-Machine-Learning-Sebastian-Raschka/dp/1783555130/ref=sr_1_2?ie=UTF8&qid=1437754343&sr=8-2&keywords=python+machine+learning+essentials)
-- [Table of contents and general info](http://sebastianraschka.com/publications.html)
-- [GitHub Code Repository] (coming soon!)
+- [Amazon link](http://www.amazon.com/Python-Machine-Learning-Sebastian-Raschka/dp/1783555130/ref=sr_1_2?ie=UTF8&qid=1437754343&sr=8-2&keywords=python+machine+learning+essentials)
+- [Publisher Link](https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning) directly from the publisher
+- [GitHub Code Repository](https://github.com/rasbt/python-machine-learning-book)
 
 
 
