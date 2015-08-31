@@ -202,6 +202,12 @@
 - Matplotlib examples -Exploratory data analysis of the Iris dataset [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_viz/matplotlib_viz_gallery.ipynb)]
 
 ![](./Images/data_viz/data_viz_iris_1.png)
+
+- Artificial Intelligence publications per country
+
+[[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_viz/ai_publication_chloropleth/ai_publication_chloropleth.ipynb)] [[PDF](./data_viz/ai_publication_chloropleth/images/ai_publication_chloropleth.pdf)]
+
+![](./data_viz/ai_publication_chloropleth/images/ai_publication_chloropleth.png)
 <br>
 <hr>
 <br>
