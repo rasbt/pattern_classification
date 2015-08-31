@@ -205,9 +205,9 @@
 
 - Artificial Intelligence publications per country
 
-[[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_viz/ai_publication_chloropleth/ai_publication_chloropleth.ipynb)] [[PDF](./data_viz/ai_publication_chloropleth/images/ai_publication_chloropleth.pdf)]
+[[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/data_viz/ai_publication_chloropleth/ai_publication_chloropleth.ipynb)] [[PDF](./data_viz/ai_publication_chloropleth/images/ai_publication_chloropleth_small.pdf)]
 
-![](./data_viz/ai_publication_chloropleth/images/ai_publication_chloropleth.png)
+![](./data_viz/ai_publication_chloropleth/images/ai_publication_chloropleth_small.png)
 <br>
 <hr>
 <br>
