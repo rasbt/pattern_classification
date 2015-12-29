@@ -2,12 +2,12 @@
 
 % start meta data
 \title{An Overview of General Performance Metrics of Binary Classifier Systems}
-\author{Sebastian Raschka\\ \texttt{se.raschka@gmail.com}} 
+\author{Sebastian Raschka\\ \texttt{se.raschka@gmail.com}}
 \date{\today}
 % end meta data
 
 \usepackage{cite}
-\usepackage{graphicx}	
+\usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \titlespacing*{\section}
@@ -64,7 +64,7 @@ The \emph{confusion matrix} (or \emph {error matrix}) is one way to summarize th
 \renewcommand\arraystretch{1.5}
 \setlength\tabcolsep{0pt}
 \begin{tabular}{c >{\bfseries}r @{\hspace{0.7em}}c @{\hspace{0.4em}}c @{\hspace{0.7em}}l}
-  \multirow{10}{*}{\parbox{1.1cm}{\bfseries\raggedleft Actual\\ Class}} 
+  \multirow{10}{*}{\parbox{1.1cm}{\bfseries\raggedleft Actual\\ Class}}
     & \multicolumn{3}{c}{\bfseries Predicted class} & \\
   & & \bfseries $P$  & \bfseries $N$ & \\
   & $P$ & \MyBox{True}{Positives (TP)} & \MyBox{False}{Negatives (FN)}  &\\[2.4em]
@@ -73,12 +73,12 @@ The \emph{confusion matrix} (or \emph {error matrix}) is one way to summarize th
 
 \vspace{1cm}
 
-\noindent 
+\noindent
 The following equations are based on \emph{An introduction to ROC analysis} by Tom Fawcett \cite{fawcett2006introduction}.
 
 \section{Prediction Error and Accuracy}
 
-Both the prediction \emph{error (ERR)} and \emph{accuracy (ACC)} provide general information about how many samples are misclassified. The \emph{error} can be understood as the sum of all false predictions divided by the number of total predications, and the the accuracy is calculated as the sum of correct predictions divided by the total number of predictions, respectively. 
+Both the prediction \emph{error (ERR)} and \emph{accuracy (ACC)} provide general information about how many samples are misclassified. The \emph{error} can be understood as the sum of all false predictions divided by the number of total predications, and the the accuracy is calculated as the sum of correct predictions divided by the total number of predictions, respectively.
 
 \begin{equation} ERR = \frac{FP + FN}{FP+ FN + TP + TN} = 1-ACC\end{equation}
 
@@ -125,7 +125,7 @@ The \emph{True Positive Rate (TPR)} and \emph{False Positive Rate (FPR)} are per
 \section{Matthews correlation coefficient}
 
 \emph{Matthews correlation coefficient (MCC)} was first formulated by Brian W. Matthews \cite{matthews1975comparison} in 1975 to assess the performance of protein secondary structure predictions. The MCC can be understood as a specific case of a linear correlation coefficient (\emph{Pearson r}) for a binary classification setting and is considered as especially useful in unbalanced class settings.
-The previous metrics take values in the range between 0 (worst) and 1 (best), whereas the MCC is bounded between the range 1 (perfect correlation between ground truth and predicted outcome) and -1 (inverse or negative correlation) --- a value of 0 denotes a random prediction. 
+The previous metrics take values in the range between 0 (worst) and 1 (best), whereas the MCC is bounded between the range 1 (perfect correlation between ground truth and predicted outcome) and -1 (inverse or negative correlation) --- a value of 0 denotes a random prediction.
 
 \begin{equation} MCC = \frac{ TP \cdot TN - FP \cdot FN } {\sqrt{ (TP + FP) ( TP + FN ) ( TN + FP ) ( TN + FN ) } } \end{equation}
 
@@ -133,7 +133,7 @@ The previous metrics take values in the range between 0 (worst) and 1 (best), wh
 
 \section{Receiver Operator Characteristic (ROC)}
 
-\emph{Receiver Operator Characteristics (ROC) graphs} are useful tools to select classification models based on their performance with respect to the \emph{False Positive} and \emph{True Positive} rates. 
+\emph{Receiver Operator Characteristics (ROC) graphs} are useful tools to select classification models based on their performance with respect to the \emph{False Positive} and \emph{True Positive} rates.
 
 
 The diagonal of a ROC graph can be interpreted as \emph{random guessing} and classification models that fall below the diagonal are considered as worse than random guessing. A perfect classifier would fall into the top left corner of the graph with a \emph{True Positive Rate} of 1 and a  \emph{False Positive Rate} of 0.
