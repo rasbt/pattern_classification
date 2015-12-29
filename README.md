@@ -137,12 +137,12 @@
 
 #### Bayes Classification
 
-- Naive Bayes and Text Classification I - Introduction and Theory [[View PDF](http://sebastianraschka.com/PDFs/articles/naive_bayes_1.pdf)] [[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/machine_learning/naive_bayes_1/tex/naive_bayes_1.pdf)]
+- Naive Bayes and Text Classification I - Introduction and Theory [[View PDF](https://github.com/rasbt/pattern_classification/blob/master/machine_learning/naive_bayes_1/tex/naive_bayes_1.pdf)] [[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/machine_learning/naive_bayes_1/tex/naive_bayes_1.pdf)]
 
 #### Logistic Regression
 
 - Out-of-core Learning and Model Persistence using scikit-learn
-[[IPython nb](./machine_learning/scikit-learn/outofcore_modelpersistence.ipynb)]
+[[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/outofcore_modelpersistence.ipynb)]
 
 #### Neural Networks
 
