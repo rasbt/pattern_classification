@@ -98,7 +98,7 @@
 ### Model Evaluation
 [[back to top](#sections)]
 
-- An Overview of General Performance Metrics of Binary Classifier Systems [[PDF](http://sebastianraschka.com/PDFs/articles/performance_metrics.pdf)]
+- An Overview of General Performance Metrics of Binary Classifier Systems [[PDF](http://arxiv.org/pdf/1410.5330.pdf)]
 - **Cross-validation**
 	- Streamline your cross-validation workflow - scikit-learn's Pipeline in action [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/scikit-pipeline.ipynb)]
 
@@ -137,8 +137,7 @@
 
 #### Bayes Classification
 
-- Naive Bayes and Text Classification I - Introduction and Theory [[View PDF](https://github.com/rasbt/pattern_classification/blob/master/machine_learning/naive_bayes_1/tex/naive_bayes_1.pdf)] [[Download PDF](https://github.com/rasbt/pattern_classification/raw/master/machine_learning/naive_bayes_1/tex/naive_bayes_1.pdf)]
-
+- Naive Bayes and Text Classification I - Introduction and Theory [[PDF](http://arxiv.org/pdf/1410.5329.pdf)]
 #### Logistic Regression
 
 - Out-of-core Learning and Model Persistence using scikit-learn
@@ -330,4 +329,4 @@ This project is about building a music recommendation system for users who want 
 
 - General Tips and Advices [[Markdown](./resources/general_tips_and_advices.md)]
 
-- A matrix cheatsheat for Python, R, Julia, and MATLAB  [[HTML](http://sebastianraschka.com/github/pattern_classification/matrix_cheatsheet_table.html)]
+- A matrix cheatsheat for Python, R, Julia, and MATLAB  [[HTML](http://sebastianraschka.com/Articles/2014_matrix_cheatsheet_table.html)]
