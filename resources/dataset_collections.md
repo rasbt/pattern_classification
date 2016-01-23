@@ -3,24 +3,24 @@ Last updated: 01/16/2015
 
 A collection of links to various free and open-source datasets.
 
-I am looking forward to extend this little collection! If you don't find your favorite datasets listed here, just let me know (via [email](mailto:mail@sebastianraschka.com) or [twitter](https://twitter.com/rasbt)) and I will add them in no-time! 
+I am looking forward to extend this little collection! If you don't find your favorite datasets listed here, just let me know (via [email](mailto:mail@sebastianraschka.com) or [twitter](https://twitter.com/rasbt)) and I will add them in no-time!
 
 <br>
 ## Sections
 
 - [Dataset Repositories](#dataset-repositories)
-- [Datasets by Format](#datasets-by-format)	
+- [Datasets by Format](#datasets-by-format)
     - [Image](#image)
     - [Audio](#audio)
     - [Text](#text)
     - [Time Series](#time-series)
-- [Datasets by Topic](#datasets-by-topic)	
+- [Datasets by Topic](#datasets-by-topic)
     - [Natural Sciences](#natural-sciences)
     - [Web, Technology, and Social Networks](#web-technology-and-social-networks)
     - [Historical Data and Human Resources](historical-data-and-human-resources)
     - [Finance and Companies](#finance-and-companies)
     - [Government Data and Politics](#government-data-and-politics)
-    
+
 
 <hr>
 <br>
@@ -31,7 +31,7 @@ I am looking forward to extend this little collection! If you don't find your fa
 
 [[back to top](#sections)]
 
-- [Kaggle](https://www.kaggle.com/competitions) - Kaggle, the leading platform for predictive modeling competitions. 
+- [Kaggle](https://www.kaggle.com/competitions) - Kaggle, the leading platform for predictive modeling competitions.
 
 - [UCI MLR](http://archive.ics.uci.edu/ml/) - UC Irvine Machine Learning Repository.
 
@@ -45,7 +45,7 @@ I am looking forward to extend this little collection! If you don't find your fa
 
 - [Amazon Web Services](http://aws.amazon.com/datasets) - Public Data Sets on AWS provides a centralized repository of public data sets that can be seamlessly integrated into AWS cloud-based applications.
 
-- [Databib](http://databib.org) - A searchable catalog / registry / directory / bibliography of research data repositories. 
+- [Databib](http://databib.org) - A searchable catalog / registry / directory / bibliography of research data repositories.
 
 - [figshare](http://figshare.com) - An online digital repository where researchers can preserve and share their research outputs, including figures, datasets, images, and videos.
 
@@ -75,8 +75,6 @@ I am looking forward to extend this little collection! If you don't find your fa
 - [Tiny Images Dataset](http://horatio.cs.nyu.edu/mit/tiny/data/index.html) - A dataset of 79,302,017 images, each being a 32x32 color image.
 
 - [ImageNet](http://www.image-net.org/index) -A searchable image database.
-
-- [The Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/) - Audio features and metadata for a million contemporary popular music tracks.
 
 - [CAT Dataset](http://137.189.35.203/WebUI/CatDatabase/catData.html) - A dataset of 10,000 cat images.
 
@@ -131,6 +129,10 @@ I am looking forward to extend this little collection! If you don't find your fa
 - [The Wayback Machine](http://blog.archive.org/2012/10/26/80-terabytes-of-archived-web-crawl-data-available-for-research/) - 80 terabytes of archived web crawl data available for research.
 
 - [SMS Spam Collection](http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/) - A collection of 425 SMS spam messages was manually extracted from the Grumbletext Web site.
+
+- [Yahoo News Feed dataset](http://webscope.sandbox.yahoo.com/catalog.php?datatype=r&did=75) - An 1.5 TB dataset for building machine learning recommendation systems
+
+- [The full Reddit Submission Corpus 2006-2015](https://www.reddit.com/r/datasets/comments/3mg812/full_reddit_submission_corpus_now_available_2006/) - This represents all publicly available Reddit submissions from January 2006 - August 31, 2015).
 
 <br>
 <br>
