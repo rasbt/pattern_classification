@@ -580,15 +580,6 @@ Ensemble methods combine multiple classifiers which may differ in algorithms, in
 <br>
 <br>
 
-<a class="mc-toclify" id="ensemble-methods"></a>
-#### Ensemble methods
-[[back to top](#table-of-contents)]
-
-Ensemble methods combine multiple classifiers which may differ in algorithms, input features, or input samples. Statistical analyses showed that ensemble methods yield better classification performances and are also less prone to overfitting. Different methods, e.g., bagging or boosting, are used to construct the final classification decision based on weighted votes.  
-
-<br>
-<br>
-
 <a class="mc-toclify" id="evolutionary-algorithms"></a>
 #### Evolutionary algorithms
 [[back to top](#table-of-contents)]
