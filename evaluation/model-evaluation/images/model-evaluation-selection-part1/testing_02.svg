@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="460" height="100" viewBox="0, 0, 460, 100">
+  <g id="Background">
+    <rect x="0" y="0" width="460" height="100" fill="#FFFFFF"/>
+  </g>
+  <g id="Layer_2"/>
+  <g id="Layer_1">
+    <g>
+      <g>
+        <path d="M282.741,95.699 C246.341,95.699 216.833,77.119 216.833,54.199 C216.833,31.28 246.341,12.699 282.741,12.699 C319.142,12.699 348.65,31.28 348.65,54.199 C348.65,77.119 319.142,95.699 282.741,95.699 z" fill="#FFFFFF"/>
+        <path d="M282.741,95.699 C246.341,95.699 216.833,77.119 216.833,54.199 C216.833,31.28 246.341,12.699 282.741,12.699 C319.142,12.699 348.65,31.28 348.65,54.199 C348.65,77.119 319.142,95.699 282.741,95.699 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+      </g>
+      <text transform="matrix(1, 0, 0, 1, 282.375, 73.866)">
+        <tspan x="-23.353" y="-4.5" font-family="AvenirNext-Bold" font-size="11" fill="#000000">Learning </tspan>
+        <tspan x="-27.071" y="10.5" font-family="AvenirNext-Bold" font-size="11" fill="#000000">Algorithm</tspan>
+      </text>
+      <text transform="matrix(1, 0, 0, 1, 282.241, 36.699)">
+        <tspan x="-37.64" y="-4.5" font-family="AvenirNext-Regular" font-size="10" fill="#000000">Hyperparameter </tspan>
+        <tspan x="-14.82" y="9.5" font-family="AvenirNext-Regular" font-size="10" fill="#000000">Values</tspan>
+      </text>
+    </g>
+    <path d="M216.833,54.199 L348.65,54.199" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    <path d="M395.286,79.642 L377.988,53.699 L395.286,27.757 L429.881,27.757 L447.178,53.699 L429.881,79.642 z" fill="#000000"/>
+    <text transform="matrix(1, 0, 0, 1, 412.333, 61.033)">
+      <tspan x="-14.79" y="-4.5" font-family="AvenirNext-Regular" font-size="10" fill="#FFFFFF">Model</tspan>
+    </text>
+    <g>
+      <path d="M185.5,54.366 L205.333,54.251" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+      <path d="M205.351,57.251 L213.333,54.205 L205.316,51.251 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="1" stroke-opacity="1"/>
+    </g>
+    <g>
+      <path d="M348.655,54.366 L368.488,54.251" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+      <path d="M368.505,57.251 L376.488,54.205 L368.471,51.251 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="1" stroke-opacity="1"/>
+    </g>
+    <path d="M27.333,68.533 C19.049,68.533 12.333,61.892 12.333,53.699 C12.333,45.507 19.049,38.866 27.333,38.866 C35.618,38.866 42.333,45.507 42.333,53.699 C42.333,61.892 35.618,68.533 27.333,68.533 z" fill="#000000"/>
+    <text transform="matrix(1, 0, 0, 1, 27.553, 55.033)">
+      <tspan x="-5.22" y="5" font-family="AvenirNext-Regular" font-size="18" fill="#FFFFFF">2</tspan>
+    </text>
+    <g>
+      <g>
+        <path d="M91.833,32.033 L184.833,32.033 L184.833,54.033 L91.833,54.033 L91.833,32.033 z" fill="#E5E5E5"/>
+        <path d="M91.833,32.033 L184.833,32.033 L184.833,54.033 L91.833,54.033 L91.833,32.033 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+      </g>
+      <g>
+        <path d="M91.833,54.033 L184.833,54.033 L184.833,76.033 L91.833,76.033 L91.833,54.033 z" fill="#E5E5E5"/>
+        <path d="M91.833,54.033 L184.833,54.033 L184.833,76.033 L91.833,76.033 L91.833,54.033 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+      </g>
+      <text transform="matrix(1, 0, 0, 1, 136.833, 48.533)">
+        <tspan x="-24.152" y="-3" font-family="AvenirNext-Regular" font-size="8" fill="#000000">Training Data</tspan>
+      </text>
+      <text transform="matrix(1, 0, 0, 1, 137.833, 69.533)">
+        <tspan x="-27.42" y="-3" font-family="AvenirNext-Regular" font-size="8" fill="#000000">Training Labels</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

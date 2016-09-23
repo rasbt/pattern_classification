@@ -101,6 +101,8 @@
 - An Overview of General Performance Metrics of Binary Classifier Systems [[PDF](http://arxiv.org/pdf/1410.5330.pdf)]
 - **Cross-validation**
 	- Streamline your cross-validation workflow - scikit-learn's Pipeline in action [[IPython nb](http://nbviewer.ipython.org/github/rasbt/pattern_classification/blob/master/machine_learning/scikit-learn/scikit-pipeline.ipynb)]
+- Model evaluation, model selection, and algorithm selection in machine learning - Part I [[Markdown](evaluation/model-evaluation/model-evaluation-selection-part1.md)]
+- Model evaluation, model selection, and algorithm selection in machine learning - Part II [[Markdown](evaluation/model-evaluation/model-evaluation-selection-part2.md)]
 
 <br>
 <hr>
