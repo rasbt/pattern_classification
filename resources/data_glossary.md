@@ -372,15 +372,6 @@ Cosine similarity measures the orientation of two *n*-dimensional sample vectors
 <br>
 <br>
 
-<a class="mk-toclify" id="cosine-similarity"></a>
-#### Cosine Similarity
-[[back to top](#table-of-contents)]
-
-Cosine similarity measures the orientation of two *n*-dimensional sample vectors irrespective to their magnitude. It is calculated by the dot product of two numeric vectors, and it is normalized by the product of the vector lengths, so that output values close to 1 indicate high similarity.  
-(submitted by [Vahid Mirjalili](https://github.com/mirjalil))
-
-<br>
-<br>
 
 <a class="mk-toclify" id="cost-function"></a>
 #### Cost function
