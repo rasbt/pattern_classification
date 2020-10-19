@@ -8,6 +8,7 @@
 <hr>
 **Tutorials, examples, collections, and everything else that falls into the categories: pattern classification, machine learning, and data mining.**
 <br>
+<a href="https://deepnote.com/launch?template=pytorch&url=https%3A%2F%2Fgithub.com%2Frasbt%2Fpattern_classification"><img src="https://deepnote.com/buttons/launch-in-deepnote-small.svg" /></a>
 <br>
 
 
