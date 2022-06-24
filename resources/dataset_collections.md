@@ -209,7 +209,7 @@ I am looking forward to extend this little collection! If you don't find your fa
 
 - [aiHit Datasets](http://endb-consolidated.aihit.com/datasets.htm) - Information on random 10,000 UK companies sampled from aiHit DB.
 
-
+- [Crunchbase Companies Datasets](https://brightdata.com/products/datasets/crunchbase) - 2 Million crunchbase company listings with over 100 data points.
 
 <br>
 <br>
