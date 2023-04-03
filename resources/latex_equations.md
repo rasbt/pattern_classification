@@ -69,30 +69,31 @@ or prepend `/begin{equation}` and append `/end{equation}`
 	![](../Images/latex_equations/bayes_classifier_1.gif)
 
 		P(\omega_j|x) = \frac{p(x|\omega_j) \cdot P(\omega_j)}{p(x)}
-		
+	
 	![](../Images/latex_equations/bayes_theorem_words.gif)	
 		
+	
 		\Rightarrow \text{posterior probability} = \frac{ \text{likelihood}  \cdot \text{prior probability}}{\text{evidence}}
- 
- 
+
+
 	- decision rule:
-
+	
 	![](../Images/latex_equations/bayes_decision_rule_1.gif)
-
+	
 	![](../Images/latex_equations/bayes_decision_rule_2.gif)
-    
-        \text{Decide } \omega_1  \text{ if }  P(\omega_1|x) > P(\omega_2|x)  \text{ else decide } \omega_2 .
+	
+	    \text{Decide } \omega_1  \text{ if }  P(\omega_1|x) > P(\omega_2|x)  \text{ else decide } \omega_2 .
 		
 		\frac{p(x|\omega_1) \cdot P(\omega_1)}{p(x)} > \frac{p(x|\omega_2) \cdot P(\omega_2)}{p(x)}
-
+	
 	- objective functions:
 	
 	![](../Images/latex_equations/bayes_objective_function_1.gif)
 	
 		g_1(\pmb x) = P(\omega_1 | \; \pmb{x}), \quad  g_2(\pmb{x}) = P(\omega_2 | \; \pmb{x}), \quad  g_3(\pmb{x}) = P(\omega_2 | \; \pmb{x})
-
+	
 	![](../Images/latex_equations/bayes_objective_function_2.gif)
-
+	
 		\quad g_i(\pmb{x}) = \pmb{x}^{\,t} \bigg( - \frac{1}{2} \Sigma_i^{-1} \bigg) \pmb{x} + \bigg( \Sigma_i^{-1} \pmb{\mu}_{\,i}\bigg)^t \pmb x + \bigg( -\frac{1}{2} \pmb{\mu}_{\,i}^{\,t}  \Sigma_{i}^{-1} \pmb{\mu}_{\,i} -\frac{1}{2} ln(|\Sigma_i|)\bigg)
 
 
@@ -122,12 +123,12 @@ Similar to the [Pearson correlation coefficient](#correlation-pearson), Kendall'
 ![](../Images/latex_equations/kendall_tau_1.gif)
 
 	\tau = \frac{c-d}{c+d} = \frac{S}{
-   		\left(
-   		\begin{matrix} 
-     	n \\
-     	2
-  	\end{matrix}
-  	\right)}
+		\left(
+		\begin{matrix} 
+	 	n \\
+	 	2
+	\end{matrix}
+	\right)}
 	= \frac{2S}{n(n-1)}
 
 where 
@@ -166,13 +167,13 @@ The Pearson correlation coefficient is probably the most widely used measure for
 ![](../Images/latex_equations/pearson_rho_1.gif)
 
     \rho = \frac{\text{cov}(X,Y)}{\sigma_x \sigma_y}
-    
+
 And the estimate  
 
 ![](../Images/latex_equations/pearson_rho_2.gif)
 
 	r = \frac{{}\sum_{i=1}^{n} (x_i - \overline{x})(y_i - \overline{y})}
-	{\sqrt{\sum_{i=1}^{n} (x_i - \overline{x})^2(y_i - \overline{y})^2}}
+	{\sqrt{\sum_{i=1}^{n} (x_i - \overline{x})^2  \sum_{i=1}^{n}(y_i - \overline{y})^2}}
 
 <br>
 <br>
@@ -186,11 +187,11 @@ Related to the [Pearson correlation coefficient](#correlation-pearson), the Spea
 ![](../Images/latex_equations/spearman_rho_1.gif)
 
 	\rho = 1- {\frac {6 \sum d_i^2}{n(n^2 - 1)}}
- 
+
  where  
  *d* = the pairwise distances of the ranks of the variables *x<sub>i</sub>* and *y<sub>i</sub>* .  
  *n* = the number of samples.
- 
+
 
 <br>
 <br>
@@ -204,7 +205,7 @@ Cosine similarity measures the orientation of two *n*-dimensional sample vectors
 ![](../Images/latex_equations/cosine_similarity_1.gif)
 
 	cos(\pmb x, \pmb y) = \frac {\pmb x \cdot \pmb y}{||\pmb x|| \cdot ||\pmb y||}
- 
+
 
 <br>
 <br>
@@ -235,13 +236,13 @@ example covariance matrix:
 ![](../Images/latex_equations/eigenvector_equation.gif)
 
     \pmb A\pmb{v} =  \lambda\pmb{v}\\\\
-
+    
     \text{where} \\\\
-
+    
     \pmb A = S_{W}^{-1}S_B\\
     \pmb{v} = \text{Eigenvector}\\
     \lambda = \text{Eigenvalue}
-    
+
 <br>
 <br>
 
@@ -289,7 +290,7 @@ The Minkowski distance is a generalized form of the Euclidean distance (if *p=2*
 ![](../Images/latex_equations/least_squares_linear_equation.gif)
 
 	f(x) = a\cdot x + b
-	
+
 Slope:
 
 ![](../Images/latex_equations/least_squares_slope.gif)
@@ -301,14 +302,14 @@ Y-axis intercept:
 ![](../Images/latex_equations/least_squares_y-intercept.gif)
 
 	b = \bar{y} - a\bar{x}\quad
-	
+
 where
 
 ![](../Images/latex_equations/least_squares_variance_covariance.gif)
 
 	S_{xy} = \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})\quad \text{(covariance)} \\
 	\sigma{_x}^{2} = \sum_{i=1}^{n} (x_i - \bar{x})^2\quad \text{(variance)}	
-	
+
 <br>
 <br>	
 	
@@ -317,22 +318,22 @@ where
 ![](../Images/latex_equations/least_squares_matrix_equation_1.gif)
 
 	\pmb X \; \pmb a = \pmb y
-	
+
 ![](../Images/latex_equations/least_squares_matrix_equation_2.gif)
 
 	\pmb X \; \pmb a = \pmb y
-
-    \Bigg[ \begin{array}{cc}
-    x_1 & 1  \\
-    ... & 1 \\
-    x_n & 1  \end{array} \Bigg]$
-    $\bigg[ \begin{array}{c}
-    a  \\
-    b \end{array} \bigg]$
-    $=\Bigg[ \begin{array}{c}
-    y_1   \\
-    ...  \\
-    y_n  \end{array} \Bigg]
+	
+	\Bigg[ \begin{array}{cc}
+	x_1 & 1  \\
+	... & 1 \\
+	x_n & 1  \end{array} \Bigg]$
+	$\bigg[ \begin{array}{c}
+	a  \\
+	b \end{array} \bigg]$
+	$=\Bigg[ \begin{array}{c}
+	y_1   \\
+	...  \\
+	y_n  \end{array} \Bigg]
 
 
 ![](../Images/latex_equations/least_squares_matrix_equation_3.gif)
@@ -351,7 +352,7 @@ The Lennard-Jones potential describes the energy potential between two non-bonde
 ![](../Images/latex_equations/lennard_jones_1.gif)
 
 	V = 4 \epsilon \bigg[ \bigg(\frac{\sigma}{r}\bigg)^{12}  - \bigg(\frac{\sigma}{r}\bigg)^{6} \bigg]
-	
+
 V = intermolecular potential  
 &sigma; = distance where V is 0  
 r = distance between atoms, measured from one center to the other  
@@ -370,12 +371,12 @@ r = distance between atoms, measured from one center to the other
 
 
     S_W = \sum\limits_{i=1}^{c} S_i \\\\
-
+    
     \text{where}  \\\\
-
+    
     S_i = \sum\limits_{\pmb x \in D_i}^n (\pmb x - \pmb m_i)\;(\pmb x - \pmb m_i)^T
      \text{  (scatter matrix for every class)} \\\\
-
+    
     \text{and} \\\\
       
     \pmb m_i = \frac{1}{n_i} \sum\limits_{\pmb x \in D_i}^n \; \pmb x_k   \text{ (mean vector)}
@@ -403,7 +404,7 @@ The probability of observing the data set
 ![](../Images/latex_equations/mle_data.gif)
 
 	D = \left\{ \pmb x_1, \pmb x_2,..., \pmb x_n \right\} 
-	
+
  can be pictured as probability to observe a particular sequence of patterns,  
 where the probability of observing a particular patterns depends on **&theta;**, the parameters the underlying (class-conditional) distribution. In order to apply MLE, we have to make the assumption that the samples are *i.i.d.* (independent and identically distributed).
 
@@ -419,7 +420,7 @@ Where **&theta;** is the parameter vector, that contains the parameters for a pa
 and p(D | **&theta;**) is also called the likelihood of **&theta;**.
 
 - log-likelihood
- 
+
 ![](../Images/latex_equations/mle_log_likelihood.gif)
 
 
@@ -486,7 +487,7 @@ and p(D | **&theta;**) is also called the likelihood of **&theta;**.
 ![](../Images/latex_equations/gaussian_multivariate.gif)
 
 	p(\pmb x) \sim N(\pmb \mu|\Sigma)\\\\
-
+	
 	p(\pmb x) \sim \frac{1}{(2\pi)^{d/2} \; |\Sigma|^{1/2}} \exp \bigg[ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu) \bigg]
 
 <br>
@@ -501,7 +502,7 @@ and p(D | **&theta;**) is also called the likelihood of **&theta;**.
 
 
 	p(x) \sim N(\mu|\sigma^2) \\\\
-
+	
 	p(x) \sim \frac{1}{\sqrt{2\pi\sigma^2}} \exp{ \bigg[-\frac{1}{2}\bigg( \frac{x-\mu}{\sigma}\bigg)^2 \bigg] } $
 
 <br>
@@ -522,9 +523,9 @@ If we extend on this concept, we can define a more general equation that applies
 ![](../Images/latex_equations/parzen_window_function_hypercube_2.gif)
 
 	k_n = \sum\limits_{i=1}^{n} \phi \bigg( \frac{\pmb x - \pmb x_i}{h_n} \bigg)\\\\
-
+	
 	\text{where}\\\\
-
+	
 	\pmb u = \bigg( \frac{\pmb x - \pmb x_i}{h_n} \bigg)
 
 - probability density estimation with hypercube kernel
@@ -591,8 +592,9 @@ example mean vector:
 ![](../Images/latex_equations/pca_scatter_matrix.gif)
 
 	S = \sum\limits_{k=1}^n (\pmb x_k - \pmb m)\;(\pmb x_k - \pmb m)^T
-	
-	
+
+
+​	
 where 
 
 ![](../Images/latex_equations/pca_mean_vector.gif)
@@ -634,7 +636,7 @@ The R-factor is one of several measures to assess the quality of a protein cryst
 [[back to top](#table-of-contents)]
 
 	\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2}
-	
+
 ![](../Images/latex_equations/standard_deviation.gif)
 
 <br>
@@ -656,8 +658,7 @@ The R-factor is one of several measures to assess the quality of a protein cryst
 ![](../Images/latex_equations/z_score.gif)
 
  	z = \frac{x - \mu}{\sigma}
- 	
-<br>
-<br>
 
+<br>
+<br>
 
