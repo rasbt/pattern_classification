@@ -265,7 +265,7 @@ The Manhattan distance (sometimes also called Taxicab distance) metric is relate
 
 ![](../Images/latex_equations/distance_manhattan_1.gif)
 
-	\left(\sum_{i=1}^n |x_i-y_i|^p\right)^{1/p}
+	\sum_{i=1}^n |x_i-y_i|
 
 <br>
 <br>
