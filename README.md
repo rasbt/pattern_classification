@@ -8,6 +8,7 @@
 <hr>
 **Tutorials, examples, collections, and everything else that falls into the categories: pattern classification, machine learning, and data mining.**
 <br>
+<a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Frasbt%2Fpattern_classification%2Fblob%2Fmaster%2Fmachine_learning%2Fscikit-learn%2Fscikit_linear_classification.ipynb"><img src="https://deepnote.com/buttons/launch-in-deepnote-small.svg" /></a>
 <br>
 
 
